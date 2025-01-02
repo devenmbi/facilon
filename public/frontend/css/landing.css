@@ -1,0 +1,266 @@
+.header_style_01 {
+  position: relative;
+}
+
+.info-list li {
+  height: auto;
+  position: relative;
+  display: block;
+  border-bottom: 1px solid #e8e8e8;
+  padding: 0px 0px;
+  /* padding-left: 27px; */
+  font-size: 16px;
+  line-height: 26px;
+  /* font-family: var(--title-font); */
+  color: #1b1e31;
+  font-weight: 600;
+  text-transform: capitalize;
+  border: 1px solid #4e4e4e33;
+  padding-left: 40px;
+  margin-bottom: 5px;
+  border-radius: 10px;
+  padding-right: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  /* margin-right: 20px; */
+}
+
+.info-list li:last-child {
+  /* border-bottom: none; */
+}
+
+.info-list li i {
+  position: absolute;
+  left: 17px;
+  top: 8px;
+  font-size: 18px;
+  color: #be1717;
+  font-weight: 400;
+}
+
+.info-list li span {
+  position: relative;
+  /* float: right; */
+  font-size: 16px;
+  /* font-family: var(--text-font); */
+  color: #6e6e6e;
+  font-weight: 400;
+  margin-left: 5px;
+  text-transform: initial;
+}
+
+.info-list {
+  margin-bottom: 19px;
+}
+
+.box-shadow {
+  box-shadow: 0 3px 6px rgb(0 0 0 / 5%), 0 3px 6px rgb(0 0 0 / 3%);
+  padding: 30px 30px;
+  margin: 0px 0px 30px;
+  border-radius: 20px;
+  background-color: white;
+}
+
+.vertical-align {
+  display: flex;
+  align-items: center;
+}
+
+.title {
+  font-size: 22px;
+  margin-bottom: 30px;
+  font-weight: 700;
+  color: #3e6f7c;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.title:before {
+  width: 10%;
+  height: 1px;
+  background: #000;
+  content: "";
+  position: absolute;
+  top: 41px;
+  /* left: 45%; */
+}
+
+.header_style_01 .navbar-default {
+  background-color: #ede9e6;
+}
+
+.broker-info i {
+  color: #be1717;
+}
+
+.broker-info b {
+  color: #be1717;
+}
+
+.broker-info h4 {
+  font-size: 25px;
+  font-weight: 600;
+}
+
+#myModal h4 b {
+  font-size: 24px;
+  padding: 0px;
+  color: #be1717;
+}
+
+#myModal h4 {
+  font-size: 24px;
+  padding: 0px;
+  width: max-content;
+}
+
+.btn-light {
+  cursor: pointer;
+}
+
+#myModal li span {
+  color: black;
+}
+
+.about-broker {
+  margin-top: 30px;
+}
+
+.contact-details .address-icon {
+  float: left;
+  padding: 0px 0px 12px;
+  line-height: 29px;
+}
+
+.contact-details .address-item h3 {
+  display: inline-block;
+  font-size: 17px;
+  color: #be1717;
+  padding-bottom: 0px;
+}
+
+.contact-details .address-icon i {
+  font-size: 17px;
+  color: #be1717;
+  margin-right: 8px;
+  top: 0px;
+  /* position: absolute; */
+}
+
+.contact-details .address-item {
+  margin-bottom: 10px;
+  box-shadow: none;
+  padding-top: 0px;
+  border-bottom: 1px solid #e8e8e8;
+  padding-left: 0px;
+}
+
+.broker-info .social-box {
+  text-align: inherit;
+}
+
+.sec-list-item {
+  margin-bottom: 0px;
+}
+
+.sec-list-item li {
+  position: relative;
+  margin-right: 16px;
+  font-weight: 500;
+  color: var(--thm-black);
+  display: inline-block;
+}
+
+.sec-list-item li i {
+  color: white;
+  /* margin-right: 8px; */
+  background: #98c458;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  line-height: 22px;
+  text-align: center;
+  font-size: 13px;
+}
+
+.sec-list-item li:last-child {
+  margin-bottom: 0;
+}
+
+.sec-list-item li .fa-times {
+  color: white;
+  background-color: #be1717;
+}
+
+.brokerage-plans h5 {
+  font-weight: 700;
+  font-size: 21px;
+  color: #be1717;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #08080824;
+  margin-bottom: 20px;
+}
+
+.brokerage-info h4 {
+  color: #828282;
+}
+
+.brokerage-info p {
+  font-size: 20px;
+  font-weight: 600;
+}
+.mt-20{
+  margin-top: 20px;
+}
+.trading-info li {
+  background-color: #3e6f7c;
+  display: inline-block;
+  padding: 5px 20px;
+  color: white;
+  font-weight: 600;
+  border-radius: 20px;
+  margin-right: 10px;
+}
+.trading-info li:hover{
+  background-color: black;
+}
+.color-sec-1 {
+  background-color: #3e6f7c;
+  color: white;
+}
+.color-sec-1 h2, .color-sec-2 h2{
+  color: white;
+}
+.color-sec-1 h2::before, .color-sec-2 h2::before{
+  background: white;
+}
+.color-sec-2 {
+  background-color: black;
+  color: white;
+}
+.moretext {
+  display: none;
+}
+.broker-info p{
+  text-align: justify;
+}
+.moreless-btn {
+  font-weight: 700;
+  margin-bottom: 20px !important;
+  /* padding-bottom: 20px; */
+  color: #3e6f7c;
+}
+.sec-list-item a {
+  color: white;
+}
+@media (max-width: 767px) {
+  .address-item{
+    width: 100%;
+  }
+  .vertical-align{
+    display: block;
+  }
+  .social-box{
+    margin-bottom: 20px;
+  }
+}

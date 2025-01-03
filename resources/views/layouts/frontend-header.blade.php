@@ -115,16 +115,16 @@ https://anvaya.online/facilon/public/frontend/css/formdesign.css
     							<!-- <li><a href="#">Why Facilon</a></li> -->
     							<li class="dropdown">
     								<a class="dropdown-toggle" data-toggle="dropdown" href="{{ route('service_providers') }}"> Service Provider</a>
-    								<ul class="dropdown-menu">
+    								{{-- <ul class="dropdown-menu">
     									<li><a href="#"> Brokers</a></li>
     									<li><a href="#"> Custodians</a></li>
     									<li><a href="#"> Portfolio Managers</a></li>
     									<li><a href="#"> Banks</a></li>
     									<li><a href="#"> Investment Advisors</a></li>
-    								</ul>
+    								</ul> --}}
     							</li>
     							<li class="dropdown">
-    								<a class="dropdown-toggle" data-toggle="dropdown" href="#"> Service Provider Products</a>
+    								<a class="dropdown-toggle" data-toggle="dropdown" href="#">Products</a>
     								<ul class="dropdown-menu">
     									<li><a href="{{ route('trading_listed_securities') }}"> Trading - Listed Equities</a></li>
     									<li><a href="{{ route('derivatives_trading') }}"> Equity Derivatives</a></li>
@@ -133,15 +133,16 @@ https://anvaya.online/facilon/public/frontend/css/formdesign.css
     									<li><a href="{{ route('portfolio_investment_scheme') }}"> PIS Account</a></li>
     								</ul>
     							</li>
-    							<!--<li class="dropdown">-->
-    							<!--	<a class="dropdown-toggle" data-toggle="dropdown" href="#"> Knowledge Center</a>-->
-    							<!--	<ul class="dropdown-menu">-->
-    							<!--		<li><a href="#"> Articles/Blogs</a></li>-->
-    							<!--		<li><a href="#"> FAQs</a></li>-->
-    							<!--	</ul>-->
-    							<!--</li>-->
-    							<!--<li><a href="#">Media & Events</a></li>-->
-    							<li><a href="#">Service Provider Registration</a></li>
+    							<li class="dropdown">
+    								<a class="dropdown-toggle" data-toggle="dropdown" href="#"> Knowledge Center</a>
+    								<ul class="dropdown-menu">
+    									<!--<li><a href="#"> Articles/Blogs</a></li>-->
+    									<li><a href="{{route('faq_show')}}"> FAQs</a></li>
+    								</ul>
+    							</li>
+    							
+    							<li><a href="{{route('coming_soon_show')}}">Registration</a></li>
+                                <li><a href="{{route('expression_interest_show')}}">Contact us</a></li>
     						</ul>
     					</div>
     					<button type="button" id="sidebarCollapse" class="btn btn-info sidebar-btn">
@@ -197,7 +198,7 @@ https://anvaya.online/facilon/public/frontend/css/formdesign.css
                     </div>
                     <div class="copyright">
                         <div class="container">
-                            <p>© Copyright 2024 Facilon | Designed By <a href="https://www.matrixbricks.com/" target="_blank">Matrix Bricks.</a> All Rights Reserved</p>
+                            <p>© Copyright 2025 Facilon | Designed By <a href="https://www.matrixbricks.com/" target="_blank">Matrix Bricks.</a> All Rights Reserved</p>
                         </div>
                     </div>
                 </footer>
@@ -205,10 +206,18 @@ https://anvaya.online/facilon/public/frontend/css/formdesign.css
             <!-- </div> -->
         </div>
     </div>
-    <div class="flotter-wharf">
-        <a href="#" class="wharf"><b>Get Started</b></a>
-    </div>
-    
+@php
+$url11 = url()->full();
+if($url11 != 'http://www.facilonservices.com/coin/faq') {
+@endphp
+<div class="flotter-wharf">
+    <a href="#" class="wharf"><b>Coming Soon</b></a>
+</div>
+@php
+} else {
+    // No content for this URL
+} 
+@endphp
     <!--Cookies-->
     <a href="#" id="scroll-to-top" class="dmtop global-radius"><i class="fa fa-angle-up"></i></a>
     <script src="{{asset('public/frontend/js/all.js')}}"></script>
@@ -221,7 +230,23 @@ https://anvaya.online/facilon/public/frontend/css/formdesign.css
     <script src="{{asset('public/frontend/js/hoverdir.js')}}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
-    
+    <script>
+$(document).ready(function(){
+    let scroll_link = $('.scroll');
+   
+     //smooth scrolling -----------------------
+     scroll_link.click(function(e){
+         e.preventDefault();
+         let url = $('body').find($(this).attr('href')).offset().top- 210;
+         $('html, body').animate({
+           scrollTop : url
+         },700);
+         $(this).parent().addClass('active');
+         $(this).parent().siblings().removeClass('active');
+         return false;
+       });
+   });
+</script> 
     @if(Route::currentRouteName() == '/')
         <script type="text/javascript">
     		var myFullpage = new fullpage('#fullpage', {
@@ -243,7 +268,7 @@ https://anvaya.online/facilon/public/frontend/css/formdesign.css
     	</script>
     @endif
     
-    @if(Route::currentRouteName() == 'service_providers')
+    @if(Route::currentRouteName() == 'service_provider')
         <script type="text/javascript">
             var myFullpage = new fullpage('#fullpage', {
               anchors: ['Services-Provider','Copyrights'],
@@ -263,5 +288,6 @@ https://anvaya.online/facilon/public/frontend/css/formdesign.css
             });
         </script>
     @endif
+
   </body>
 </html>

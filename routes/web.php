@@ -21,6 +21,13 @@ Route::get('/', 'App\Http\Controllers\FrontendController@index')->name('/');
     Route::post('/change-password', [App\Http\Controllers\ChangePasswordController::class, 'changePassword'])->name('password.update');
 // });
 
+Route::get('coming-soon', 'App\Http\Controllers\FrontendController@coming_soon_show')->name('coming_soon_show');
+
+Route::get('faq', 'App\Http\Controllers\FrontendController@faq_show')->name('faq_show');
+
+
+Route::get('expression-of-interest', 'App\Http\Controllers\FrontendController@expression_interest_show')->name('expression_interest_show');
+Route::get('markets/india', 'App\Http\Controllers\FrontendController@india_market_show')->name('india_market_show');
 
 //Service Provider registration
 Route::get('service-provider/register/step1/{provider_id?}',[App\Http\Controllers\BrokerController::class,'service_provider_registration_step1_show'])->name('service_provider_registration_step1_show');

@@ -3,6 +3,7 @@
 use App\Http\Controllers\AdminController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ChangePasswordController;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -48,32 +49,32 @@ Route::get('broker/register/thank-you',[App\Http\Controllers\BrokerController::c
 
 
 //Investor Frontend Routes
-Route::get('investor/register/step1',[App\Http\Controllers\InvestorController::class,'investor_register_step1_show'])->name('investor_register_step1_show');
-Route::post('investor/register/step1',[App\Http\Controllers\InvestorController::class,'investor_register_step1_submit'])->name('investor_register_step1_submit');
+// Route::get('investor/register/step1',[App\Http\Controllers\InvestorController::class,'investor_register_step1_show'])->name('investor_register_step1_show');
+// Route::post('investor/register/step1',[App\Http\Controllers\InvestorController::class,'investor_register_step1_submit'])->name('investor_register_step1_submit');
 
-Route::get('investor/register/step2/{unique_code?}',[App\Http\Controllers\InvestorController::class,'investor_register_step2_show'])->name('investor_register_step2_show');
+// Route::get('investor/register/step2/{unique_code?}',[App\Http\Controllers\InvestorController::class,'investor_register_step2_show'])->name('investor_register_step2_show');
 
-Route::get('investor/register/step1/update/{unique_code?}',[App\Http\Controllers\InvestorController::class,'investor_register_step1_update_show'])->name('investor_register_step1_update_show');
+// Route::get('investor/register/step1/update/{unique_code?}',[App\Http\Controllers\InvestorController::class,'investor_register_step1_update_show'])->name('investor_register_step1_update_show');
 
-Route::post('investor/register/step1/update/{unique_code?}',[App\Http\Controllers\InvestorController::class,'investor_email_mobile_update'])->name('investor_email_mobile_update');
+// Route::post('investor/register/step1/update/{unique_code?}',[App\Http\Controllers\InvestorController::class,'investor_email_mobile_update'])->name('investor_email_mobile_update');
 
-Route::post('investor/register/step2/verify-otp',[App\Http\Controllers\InvestorController::class,'investor_register_step2_verify_otp'])->name('investor_register_step2_verify_otp');
+// Route::post('investor/register/step2/verify-otp',[App\Http\Controllers\InvestorController::class,'investor_register_step2_verify_otp'])->name('investor_register_step2_verify_otp');
 
-Route::get('investor/register/step3/{unique_code?}',[App\Http\Controllers\InvestorController::class,'investor_register_step3_show'])->name('investor_register_step3_show');
-Route::post('investor/register/step3/enter_full_name',[App\Http\Controllers\InvestorController::class,'investor_register_step3_enter_full_name'])->name('investor_register_step3_enter_full_name');
+// Route::get('investor/register/step3/{unique_code?}',[App\Http\Controllers\InvestorController::class,'investor_register_step3_show'])->name('investor_register_step3_show');
+// Route::post('investor/register/step3/enter_full_name',[App\Http\Controllers\InvestorController::class,'investor_register_step3_enter_full_name'])->name('investor_register_step3_enter_full_name');
 
-Route::get('investor/register/step4/{unique_code?}',[App\Http\Controllers\InvestorController::class,'investor_register_step4_show'])->name('investor_register_step4_show');
-Route::post('investor/register/step4/{unique_code?}',[App\Http\Controllers\InvestorController::class,'investor_register_step4_insert_data'])->name('investor_register_step4_insert_data');
+// Route::get('investor/register/step4/{unique_code?}',[App\Http\Controllers\InvestorController::class,'investor_register_step4_show'])->name('investor_register_step4_show');
+// Route::post('investor/register/step4/{unique_code?}',[App\Http\Controllers\InvestorController::class,'investor_register_step4_insert_data'])->name('investor_register_step4_insert_data');
 
-Route::get('investor/register/step2/resend/otp/{unique_code?}',[App\Http\Controllers\InvestorController::class,'investor_register_step2_resend_otp'])->name('investor_register_step2_resend_otp');
+// Route::get('investor/register/step2/resend/otp/{unique_code?}',[App\Http\Controllers\InvestorController::class,'investor_register_step2_resend_otp'])->name('investor_register_step2_resend_otp');
 
-Route::get('investor/register/thank-you',[App\Http\Controllers\InvestorController::class,'investor_register_thank_you_show'])->name('investor_register_thank_you_show');
+// Route::get('investor/register/thank-you',[App\Http\Controllers\InvestorController::class,'investor_register_thank_you_show'])->name('investor_register_thank_you_show');
 
 Auth::routes();
 Route::get('admin/login',[App\Http\Controllers\AdminController::class,'login_form'])->name('login.form');
 Route::post('login-functionality',[App\Http\Controllers\AdminController::class,'login_functionality'])->name('login.functionality');
 Route::group(['middleware'=>'admin'],function(){
-    
+
     Route::get('logout',[App\Http\Controllers\AdminController::class,'logout'])->name('logout');
     Route::get('dashboard',[App\Http\Controllers\AdminController::class,'dashboard_show'])->name('dashboard_show');
 
@@ -166,10 +167,10 @@ Route::group(['middleware'=>'admin'],function(){
     Route::get('delete-service-provider/{id?}',[App\Http\Controllers\AdminController::class,'delete_service_provider'])->name('admin.delete_service_provider');
     Route::get('deactivate-service-provider/{id?}',[App\Http\Controllers\AdminController::class,'deactivate_service_provider'])->name('admin.deactivate_service_provider');
     Route::get('activate-service-provider/{id?}',[App\Http\Controllers\AdminController::class,'activate_service_provider'])->name('admin.activate_service_provider');
-    
+
     //service providers registration list
     Route::get('regitstration/service-provider/{provider_id?}',[App\Http\Controllers\AdminController::class,'get_service_provider_registration_list'])->name('admin.get_service_provider_registration_list');
-    
+
     //  Home - Banner Details
     Route::get('banner-details',[App\Http\Controllers\AdminController::class,'view_banner_details'])->name('admin.view_banner_details');
     Route::post('banner-details-form',[App\Http\Controllers\AdminController::class,'update_banner_details'])->name('admin.update_banner_details');

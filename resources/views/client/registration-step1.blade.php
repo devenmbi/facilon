@@ -1,238 +1,338 @@
-@extends('layouts.frontend-header')
-@section('content')
-<section class="login-form-style4 steps4-sec section-padding align-items-center"
-      style="background-image:url('https://anvaya.online/facilon/public/frontend/images/banner/2125.jpg');">
-      <div class="container ">
-        <div class="row align-items-center">
-          <div class="col-lg-5 col-md-12 col-sm-12">
-            <div class="lgf4_Left_content">
-              <h3>Client <span>Registration</span> </h3>
-              <p>Currently we are only registering the expression of interest in the India Securities market</p>
-            </div>
-          </div>
-          <div class="col-lg-7 col-md-12 col-sm-12">
-            <div class="login-form-style3-main">
-              <div class="login-form-style3-main_full">
-                
-                <div class="login-register3-form-middle">
-                  <form action="" data-bitwarden-watching="1" method="post" enctype="multipart/form-data">
-                    {{csrf_field()}}
-                    <input type="hidden" name="unique_code" value="">
-                    
-                    <div class="">
-                      <h3><span class="" style="background-color: #3e6f7c;padding: 3px 26px;border-radius: 40px;text-transform: uppercase;font-weight: 400;">Individual </span>
-                      </h3>
-                    </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Registration - Individual</title>
+    <!-- Bootstrap 4 or 5 CDN for grid system -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            background-color: #ffffff;
+            padding: 20px;
+            max-width: 600px;
+            margin: 0 auto;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        h4 {
+  font-size: 20px !important;
+}
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            /* font-weight: bold; */
+        }
+        input[type="text"], input[type="email"], input[type="password"], input[type="tel"], input[type="number"], select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 15px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 4px;
+            width: 100%;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
 
-                    <div class="name-sec" id="section_self_div" >
-                      <div class="row">
-                        <div class="col-md-6">
-                          <div class="single-field">
-                            <label for="username"><i class="fa-solid fa-user"></i> Full Name: <span class="star-color">*</span>
-                            </label>
-                           
-                            <input type="text" name="full_name" value="">
-                          </div>
-                        </div>
-                        <div class="col-md-6">
-                          <div class="single-field">
-                            <label for="email_id"><i class="fa-solid fa-user"></i>Email ID: <span class="star-color">*</span>
-                            </label>
-                           
-                            <input type="email" name="email_id" value="">
-                          </div>
-                        </div>
-                        <div class="col-md-6">
-                          <div class="single-field">
-                            <label for="mobile"><i class="fa-solid fa-user"></i> Mobile: <span class="star-color">*</span>
-                            </label>
-                           
-                            <input type="text" name="mobile_no" value="">
-                          </div>
-                        </div>
-                        <div class="col-md-6">
-                          <div class="single-field">
-                            <label for="username"><i class="fa-solid fa-user"></i> Client Code: <span class="star-color">*</span>
-                            </label>
-                           
-                            <input type="text" name="client_code" value="">
-                          </div>
-                        </div>
-                        <div class="col-md-6">
-                          <div class="single-field">
-                            <label for="username"><i class="fa-solid fa-user"></i> Client Id: <span class="star-color">*</span>
-                            </label>
-                           
-                            <input type="text" name="client_id" value="">
-                          </div>
-                        </div>
-                        <div class="col-md-6">
-                          <div class="single-field">
-                            <label for="username"><i class="fa-solid fa-user"></i> Branch: <span class="star-color">*</span>
-                            </label>
-                           
-                            <input type="text" name="branch_name" value="">
-                          </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="single-field">
-                              <label for="username"><i class="fa-solid fa-user"></i> Country: <span class="star-color">*</span>
-                              </label>
-                             
-                              <input type="text" name="country_code" value="">
-                            </div>
-                          </div>
-                          <div class="col-md-6">
-                            <div class="single-field">
-                              <label for="username"><i class="fa-solid fa-user"></i> State: <span class="star-color">*</span>
-                              </label>
-                             
-                              <input type="text" name="state_code" value="">
-                            </div>
-                          </div>
-                          <div class="col-md-6">
-                            <div class="single-field">
-                              <label for="username"><i class="fa-solid fa-user"></i> City: <span class="star-color">*</span>
-                              </label>
-                             
-                              <input type="text" name="city_code" value="">
-                            </div>
-                          </div>
-                        <div class="col-md-6">
-                          <div class="single-field">
-                            <label for="username"><i class="fa-solid fa-user"></i> Upload Logo: <span class="star-color">*</span>
-                            </label>
-                           
-                            <input type="file" name="upload_logo" value="">
-                          </div>
-                        </div>
-                        
-                      </div>  
-                    </div>
-                    
-                      <div id="button_div">
-                        <div class="row">
-                          <div class="col-md-6">
-                            <div class="single-field mb-0">
-                              <button class="button-1" type="submit" name="submit">Next</button>
-                            </div>
-                          </div>
-                          <div class="col-md-6">
-                            <div class="single-field mb-0">
-                              <a href="" class="button-1" style="padding: 12px 20px;font-size: 18px;display: inline-block;width: 100%;text-align:center;" type="submit">Cancel</a>
-                            </div>
-                          </div>
-                        </div>
-                      </div>  
-                    
-                  </form>
+    <div class="container">
+        <center><u><h4>Client Registration - Individual</h4></u></center>
+<br>
+        <form action="/submit" method="post">
+
+            <center><h4>Personal Information</h4></center>
+            <div class="form-group row">
+                <div class="col-md-6">
+                    <label for="first-name">Client Name</label>
+                    <input type="text" class="form-control" id="first-name" name="first_name" required>
                 </div>
-              </div>
+                <div class="col-md-6">
+                    <label for="dob">Branch Name</label>
+                    <input type="text" class="form-control" id="branch_name" name="branch_name" required>
+                </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script>
 
-    $(document).ready(function(){ 
-        $("#legal_country").change(function() {
-          
-          const selectedVal = $(this).val();
-          if(selectedVal == 'India')
-          {
-            document.getElementById('legal_country_div').style.display = 'block'; 
-            document.getElementById('note_confirm_div').style.display = 'block';
-            document.getElementById('button_div').style.display = 'block';
-          }else{
-            document.getElementById('legal_country_div').style.display = 'block';
-            document.getElementById('note_confirm_div').style.display = 'block';
-            document.getElementById('button_div').style.display = 'block';
-          }
-        });
-      }); 
+            <div class="form-group row">
+                <div class="col-md-6">
+                    <label for="email">Client Code</label>
+                    <input type="text" class="form-control" id="client_code" name="client_code" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="phone">Client ID</label>
+                    <input type="text" class="form-control" id="client_id" name="client_id" required>
+                </div>
+            </div>
 
-      function change_register(){
-        
-          var getSelectedValue = document.querySelector( 'input[name="Self"]:checked');   
-          if(getSelectedValue != null) {      
-              if(getSelectedValue.value == 'Legal Entity'){
-                
-                document.getElementById('section_legal_div').style.display = 'block';
-                document.getElementById('section_self_div').style.display = 'none';
-                // document.getElementById('pan_note_div').style.display = 'block';
-                
-              }else{
-                
-                document.getElementById('section_legal_div').style.display = 'none';
-                document.getElementById('section_self_div').style.display = 'block';
-                // document.getElementById('pan_note_div').style.display = 'none';
-                
-              }  
-          }  
-       
-      }
-      function change(){
-          var getSelectedValue = document.querySelector( 'input[name="pancard"]:checked');   
-          if(getSelectedValue != null) {      
-              if(getSelectedValue.value == 'No'){
-                //document.getElementById('pan_note_div').style.display = 'block';
-                document.getElementById('note_confirm_div').style.display = 'block';
-                document.getElementById('button_div').style.display = 'block';
-              }else{
-                //document.getElementById('pan_note_div').style.display = 'none';
-                document.getElementById('note_confirm_div').style.display = 'block';
-                document.getElementById('button_div').style.display = 'block';
-              }  
-          }  
-       
-      }
 
-      function change1(){
-          var getSelectedValue = document.querySelector( 'input[name="indian_origin"]:checked');   
-          if(getSelectedValue != null) {      
-              if(getSelectedValue.value == 'Yes'){
-                document.getElementById('oci_card_div').style.display = 'block';
-                document.getElementById('note_confirm_div').style.display = 'block';
-                // document.getElementById('pan_note_div').style.display = 'none';
-                document.getElementById('button_div').style.display = 'block';
-              }else{
-                document.getElementById('oci_card_div').style.display = 'none';
-                // document.getElementById('pan_note_div').style.display = 'block';
-                document.getElementById('note_confirm_div').style.display = 'block';
-                document.getElementById('button_div').style.display = 'block';
-              }  
-          }  
-       
-      }
-      function change2(){
-          var getSelectedValue = document.querySelector( 'input[name="oci_card"]:checked');   
-          if(getSelectedValue != null) {      
-              if(getSelectedValue.value == 'No'){
-                //document.getElementById('oci_card_note_div').style.display = 'block';
+            <div class="form-group">
                 
-              }else{
-                //document.getElementById('oci_card_note_div').style.display = 'none';
-              }  
-          }  
-       
-      }
+            </div>
+            <center><h4>Central KYC Registry - First Holder</h4></center>
+            <div class="form-group row">
+                <div class="col-md-4">
+                    <label for="first-name">First Name</label>
+                    <input type="text" class="form-control" id="first-name" name="first_name1" required>
+                </div>
+                <div class="col-md-4">
+                    <label for="middle-name">Middle Name</label>
+                    <input type="text" class="form-control" id="middle-name" name="middle_name1">
+                </div>
+                <div class="col-md-4">
+                    <label for="last-name">Last Name</label>
+                    <input type="text" class="form-control" id="last-name" name="last_name1" required>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-md-4">
+                    <label for="first-name">Father / Spouse Name</label>
+                    <input type="text" class="form-control" id="father-name" name="father_name1" required>
+                </div>
+                <div class="col-md-4">
+                    <label for="middle-name">Mother Name</label>
+                    <input type="text" class="form-control" id="mother-name" name="mother_name1">
+                </div>
+                <div class="col-md-4">
+                    <label for="last-name">DOB</label>
+                    <input type="date" class="form-control" id="last-name" name="dob1" required>
+                </div>
+            </div>
+            <div class="form-group row gender-checkboxes">
+                <div class="col-md-3">
+                    <label for="middle-name">Gender : </label>
+                </div>
+                <div class="col-md-3">
+                    <input type="radio" class="form-check-input" id="radio1" name="gender" value="Male">Male
+                    <label class="form-check-label" for="radio1"></label>
+                </div>
+                <div class="col-md-3">
+                    <input type="radio" class="form-check-input" id="radio1" name="gender" value="Female">Female
+                    <label class="form-check-label" for="radio1"></label>
+                </div>
+                <div class="col-md-3">
+                    <input type="radio" class="form-check-input" id="radio1" name="gender" value="Transgender">Transgender
+                    <label class="form-check-label" for="radio1"></label>
+                </div>
+            </div>
+            <div class="form-group row gender-checkboxes">
+                <div class="col-md-3">
+                    <label for="middle-name">Marital Status : </label>
+                </div>
+                <div class="col-md-3">
+                    <input type="radio" class="form-check-input" id="radio1" name="marital_status" value="Married">Married
+                    <label class="form-check-label" for="radio1"></label>
+                </div>
+                <div class="col-md-3">
+                    <input type="radio" class="form-check-input" id="radio1" name="marital_status" value="Unmarried">Unmarried
+                    <label class="form-check-label" for="radio1"></label>
+                </div>
+                <div class="col-md-3">
+                    <input type="radio" class="form-check-input" id="radio1" name="marital_status" value="Other">Other
+                    <label class="form-check-label" for="radio1"></label>
+                </div>
+            </div>
+            <div class="form-group row gender-checkboxes">
+                <div class="col-md-3">
+                    <label for="middle-name">Citizenship : </label>
+                </div>
+                <div class="col-md-3">
+                    <input type="radio" class="form-check-input" id="radio1" name="citizenship" value="Married">Indian
+                    <label class="form-check-label" for="radio1"></label>
+                </div>
+                <div class="col-md-3">
+                    <input type="radio" class="form-check-input" id="radio1" name="citizenship" value="Other">Other
+                    <label class="form-check-label" for="radio1"></label>
+                </div>
+                
+            </div>
+            <div class="form-group">
+                <label for="middle-name">Residential Status : </label>
+            </div>
+            <div class="form-group row" style="padding: 0px 1px 1px 19px !important;">
+                
+                <div class="col-md-3">
+                    <input type="radio" class="form-check-input" id="radio1" name="residential_status" value="Resident Individual">Resident Individual
+                    <label class="form-check-label" for="radio1"></label>
+                </div>
+                <div class="col-md-3">
+                    <input type="radio" class="form-check-input" id="radio1" name="residential_status" value="Non Resident Indian">Non Resident Indian
+                    <label class="form-check-label" for="radio1"></label>
+                </div>
+               
+                <div class="col-md-3">
+                    <input type="radio" class="form-check-input" id="radio1" name="residential_status" value="Foreign National">Foreign National
+                    <label class="form-check-label" for="radio1"></label>
+                </div>
+                <div class="col-md-3">
+                    <input type="radio" class="form-check-input" id="radio1" name="residential_status" value="Person of Indian Origin">Person of Indian Origin
+                    <label class="form-check-label" for="radio1"></label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="middle-name">Occupation Type : </label>
+            </div>
+            <div class="form-group row" style="padding: 0px 1px 1px 19px !important;">
+                
+                <div class="col-md-3">
+                    <input type="radio" class="form-check-input" id="radio1" name="residential_status" value="Resident Individual">Service
+                    <label class="form-check-label" for="radio1"></label>
+                </div>
+                <div class="col-md-3">
+                    <input type="radio" class="form-check-input" id="radio1" name="residential_status" value="Non Resident Indian">Private Sector
+                    <label class="form-check-label" for="radio1"></label>
+                </div>
+               
+                <div class="col-md-3">
+                    <input type="radio" class="form-check-input" id="radio1" name="residential_status" value="Foreign National">Public Sector
+                    <label class="form-check-label" for="radio1"></label>
+                </div>
+                <div class="col-md-3">
+                    <input type="radio" class="form-check-input" id="radio1" name="residential_status" value="Person of Indian Origin">Govt Sector
+                    <label class="form-check-label" for="radio1"></label>
+                </div>
+                <div class="col-md-3">
+                    <input type="radio" class="form-check-input" id="radio1" name="residential_status" value="Resident Individual">others
+                    <label class="form-check-label" for="radio1"></label>
+                </div>
+                <div class="col-md-3">
+                    <input type="radio" class="form-check-input" id="radio1" name="residential_status" value="Non Resident Indian">Professional
+                    <label class="form-check-label" for="radio1"></label>
+                </div>
+               
+                <div class="col-md-3">
+                    <input type="radio" class="form-check-input" id="radio1" name="residential_status" value="Foreign National">Self Employed
+                    <label class="form-check-label" for="radio1"></label>
+                </div>
+                <div class="col-md-3">
+                    <input type="radio" class="form-check-input" id="radio1" name="residential_status" value="Person of Indian Origin">Retired
+                    <label class="form-check-label" for="radio1"></label>
+                </div>
+                <div class="col-md-3">
+                    <input type="radio" class="form-check-input" id="radio1" name="residential_status" value="Non Resident Indian">Housewife
+                    <label class="form-check-label" for="radio1"></label>
+                </div>
+               
+                <div class="col-md-3">
+                    <input type="radio" class="form-check-input" id="radio1" name="residential_status" value="Foreign National">Student
+                    <label class="form-check-label" for="radio1"></label>
+                </div>
+                <div class="col-md-3">
+                    <input type="radio" class="form-check-input" id="radio1" name="residential_status" value="Person of Indian Origin">Business
+                    <label class="form-check-label" for="radio1"></label>
+                </div>
+                <div class="col-md-3">
+                    <input type="radio" class="form-check-input" id="radio1" name="residential_status" value="Person of Indian Origin">Not Categorized
+                    <label class="form-check-label" for="radio1"></label>
+                </div>
+            </div>
+            <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" id="residence_outside_india" name="residence_outside_india" value="something">
+      <label class="form-check-label" for="residence_outside_india">Residence for TAX purposes in Jurisdiction outside India</label>
+            </div>
+            <div class="form-group row">
+                <div class="col-md-6">
+                    <label for="first-name">ISO 3166 country Code of Jurisdiction</label>
+                    <input type="text" class="form-control" id="father-name" name="father_name1" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="middle-name">TAX Identification No.</label>
+                    <input type="text" class="form-control" id="mother-name" name="mother_name1">
+                </div>
+                <div class="col-md-6">
+                    <label for="last-name">Place/City of Birth</label>
+                    <input type="date" class="form-control" id="last-name" name="dob1" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="last-name">ISO 3166 Country code of Birth</label>
+                    <input type="date" class="form-control" id="last-name" name="dob1" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="middle-name">Proof of Identity : </label>
+            </div>
+            <div class="form-group row">
+                <div class="col-md-6 form-check">
+                    <input type="checkbox" class="form-check-input" id="residence_outside_india" name="residence_outside_india" value="something">
+                    <label class="form-check-label" for="residence_outside_india">Passport Number</label>
+                </div>
+                <div class="col-md-6">
+                    
+                    <input type="text" class="form-control" id="father-name" name="father_name1" required>
+                </div>
+                <div class="col-md-6 form-check">
+                    <input type="checkbox" class="form-check-input" id="residence_outside_india" name="residence_outside_india" value="something">
+                    <label class="form-check-label" for="residence_outside_india">Voter ID Card</label>
+                </div>
+                <div class="col-md-6">
+                    
+                    <input type="text" class="form-control" id="father-name" name="father_name1" required>
+                </div>
+                <div class="col-md-6 form-check">
+                    <input type="checkbox" class="form-check-input" id="residence_outside_india" name="residence_outside_india" value="something">
+                    <label class="form-check-label" for="residence_outside_india">PAN Card</label>
+                </div>
+                <div class="col-md-6">
+                    
+                    <input type="text" class="form-control" id="father-name" name="father_name1" required>
+                </div>
+                <div class="col-md-6 form-check">
+                    <input type="checkbox" class="form-check-input" id="residence_outside_india" name="residence_outside_india" value="something">
+                    <label class="form-check-label" for="residence_outside_india">Driving Licence</label>
+                </div>
+                <div class="col-md-6">
+                    
+                    <input type="text" class="form-control" id="father-name" name="father_name1" required>
+                </div>
+                <div class="col-md-6 form-check">
+                    <input type="checkbox" class="form-check-input" id="residence_outside_india" name="residence_outside_india" value="something">
+                    <label class="form-check-label" for="residence_outside_india">UID(Aadhaar)</label>
+                </div>
+                <div class="col-md-6">
+                    
+                    <input type="text" class="form-control" id="father-name" name="father_name1" required>
+                </div>
+                <div class="col-md-6 form-check">
+                    <input type="checkbox" class="form-check-input" id="residence_outside_india" name="residence_outside_india" value="something">
+                    <label class="form-check-label" for="residence_outside_india">NREGA Job Card</label>
+                </div>
+                <div class="col-md-6">
+                    
+                    <input type="text" class="form-control" id="father-name" name="father_name1" required>
+                </div>
+            </div>
+            
+            <!-- Submit -->
+            <div class="form-group">
+                <input type="submit" class="btn btn-success btn-block" value="Submit">
+            </div>
 
-      $(document).ready(function(){ 
-        $("#nationality").change(function() {
-          
-          const selectedVal = $(this).val();
-          if(selectedVal == 'Indian')
-          {
-            document.getElementById('nationality_div').style.display = 'block'; 
-            document.getElementById('other_nationality_div').style.display = 'none';
-          }else{
-            document.getElementById('nationality_div').style.display = 'none';
-            document.getElementById('other_nationality_div').style.display = 'block';
-          }
-        });
-      });
-        
-    </script>
-@endsection
+        </form>
+    </div>
+
+    <!-- Bootstrap JS, Popper.js and jQuery (Optional but needed for some features like dropdowns) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

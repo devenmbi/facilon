@@ -86,6 +86,7 @@ Route::group(['middleware'=>'admin'],function(){
     Route::get('logout',[App\Http\Controllers\AdminController::class,'logout'])->name('logout');
     Route::get('dashboard',[App\Http\Controllers\AdminController::class,'dashboard_show'])->name('dashboard_show');
 
+    Route::get('user-management/add-new',[App\Http\Controllers\UserController::class,'add_new_user_show'])->name('admin.add_new_user_show');
     //  Custody - Basic Details
     Route::get('custody-basic-details',[App\Http\Controllers\AdminController::class,'view_custody_basic_details'])->name('admin.view_custody_basic_details');
     Route::post('custody-basic-details-form',[App\Http\Controllers\AdminController::class,'update_custody_basic_details'])->name('admin.update_custody_basic_details');

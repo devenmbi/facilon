@@ -9,7 +9,7 @@
     <div class="row">
       <div class="col-md-8">
         <div class="layer-1-1 wow slideInDown" data-wow-duration="2s" data-wow-delay=".2s">
-          <h2 class="title1"><span> Riddhi Are you a service provider looking to connect with overseas investors seeking opportunities in India?  </span></h2>
+          <h2 class="title1"><span>Are you a service provider looking to connect with overseas investors seeking opportunities in India?  </span></h2>
           <p>Facilon facilitates access, onboarding, and collaboration by leveraging an onshore network of securities service providers.</p>  
 <p>Showcase your products and services to global investors on Facilon, our flexible and scalable cloud solutions empower you to expand your reach in the Indian investment landscape. </p>
         </div>

@@ -5,16 +5,16 @@
     	<meta http-equiv="X-UA-Compatible" content="IE=edge">
     	<meta name="viewport" content="width=device-width,initial-scale=1">
     	<title>Facilon</title>
-    	<link rel="stylesheet" href="{{asset('public/frontend/css/bootstrap.min.css')}}">
-    	<link rel="stylesheet" href="{{asset('public/frontend/css/style.css')}}">
-    	<link rel="stylesheet" href="{{asset('public/frontend/css/responsive.css')}}">
-    	<link rel="stylesheet" href="{{asset('public/frontend/css/custom.css')}}">
-    	<link rel="stylesheet" href="{{asset('public/frontend/css/fullpage.css')}}">
+    	<link rel="stylesheet" href="{{asset('/frontend/css/bootstrap.min.css')}}">
+    	<link rel="stylesheet" href="{{asset('/frontend/css/style.css')}}">
+    	<link rel="stylesheet" href="{{asset('/frontend/css/responsive.css')}}">
+    	<link rel="stylesheet" href="{{asset('/frontend/css/custom.css')}}">
+    	<link rel="stylesheet" href="{{asset('/frontend/css/fullpage.css')}}">
     	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
     	<link rel="stylesheet" href="
-https://anvaya.online/facilon/public/frontend/css/formdesign.css
+https://anvaya.online/facilon/frontend/css/formdesign.css
 ">
-    	<script src="{{asset('public/frontend/js/modernizer.js')}}"></script>
+    	<script src="{{asset('/frontend/js/modernizer.js')}}"></script>
 	</head>
 	<body>
 		<!--  <div id="preloader">
@@ -108,7 +108,7 @@ https://anvaya.online/facilon/public/frontend/css/formdesign.css
     						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
     						    <span class="sr-only">Menu</span>
     						</button>
-    						<a class="navbar-brand" href="{{ route('/') }}"><img src="{{asset('public/frontend/images/logo.png')}}" alt="image"></a>
+    						<a class="navbar-brand" href="{{ route('/') }}"><img src="{{asset('/frontend/images/logo.png')}}" alt="image"></a>
     					</div>
     					<div id="navbar" class="navbar-collapse collapse">
     						<ul class="nav navbar-nav navbar-right">
@@ -220,14 +220,14 @@ if($url11 != 'http://www.facilonservices.com/coin/faq') {
 @endphp
     <!--Cookies-->
     <a href="#" id="scroll-to-top" class="dmtop global-radius"><i class="fa fa-angle-up"></i></a>
-    <script src="{{asset('public/frontend/js/all.js')}}"></script>
-    <script src="{{asset('public/frontend/js/jquery.nivo.slider.js')}}"></script>
-    <script src="{{asset('public/frontend/js/jquery.appear.js')}}"></script>
-    <script src="{{asset('public/frontend/js/isotope.pkgd.min.js')}}"></script>
-    <script src="{{asset('public/frontend/js/custom.js')}}"></script>
-    <script src="{{asset('public/frontend/js/fullpage.js')}}"></script>
-    <script src="{{asset('public/frontend/js/portfolio.js')}}"></script>
-    <script src="{{asset('public/frontend/js/hoverdir.js')}}"></script>
+    <script src="{{asset('/frontend/js/all.js')}}"></script>
+    <script src="{{asset('/frontend/js/jquery.nivo.slider.js')}}"></script>
+    <script src="{{asset('/frontend/js/jquery.appear.js')}}"></script>
+    <script src="{{asset('/frontend/js/isotope.pkgd.min.js')}}"></script>
+    <script src="{{asset('/frontend/js/custom.js')}}"></script>
+    <script src="{{asset('/frontend/js/fullpage.js')}}"></script>
+    <script src="{{asset('/frontend/js/portfolio.js')}}"></script>
+    <script src="{{asset('/frontend/js/hoverdir.js')}}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
     <script>

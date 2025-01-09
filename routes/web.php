@@ -101,6 +101,8 @@ Route::group(['middleware'=>'admin'],function(){
     Route::get('deactivate-custody-service/{id?}',[App\Http\Controllers\AdminController::class,'deactivate_custody_service'])->name('admin.deactivate_custody_service');
     Route::get('activate-custody-service/{id?}',[App\Http\Controllers\AdminController::class,'activate_custody_service'])->name('admin.activate_custody_service');
 
+    //User Management
+    Route::get('user-management/add-new',[App\Http\Controllers\UserController::class,'add_new_user_show'])->name('admin.add_new_user_show');
     //  Derivatives Trading - Basic Details
     Route::get('derivatives-trading-basic-details',[App\Http\Controllers\AdminController::class,'view_derivatives_trading_basic_details'])->name('admin.view_derivatives_trading_basic_details');
     Route::post('derivatives-trading-basic-details-form',[App\Http\Controllers\AdminController::class,'update_derivatives_trading_basic_details'])->name('admin.update_derivatives_trading_basic_details');

@@ -65,6 +65,17 @@
 						<li><a href="{{route('admin.list_key_points')}}"><i class='bx bx-radio-circle'></i>Journey With Facilon</a></li>
 					</ul>
 				</li>
+				<li>
+					<a href="javascript:;" class="has-arrow">
+						<div class="parent-icon"><i class="bx bx-category"></i>
+						</div>
+						<div class="menu-title">User Management</div>
+					</a>
+					<ul>
+						<li><a href=""><i class='bx bx-radio-circle'></i>All Users</a></li>
+						<li><a href=""><i class='bx bx-radio-circle'></i>Add New User</a></li>
+					</ul>
+				</li>
 				<li class="menu-label">Types Of Service Providers</li>
 				<li>
 					<a href="{{route('admin.list_service_providers')}}">

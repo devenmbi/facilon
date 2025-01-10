@@ -86,7 +86,16 @@ Route::group(['middleware'=>'admin'],function(){
     Route::get('logout',[App\Http\Controllers\AdminController::class,'logout'])->name('logout');
     Route::get('dashboard',[App\Http\Controllers\AdminController::class,'dashboard_show'])->name('dashboard_show');
 
+    //User Management
     Route::get('user-management/add-new',[App\Http\Controllers\UserController::class,'add_new_user_show'])->name('admin.add_new_user_show');
+    Route::post('user-management/add-new',[App\Http\Controllers\UserController::class,'new_user_insert'])->name('admin.new_user_insert');
+    
+    Route::get('user-management/all-users',[App\Http\Controllers\UserController::class,'all_users_list'])->name('admin.all_users_list');
+    Route::get('user-management/all-users/activate/{id?}',[App\Http\Controllers\UserController::class,'users_list_activate'])->name('admin.users_list_activate');
+    Route::get('user-management/all-users/deactivate/{id?}',[App\Http\Controllers\UserController::class,'users_list_deactivate'])->name('admin.users_list_deactivate');
+    Route::get('user-management/all-users/delete/{id?}',[App\Http\Controllers\UserController::class,'delete_user_from_list'])->name('admin.delete_user_from_list');
+   
+    
     //  Custody - Basic Details
     Route::get('custody-basic-details',[App\Http\Controllers\AdminController::class,'view_custody_basic_details'])->name('admin.view_custody_basic_details');
     Route::post('custody-basic-details-form',[App\Http\Controllers\AdminController::class,'update_custody_basic_details'])->name('admin.update_custody_basic_details');

@@ -11,7 +11,7 @@
                                 <h5 class="mb-1">Add New User</h5>
                             </div>
                             <div class="card-content mt-4">
-                                <form action="{{route('admin.update_banner_details')}}" method="post" enctype="multipart/form-data">
+                                <form action="{{route('admin.new_user_insert')}}" method="post" enctype="multipart/form-data">
                                 {{csrf_field()}}
                                     <div class="row">
                                         <div class="col-md-8">
@@ -74,7 +74,7 @@
                                                 <div class="col-md-6">
                                                    
                                                     <label>NSE F&O SEBI Reg No<span class="text-danger"> *</span></label>
-                                                    <input type="text" class="form-control" name="nse_fo_sebi_reg_no">  
+                                                    <input type="text" class="form-control" name="nse_f_and_o_sebi_reg_no">  
                                                 </div>
                                                 <div class="col-md-6">
                                                    
@@ -84,82 +84,82 @@
                                                 <div class="col-md-6">
                                                    
                                                     <label>NSE F&O SEBI Reg No<span class="text-danger"> *</span></label>
-                                                    <input type="text" class="form-control" name="bse_fo_sebi_reg_no">  
+                                                    <input type="text" class="form-control" name="bse_f_and_o_sebi_reg_no">  
                                                 </div>
                                                 <div class="col-md-6">
                                                    
                                                     <label>Primary Contact Name1<span class="text-danger"> *</span></label>
-                                                    <input type="text" class="form-control" name="primary_contact_name1">  
+                                                    <input type="text" class="form-control" name="primary1_name">  
                                                 </div>
                                                 <div class="col-md-6">
                                                    
                                                     <label>Primary Contact Phone1 <span class="text-danger"> *</span></label>
-                                                    <input type="text" class="form-control" name="primary_contact_phone1">  
+                                                    <input type="text" class="form-control" name="primary1_phone">  
                                                 </div>
                                                 <div class="col-md-6">
                                                    
                                                     <label>Primary Contact Email1<span class="text-danger"> *</span></label>
-                                                    <input type="text" class="form-control" name="primary_contact_email1">  
+                                                    <input type="text" class="form-control" name="primary1_email">  
                                                 </div>
                                                 <div class="col-md-6">
                                                    
                                                     <label>Primary Contact Name2<span class="text-danger"> *</span></label>
-                                                    <input type="text" class="form-control" name="primary_contact_name2">  
+                                                    <input type="text" class="form-control" name="primary2_name">  
                                                 </div>
                                                 <div class="col-md-6">
                                                    
                                                     <label>Primary Contact Phone2 <span class="text-danger"> *</span></label>
-                                                    <input type="text" class="form-control" name="primary_contact_phone2">  
+                                                    <input type="text" class="form-control" name="primary2_phone">  
                                                 </div>
                                                 <div class="col-md-6">
                                                    
                                                     <label>Primary Contact Email2<span class="text-danger"> *</span></label>
-                                                    <input type="text" class="form-control" name="primary_contact_email2">  
+                                                    <input type="text" class="form-control" name="primary2_email">  
                                                 </div>
                                                 <div class="col-md-6">
                                                    
                                                     <label>Primary Contact Name3<span class="text-danger"> *</span></label>
-                                                    <input type="text" class="form-control" name="primary_contact_name3">  
+                                                    <input type="text" class="form-control" name="primary3_name">  
                                                 </div>
                                                 <div class="col-md-6">
                                                    
                                                     <label>Primary Contact Phone3 <span class="text-danger"> *</span></label>
-                                                    <input type="text" class="form-control" name="primary_contact_phone3">  
+                                                    <input type="text" class="form-control" name="primary3_phone">  
                                                 </div>
                                                 <div class="col-md-6">
                                                    
                                                     <label>Primary Contact Email3<span class="text-danger"> *</span></label>
-                                                    <input type="text" class="form-control" name="primary_contact_email3">  
+                                                    <input type="text" class="form-control" name="primary3_email">  
                                                 </div>
                                                 <div class="col-md-6">
                                                    
                                                     <label>Escalation Contact Name1<span class="text-danger"> *</span></label>
-                                                    <input type="text" class="form-control" name="escalation_contact_name1">  
+                                                    <input type="text" class="form-control" name="escalation1_name">  
                                                 </div>
                                                 <div class="col-md-6">
                                                    
                                                     <label>Escalation Contact Phone1 <span class="text-danger"> *</span></label>
-                                                    <input type="text" class="form-control" name="escalation_contact_phone1">  
+                                                    <input type="text" class="form-control" name="escalation1_phone">  
                                                 </div>
                                                 <div class="col-md-6">
                                                    
                                                     <label>Escalation Contact Email1<span class="text-danger"> *</span></label>
-                                                    <input type="text" class="form-control" name="escalation_contact_email1">  
+                                                    <input type="text" class="form-control" name="escalation1_email">  
                                                 </div>
                                                 <div class="col-md-6">
                                                    
                                                     <label>Escalation Contact Name2<span class="text-danger"> *</span></label>
-                                                    <input type="text" class="form-control" name="escalation_contact_name2">  
+                                                    <input type="text" class="form-control" name="escalation2_name">  
                                                 </div>
                                                 <div class="col-md-6">
                                                    
                                                     <label>Escalation Contact Phone2 <span class="text-danger"> *</span></label>
-                                                    <input type="text" class="form-control" name="escalation_contact_phone2">  
+                                                    <input type="text" class="form-control" name="escalation2_phone">  
                                                 </div>
                                                 <div class="col-md-6">
                                                    
                                                     <label>Escalation Contact Email2<span class="text-danger"> *</span></label>
-                                                    <input type="text" class="form-control" name="escalation_contact_email2">  
+                                                    <input type="text" class="form-control" name="escalation2_email">  
                                                 </div>
                                             </div>
                                         </div>
@@ -173,12 +173,12 @@
                                                 <div class="col-md-6">
                                                    
                                                     <label>Contact Person Name <span class="text-danger"> *</span></label>
-                                                    <input type="text" class="form-control" name="tel_no">  
+                                                    <input type="text" class="form-control" name="contact_person_name">  
                                                 </div>
                                                 <div class="col-md-6">
                                                    
                                                     <label>Address Line 1<span class="text-danger"> *</span></label>
-                                                    <input type="text" class="form-control" name="address_line_1">  
+                                                    <input type="text" class="form-control" name="address_line1">  
                                                 </div>
                                                 <div class="col-md-6">
                                                    
@@ -218,7 +218,7 @@
                                                 <div class="col-md-6">
                                                    
                                                     <label>Pincode / Zipcode<span class="text-danger"> *</span></label>
-                                                    <input type="text" class="form-control" name="zipcode">  
+                                                    <input type="text" class="form-control" name="pin_zip_code">  
                                                 </div>
                                                 
                                             </div>
@@ -245,7 +245,7 @@
     var selectedValue = document.getElementById("service_provider_type").value;
     //console.log("Selected value: " + selectedValue);
 //alert(selectedValue);
-    if(selectedValue == 1)
+    if(selectedValue == 1 || selectedValue == 2 || selectedValue == 3)
     {
         document.getElementById("myDiv").style.display = "block";
         document.getElementById("myDiv4").style.display = "none";

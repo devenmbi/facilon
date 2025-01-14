@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ventura Form</title>
+
+    {{-- Bootstrap CSS --}}
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+            font-size: 95%;
+        }
+
+        /* Style for paragraph element */
+        p {
+            text-align: justify;
+            font-weight: 600;
+        }
+
+        /* Style for anchor tag */
+        a {
+            color: windowtext;
+            text-decoration: none;
+        }
+
+        .WordSection1 {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .header,
+        .footer {
+            width: 100%;
+            background-color: #f58220;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        .header {
+            height: 200px;
+        }
+
+        .footer {
+            font-size: 14px;
+        }
+
+        .logo {
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .logo img {
+            max-width: 100%;
+            height: auto;
+            width: auto;
+            margin-top: 180px;
+            margin-bottom: 150px;
+        }
+
+        .form-section {
+            width: 80%;
+            border: 2px solid #000;
+            padding: 20px;
+            margin: 20px auto;
+            box-sizing: border-box;
+            max-height: calc(100% - 220px);
+            /* Prevents overflow */
+            overflow: hidden;
+        }
+
+        .form-section p {
+            margin: 10px 0;
+            font-size: 16px;
+        }
+
+        .footer {
+            margin-top: 60px;
+            width: 100%;
+            background-color: #f58220;
+            text-align: center;
+            padding: 10px 0;
+            color: #fff;
+            font-size: 18px;
+            font-weight: bold;
+            position: absolute;
+        }
+
+        .footer span {
+            display: block;
+            font-size: 14px;
+            margin-top: 5px;
+            font-weight: normal;
+        }
+
+        .WordSection2 {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th,
+        td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        .instructions-header {
+            font-family: "Trebuchet MS", sans-serif;
+            color: black;
+            background-color: lightgrey;
+            padding: 5px;
+            text-align: center;
+            font-weight: bold;
+            letter-spacing: 0.9pt;
+        }
+
+        .list-paragraph {
+            margin-top: 5px;
+            margin-left: 65px;
+            text-align: justify;
+        }
+
+        .list-paragraph b {
+            font-weight: bold;
+        }
+
+        .logo-container {
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+
+        .logo-container img {
+            height: 50px;
+            width: 200px;
+        }
+
+        .heading {
+            margin-top: 6.95pt;
+            margin-left: 45.35pt;
+            text-indent: -19.85pt;
+        }
+
+        .body-text {
+            margin-top: 6.3pt;
+            margin-left: 45.35pt;
+        }
+
+        .body-text p {
+            margin-bottom: 0;
+        }
+
+        .body-text span {
+            font-weight: bold;
+        }
+
+        .WordSection3 {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .instructions-header {
+            text-align: center;
+            font-weight: bold;
+            letter-spacing: 0.9pt;
+        }
+
+        .list-paragraph {
+            font-size: 16px;
+            margin: 10px 0;
+        }
+
+        .WordSection4 {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- First Page with Design -->
+    <div class="WordSection1">
+        <!-- Header Section -->
+        <div class="header"></div>
+
+        <!-- Logo -->
+        <div class="logo">
+            <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/ventura_logo.jpg'))) }}"
+                alt="Ventura Logo">
+        </div>
+
+        <!-- Form Section -->
+        <div class="form-section">
+            <p>Name Of Client: _________________________</p>
+            <p>Client Code: ____________________ Client ID: ____________________</p>
+            <p>Branch: _________________________</p>
+        </div>
+
+        <!-- Footer Section -->
+        <div class="footer">
+            Client Registration Form - INDIVIDUAL
+            <span>(Equity + Demat + Commodity)</span>
+            <span>THROUGH BUSINESS ASSOCIATES</span>
+        </div>
+    </div>
+
+    <!-- Second Page with Content -->
+    <div class=WordSection2>
+
+        <p class="MsoBodyText">
+        <table border="1" style="border-collapse: collapse; border-color: #000000; width: 20%; float: right;">
+            <tr>
+                <td style="padding: 5px; text-align: center; font-weight: bold;">
+                    PART - A
+                </td>
+            </tr>
+        </table>
+        </p>
+
+        <div
+            style="text-align: center; margin-top: 1.9pt; margin-right: 0in; margin-bottom: 2.3pt; margin-left: 2.85pt;">
+            ACCOUNT<span style="letter-spacing: .5pt;"> </span>
+            OPENING<span style="letter-spacing: .5pt;"> </span>
+            KIT<span style="letter-spacing: .5pt;"> </span>
+            -<span style="letter-spacing: .5pt;"> </span>
+            INDIVIDUAL<span style="letter-spacing: .5pt;"> </span>
+            <span style="letter-spacing: -.1pt;">INDEX</span>
+        </div>
+        <br>
+
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <td style="width: 10%; background: #D1D3D4; text-align: center;">Sr. No.</td>
+                    <td style="width: 30%; background: #D1D3D4; text-align: center;">Name of the Document</td>
+                    <td style="width: 30%; background: #D1D3D4; text-align: center;">Brief Significance of the Document
+                    </td>
+                    <td style="width: 26.1pt; background: #D1D3D4; text-align: center;">Part</td>
+                    <td colspan="2" style="background: #D1D3D4; text-align: center;">Page No.</td>
+                </tr>
+                <tr>
+                    <td style="background: #D1D3D4;">&nbsp;</td>
+                    <td style="background: #D1D3D4;">&nbsp;</td>
+                    <td style="background: #D1D3D4;">&nbsp;</td>
+                    <td style="background: #D1D3D4;">&nbsp;</td>
+                    <td style="width: 13%; background: #D1D3D4; text-align: center;">From</td>
+                    <td style="width: 13%; background: #D1D3D4; text-align: center;">To</td>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td colspan="6" style="text-align: center;">
+                        <strong>MANDATORY DOCUMENTS AS PRESCRIBED BY SEBI / EXCHANGES / DEPOSITORY</strong>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;">1</td>
+                    <td>Account Opening Form</td>
+                    <td style="text-align: justify;">
+                        A. KYC form - Document captures the basic information about the constituent and In-Person
+                        Verification details and instructions<br>
+                        B. Document captures the additional information about the constituent relevant to trading and
+                        demat account.
+                    </td>
+                    <td style="text-align: center;">A</td>
+                    <td style="text-align: center;">1</td>
+                    <td style="text-align: center;">8</td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;">2</td>
+                    <td>Tariff Schedule - Equity and Commodity</td>
+                    <td style="text-align: justify;">Document detailing the rate/amount of brokerage and other charges
+                        levied on the client for trading on the stock exchange(s).</td>
+                    <td style="text-align: center;">A</td>
+                    <td style="text-align: center;">14</td>
+                    <td style="text-align: center;">15</td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;">3</td>
+                    <td>Schedule of DP Charges and Option for DIS Booklet</td>
+                    <td style="text-align: justify;">Charges for Depository Services / Demat charges and option for
+                        issuance of DIS booklet.</td>
+                    <td style="text-align: center;">A</td>
+                    <td style="text-align: center;">16</td>
+                    <td style="text-align: center;"></td>17</td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;">4</td>
+                    <td>Acknowledgement letter</td>
+                    <td style="text-align: justify;">Acknowledgement indicating receipt of documents by client.</td>
+                    <td style="text-align: center;">A</td>
+                    <td style="text-align: center;">18</td>
+                    <td style="text-align: center;">19</td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;">5</td>
+                    <td>FATCA/CRS Declaration Form</td>
+                    <td style="text-align: justify;">Account opening form supplement</td>
+                    <td style="text-align: center;">A</td>
+                    <td style="text-align: center;">24</td>
+                    <td style="text-align: center;">26</td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;">6</td>
+                    <td>Consent & MITC</td>
+                    <td>Consent for usage of Aadhaar Number & Most Important Terms and Conditions (MITC)</td>
+                    <td style="text-align: center;">A</td>
+                    <td style="text-align: center;">27</td>
+                    <td style="text-align: center;">28</td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;">7</td>
+                    <td>Rights and Obligations</td>
+                    <td style="text-align: justify;">Document detailing the rights and obligations of the account
+                        holder.</td>
+                    <td style="text-align: center;">A</td>
+                    <td style="text-align: center;">29</td>
+                    <td style="text-align: center;">31</td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;">8</td>
+                    <td>Risk Disclosure Document (RDD)</td>
+                    <td style="text-align: justify;">Document detailing risks associated with dealing in the securities
+                        market.</td>
+                    <td style="text-align: center;">B</td>
+                    <td style="text-align: center;">11</td>
+                    <td style="text-align: center;">13</td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;">9</td>
+                    <td>Guidance Note</td>
+                    <td style="text-align: justify;">Document detailing do’s and don’ts for trading on exchange, for the
+                        education of the investors.</td>
+                    <td style="text-align: center;">B</td>
+                    <td style="text-align: center;">14</td>
+                    <td style="text-align: center;">15</td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;">10</td>
+                    <td>Policies and Procedures</td>
+                    <td style="text-align: justify;">Document describing significant policies and procedures of the
+                        stock broker.</td>
+                    <td style="text-align: center;">B</td>
+                    <td style="text-align: center;">16</td>
+                    <td style="text-align: center;">18</td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;">11</td>
+                    <td>Rights and Obligations of DP</td>
+                    <td style="text-align: justify;">Rights and Obligations of Beneficial Owner and Depository
+                        Participant as prescribed by SEBI and Depositories.</td>
+                    <td style="text-align: center;">B</td>
+                    <td style="text-align: center;">34</td>
+                    <td style="text-align: center;">35</td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;">12</td>
+                    <td>Intimation of Money Laundering</td>
+                    <td style="text-align: justify;">This document is to make the client aware of Anti Money Laundering
+                        (AML) provisions.</td>
+                    <td style="text-align: center;">B</td>
+                    <td style="text-align: center;">36</td>
+                    <td style="text-align: center;">36</td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;">13</td>
+                    <td>Risk Disclosure Document, Rights and Obligations and Do’s & Don’ts (Commodities)</td>
+                    <td style="text-align: justify;">Document detailing risks associated with dealing in Commodity
+                        Market, Rights and Obligations and Do’s & Don’ts for trading on Commodity Exchange for the
+                        education of the investor.</td>
+                    <td style="text-align: center;">B</td>
+                    <td style="text-align: center;">37</td>
+                    <td style="text-align: center;">49</td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;">14</td>
+                    <td>Investor Charter - Stock Brokers</td>
+                    <td style="text-align: justify;">Annexure-A.</td>
+                    <td style="text-align: center;">B</td>
+                    <td style="text-align: center;">50</td>
+                    <td style="text-align: center;">53</td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;">15</td>
+                    <td>Investor Charter - DP</td>
+                    <td style="text-align: justify;">Investor Charter by Depository Participants.</td>
+                    <td style="text-align: center;">B</td>
+                    <td style="text-align: center;">54</td>
+                    <td style="text-align: center;">59</td>
+                </tr>
+
+                <tr>
+                    <td colspan="6" style="text-align: center;">
+                        <strong>VOLUNTARY DOCUMENTS AS PROVIDED BY THE STOCK BROKER / DEPOSITORY</strong>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;">16</td>
+                    <td>Letter of Appointment</td>
+                    <td style="text-align: justify;">
+                        This document allows the client to give authority to another person for placing / giving /
+                        executing orders on his / her behalf.
+                    </td>
+                    <td style="text-align: center;">A</td>
+                    <td style="text-align: center;">19</td>
+                    <td style="text-align: center;">19</td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;">17</td>
+                    <td>Authorization for running account / request letter</td>
+                    <td style="text-align: justify;">
+                        Letter of authority / request to Ventura Securities Limited
+                    </td>
+                    <td style="text-align: center;">A</td>
+                    <td style="text-align: center;">20</td>
+                    <td style="text-align: center;">20</td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;">18</td>
+                    <td>Other Voluntary Consents</td>
+                    <td style="text-align: justify;">
+                        Consent for Electronic Contract Note (ECN), undertaking for High Value Transactions in Commodity
+                        Market.
+                    </td>
+                    <td style="text-align: center;">A</td>
+                    <td style="text-align: center;">21</td>
+                    <td style="text-align: center;">23</td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;">19</td>
+                    <td>Rights and Obligations</td>
+                    <td style="text-align: justify;">
+                        Additional clauses forming part and parcel of mandatory Rights and Obligations.
+                    </td>
+                    <td style="text-align: center;">B</td>
+                    <td style="text-align: center;">19</td>
+                    <td style="text-align: center;">33</td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;">20</td>
+                    <td>DDPI</td>
+                    <td style="text-align: justify;">Demat Debit and Pledge Instruction (DDPI)</td>
+                    <td style="text-align: center;">B</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+            </tbody>
+        </table>
+        <br />
+
+        <table>
+            <tr>
+                <th>Name of Stock Broker/Trading Member</th>
+                <th colspan="3">VENTURA SECURITIES LIMITED</th>
+            </tr>
+            <tr>
+                <th>Single SEBI Regn. No.</th>
+                <td>SEBI Registration INZ000194736</td>
+                <th>Regn. Date</th>
+                <td>August 21, 2018</td>
+            </tr>
+            <tr>
+                <th>SEBI Regn. No. NSDL</th>
+                <td colspan="3">IN-DP-565-2021 DP ID-IN303116</td>
+            </tr>
+            <tr>
+                <th>Clearing Member - NSE Commodity Derivatives</th>
+                <td colspan="3">SMC Global Securities Limited</td>
+            </tr>
+            <tr>
+                <th>SEBI Regn. No.</th>
+                <td>INZ000199438</td>
+                <th>Regn. Date</th>
+                <td>September 12, 2018</td>
+            </tr>
+            <tr>
+                <th>Registered Office address</th>
+                <td colspan="3">
+                    SMC Global Securities Ltd.,<br>
+                    11/6B, Shanti Chamber, Pusa Road, New Delhi-110005
+                </td>
+            </tr>
+            <tr>
+                <th>Registered / Correspondence Office</th>
+                <td colspan="3">
+                    I-Think Techno Campus, “B” Wing, 8th Floor, Off. Pokhran Road No. 2,<br>
+                    Close to Eastern Express Highway, Thane (West) - 400607, Maharashtra, India.
+                </td>
+            </tr>
+        </table>
+        <br>
+
+        <table>
+            <tr>
+                <th><span class="bold">Phone No.</span></th>
+                <td>91-22-6754 7000</td>
+                <td>91-22-6622 7100</td>
+                <td>
+                    <span class="bold">Website:</span>
+                    <a href="http://www.venturasecurities.com/">www.venturasecurities.com</a>
+                </td>
+            </tr>
+        </table>
+        <br>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Compliance Officer Name</th>
+                    <th>CEO Name</th>
+                    <th>Tel. No.</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Mr. D. P. Singh</td>
+                    <td>Mr. Hemant Majethia</td>
+                    <td>91-22-6754 7000</td>
+                    <td><a href="mailto:compliance@ventura1.com">compliance@ventura1.com</a></td>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+
+        <p>
+            <span style="letter-spacing: -0.3pt;">
+                For any grievance / dispute please contact us at the above address or email id -
+            </span>
+            <a href="mailto:complaints@ventura1.com">
+                complaints@ventura1.com
+            </a>
+            <span style="letter-spacing: -0.3pt;">
+                and Phone no.
+            </span>
+            91-22-67547000. In case not satisfied with the response, please contact BSE at
+            <a href="mailto:dis@bseindia.com">dis@bseindia.com</a>
+            and phone no. 91-22-22728517, NSE at
+            <a href="mailto:ignse@nse.co.in">ignse@nse.co.in</a>
+            and phone no. 1800 266 0058 / 91-22-26598191, MCX at
+            <a href="mailto:grievance@mcxindia.com">grievance@mcxindia.com</a>
+            and phone no. 91-22-66494070 / 91-22-67318888 & Option 0, NCDEX at
+            <a href="mailto:ig@ncdex.com">ig@ncdex.com</a>
+            and phone no. 1800 26 62339 / 91-22-66406789
+        </p>
+
+    </div>
+
+    <!-- Third Page with Content -->
+    <div class="WordSection3" style="position: relative;">
+        <div style="position: absolute; top: 0; right: 0;">
+            <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/ventura_logo.jpg'))) }}" alt="Ventura Logo" style="height: 50px; width: 200px;" >
+        </div>
+
+        <div class="row">
+            <p class="instructions-header">INSTRUCTIONS/CHECK LIST FOR FILLING KYC FORM</p>
+
+            <p class="list-paragraph">A. IMPORTANT POINTS:</p>
+            <p style="margin-left: 40px; text-align: justify; font-weight: normal;">
+                1. Self-attested copy of PAN card is mandatory for all clients,
+                including Promoters/Partners/Karta/Trustees and whole-time
+                directors and persons authorized to deal in securities on
+                behalf of company/firm/others.
+            </p>
+            <p style="margin-left: 40px; text-align: justify; font-weight: normal;">
+                2. Copies of all the documents submitted by the applicant should
+                be self-attested and accompanied by originals for verification.
+                In case the original of any document is not produced for
+                verification, then the copies should be properly attested by
+                entities authorized for attesting the documents, as per the
+                below-mentioned list.
+            </p>
+            <p style="margin-left: 40px; text-align: justify; font-weight: normal;">
+                3.	If any proof of identity or address is in a foreign
+                    language / regional language, then translation into
+                    English is required.
+            </p>
+            <p style="margin-left: 40px; text-align: justify; font-weight: normal;">
+                4.  Name & address of the applicant mentioned on the KYC form, should
+                    match with the documentary proof submitted.
+            </p>
+            <p style="margin-left: 40px; text-align: justify; font-weight: normal;">
+                5. If correspondence & permanent address are different, then proofs for both have to be submitted.
+            </p>
+            <p style="margin-left: 40px; text-align: justify; font-weight: normal;">
+                6. Sole proprietor must make the application in his individual name & capacity.
+            </p>
+            <p style="margin-left: 40px; text-align: justify; font-weight: normal;">
+                7. For non-residents and foreign nationals, (allowed to trade subject to RBI
+                and FEMA guidelines), copy of passport/PIO Card/ OCI Card and overseas
+                address proof is mandatory.
+            </p>
+            <p style="margin-left: 40px; text-align: justify; font-weight: normal;">
+                8. For foreign entities, CIN is optional; and in the absence of DIN no. for
+                the directors, their passport copy should be given.
+            </p>
+            <p style="margin-left: 40px; text-align: justify; font-weight: normal;">
+                9. In case of Merchant Navy NRI’s, Mariner’s declaration or certified copy of
+                CDC (Continuous Discharge Certificate) is to be submitted.
+            </p>
+            <p style="margin-left: 40px; text-align: justify; font-weight: normal;">
+                10. For opening an account with Depository participant or Mutual Fund, for a
+                    minor, photocopy of the School Leaving Certificate / Mark sheet issued by
+                    Higher Secondary Board / Passport of Minor / Birth Certificate must be
+                    provided.
+            </p>
+            <p style="margin-left: 40px; text-align: justify; font-weight: normal;">
+                11. Politically Exposed Persons (PEP) are defined as individuals who are or
+                    have been entrusted with prominent public functions in a foreign country,
+                    e.g., Heads of States or of Governments, senior politicians, senior
+                    Government / judicial / military officers, senior executives of state
+                    owned corporations, important political party officials, etc.
+            </p>
+        </div>
+
+        <div class="row">
+            <p class="list-paragraph">B. Proof of Identity (POI) : - List of documents admissible as Proof of Identity:</p>
+
+            <p style="margin-left: 40px; text-align: justify; font-weight: normal;">
+                1. Unique Identification Number (UID) (Aadhaar)/ Passport/ Voter ID card/ Driving license.
+            </p>
+            <p style="margin-left: 40px; text-align: justify; font-weight: normal;">
+                2. PAN card with photograph.
+            </p>
+            <p style="margin-left: 40px; text-align: justify; font-weight: normal;">
+                3. Identity card / document with applicant's Photo, issued by any of the following :
+                   Central / State Government and its Departments, Statutory / Regulatory Authorities,
+                   Public Sector Undertakings, Scheduled Commercial Banks, Public Financial Institutions,
+                   Colleges affiliated to Universities, Professional Bodies such as ICAI, ICWAI, ICSI, Bar
+                   Council etc., to their Members; and Credit cards / Debit cards issued by Banks.
+            </p>
+        </div>
+    </div>
+
+    <div class="row">
+        <p class="list-paragraph">C. Proof of Address : - List of documents admissible as Proof of Address :</p>
+        <p style="text-align: justify; font-weight: normal;">
+            (*Documents having an expiry date should be valid on the date of submission.)
+        </p>
+        <p style="margin-left: 40px; text-align: justify; font-weight: normal;">
+            1.  Passport / Voters Identity Card / Ration Card / Registered Lease or Sale Agreement
+                of Residence / Driving License / Flat Maintenance bill / Insurance Copy /
+                Aadhaar Card.
+        </p>
+        <p style="margin-left: 40px; text-align: justify; font-weight: normal;">
+            2.  Utility bills like Telephone Bill (only land line), Electricity bill or Gas
+                bill - Not more than 3 months old.
+        </p>
+        <p style="margin-left: 40px; text-align: justify; font-weight: normal;">
+            3. Bank Account Statement / Passbook - Not more than 3 months old.
+        </p>
+        <p style="margin-left: 40px; text-align: justify; font-weight: normal;">
+            4. Self-declaration by High Court and Supreme Court judges, giving the new address
+               in respect of their own accounts.
+        </p>
+        <p style="margin-left: 40px; text-align: justify; font-weight: normal;">
+            5. Proof of address issued by any of the following: Bank Managers of Scheduled Commercial
+               Banks / Scheduled Co-Operative Bank / Multinational Foreign Banks / Gazetted Officer
+               / Notary public / Elected representatives to the Legislative Assembly / Parliament
+               / Documents issued by any Govt. or Statutory Authority.
+        </p>
+        <p style="margin-left: 40px; text-align: justify; font-weight: normal;">
+            6. Identity card / document with address, issued by any of the following: Central / State Government
+               and its Departments, Statutory / Regulatory Authorities, Public Sector Undertakings, Scheduled
+               Commercial Banks, Public Financial Institutions, Colleges affiliated to Universities and
+               Professional Bodies such as ICAI, ICWAI, ICSI, Bar Council etc., to their Members.
+        </p>
+        <p style="margin-left: 40px; text-align: justify; font-weight: normal;">
+            7. For FII / sub account, Power of Attorney given by FII / sub-account to the Custodians
+               (which are duly notarized and/or apostiled or consularised) that gives the registered
+               address should be taken.
+        </p>
+    </div>
+
+    <!-- Fourt Page with Content -->
+    <div class=WordSection4>
+        <div style="position: relative; right: 0;">
+            <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/ventura_logo.jpg'))) }}" alt="Ventura Logo" style="height: 50px; width: 200px;" >
+        </div>
+
+
+    </div>
+
+</body>
+
+</html>

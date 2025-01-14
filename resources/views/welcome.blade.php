@@ -2,7 +2,7 @@
 @section('content')
     <div id="fullpage">
         <div id="section0" class="section slider-area fp-auto-height-responsive">
-        	<div id="hero" class="hero" style="background-image:url({{asset('public/admin/assets/images/banner/'.$fetch_banner_details->img_src)}});">
+        	<div id="hero" class="hero" style="background-image:url({{asset('admin/assets/images/banner/'.$fetch_banner_details->img_src)}});">
         		<div class="container">
         			<div class="row">
         				<div class="col-md-5">
@@ -28,18 +28,18 @@
         		</div>
         		<div class="row">
         		    @php $sr_no = 1; @endphp
-        		    
+
         		    @foreach($list_key_points AS $list_key_points_ind)
             		    <div class="col-md-4 col-sm-12">
             				<div class="cat-box wow fadeInUp">
             					<a href="{{ $list_key_points_ind->url }}" class="bg-tutu">
-            						<div class="icon-box"><img src="{{asset('public/admin/assets/images/key-points/'.$list_key_points_ind->img_src)}}" alt="icon"></div>
+            						<div class="icon-box"><img src="{{asset('admin/assets/images/key-points/'.$list_key_points_ind->img_src)}}" alt="icon"></div>
             						<strong class="title">{{ $list_key_points_ind->title }}</strong>
             						<span class="value">{{ $sr_no }}</span>
             					</a>
             				</div>
             			</div>
-            			
+
             			 @php $sr_no++; @endphp
             		@endforeach
         		</div>

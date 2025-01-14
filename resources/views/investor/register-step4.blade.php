@@ -21,7 +21,7 @@
                     {{csrf_field()}}
                     <input type="hidden" name="unique_code" value="{{ Crypt::decrypt($unique_code)}}">
                     <div class="single-field intro-name">
-                      <label for="username"><img src="{{asset('public/frontend/images/icon/presentation.png')}}"/> Introducer Name: <span class="referred-name">@php echo Crypt::decrypt($unique_code); @endphp</span>
+                      <label for="username"><img src="{{asset('frontend/images/icon/presentation.png')}}"/> Introducer Name: <span class="referred-name">@php echo Crypt::decrypt($unique_code); @endphp</span>
                       </label>
                     </div>
                     <div class="single-field self-sec">
@@ -62,7 +62,7 @@
                               <option value="select">Select Nationality</option>
                               <option value="Indian">Indian</option>
                               <option value="American">American</option>
-                              
+
                             </select>
                           </div>
                         </div>
@@ -140,8 +140,8 @@
                             </div>
                           </div>
                         </div>
-                        
-                          
+
+
                       </div>
                     </div>
                     <div class="name-sec" id="section_legal_div" style="display:none;">
@@ -151,7 +151,7 @@
                             <label for="username"><i class="fa-solid fa-user"></i> Name of the Entity: <span class="star-color">*</span> <a href="#"
                               data-toggle="popover" data-trigger="hover"
                               data-content="Should Be Same As The Incorporation/formation Documents"><img
-                                src="{{asset('public/frontend/images/information-button.png')}}" /></a>
+                                src="{{asset('frontend/images/information-button.png')}}" /></a>
                             </label>
                             <input type="text" name="entity_name">
                           </div>
@@ -160,7 +160,7 @@
                           <div class="single-field">
                             <label for="username"><i class="fa-solid fa-flag"></i> Country of Incorporation/Formation: <span class="star-color">*</span>
                             </label>
-                            @php 
+                            @php
                               $fetch_country_name = DB::table('isd_code_values')
                                                   ->get();
                             @endphp
@@ -169,7 +169,7 @@
                               @foreach($fetch_country_name as $country_name)
                               <option value="{{$country_name->country_name}}">{{$country_name->country_name}}</option>
                               @endforeach
-                              
+
                             </select>
                           </div>
                         </div>
@@ -194,7 +194,7 @@
                             <label for="username"><i class="fa-solid fa-users"></i> Name of Entity Representative: <span class="star-color">*</span> <a href="#"
                               data-toggle="popover" data-trigger="hover"
                               data-content="Name Should Match Your Identity Documents"><img
-                                src="{{asset('public/frontend/images/information-button.png')}}" /></a>
+                                src="{{asset('frontend/images/information-button.png')}}" /></a>
                             </label>
                             @php
                                 $decrypted_code1 = Crypt::decrypt($unique_code);
@@ -235,13 +235,13 @@
                                 <span>No <a href="#"
                                   data-toggle="popover" data-trigger="hover" data-title="Regulated Entity"
                                   data-content="Is the entity regulatd as a securities or banking provider?"><img
-                                    src="{{asset('public/frontend/images/information-button.png')}}" /></a></span>
+                                    src="{{asset('frontend/images/information-button.png')}}" /></a></span>
                               </label>
                             </div>
                           </div>
                         </div>
-                      
-                      
+
+
                     </div>
 
 
@@ -314,7 +314,7 @@
                             </div>
                           </div>
                         </div>
-                      </div>  
+                      </div>
                     <!-- <div class="single-field text-center confidential">
                       <a href="#">Privileged & Confidential</a>
                     </div> -->
@@ -329,13 +329,13 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script>
 
-    $(document).ready(function(){ 
+    $(document).ready(function(){
         $("#legal_country").change(function() {
-          
+
           const selectedVal = $(this).val();
           if(selectedVal == 'India')
           {
-            document.getElementById('legal_country_div').style.display = 'block'; 
+            document.getElementById('legal_country_div').style.display = 'block';
             document.getElementById('note_confirm_div').style.display = 'block';
             document.getElementById('button_div').style.display = 'block';
           }else{
@@ -344,31 +344,31 @@
             document.getElementById('button_div').style.display = 'block';
           }
         });
-      }); 
+      });
 
       function change_register(){
-        
-          var getSelectedValue = document.querySelector( 'input[name="Self"]:checked');   
-          if(getSelectedValue != null) {      
+
+          var getSelectedValue = document.querySelector( 'input[name="Self"]:checked');
+          if(getSelectedValue != null) {
               if(getSelectedValue.value == 'Legal Entity'){
-                
+
                 document.getElementById('section_legal_div').style.display = 'block';
                 document.getElementById('section_self_div').style.display = 'none';
                 // document.getElementById('pan_note_div').style.display = 'block';
-                
+
               }else{
-                
+
                 document.getElementById('section_legal_div').style.display = 'none';
                 document.getElementById('section_self_div').style.display = 'block';
                 // document.getElementById('pan_note_div').style.display = 'none';
-                
-              }  
-          }  
-       
+
+              }
+          }
+
       }
       function change(){
-          var getSelectedValue = document.querySelector( 'input[name="pancard"]:checked');   
-          if(getSelectedValue != null) {      
+          var getSelectedValue = document.querySelector( 'input[name="pancard"]:checked');
+          if(getSelectedValue != null) {
               if(getSelectedValue.value == 'No'){
                 //document.getElementById('pan_note_div').style.display = 'block';
                 document.getElementById('note_confirm_div').style.display = 'block';
@@ -377,14 +377,14 @@
                 //document.getElementById('pan_note_div').style.display = 'none';
                 document.getElementById('note_confirm_div').style.display = 'block';
                 document.getElementById('button_div').style.display = 'block';
-              }  
-          }  
-       
+              }
+          }
+
       }
 
       function change1(){
-          var getSelectedValue = document.querySelector( 'input[name="indian_origin"]:checked');   
-          if(getSelectedValue != null) {      
+          var getSelectedValue = document.querySelector( 'input[name="indian_origin"]:checked');
+          if(getSelectedValue != null) {
               if(getSelectedValue.value == 'Yes'){
                 document.getElementById('oci_card_div').style.display = 'block';
                 document.getElementById('note_confirm_div').style.display = 'block';
@@ -395,30 +395,30 @@
                 // document.getElementById('pan_note_div').style.display = 'block';
                 document.getElementById('note_confirm_div').style.display = 'block';
                 document.getElementById('button_div').style.display = 'block';
-              }  
-          }  
-       
+              }
+          }
+
       }
       function change2(){
-          var getSelectedValue = document.querySelector( 'input[name="oci_card"]:checked');   
-          if(getSelectedValue != null) {      
+          var getSelectedValue = document.querySelector( 'input[name="oci_card"]:checked');
+          if(getSelectedValue != null) {
               if(getSelectedValue.value == 'No'){
                 //document.getElementById('oci_card_note_div').style.display = 'block';
-                
+
               }else{
                 //document.getElementById('oci_card_note_div').style.display = 'none';
-              }  
-          }  
-       
+              }
+          }
+
       }
 
-      $(document).ready(function(){ 
+      $(document).ready(function(){
         $("#nationality").change(function() {
-          
+
           const selectedVal = $(this).val();
           if(selectedVal == 'Indian')
           {
-            document.getElementById('nationality_div').style.display = 'block'; 
+            document.getElementById('nationality_div').style.display = 'block';
             document.getElementById('other_nationality_div').style.display = 'none';
           }else{
             document.getElementById('nationality_div').style.display = 'none';
@@ -426,6 +426,6 @@
           }
         });
       });
-        
+
     </script>
 @endsection

@@ -26,10 +26,10 @@
                             <ul>
                                 @foreach($list_portfolio_management_services as $list_portfolio_management_services_ind)
                                     <li>
-                                        <span><img src="{{asset('public/admin/assets/images/portfolio-management-services/services/'.$list_portfolio_management_services_ind->img_src)}}"></span> 
-                                        
+                                        <span><img src="{{asset('admin/assets/images/portfolio-management-services/services/'.$list_portfolio_management_services_ind->img_src)}}"></span>
+
                                         <b>{{ $list_portfolio_management_services_ind->title }}</b>
-                                        
+
                                         {{ $list_portfolio_management_services_ind->description }}
                                     </li>
                                 @endforeach

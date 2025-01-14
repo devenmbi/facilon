@@ -30,7 +30,7 @@
                                         <div class="col-md-4">
                                             <div class="form-group row mt-3">
                                                 <div class="col-md-12">
-                                                    <label>Image <span class="text-danger"> *</span> <a href="{{asset('public/admin/assets/images/service-providers/'.$fetch_service_provider_details->img_src)}}" class="btn btn-sm btn-primary mb-2" target="_blank">View Image</a></label>
+                                                    <label>Image <span class="text-danger"> *</span> <a href="{{asset('admin/assets/images/service-providers/'.$fetch_service_provider_details->img_src)}}" class="btn btn-sm btn-primary mb-2" target="_blank">View Image</a></label>
                                                     <input type="file" class="form-control" name="img_src" accept="image/*">
                                                     <input type="hidden" name="old_img_src" value="{{ $fetch_service_provider_details->img_src }}">
 
@@ -57,5 +57,5 @@
                 </div>
             </div>
         </div>
-    </div>	
+    </div>
 @endsection

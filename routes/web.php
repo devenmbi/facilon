@@ -47,6 +47,8 @@ Route::post('broker/register/step3/{unique_code?}',[App\Http\Controllers\BrokerC
 
 Route::get('broker/register/thank-you',[App\Http\Controllers\BrokerController::class,'broker_register_thank_you_show'])->name('broker_register_thank_you_show');
 
+// ==== Generate registration PDF ====
+Route::get('register/pdf',[App\Http\Controllers\userRegisterPDFController::class,'user_register_pdf'])->name('user_register_pdf');
 
 //Investor Frontend Routes
 // Route::get('investor/register/step1',[App\Http\Controllers\InvestorController::class,'investor_register_step1_show'])->name('investor_register_step1_show');
@@ -70,7 +72,7 @@ Route::get('broker/register/thank-you',[App\Http\Controllers\BrokerController::c
 
 // Route::get('investor/register/thank-you',[App\Http\Controllers\InvestorController::class,'investor_register_thank_you_show'])->name('investor_register_thank_you_show');
 
-Auth::routes();
+// Auth::routes();
 Route::get('admin/login',[App\Http\Controllers\AdminController::class,'login_form'])->name('login.form');
 Route::post('login-functionality',[App\Http\Controllers\AdminController::class,'login_functionality'])->name('login.functionality');
 Route::group(['middleware'=>'admin'],function(){

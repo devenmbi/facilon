@@ -24,14 +24,14 @@
                                     </thead>
                                     <tbody>
                                         @php
-                                            $sr_no = 1;    
+                                            $sr_no = 1;
                                         @endphp
-                                        
+
                                         @if(count($list_portfolio_management_services) > 0)
                                             @foreach ($list_portfolio_management_services as $list_portfolio_management_services_ind)
                                                 <tr>
                                                     <td>{{ $sr_no++ }}</td>
-                                                    <td><img src="{{asset('public/admin/assets/images/portfolio-management-services/services/'.$list_portfolio_management_services_ind->img_src)}}" style="width: 100px; height:100px;"></td>
+                                                    <td><img src="{{asset('admin/assets/images/portfolio-management-services/services/'.$list_portfolio_management_services_ind->img_src)}}" style="width: 100px; height:100px;"></td>
                                                     <td>{{ $list_portfolio_management_services_ind->title }}</td>
                                                     <td>{{ date('d M Y', strtotime($list_portfolio_management_services_ind->created_at)) }}</td>
                                                     <td>
@@ -40,10 +40,10 @@
                                                         <a href="javascript:void(0)" class="btn btn-xs btn-danger" title="Delete" onclick="confirm_delete({{$list_portfolio_management_services_ind->id}})"><i class="bx bx-trash" aria-hidden="true"></i></a>
 
                                                         <script>
-                                                            function confirm_delete(id) 
+                                                            function confirm_delete(id)
                                                             {
                                                                 var confirmation = confirm("Are you sure you want to delete this service?");
-                                                                
+
                                                                 if(confirmation)
                                                                 {
                                                                     window.location.href = "{{route('admin.delete_portfolio_management_service')}}/"+id;
@@ -57,7 +57,7 @@
                                                             <a href="{{route('admin.activate_portfolio_management_service')}}/{{$list_portfolio_management_services_ind->id}}" class="btn btn-xs btn-success" title="Activate Service"><i class="bx bx-like" aria-hidden="true"></i></a>
                                                         @endif
                                                     </td>
-                                                </tr>  
+                                                </tr>
                                             @endforeach
                                         @else
                                             <tr>
@@ -75,22 +75,22 @@
     </div>
 
     <style>
-        .custom-align 
+        .custom-align
         {
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
-        .custom-align h5 
+        .custom-align h5
         {
             margin: 0;
         }
 
-        .custom-align button 
+        .custom-align button
         {
             margin-left: auto;
         }
     </style>
 @endsection
-				
+

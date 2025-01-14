@@ -20,20 +20,20 @@
                   <form action="{{route('service_provider_register_step2_submit')}}" data-bitwarden-watching="1" method="post">
                     {{csrf_field()}}
                     <input type="hidden" name="unique_code" value="{{ $unique_code }}">
-                    
+
                     <div class="single-field intro-name">
                       <label for="username"><span class="referred-name">Primary Contact Details </span>
                       </label>
                     </div>
 
                     <div class="name-sec" id="section_self_div" >
-                      
+
                       <div class="row">
                         <div class="col-md-6">
                           <div class="single-field">
                             <label for="username"><i class="fa-solid fa-user"></i> Primary Contact 1 - Name: <span class="star-color">*</span>
                             </label>
-                           
+
                             <input type="text" name="primary1_name" value="">
                           </div>
                         </div>
@@ -41,7 +41,7 @@
                           <div class="single-field">
                             <label for="username"><i class="fa-solid fa-user"></i>Primary Contact 1 - Phone: <span class="star-color">*</span>
                             </label>
-                           
+
                             <input type="text" name="primary1_phone" value="">
                           </div>
                         </div>
@@ -49,7 +49,7 @@
                           <div class="single-field">
                             <label for="username"><i class="fa-solid fa-user"></i> Primary Contact 1 - Email: <span class="star-color">*</span>
                             </label>
-                           
+
                             <input type="text" name="primary1_email" value="">
                           </div>
                         </div>
@@ -59,7 +59,7 @@
                           <div class="single-field">
                             <label for="username"><i class="fa-solid fa-user"></i> Primary Contact 2 - Name: <span class="star-color">*</span>
                             </label>
-                           
+
                             <input type="text" name="primary2_name" value="">
                           </div>
                         </div>
@@ -67,7 +67,7 @@
                           <div class="single-field">
                             <label for="username"><i class="fa-solid fa-user"></i>Primary Contact 2 - Phone: <span class="star-color">*</span>
                             </label>
-                           
+
                             <input type="text" name="primary2_phone" value="">
                           </div>
                         </div>
@@ -75,7 +75,7 @@
                           <div class="single-field">
                             <label for="username"><i class="fa-solid fa-user"></i> Primary Contact 2 - Email: <span class="star-color">*</span>
                             </label>
-                           
+
                             <input type="text" name="primary2_email" value="">
                           </div>
                         </div>
@@ -85,7 +85,7 @@
                           <div class="single-field">
                             <label for="username"><i class="fa-solid fa-user"></i> Primary Contact 3 - Name: <span class="star-color">*</span>
                             </label>
-                           
+
                             <input type="text" name="primary3_name" value="">
                           </div>
                         </div>
@@ -93,7 +93,7 @@
                           <div class="single-field">
                             <label for="username"><i class="fa-solid fa-user"></i>Primary Contact 3 - Phone: <span class="star-color">*</span>
                             </label>
-                           
+
                             <input type="text" name="primary3_phone" value="">
                           </div>
                         </div>
@@ -101,15 +101,15 @@
                           <div class="single-field">
                             <label for="username"><i class="fa-solid fa-user"></i> Primary Contact 3 - Email: <span class="star-color">*</span>
                             </label>
-                           
+
                             <input type="text" name="primary3_email" value="">
                           </div>
                         </div>
                       </div>
-                      
-                      
+
+
                     </div>
-                    
+
 
 
 
@@ -127,7 +127,7 @@
                               </label>
                             </div>
                           </div> -->
-                        
+
                       <div id="button_div">
                         <div class="row">
                           <div class="col-md-6">
@@ -141,7 +141,7 @@
                             </div>
                           </div>
                         </div>
-                      </div>  
+                      </div>
                     <!-- <div class="single-field text-center confidential">
                       <a href="#">Privileged & Confidential</a>
                     </div> -->
@@ -156,13 +156,13 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script>
 
-    $(document).ready(function(){ 
+    $(document).ready(function(){
         $("#legal_country").change(function() {
-          
+
           const selectedVal = $(this).val();
           if(selectedVal == 'India')
           {
-            document.getElementById('legal_country_div').style.display = 'block'; 
+            document.getElementById('legal_country_div').style.display = 'block';
             document.getElementById('note_confirm_div').style.display = 'block';
             document.getElementById('button_div').style.display = 'block';
           }else{
@@ -171,31 +171,31 @@
             document.getElementById('button_div').style.display = 'block';
           }
         });
-      }); 
+      });
 
       function change_register(){
-        
-          var getSelectedValue = document.querySelector( 'input[name="Self"]:checked');   
-          if(getSelectedValue != null) {      
+
+          var getSelectedValue = document.querySelector( 'input[name="Self"]:checked');
+          if(getSelectedValue != null) {
               if(getSelectedValue.value == 'Legal Entity'){
-                
+
                 document.getElementById('section_legal_div').style.display = 'block';
                 document.getElementById('section_self_div').style.display = 'none';
                 // document.getElementById('pan_note_div').style.display = 'block';
-                
+
               }else{
-                
+
                 document.getElementById('section_legal_div').style.display = 'none';
                 document.getElementById('section_self_div').style.display = 'block';
                 // document.getElementById('pan_note_div').style.display = 'none';
-                
-              }  
-          }  
-       
+
+              }
+          }
+
       }
       function change(){
-          var getSelectedValue = document.querySelector( 'input[name="pancard"]:checked');   
-          if(getSelectedValue != null) {      
+          var getSelectedValue = document.querySelector( 'input[name="pancard"]:checked');
+          if(getSelectedValue != null) {
               if(getSelectedValue.value == 'No'){
                 //document.getElementById('pan_note_div').style.display = 'block';
                 document.getElementById('note_confirm_div').style.display = 'block';
@@ -204,14 +204,14 @@
                 //document.getElementById('pan_note_div').style.display = 'none';
                 document.getElementById('note_confirm_div').style.display = 'block';
                 document.getElementById('button_div').style.display = 'block';
-              }  
-          }  
-       
+              }
+          }
+
       }
 
       function change1(){
-          var getSelectedValue = document.querySelector( 'input[name="indian_origin"]:checked');   
-          if(getSelectedValue != null) {      
+          var getSelectedValue = document.querySelector( 'input[name="indian_origin"]:checked');
+          if(getSelectedValue != null) {
               if(getSelectedValue.value == 'Yes'){
                 document.getElementById('oci_card_div').style.display = 'block';
                 document.getElementById('note_confirm_div').style.display = 'block';
@@ -222,30 +222,30 @@
                 // document.getElementById('pan_note_div').style.display = 'block';
                 document.getElementById('note_confirm_div').style.display = 'block';
                 document.getElementById('button_div').style.display = 'block';
-              }  
-          }  
-       
+              }
+          }
+
       }
       function change2(){
-          var getSelectedValue = document.querySelector( 'input[name="oci_card"]:checked');   
-          if(getSelectedValue != null) {      
+          var getSelectedValue = document.querySelector( 'input[name="oci_card"]:checked');
+          if(getSelectedValue != null) {
               if(getSelectedValue.value == 'No'){
                 //document.getElementById('oci_card_note_div').style.display = 'block';
-                
+
               }else{
                 //document.getElementById('oci_card_note_div').style.display = 'none';
-              }  
-          }  
-       
+              }
+          }
+
       }
 
-      $(document).ready(function(){ 
+      $(document).ready(function(){
         $("#nationality").change(function() {
-          
+
           const selectedVal = $(this).val();
           if(selectedVal == 'Indian')
           {
-            document.getElementById('nationality_div').style.display = 'block'; 
+            document.getElementById('nationality_div').style.display = 'block';
             document.getElementById('other_nationality_div').style.display = 'none';
           }else{
             document.getElementById('nationality_div').style.display = 'none';
@@ -253,6 +253,6 @@
           }
         });
       });
-        
+
     </script>
 @endsection

@@ -11,7 +11,7 @@
                         <div class="col-md-4 col-sm-12">
                             <div class="box-location-v3 hover-img not-overlay hover-btn-view">
                                 <div class="img-style">
-                                    <img src="{{asset('public/admin/assets/images/service-providers/'.$list_service_providers_ind->img_src)}}" alt="image-location">
+                                    <img src="{{asset('admin/assets/images/service-providers/'.$list_service_providers_ind->img_src)}}" alt="image-location">
                                 </div>
                                 <div class="content">
                                     <h6><a href="#" class="link">{{ $list_service_providers_ind->title }}</a></h6>
@@ -70,7 +70,7 @@
                         <div class="service-block wow fadeInUp">
                         <div class="inner-box">
                             <img src="./images/icon/pros-and-cons.png">
-                        
+
                             <h6 class="title">Review and Evaluate list of Service Providers in India​​​</h6>
                         </div>
                         </div>
@@ -79,7 +79,7 @@
                         <div class="service-block wow fadeInUp">
                         <div class="inner-box">
                             <img src="./images/icon/doctor-on-call.png">
-                        
+
                             <h6 class="title">Appoint a Service Provider</h6>
                         </div>
                         </div>
@@ -104,7 +104,7 @@
                         <div class="service-block wow fadeInUp">
                         <div class="inner-box">
                             <img src="./images/icon/documents.png">
-                        
+
                             <h6 class="title">Provide account opening documentation​</h6>
                         </div>
                         </div>
@@ -113,7 +113,7 @@
                         <div class="service-block wow fadeInUp">
                         <div class="inner-box">
                             <img src="./images/icon/login.png">
-                        
+
                             <h6 class="title">Obtain account numbers from Service Providers​</h6>
                         </div>
                         </div>
@@ -122,7 +122,7 @@
                         <div class="service-block wow fadeInUp">
                         <div class="inner-box">
                             <img src="./images/icon/instructions.png">
-                        
+
                             <h6 class="title">Send Instructions using Facilon Services ​​​</h6>
                         </div>
                         </div>
@@ -130,5 +130,5 @@
                 </div>
             </div>
         </div>
-    
+
 @endsection

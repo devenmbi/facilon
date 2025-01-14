@@ -26,10 +26,10 @@
                             <ul>
                                 @foreach($list_trading_listed_securities_services as $list_trading_listed_securities_services_ind)
                                     <li>
-                                        <span><img src="{{asset('public/admin/assets/images/trading-listed-securities/services/'.$list_trading_listed_securities_services_ind->img_src)}}"></span> 
-                                        
+                                        <span><img src="{{asset('admin/assets/images/trading-listed-securities/services/'.$list_trading_listed_securities_services_ind->img_src)}}"></span>
+
                                         <b>{{ $list_trading_listed_securities_services_ind->title }}</b>
-                                        
+
                                         {{ $list_trading_listed_securities_services_ind->description }}
                                     </li>
                                 @endforeach

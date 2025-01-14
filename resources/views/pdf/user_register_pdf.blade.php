@@ -207,6 +207,40 @@
             position: relative;
             overflow: hidden;
         }
+
+        .WordSection5 {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .headert-section {
+            background-color: #f2f2f2;
+        }
+
+        .important-instructions {
+            background-color: #f2f2f2;
+            padding: 10px;
+            margin-top: 10px;
+        }
+
+        .personal-details {
+            font-weight: bold;
+        }
+
+        input[type="radio"] {
+            margin-right: 5px;
+        }
+
+        /* Optional: For better visual separation */
+        .section-header {
+            font-weight: bold;
+            margin-top: 15px;
+            margin-bottom: 5px;
+        }
     </style>
 </head>
 
@@ -583,20 +617,21 @@
     <!-- Third Page with Content -->
     <div class="WordSection3" style="position: relative;">
         <div style="position: absolute; top: 0; right: 0;">
-            <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/ventura_logo.jpg'))) }}" alt="Ventura Logo" style="height: 50px; width: 200px;" >
+            <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/ventura_logo.jpg'))) }}"
+                alt="Ventura Logo" style="height: 50px; width: 200px;">
         </div>
 
         <div class="row">
             <p class="instructions-header">INSTRUCTIONS/CHECK LIST FOR FILLING KYC FORM</p>
 
             <p class="list-paragraph">A. IMPORTANT POINTS:</p>
-            <p style="margin-left: 40px; text-align: justify; font-weight: normal;">
+            <p style="margin-left: 40px; text-align: justify; font-weight: normal; font-size:16px;">
                 1. Self-attested copy of PAN card is mandatory for all clients,
                 including Promoters/Partners/Karta/Trustees and whole-time
                 directors and persons authorized to deal in securities on
                 behalf of company/firm/others.
             </p>
-            <p style="margin-left: 40px; text-align: justify; font-weight: normal;">
+            <p style="margin-left: 40px; text-align: justify; font-weight: normal; font-size:16px;">
                 2. Copies of all the documents submitted by the applicant should
                 be self-attested and accompanied by originals for verification.
                 In case the original of any document is not produced for
@@ -604,113 +639,480 @@
                 entities authorized for attesting the documents, as per the
                 below-mentioned list.
             </p>
-            <p style="margin-left: 40px; text-align: justify; font-weight: normal;">
-                3.	If any proof of identity or address is in a foreign
-                    language / regional language, then translation into
-                    English is required.
+            <p style="margin-left: 40px; text-align: justify; font-weight: normal; font-size:16px;">
+                3. If any proof of identity or address is in a foreign
+                language / regional language, then translation into
+                English is required.
             </p>
-            <p style="margin-left: 40px; text-align: justify; font-weight: normal;">
-                4.  Name & address of the applicant mentioned on the KYC form, should
-                    match with the documentary proof submitted.
+            <p style="margin-left: 40px; text-align: justify; font-weight: normal; font-size:16px;">
+                4. Name & address of the applicant mentioned on the KYC form, should
+                match with the documentary proof submitted.
             </p>
-            <p style="margin-left: 40px; text-align: justify; font-weight: normal;">
+            <p style="margin-left: 40px; text-align: justify; font-weight: normal; font-size:16px;">
                 5. If correspondence & permanent address are different, then proofs for both have to be submitted.
             </p>
-            <p style="margin-left: 40px; text-align: justify; font-weight: normal;">
+            <p style="margin-left: 40px; text-align: justify; font-weight: normal; font-size:16px;">
                 6. Sole proprietor must make the application in his individual name & capacity.
             </p>
-            <p style="margin-left: 40px; text-align: justify; font-weight: normal;">
+            <p style="margin-left: 40px; text-align: justify; font-weight: normal; font-size:16px;">
                 7. For non-residents and foreign nationals, (allowed to trade subject to RBI
                 and FEMA guidelines), copy of passport/PIO Card/ OCI Card and overseas
                 address proof is mandatory.
             </p>
-            <p style="margin-left: 40px; text-align: justify; font-weight: normal;">
+            <p style="margin-left: 40px; text-align: justify; font-weight: normal; font-size:16px;">
                 8. For foreign entities, CIN is optional; and in the absence of DIN no. for
                 the directors, their passport copy should be given.
             </p>
-            <p style="margin-left: 40px; text-align: justify; font-weight: normal;">
+            <p style="margin-left: 40px; text-align: justify; font-weight: normal; font-size:16px;">
                 9. In case of Merchant Navy NRI’s, Mariner’s declaration or certified copy of
                 CDC (Continuous Discharge Certificate) is to be submitted.
             </p>
-            <p style="margin-left: 40px; text-align: justify; font-weight: normal;">
+            <p style="margin-left: 40px; text-align: justify; font-weight: normal; font-size:16px;">
                 10. For opening an account with Depository participant or Mutual Fund, for a
-                    minor, photocopy of the School Leaving Certificate / Mark sheet issued by
-                    Higher Secondary Board / Passport of Minor / Birth Certificate must be
-                    provided.
+                minor, photocopy of the School Leaving Certificate / Mark sheet issued by
+                Higher Secondary Board / Passport of Minor / Birth Certificate must be
+                provided.
             </p>
-            <p style="margin-left: 40px; text-align: justify; font-weight: normal;">
+            <p style="margin-left: 40px; text-align: justify; font-weight: normal; font-size:16px;">
                 11. Politically Exposed Persons (PEP) are defined as individuals who are or
-                    have been entrusted with prominent public functions in a foreign country,
-                    e.g., Heads of States or of Governments, senior politicians, senior
-                    Government / judicial / military officers, senior executives of state
-                    owned corporations, important political party officials, etc.
+                have been entrusted with prominent public functions in a foreign country,
+                e.g., Heads of States or of Governments, senior politicians, senior
+                Government / judicial / military officers, senior executives of state
+                owned corporations, important political party officials, etc.
             </p>
         </div>
 
         <div class="row">
-            <p class="list-paragraph">B. Proof of Identity (POI) : - List of documents admissible as Proof of Identity:</p>
+            <p class="list-paragraph">B. Proof of Identity (POI) : - List of documents admissible as Proof of Identity:
+            </p>
 
-            <p style="margin-left: 40px; text-align: justify; font-weight: normal;">
+            <p style="margin-left: 40px; text-align: justify; font-weight: normal; font-size:16px;">
                 1. Unique Identification Number (UID) (Aadhaar)/ Passport/ Voter ID card/ Driving license.
             </p>
-            <p style="margin-left: 40px; text-align: justify; font-weight: normal;">
+            <p style="margin-left: 40px; text-align: justify; font-weight: normal; font-size:16px;">
                 2. PAN card with photograph.
             </p>
-            <p style="margin-left: 40px; text-align: justify; font-weight: normal;">
+            <p style="margin-left: 40px; text-align: justify; font-weight: normal; font-size:16px;">
                 3. Identity card / document with applicant's Photo, issued by any of the following :
-                   Central / State Government and its Departments, Statutory / Regulatory Authorities,
-                   Public Sector Undertakings, Scheduled Commercial Banks, Public Financial Institutions,
-                   Colleges affiliated to Universities, Professional Bodies such as ICAI, ICWAI, ICSI, Bar
-                   Council etc., to their Members; and Credit cards / Debit cards issued by Banks.
+                Central / State Government and its Departments, Statutory / Regulatory Authorities,
+                Public Sector Undertakings, Scheduled Commercial Banks, Public Financial Institutions,
+                Colleges affiliated to Universities, Professional Bodies such as ICAI, ICWAI, ICSI, Bar
+                Council etc., to their Members; and Credit cards / Debit cards issued by Banks.
             </p>
         </div>
-    </div>
 
-    <div class="row">
-        <p class="list-paragraph">C. Proof of Address : - List of documents admissible as Proof of Address :</p>
-        <p style="text-align: justify; font-weight: normal;">
-            (*Documents having an expiry date should be valid on the date of submission.)
-        </p>
-        <p style="margin-left: 40px; text-align: justify; font-weight: normal;">
-            1.  Passport / Voters Identity Card / Ration Card / Registered Lease or Sale Agreement
+        <div class="row">
+            <p class="list-paragraph">C. Proof of Address : - List of documents admissible as Proof of Address :</p>
+            <p style="text-align: justify; font-weight: normal;">
+                (*Documents having an expiry date should be valid on the date of submission.)
+            </p>
+            <p style="margin-left: 40px; text-align: justify; font-weight: normal; font-size:16px;">
+                1. Passport / Voters Identity Card / Ration Card / Registered Lease or Sale Agreement
                 of Residence / Driving License / Flat Maintenance bill / Insurance Copy /
                 Aadhaar Card.
-        </p>
-        <p style="margin-left: 40px; text-align: justify; font-weight: normal;">
-            2.  Utility bills like Telephone Bill (only land line), Electricity bill or Gas
+            </p>
+            <p style="margin-left: 40px; text-align: justify; font-weight: normal; font-size:16px;">
+                2. Utility bills like Telephone Bill (only land line), Electricity bill or Gas
                 bill - Not more than 3 months old.
-        </p>
-        <p style="margin-left: 40px; text-align: justify; font-weight: normal;">
-            3. Bank Account Statement / Passbook - Not more than 3 months old.
-        </p>
-        <p style="margin-left: 40px; text-align: justify; font-weight: normal;">
-            4. Self-declaration by High Court and Supreme Court judges, giving the new address
-               in respect of their own accounts.
-        </p>
-        <p style="margin-left: 40px; text-align: justify; font-weight: normal;">
-            5. Proof of address issued by any of the following: Bank Managers of Scheduled Commercial
-               Banks / Scheduled Co-Operative Bank / Multinational Foreign Banks / Gazetted Officer
-               / Notary public / Elected representatives to the Legislative Assembly / Parliament
-               / Documents issued by any Govt. or Statutory Authority.
-        </p>
-        <p style="margin-left: 40px; text-align: justify; font-weight: normal;">
-            6. Identity card / document with address, issued by any of the following: Central / State Government
-               and its Departments, Statutory / Regulatory Authorities, Public Sector Undertakings, Scheduled
-               Commercial Banks, Public Financial Institutions, Colleges affiliated to Universities and
-               Professional Bodies such as ICAI, ICWAI, ICSI, Bar Council etc., to their Members.
-        </p>
-        <p style="margin-left: 40px; text-align: justify; font-weight: normal;">
-            7. For FII / sub account, Power of Attorney given by FII / sub-account to the Custodians
-               (which are duly notarized and/or apostiled or consularised) that gives the registered
-               address should be taken.
-        </p>
+            </p>
+            <p style="margin-left: 40px; text-align: justify; font-weight: normal; font-size:16px;">
+                3. Bank Account Statement / Passbook - Not more than 3 months old.
+            </p>
+            <p style="margin-left: 40px; text-align: justify; font-weight: normal; font-size:16px;">
+                4. Self-declaration by High Court and Supreme Court judges, giving the new address
+                in respect of their own accounts.
+            </p>
+            <p style="margin-left: 40px; text-align: justify; font-weight: normal; font-size:16px;">
+                5. Proof of address issued by any of the following: Bank Managers of Scheduled Commercial
+                Banks / Scheduled Co-Operative Bank / Multinational Foreign Banks / Gazetted Officer
+                / Notary public / Elected representatives to the Legislative Assembly / Parliament
+                / Documents issued by any Govt. or Statutory Authority.
+            </p>
+            <p style="margin-left: 40px; text-align: justify; font-weight: normal; font-size:16px;">
+                6. Identity card / document with address, issued by any of the following: Central / State Government
+                and its Departments, Statutory / Regulatory Authorities, Public Sector Undertakings, Scheduled
+                Commercial Banks, Public Financial Institutions, Colleges affiliated to Universities and
+                Professional Bodies such as ICAI, ICWAI, ICSI, Bar Council etc., to their Members.
+            </p>
+            <p style="margin-left: 40px; text-align: justify; font-weight: normal; font-size:16px;">
+                7. For FII / sub account, Power of Attorney given by FII / sub-account to the Custodians
+                (which are duly notarized and/or apostiled or consularised) that gives the registered
+                address should be taken.
+            </p>
+        </div>
+
+        <div class="row">
+            <p class="list-paragraph">D. Exemptions/clarifications to PAN :</p>
+            <p style="text-align: justify; font-weight: normal;">
+                (*Sufficient documentary evidence in support of such claims to be collected.)
+            </p>
+            <p style="margin-left: 40px; text-align: justify; font-weight: normal; font-size:16px;">
+                1. In case of transactions undertaken on behalf of Central Government and / or
+                State Government and by officials appointed by Courts e.g. Official liquidator,
+                Court receiver etc.
+            </p>
+            <p style="margin-left: 40px; text-align: justify; font-weight: normal; font-size:16px;">
+                2. Investors residing in the state of Sikkim.
+            </p>
+            <p style="margin-left: 40px; text-align: justify; font-weight: normal; font-size:16px;">
+                3. UN entities/multilateral agencies exempt from paying taxes / filing tax returns
+                in India.
+            </p>
+            <p style="margin-left: 40px; text-align: justify; font-weight: normal; font-size:16px;">
+                4. SIP of Mutual Funds upto Rs 50,000 /- p.a.
+            </p>
+            <p style="margin-left: 40px; text-align: justify; font-weight: normal; font-size:16px;">
+                5. In case of institutional clients, namely, FIIs, MFs, VCFs, FVCIs,
+                Scheduled Commercial Banks, Multilateral and Bilateral Development Financial Institutions,
+                State Industrial Development Corporations, Insurance Companies registered with IRDA and
+                Public Financial Institution as defined under section 4A of the Companies Act, 1956,
+                Custodians shall verify the PAN card details with the original PAN card and provide duly
+                certified copies of such verified PAN details to the intermediary.
+            </p>
+        </div>
+
     </div>
 
     <!-- Fourt Page with Content -->
     <div class=WordSection4>
         <div style="position: relative; right: 0;">
-            <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/ventura_logo.jpg'))) }}" alt="Ventura Logo" style="height: 50px; width: 200px;" >
+            <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/ventura_logo.jpg'))) }}"
+                alt="Ventura Logo" style="height: 50px; width: 200px;">
         </div>
+
+        <div class="row">
+            <p class="list-paragraph">E. List of people authorized to attest the documents :</p>
+            <p style="margin-left: 40px; text-align: justify; font-weight: normal; font-size:16px;">
+                1. Notary Public, Gazetted Officer, Manager of a Scheduled Commercial /
+                Co-operative Bank or Multinational Foreign Banks (Name, Designation
+                & Seal should be affixed on the copy).
+            </p>
+            <p style="margin-left: 40px; text-align: justify; font-weight: normal; font-size:16px;">
+                2. In case of NRIs, authorized officials of overseas branches of Scheduled Commercial Banks
+                registered in India, Notary Public, Court Magistrate, Judge, Indian Embassy /
+                Consulate General in the country where the client resides are permitted to attest the
+                documents.
+            </p>
+        </div>
+
+        <div class="row">
+            <p class="list-paragraph">F. Additional documents in case of trading in derivatives segments - illustrative
+                list :</p>
+            <table class="table table-bordered">
+                <tr>
+                    <td>Copy of ITR Acknowledgement</td>
+                    <td>Copy of Annual Accounts</td>
+                </tr>
+                <tr>
+                    <td>In case of salary income - Salary Slip, Copy of Form 16</td>
+                    <td>Net worth certificate</td>
+                </tr>
+                <tr>
+                    <td>Copy of demat account holding statement.</td>
+                    <td>Bank account statement for last 6 months</td>
+                </tr>
+                <tr>
+                    <td>Any other relevant documents substantiating ownership of assets.</td>
+                    <td>Self declaration with relevant supporting documents.</td>
+                </tr>
+            </table>
+
+            <p style="text-align: justify; font-weight: normal; font-size:16px;">
+                *In respect of other clients, documents as per risk management policy of the
+                stock broker need to be provided by the client from time to time.
+            </p>
+        </div>
+
+        <div class="row">
+            <p style="text-align: justify; font-weight: normal; font-size:16px;">
+                <b>G.</b> Copy of cancelled cheque leaf / pass book / bank statement specifying name of the
+                constituent, MICR Code and IFSC Code of the bank should be submitted.
+            </p>
+        </div>
+
+        <div class="row">
+            <p style="text-align: justify; font-weight: normal; font-size:16px;">
+                <b>H.</b> Demat master or recent holding statement issued by DP bearing name of the client.
+            </p>
+        </div>
+
+        <div class="row">
+            <p class="list-paragraph">I. For individuals :</p>
+            <p style="margin-left: 40px; text-align: justify; font-weight: normal; font-size:16px;">
+                a. Stock broker has an option of doing 'in-person' verification through web camera at the
+                branch office of the stock broker /sub- broker's office.
+            </p>
+            <p style="margin-left: 40px; text-align: justify; font-weight: normal; font-size:16px;">
+                b. In case of non-resident clients, employees at the stock broker's local office, overseas
+                can do in-person' verification. Further, considering the infeasibility of carrying out
+                'In-person' verification of the non-resident clients by the stock broker's staff,
+                attestation of KYC documents by Notary Public, Court, Magistrate, Judge, Local Banker,
+                Indian Embassy / Consulate General in the country where the client resides may be permitted.
+            </p>
+        </div>
+
+    </div>
+
+    <!--- Fifth Page with Content -->
+    <div class="WordSection5">
+
+        <table border="1" style="border-collapse: collapse; border-color: #000000; width: 30%; float: right;">
+            <tr>
+                <td style="padding: 10px; text-align: left; font-weight: bold; font-size: 20px; line-height: 20px;">
+                    FU |
+                </td>
+            </tr>
+        </table>
+        <br><br><br>
+
+        <!-- Instructions Section -->
+        <table style="width: 100%; font-size: 12px; font-weight: normal; ">
+            <thead>
+                <tr>
+                    <th style="text-align: left;  padding-bottom: 5px;" colspan="3">
+                        CENTRAL KYC REGISTRY | Know Your Cusstomer (KYC) Application Form | Individual
+                    </th>
+                </tr>
+                <tr>
+                    <th style="text-align: left;  padding-bottom: 5px;" colspan="3">
+                        <h4>Important Instructions:</h4>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <!-- Section 1 -->
+                    <td style="vertical-align: top;">
+                        <ul style="list-style-type: none; padding-left: 0;">
+                            <p>A) Fields marked with “*” are mandatory fields.</p>
+                            <p>B) Please fill the form in English and in BLOCK letters.</p>
+                            <p>C) Please fill the date in DD-MM-YYYY format.</p>
+                            <p>D) Please read section-wise detailed guidelines/instructions at the end.</p>
+                        </ul>
+                    </td>
+                    <!-- Section 2 -->
+                    <td style="vertical-align: top;">
+                        <ul style="list-style-type: none; padding-left: 0;">
+                            <p>E) List of State/U.T codes as per Indian Motor Vehicle Act, 1988 is available at the end.
+                            </p>
+                            <p>F) List of two-character ISO 3166 country codes is available at the end.</p>
+                            <p>G) KYC number of applicant is mandatory for update application.</p>
+                            <p>H) For particular section update, please tick (✓) in the box available before the section
+                                number and strike off the sections not required to be updated.</p>
+                        </ul>
+                    </td>
+                    <!-- Section 3 -->
+                    <td style="vertical-align: top; padding: 10px;">
+                        <ul style="list-style-type: none; padding-left: 0;">
+                            <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/central_KYC_logo.png'))) }}"
+                                alt="Ventura Logo">
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+        <br>
+
+        <table style="width: 700px; border-spacing: 0; font-size: 12px; border: 1px solid #000;">
+            <thead>
+                <tr>
+                    <th colspan="5" style="text-align: left; padding: 5px; border: 1px solid #000;">
+                        For office use only
+                        (To be filled by financial institution)
+                    </th>
+                </tr>
+                <tr>
+                    <th colspan="2" style="border: 1px solid #000; padding: 5px;"><b>Application Type :-</b></th>
+                    <th style="border: 1px solid #000; padding: 5px;"><input type="checkbox" name="app_type" value="New"> New</th>
+                    <th style="border: 1px solid #000; padding: 5px;"><input type="checkbox" name="app_type" value="Update"> Update</th>
+                    <th style="border: 1px solid #000; padding: 5px;"></th>
+                </tr>
+                <tr>
+                    <th colspan="2" style="border: 1px solid #000; padding: 5px;"><b>KYC Number :-</b> </th>
+                    <th colspan="3" style="border: 1px solid #000; padding: 5px;">(Mandatory for KYC update request)</th>
+                </tr>
+                <tr>
+                    <td colspan="5" style="border: 1px solid #000; padding: 5px;">
+                        <strong>1. PERSONAL DETAILS</strong> (Please refer to instruction A at the end)
+                    </td>
+                </tr>
+            </thead>
+        </table>
+
+        <table style="width: 700px; border-spacing: 0; font-size: 12px; border: 1px solid #000;">
+            <thead>
+                <tr>
+                    <td style="border: 1px solid #000; padding: 5px; text-align : center; width:20%;" >
+                    </td>
+
+                    <td style="border: 1px solid #000; padding: 5px; text-align : center; width:20%;">
+                        Prefix
+                    </td>
+
+                    <td style="border: 1px solid #000; padding: 5px; text-align : center; width:20%;">
+                        First Name
+                    </td>
+
+                    <td style="border: 1px solid #000; padding: 5px; text-align : center; width:20%;">
+                        Middle Name
+                    </td>
+
+                    <td style="border: 1px solid #000; padding: 5px; text-align : center; width:20%;">
+                        Last Name
+                    </td>
+                </tr>
+
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td style="border: 1px solid #000; padding: 5px;">
+                        <input type="checkbox" name="app_type" value="New"> Name (Same as ID proof)
+                    </td>
+
+                    <td style="border: 1px solid #000; border-bottom: 1px solid black; padding: 5px;">
+                        <input type="text" style="width: 20%; height: 20px; padding: 0; border-color:#000000;">
+                        <input type="text" style="width: 20%; height: 20px; padding: 0; border-color:#000000;">
+                        <input type="text" style="width: 20%; height: 20px; padding: 0; border-color:#000000;">
+                    </td>
+
+                    <td style="border: 1px solid #000; padding: 5px;">
+                        <input type="text" style="width: 20%; height: 20px; padding: 0; border-color:#000000;">
+                        <input type="text" style="width: 20%; height: 20px; padding: 0; border-color:#000000;">
+                        <input type="text" style="width: 20%; height: 20px; padding: 0; border-color:#000000;">
+
+                    </td>
+
+                    <td style="border: 1px solid #000; padding: 5px;">
+                        <input type="text" style="width: 20%; height: 20px; padding: 0; border-color:#000000;">
+                        <input type="text" style="width: 20%; height: 20px; padding: 0; border-color:#000000;">
+                        <input type="text" style="width: 20%; height: 20px; padding: 0; border-color:#000000;">
+                    </td>
+
+                    <td style="border: 1px solid #000; padding: 5px;">
+                        <input type="text" style="width: 20%; height: 20px; padding: 0; border-color:#000000;">
+                        <input type="text" style="width: 20%; height: 20px; padding: 0; border-color:#000000;">
+                        <input type="text" style="width: 20%; height: 20px; padding: 0; border-color:#000000;">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td style="border: 1px solid #000; padding: 5px;">
+                        Maiden Name (if any *)
+                    </td>
+
+                    <td style="border: 1px solid #000; border-bottom: 1px solid black; padding: 5px;">
+                        <input type="text" style="width: 20%; height: 20px; padding: 0; border-color:#000000;">
+                        <input type="text" style="width: 20%; height: 20px; padding: 0; border-color:#000000;">
+                        <input type="text" style="width: 20%; height: 20px; padding: 0; border-color:#000000;">
+                    </td>
+
+                    <td style="border: 1px solid #000; padding: 5px;">
+                        <input type="text" style="width: 20%; height: 20px; padding: 0; border-color:#000000;">
+                        <input type="text" style="width: 20%; height: 20px; padding: 0; border-color:#000000;">
+                        <input type="text" style="width: 20%; height: 20px; padding: 0; border-color:#000000;">
+
+                    </td>
+
+                    <td style="border: 1px solid #000; padding: 5px;">
+                        <input type="text" style="width: 20%; height: 20px; padding: 0; border-color:#000000;">
+                        <input type="text" style="width: 20%; height: 20px; padding: 0; border-color:#000000;">
+                        <input type="text" style="width: 20%; height: 20px; padding: 0; border-color:#000000;">
+                    </td>
+
+                    <td style="border: 1px solid #000; padding: 5px;">
+                        <input type="text" style="width: 20%; height: 20px; padding: 0; border-color:#000000;">
+                        <input type="text" style="width: 20%; height: 20px; padding: 0; border-color:#000000;">
+                        <input type="text" style="width: 20%; height: 20px; padding: 0; border-color:#000000;">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td style="border: 1px solid #000; padding: 5px;">
+                        Father / Spouse Name *
+                    </td>
+
+                    <td style="border: 1px solid #000; border-bottom: 1px solid black; padding: 5px;">
+                        <input type="text" style="width: 20%; height: 20px; padding: 0; border-color:#000000;">
+                        <input type="text" style="width: 20%; height: 20px; padding: 0; border-color:#000000;">
+                        <input type="text" style="width: 20%; height: 20px; padding: 0; border-color:#000000;">
+                    </td>
+
+                    <td style="border: 1px solid #000; padding: 5px;">
+                        <input type="text" style="width: 20%; height: 20px; padding: 0; border-color:#000000;">
+                        <input type="text" style="width: 20%; height: 20px; padding: 0; border-color:#000000;">
+                        <input type="text" style="width: 20%; height: 20px; padding: 0; border-color:#000000;">
+
+                    </td>
+
+                    <td style="border: 1px solid #000; padding: 5px;">
+                        <input type="text" style="width: 20%; height: 20px; padding: 0; border-color:#000000;">
+                        <input type="text" style="width: 20%; height: 20px; padding: 0; border-color:#000000;">
+                        <input type="text" style="width: 20%; height: 20px; padding: 0; border-color:#000000;">
+                    </td>
+
+                    <td style="border: 1px solid #000; padding: 5px;">
+                        <input type="text" style="width: 20%; height: 20px; padding: 0; border-color:#000000;">
+                        <input type="text" style="width: 20%; height: 20px; padding: 0; border-color:#000000;">
+                        <input type="text" style="width: 20%; height: 20px; padding: 0; border-color:#000000;">
+                    </td>
+                </tr>
+                <tr>
+                    <td style="border: 1px solid #000; padding: 5px;">
+                        Mother Name *
+                    </td>
+
+                    <td style="border: 1px solid #000; border-bottom: 1px solid black; padding: 5px;">
+                        <input type="text" style="width: 20%; height: 20px; padding: 0; border-color:#000000;">
+                        <input type="text" style="width: 20%; height: 20px; padding: 0; border-color:#000000;">
+                        <input type="text" style="width: 20%; height: 20px; padding: 0; border-color:#000000;">
+                    </td>
+
+                    <td style="border: 1px solid #000; padding: 5px;">
+                        <input type="text" style="width: 20%; height: 20px; padding: 0; border-color:#000000;">
+                        <input type="text" style="width: 20%; height: 20px; padding: 0; border-color:#000000;">
+                        <input type="text" style="width: 20%; height: 20px; padding: 0; border-color:#000000;">
+
+                    </td>
+
+                    <td style="border: 1px solid #000; padding: 5px;">
+                        <input type="text" style="width: 20%; height: 20px; padding: 0; border-color:#000000;">
+                        <input type="text" style="width: 20%; height: 20px; padding: 0; border-color:#000000;">
+                        <input type="text" style="width: 20%; height: 20px; padding: 0; border-color:#000000;">
+                    </td>
+
+                    <td style="border: 1px solid #000; padding: 5px;">
+                        <input type="text" style="width: 20%; height: 20px; padding: 0; border-color:#000000;">
+                        <input type="text" style="width: 20%; height: 20px; padding: 0; border-color:#000000;">
+                        <input type="text" style="width: 20%; height: 20px; padding: 0; border-color:#000000;">
+                    </td>
+                </tr>
+
+            </tbody>
+
+        </table>
+
+        <table style="width: 700px; border-spacing: 0; font-size: 12px; border: 1px solid #000;">
+            <thead>
+                <tr>
+                    <td style="border: 1px solid #000; padding: 5px;">
+                        Date Of Birth *
+                    </td>
+
+                    <td style="border: 1px solid #000; border-bottom: 1px solid black; padding: 5px;">
+                        <input type="text" style="width: 10%; height: 20px; text-align:center padding: 0; border-color:#000000;" value="D">
+                        <input type="text" style="width: 10%; height: 20px; text-align:center padding: 0; border-color:#000000;" value="D">
+
+                        <input type="text" style="width: 10%; height: 20px; text-align:center padding: 0; border-color:#000000;" value="M">
+                        <input type="text" style="width: 10%; height: 20px; text-align:center padding: 0; border-color:#000000;" value="M">
+
+                        <input type="text" style="width: 10%; height: 20px; text-align:center padding: 0; border-color:#000000;" value="Y">
+                        <input type="text" style="width: 10%; height: 20px; text-align:center padding: 0; border-color:#000000;" value="Y">
+                    </td>
+                </tr>
+            </thead>
+        </table>
 
 
     </div>

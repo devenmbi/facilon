@@ -4,7 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
+    {{-- Title --}}
     <title>Ventura Form</title>
+
+    {{-- Fav icon --}}
+    <link rel="icon" href="{{ url('frontend/images/logo.png') }}">
+
+    {{-- Bootstrap --}}
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
     <style>
         body {
@@ -914,11 +927,11 @@
                 <tr>
                     <td colspan="2" style="border: 1px solid #000; padding: 5px;"><b>Application Type <span style="color: red">*</span></b></td>
                     <td class="d-flex">
-                        <div class="small-square-box">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;New</div> 
-                        
+                        <div class="small-square-box">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;New</div>
+
                     </td>
                     <td>
-                        <div class="small-square-box">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Update</div> 
+                        <div class="small-square-box">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Update</div>
                     </td>
                     <td style="border: 1px solid #000; padding: 5px;"></td>
                 </tr>

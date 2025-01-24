@@ -212,30 +212,23 @@
             position: relative;
             overflow: hidden;
         }
-
-        .headert-section {
-            background-color: #f2f2f2;
+        .square-box {
+            width: 20px !important;
+            height: 20px !important;
+            border: 1px solid #1f1e1e;
+            display: flex !important;
+            justify-content: center !important;
+            align-items: center !important;
+            background-color: #f9f9f9 !important;
         }
-
-        .important-instructions {
-            background-color: #f2f2f2;
-            padding: 10px;
-            margin-top: 10px;
-        }
-
-        .personal-details {
-            font-weight: bold;
-        }
-
-        input[type="radio"] {
-            margin-right: 5px;
-        }
-
-        /* Optional: For better visual separation */
-        .section-header {
-            font-weight: bold;
-            margin-top: 15px;
-            margin-bottom: 5px;
+        .small-square-box {
+            width: 17px !important;
+            height: 17px !important;
+            border: 1px solid #1f1e1e;
+            display: flex !important;
+            justify-content: center !important;
+            align-items: center !important;
+            background-color: #f9f9f9 !important;
         }
     </style>
 </head>
@@ -914,26 +907,30 @@
             <thead>
                 <tr>
                     <th colspan="5" style="text-align: left; padding: 5px; border: 1px solid #000;">
-                        For office use only
-                        (To be filled by financial institution)
+                        <div class="small-square-box"></div>
+                        For office use only (To be filled by financial institution)
                     </th>
                 </tr>
                 <tr>
-                    <th colspan="2" style="border: 1px solid #000; padding: 5px;"><b>Application Type :-</b></th>
-                    <th style="border: 1px solid #000; padding: 5px;"><input type="checkbox" name="app_type"
-                            value="New"> New</th>
-                    <th style="border: 1px solid #000; padding: 5px;"><input type="checkbox" name="app_type"
-                            value="Update"> Update</th>
-                    <th style="border: 1px solid #000; padding: 5px;"></th>
+                    <td colspan="2" style="border: 1px solid #000; padding: 5px;"><b>Application Type <span style="color: red">*</span></b></td>
+                    <td class="d-flex">
+                        <div class="small-square-box">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;New</div> 
+                        
+                    </td>
+                    <td>
+                        <div class="small-square-box">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Update</div> 
+                    </td>
+                    <td style="border: 1px solid #000; padding: 5px;"></td>
                 </tr>
                 <tr>
-                    <th colspan="2" style="border: 1px solid #000; padding: 5px;"><b>KYC Number :-</b> </th>
-                    <th colspan="3" style="border: 1px solid #000; padding: 5px;">(Mandatory for KYC update
-                        request)</th>
+                    <td colspan="2" style="border: 1px solid #000; padding: 5px;"><b>KYC Number <span style="color: red">*</span></b> </td>
+                    <td colspan="3" style="border: 1px solid #000; padding: 5px;">
+                        (Mandatory for KYC update request)
+                    </td>
                 </tr>
                 <tr>
                     <td colspan="5" style="border: 1px solid #000; padding: 5px;">
-                        <strong>1. PERSONAL DETAILS</strong> (Please refer to instruction A at the end)
+                        1. PERSONAL DETAILS</strong> (Please refer to instruction A at the end)
                     </td>
                 </tr>
             </thead>
@@ -966,61 +963,69 @@
 
             <tbody>
                 <tr>
-                    <td style="border: 1px solid #000; padding: 5px; font-size:14px;">
+                    <td>
                         Name (Same as ID proof)
                     </td>
 
-                    <td style="border: 1px solid #000; border-bottom: 1px solid black; padding: 5px;">
-                        {{-- <input type="text" style="width: 20%; height: 20px; padding: 0; border-color:#000000;">
-                        <input type="text" style="width: 20%; height: 20px; padding: 0; border-color:#000000;">
-                        <input type="text" style="width: 20%; height: 20px; padding: 0; border-color:#000000;"> --}}
+                    <td>
+                        <div class="square-box"></div>
+                        <div class="square-box"></div>
+                        <div class="square-box"></div>
                     </td>
 
-                    <td style="border: 1px solid #000; padding: 5px;">
-                        {{-- <input type="text" style="width: 20%; height: 20px; padding: 0; border-color:#000000;">
-                        <input type="text" style="width: 20%; height: 20px; padding: 0; border-color:#000000;">
-                        <input type="text" style="width: 20%; height: 20px; padding: 0; border-color:#000000;"> --}}
-
+                    <td>
+                        <div class="square-box"></div>
+                        <div class="square-box"></div>
+                        <div class="square-box"></div>
+                        <div class="square-box"></div>
+                        <div class="square-box"></div>
+                        <div class="square-box"></div>
                     </td>
 
-                    <td style="border: 1px solid #000; padding: 5px;">
-                        {{-- <input type="text" style="width: 20%; height: 20px; padding: 0; border-color:#000000;">
-                        <input type="text" style="width: 20%; height: 20px; padding: 0; border-color:#000000;">
-                        <input type="text" style="width: 20%; height: 20px; padding: 0; border-color:#000000;"> --}}
+                    <td>
+                        <div class="square-box"></div>
+                        <div class="square-box"></div>
+                        <div class="square-box"></div>
+                        <div class="square-box"></div>
+                        <div class="square-box"></div>
+                        <div class="square-box"></div>
                     </td>
 
-                    <td style="border: 1px solid #000; padding: 5px;">
-                        {{-- <input type="text" style="width: 20%; height: 20px; padding: 0; border-color:#000000;">
-                        <input type="text" style="width: 20%; height: 20px; padding: 0; border-color:#000000;">
-                        <input type="text" style="width: 20%; height: 20px; padding: 0; border-color:#000000;"> --}}
+                    <td>
+                        <div class="square-box"></div>
+                        <div class="square-box"></div>
+                        <div class="square-box"></div>
+                        <div class="square-box"></div>
+                        <div class="square-box"></div>
+                        <div class="square-box"></div>
                     </td>
                 </tr>
 
                 <tr>
-                    <td style="border: 1px solid #000; padding: 5px; font-size:14px;">
+                    <td>
                         Maiden Name (if any <span style="color: red;">*</span>)
                     </td>
 
-                    <td style="border: 1px solid #000; border-bottom: 1px solid black; padding: 5px;">
+                    <td>
                         {{-- <input type="text" style="width: 20%; height: 20px; padding: 0; border-color:#000000;">
                         <input type="text" style="width: 20%; height: 20px; padding: 0; border-color:#000000;">
                         <input type="text" style="width: 20%; height: 20px; padding: 0; border-color:#000000;"> --}}
                     </td>
 
-                    <td style="border: 1px solid #000; padding: 5px;">
+                    <td>
                         {{-- <input type="text" style="width: 20%; height: 20px; padding: 0; border-color:#000000;">
                         <input type="text" style="width: 20%; height: 20px; padding: 0; border-color:#000000;">
                         <input type="text" style="width: 20%; height: 20px; padding: 0; border-color:#000000;"> --}}
 
                     </td>
 
-                    <td style="border: 1px solid #000; padding: 5px;">
+                    <td>
                         {{-- <input type="text" style="width: 20%; height: 20px; padding: 0; border-color:#000000;">
                         <input type="text" style="width: 20%; height: 20px; padding: 0; border-color:#000000;">
                         <input type="text" style="width: 20%; height: 20px; padding: 0; border-color:#000000;"> --}}
                     </td>
 
-                    <td style="border: 1px solid #000; padding: 5px;">
+                    <td>
                         {{-- <input type="text" style="width: 20%; height: 20px; padding: 0; border-color:#000000;">
                         <input type="text" style="width: 20%; height: 20px; padding: 0; border-color:#000000;">
                         <input type="text" style="width: 20%; height: 20px; padding: 0; border-color:#000000;"> --}}
@@ -1028,7 +1033,7 @@
                 </tr>
 
                 <tr>
-                    <td style="border: 1px solid #000; padding: 5px; font-size:14px;">
+                    <td>
                         Father / Spouse Name <span style="color: red;">*</span>
                     </td>
 
@@ -1059,7 +1064,7 @@
                 </tr>
 
                 <tr>
-                    <td style="border: 1px solid #000; padding: 5px; font-size:14px;">
+                    <td>
                         Mother Name <span style="color: red;">*</span>
                     </td>
 

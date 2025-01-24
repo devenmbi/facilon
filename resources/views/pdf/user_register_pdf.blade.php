@@ -226,13 +226,17 @@
             overflow: hidden;
         }
         .square-box {
-            width: 20px !important;
-            height: 20px !important;
-            border: 1px solid #1f1e1e;
-            display: flex !important;
-            justify-content: center !important;
-            align-items: center !important;
-            background-color: #f9f9f9 !important;
+            display: inline-block;
+            width: 11px;
+            height: 11px;
+            border: 1px solid #000;
+            margin: 2px;
+        }
+
+        td div {
+            display: flex;
+            gap: 5px; /* Optional spacing between boxes */
+            align-items: center;
         }
         .small-square-box {
             width: 17px !important;
@@ -242,6 +246,12 @@
             justify-content: center !important;
             align-items: center !important;
             background-color: #f9f9f9 !important;
+        }
+
+        .d-flex {
+            display: flex;
+            align-items: center; /* Vertically align the box and the text */
+            justify-content: flex-start; /* Align everything to the left */
         }
     </style>
 </head>
@@ -916,39 +926,44 @@
             </tbody>
         </table>
 
+
         <table>
             <thead>
                 <tr>
-                    <th colspan="5" style="text-align: left; padding: 5px; border: 1px solid #000;">
-                        <div class="small-square-box"></div>
+                    <th colspan="5" class="table-header">
+                        <div class="small-square-box">
+                        </div>
                         For office use only (To be filled by financial institution)
                     </th>
                 </tr>
                 <tr>
-                    <td colspan="2" style="border: 1px solid #000; padding: 5px;"><b>Application Type <span style="color: red">*</span></b></td>
-                    <td class="d-flex">
+                    <th colspan="4" >
+                        <b>Application Type <span style="color: red">*</span></b>
+                    </th>
+                    <th rowspan="3" class="d-flex">
                         <div class="small-square-box">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;New</div>
-
-                    </td>
-                    <td>
+                    </th>
+                    <th rowspan="3" class="d-flex">
                         <div class="small-square-box">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Update</div>
-                    </td>
-                    <td style="border: 1px solid #000; padding: 5px;"></td>
+                    </th>
                 </tr>
                 <tr>
-                    <td colspan="2" style="border: 1px solid #000; padding: 5px;"><b>KYC Number <span style="color: red">*</span></b> </td>
-                    <td colspan="3" style="border: 1px solid #000; padding: 5px;">
+                    <th colspan="2">
+                        <b>KYC Number <span style="color: red">*</span></b>
+                    </th>
+                    <th colspan="3">
                         (Mandatory for KYC update request)
-                    </td>
+                    </th>
                 </tr>
                 <tr>
-                    <td colspan="5" style="border: 1px solid #000; padding: 5px;">
+                    <th colspan="5">
                         1. PERSONAL DETAILS</strong> (Please refer to instruction A at the end)
-                    </td>
+                    </th>
                 </tr>
             </thead>
         </table>
 
+        {{-- First Name, Middle Name, Last Name Section --}}
         <table>
             <thead>
                 <tr>
@@ -1020,28 +1035,36 @@
                     </td>
 
                     <td>
-                        {{-- <input type="text" style="width: 20%; height: 20px; padding: 0; border-color:#000000;">
-                        <input type="text" style="width: 20%; height: 20px; padding: 0; border-color:#000000;">
-                        <input type="text" style="width: 20%; height: 20px; padding: 0; border-color:#000000;"> --}}
+                        <div class="square-box"></div>
+                        <div class="square-box"></div>
+                        <div class="square-box"></div>
                     </td>
 
                     <td>
-                        {{-- <input type="text" style="width: 20%; height: 20px; padding: 0; border-color:#000000;">
-                        <input type="text" style="width: 20%; height: 20px; padding: 0; border-color:#000000;">
-                        <input type="text" style="width: 20%; height: 20px; padding: 0; border-color:#000000;"> --}}
-
+                        <div class="square-box"></div>
+                        <div class="square-box"></div>
+                        <div class="square-box"></div>
+                        <div class="square-box"></div>
+                        <div class="square-box"></div>
+                        <div class="square-box"></div>
                     </td>
 
                     <td>
-                        {{-- <input type="text" style="width: 20%; height: 20px; padding: 0; border-color:#000000;">
-                        <input type="text" style="width: 20%; height: 20px; padding: 0; border-color:#000000;">
-                        <input type="text" style="width: 20%; height: 20px; padding: 0; border-color:#000000;"> --}}
+                        <div class="square-box"></div>
+                        <div class="square-box"></div>
+                        <div class="square-box"></div>
+                        <div class="square-box"></div>
+                        <div class="square-box"></div>
+                        <div class="square-box"></div>
                     </td>
 
                     <td>
-                        {{-- <input type="text" style="width: 20%; height: 20px; padding: 0; border-color:#000000;">
-                        <input type="text" style="width: 20%; height: 20px; padding: 0; border-color:#000000;">
-                        <input type="text" style="width: 20%; height: 20px; padding: 0; border-color:#000000;"> --}}
+                        <div class="square-box"></div>
+                        <div class="square-box"></div>
+                        <div class="square-box"></div>
+                        <div class="square-box"></div>
+                        <div class="square-box"></div>
+                        <div class="square-box"></div>
                     </td>
                 </tr>
 
@@ -1050,29 +1073,37 @@
                         Father / Spouse Name <span style="color: red;">*</span>
                     </td>
 
-                    <td style="border: 1px solid #000; border-bottom: 1px solid black; padding: 5px;">
-                        {{-- <input type="text" style="width: 20%; height: 20px; padding: 0; border-color:#000000;">
-                        <input type="text" style="width: 20%; height: 20px; padding: 0; border-color:#000000;">
-                        <input type="text" style="width: 20%; height: 20px; padding: 0; border-color:#000000;"> --}}
+                    <td>
+                        <div class="square-box"></div>
+                        <div class="square-box"></div>
+                        <div class="square-box"></div>
                     </td>
 
-                    <td style="border: 1px solid #000; padding: 5px;">
-                        {{-- <input type="text" style="width: 20%; height: 20px; padding: 0; border-color:#000000;">
-                        <input type="text" style="width: 20%; height: 20px; padding: 0; border-color:#000000;">
-                        <input type="text" style="width: 20%; height: 20px; padding: 0; border-color:#000000;"> --}}
-
+                    <td>
+                        <div class="square-box"></div>
+                        <div class="square-box"></div>
+                        <div class="square-box"></div>
+                        <div class="square-box"></div>
+                        <div class="square-box"></div>
+                        <div class="square-box"></div>
                     </td>
 
-                    <td style="border: 1px solid #000; padding: 5px;">
-                        {{-- <input type="text" style="width: 20%; height: 20px; padding: 0; border-color:#000000;">
-                        <input type="text" style="width: 20%; height: 20px; padding: 0; border-color:#000000;">
-                        <input type="text" style="width: 20%; height: 20px; padding: 0; border-color:#000000;"> --}}
+                    <td>
+                        <div class="square-box"></div>
+                        <div class="square-box"></div>
+                        <div class="square-box"></div>
+                        <div class="square-box"></div>
+                        <div class="square-box"></div>
+                        <div class="square-box"></div>
                     </td>
 
-                    <td style="border: 1px solid #000; padding: 5px;">
-                        {{-- <input type="text" style="width: 20%; height: 20px; padding: 0; border-color:#000000;">
-                        <input type="text" style="width: 20%; height: 20px; padding: 0; border-color:#000000;">
-                        <input type="text" style="width: 20%; height: 20px; padding: 0; border-color:#000000;"> --}}
+                    <td>
+                        <div class="square-box"></div>
+                        <div class="square-box"></div>
+                        <div class="square-box"></div>
+                        <div class="square-box"></div>
+                        <div class="square-box"></div>
+                        <div class="square-box"></div>
                     </td>
                 </tr>
 
@@ -1081,32 +1112,39 @@
                         Mother Name <span style="color: red;">*</span>
                     </td>
 
-                    <td style="border: 1px solid #000; border-bottom: 1px solid black; padding: 5px;">
-                        {{-- <input type="text" style="width: 20%; height: 20px; padding: 0; border-color:#000000;">
-                        <input type="text" style="width: 20%; height: 20px; padding: 0; border-color:#000000;">
-                        <input type="text" style="width: 20%; height: 20px; padding: 0; border-color:#000000;"> --}}
+                    <td>
+                        <div class="square-box"></div>
+                        <div class="square-box"></div>
+                        <div class="square-box"></div>
                     </td>
 
-                    <td style="border: 1px solid #000; padding: 5px;">
-                        {{-- <input type="text" style="width: 20%; height: 20px; padding: 0; border-color:#000000;">
-                        <input type="text" style="width: 20%; height: 20px; padding: 0; border-color:#000000;">
-                        <input type="text" style="width: 20%; height: 20px; padding: 0; border-color:#000000;"> --}}
-
+                    <td>
+                        <div class="square-box"></div>
+                        <div class="square-box"></div>
+                        <div class="square-box"></div>
+                        <div class="square-box"></div>
+                        <div class="square-box"></div>
+                        <div class="square-box"></div>
                     </td>
 
-                    <td style="border: 1px solid #000; padding: 5px;">
-                        {{-- <input type="text" style="width: 20%; height: 20px; padding: 0; border-color:#000000;">
-                        <input type="text" style="width: 20%; height: 20px; padding: 0; border-color:#000000;">
-                        <input type="text" style="width: 20%; height: 20px; padding: 0; border-color:#000000;"> --}}
+                    <td>
+                        <div class="square-box"></div>
+                        <div class="square-box"></div>
+                        <div class="square-box"></div>
+                        <div class="square-box"></div>
+                        <div class="square-box"></div>
+                        <div class="square-box"></div>
                     </td>
 
-                    <td style="border: 1px solid #000; padding: 5px;">
-                        {{-- <input type="text" style="width: 20%; height: 20px; padding: 0; border-color:#000000;">
-                        <input type="text" style="width: 20%; height: 20px; padding: 0; border-color:#000000;">
-                        <input type="text" style="width: 20%; height: 20px; padding: 0; border-color:#000000;"> --}}
+                    <td>
+                        <div class="square-box"></div>
+                        <div class="square-box"></div>
+                        <div class="square-box"></div>
+                        <div class="square-box"></div>
+                        <div class="square-box"></div>
+                        <div class="square-box"></div>
                     </td>
                 </tr>
-
             </tbody>
 
         </table>
@@ -1135,11 +1173,15 @@
                     <td style="width: 22%; border: 1px solid #000; ">Gender <span style="color: red;">*</span></td>
                     <td style="width: 66%; border: 1px solid #000;">
                         <div style="display: flex; align-items: center; gap: 20px; flex-wrap: wrap;">
-                            <label><input type="checkbox" name="gender" style="margin-right: 5px;">M - Male</label>
-                            <label><input type="checkbox" name="gender" style="margin-right: 5px;">F -
-                                Female</label>
-                            <label><input type="checkbox" name="gender" style="margin-right: 5px;">T -
-                                Transgender</label>
+                            <label>
+                                <div class="square-box"></div>M - Male
+                            </label>
+                            <label>
+                                <div class="square-box"> F - Female</div>
+                            </label>
+                            <label>
+                                <div class="square-box">T - Transgender</div>
+                            </label>
                         </div>
                     </td>
                     <td rowspan="5" style="border: 1px solid #000; padding: 5px; width: 13%;">
@@ -1354,6 +1396,7 @@
                 </tr>
             </table>
         </div>
+
 
     </div>
 

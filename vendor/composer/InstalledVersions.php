@@ -346,15 +346,9 @@ class InstalledVersions
                     $required = require $vendorDir.'/composer/installed.php';
                     self::$installedByVendor[$vendorDir] = $required;
                     $installed[] = $required;
-<<<<<<< HEAD
                     if (self::$installed === null && $vendorDir.'/composer' === $selfDir) {
                         self::$installed = $required;
                         self::$installedIsLocalDir = true;
-=======
-                    if (strtr($vendorDir.'/composer', '\\', '/') === strtr(__DIR__, '\\', '/')) {
-                        self::$installed = $required;
-                        $copiedLocalDir = true;
->>>>>>> riddhi
                     }
                 }
                 if (self::$installedIsLocalDir && $vendorDir.'/composer' === $selfDir) {

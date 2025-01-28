@@ -41,9 +41,11 @@ Route::get('service-provider/register/step3/{unique_code?}',[App\Http\Controller
 Route::post('service-provider/register/step3/{unique_code?}',[App\Http\Controllers\BrokerController::class,'service_provider_step3_submit'])->name('service_provider_step3_submit');
 
 Route::get('service-provider/register/thank-you',[App\Http\Controllers\BrokerController::class,'service_provider_register_thank_you_show'])->name('service_provider_register_thank_you_show');
+Route::post('/submit', [App\Http\Controllers\ClientController::class, 'store'])->name('submit');
 
 //client registration
 Route::get('client/register/step1',[App\Http\Controllers\ClientController::class,'client_registration_step1_show'])->name('client_registration_step1_show');
+
 //Broker registration
 Route::get('broker/register/step1',[App\Http\Controllers\BrokerController::class,'broker_registration_step1_show'])->name('broker_registration_step1_show');
 Route::post('broker/register/step1',[App\Http\Controllers\BrokerController::class,'broker_registration_step1_submit'])->name('broker_registration_step1_submit');

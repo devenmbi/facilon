@@ -1,338 +1,350 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Client Registration - Individual</title>
-    <!-- Bootstrap 4 or 5 CDN for grid system -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 20px;
-        }
-        .container {
-            background-color: #ffffff;
-            padding: 20px;
-            max-width: 600px;
-            margin: 0 auto;
-            border-radius: 8px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-        }
-        h4 {
-  font-size: 20px !important;
-}
-        h2 {
-            text-align: center;
-            color: #333;
-        }
-        label {
-            display: block;
-            margin-bottom: 8px;
-            /* font-weight: bold; */
-        }
-        input[type="text"], input[type="email"], input[type="password"], input[type="tel"], input[type="number"], select, textarea {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 15px;
-            border-radius: 4px;
-            border: 1px solid #ccc;
-        }
-        input[type="submit"] {
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            padding: 15px;
-            font-size: 16px;
-            cursor: pointer;
-            border-radius: 4px;
-            width: 100%;
-        }
-        input[type="submit"]:hover {
-            background-color: #45a049;
-        }
-    </style>
-</head>
-<body>
+@extends('layouts.frontend-header')
+<style>
+    .form-control {
+        height: 48px !important;
+        border: 1px solid #3a3535 !important;
+        border-radius: 5px !important;
+    }
+</style>
+@section('content')
+    <section class="login-form-style4 steps4-sec section-padding align-items-center" style="background-image:url('https://anvaya.online/facilon/public/frontend/images/banner/2125.jpg');">
+        <div class="container ">
+            <div class="row align-items-center">
+                {{-- <div class="col-lg-5 col-md-12 col-sm-12">
+                    <div class="lgf4_Left_content">
+                        <h3>Service Provider <span>Registration</span> </h3>
+                        <p>Currently we are only registering the expression of interest in the India Securities market</p>
+                    </div>
+                </div> --}}
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                    <div class="login-form-style3-main">
+                        <div class="login-form-style3-main_full">
+                            <div class="login-register3-form-middle">
+                                <form action="{{ route('submit') }}" data-bitwarden-watching="1" method="post">
+                                    @csrf
 
-    <div class="container">
-        <center><u><h4>Client Registration - Individual</h4></u></center>
-<br>
-        <form action="/submit" method="post">
+                                    <div class="name-sec" id="section_self_div">
+                                        <div class="row" style="margin-bottom: 40px !important;">
+                                            <div class="col-md-4 mb-3">
+                                                <label for="username">
+                                                    Client Name : <span class="star-color">*</span>
+                                                </label>
+                                                <input type="text" class="form-control @error('client_name') is-invalid @enderror" id="client_name" name="client_name" value="{{ old('client_name') }}">
+                                                @error('client_name')
+                                                    <span class="invalid-feedback" role="alert">
+                                                        <strong class="text-danger">{{ $message }}</strong>
+                                                    </span>
+                                                @enderror
+                                            </div>
 
-            <center><h4>Personal Information</h4></center>
-            <div class="form-group row">
-                <div class="col-md-6">
-                    <label for="first-name">Client Name</label>
-                    <input type="text" class="form-control" id="first-name" name="first_name" required>
-                </div>
-                <div class="col-md-6">
-                    <label for="dob">Branch Name</label>
-                    <input type="text" class="form-control" id="branch_name" name="branch_name" required>
-                </div>
-            </div>
+                                            <div class="col-md-4" style="margin-bottom: 3px !important;">
+                                                <label for="username">
+                                                    Branch Name : <span class="star-color">*</span>
+                                                </label>
+                                                <input type="text" class="form-control @error('branch_name') is-invalid @enderror" id="branch_name" name="branch_name" value="{{ old('branch_name') }}">
+                                                @error('branch_name')
+                                                    <span class="invalid-feedback" role="alert">
+                                                        <strong class="text-danger">{{ $message }}</strong>
+                                                    </span>
+                                                @enderror
+                                            </div>
 
-            <div class="form-group row">
-                <div class="col-md-6">
-                    <label for="email">Client Code</label>
-                    <input type="text" class="form-control" id="client_code" name="client_code" required>
-                </div>
-                <div class="col-md-6">
-                    <label for="phone">Client ID</label>
-                    <input type="text" class="form-control" id="client_id" name="client_id" required>
-                </div>
-            </div>
+                                            <div class="col-md-4" style="margin-bottom: 3px !important;">
+                                                <label for="client_code">
+                                                    Client Code : <span class="star-color">*</span>
+                                                </label>
+                                                <input type="text" class="form-control @error('client_code') is-invalid @enderror" id="client_code" name="client_code" value="{{ old('client_code') }}">
+                                                @error('client_code')
+                                                    <span class="invalid-feedback" role="alert">
+                                                        <strong class="text-danger">{{ $message }}</strong>
+                                                    </span>
+                                                @enderror
+                                            </div>
 
+                                            <div class="col-md-4" style="margin-bottom: 3px !important;">
+                                                <label for="client_id">
+                                                    Client ID : <span class="star-color">*</span>
+                                                </label>
+                                                <input type="text" class="form-control @error('client_id') is-invalid @enderror" id="client_id" name="client_id" value="{{ old('client_id') }}">
+                                                @error('client_id')
+                                                    <span class="invalid-feedback" role="alert">
+                                                        <strong class="text-danger">{{ $message }}</strong>
+                                                    </span>
+                                                @enderror
+                                            </div>
+                                        </div>
 
-            <div class="form-group">
-                
-            </div>
-            <center><h4>Central KYC Registry - First Holder</h4></center>
-            <div class="form-group row">
-                <div class="col-md-4">
-                    <label for="first-name">First Name</label>
-                    <input type="text" class="form-control" id="first-name" name="first_name1" required>
-                </div>
-                <div class="col-md-4">
-                    <label for="middle-name">Middle Name</label>
-                    <input type="text" class="form-control" id="middle-name" name="middle_name1">
-                </div>
-                <div class="col-md-4">
-                    <label for="last-name">Last Name</label>
-                    <input type="text" class="form-control" id="last-name" name="last_name1" required>
-                </div>
-            </div>
-            <div class="form-group row">
-                <div class="col-md-4">
-                    <label for="first-name">Father / Spouse Name</label>
-                    <input type="text" class="form-control" id="father-name" name="father_name1" required>
-                </div>
-                <div class="col-md-4">
-                    <label for="middle-name">Mother Name</label>
-                    <input type="text" class="form-control" id="mother-name" name="mother_name1">
-                </div>
-                <div class="col-md-4">
-                    <label for="last-name">DOB</label>
-                    <input type="date" class="form-control" id="last-name" name="dob1" required>
-                </div>
-            </div>
-            <div class="form-group row gender-checkboxes">
-                <div class="col-md-3">
-                    <label for="middle-name">Gender : </label>
-                </div>
-                <div class="col-md-3">
-                    <input type="radio" class="form-check-input" id="radio1" name="gender" value="Male">Male
-                    <label class="form-check-label" for="radio1"></label>
-                </div>
-                <div class="col-md-3">
-                    <input type="radio" class="form-check-input" id="radio1" name="gender" value="Female">Female
-                    <label class="form-check-label" for="radio1"></label>
-                </div>
-                <div class="col-md-3">
-                    <input type="radio" class="form-check-input" id="radio1" name="gender" value="Transgender">Transgender
-                    <label class="form-check-label" for="radio1"></label>
-                </div>
-            </div>
-            <div class="form-group row gender-checkboxes">
-                <div class="col-md-3">
-                    <label for="middle-name">Marital Status : </label>
-                </div>
-                <div class="col-md-3">
-                    <input type="radio" class="form-check-input" id="radio1" name="marital_status" value="Married">Married
-                    <label class="form-check-label" for="radio1"></label>
-                </div>
-                <div class="col-md-3">
-                    <input type="radio" class="form-check-input" id="radio1" name="marital_status" value="Unmarried">Unmarried
-                    <label class="form-check-label" for="radio1"></label>
-                </div>
-                <div class="col-md-3">
-                    <input type="radio" class="form-check-input" id="radio1" name="marital_status" value="Other">Other
-                    <label class="form-check-label" for="radio1"></label>
-                </div>
-            </div>
-            <div class="form-group row gender-checkboxes">
-                <div class="col-md-3">
-                    <label for="middle-name">Citizenship : </label>
-                </div>
-                <div class="col-md-3">
-                    <input type="radio" class="form-check-input" id="radio1" name="citizenship" value="Married">Indian
-                    <label class="form-check-label" for="radio1"></label>
-                </div>
-                <div class="col-md-3">
-                    <input type="radio" class="form-check-input" id="radio1" name="citizenship" value="Other">Other
-                    <label class="form-check-label" for="radio1"></label>
-                </div>
-                
-            </div>
-            <div class="form-group">
-                <label for="middle-name">Residential Status : </label>
-            </div>
-            <div class="form-group row" style="padding: 0px 1px 1px 19px !important;">
-                
-                <div class="col-md-3">
-                    <input type="radio" class="form-check-input" id="radio1" name="residential_status" value="Resident Individual">Resident Individual
-                    <label class="form-check-label" for="radio1"></label>
-                </div>
-                <div class="col-md-3">
-                    <input type="radio" class="form-check-input" id="radio1" name="residential_status" value="Non Resident Indian">Non Resident Indian
-                    <label class="form-check-label" for="radio1"></label>
-                </div>
-               
-                <div class="col-md-3">
-                    <input type="radio" class="form-check-input" id="radio1" name="residential_status" value="Foreign National">Foreign National
-                    <label class="form-check-label" for="radio1"></label>
-                </div>
-                <div class="col-md-3">
-                    <input type="radio" class="form-check-input" id="radio1" name="residential_status" value="Person of Indian Origin">Person of Indian Origin
-                    <label class="form-check-label" for="radio1"></label>
-                </div>
-            </div>
-            <div class="form-group">
-                <label for="middle-name">Occupation Type : </label>
-            </div>
-            <div class="form-group row" style="padding: 0px 1px 1px 19px !important;">
-                
-                <div class="col-md-3">
-                    <input type="radio" class="form-check-input" id="radio1" name="residential_status" value="Resident Individual">Service
-                    <label class="form-check-label" for="radio1"></label>
-                </div>
-                <div class="col-md-3">
-                    <input type="radio" class="form-check-input" id="radio1" name="residential_status" value="Non Resident Indian">Private Sector
-                    <label class="form-check-label" for="radio1"></label>
-                </div>
-               
-                <div class="col-md-3">
-                    <input type="radio" class="form-check-input" id="radio1" name="residential_status" value="Foreign National">Public Sector
-                    <label class="form-check-label" for="radio1"></label>
-                </div>
-                <div class="col-md-3">
-                    <input type="radio" class="form-check-input" id="radio1" name="residential_status" value="Person of Indian Origin">Govt Sector
-                    <label class="form-check-label" for="radio1"></label>
-                </div>
-                <div class="col-md-3">
-                    <input type="radio" class="form-check-input" id="radio1" name="residential_status" value="Resident Individual">others
-                    <label class="form-check-label" for="radio1"></label>
-                </div>
-                <div class="col-md-3">
-                    <input type="radio" class="form-check-input" id="radio1" name="residential_status" value="Non Resident Indian">Professional
-                    <label class="form-check-label" for="radio1"></label>
-                </div>
-               
-                <div class="col-md-3">
-                    <input type="radio" class="form-check-input" id="radio1" name="residential_status" value="Foreign National">Self Employed
-                    <label class="form-check-label" for="radio1"></label>
-                </div>
-                <div class="col-md-3">
-                    <input type="radio" class="form-check-input" id="radio1" name="residential_status" value="Person of Indian Origin">Retired
-                    <label class="form-check-label" for="radio1"></label>
-                </div>
-                <div class="col-md-3">
-                    <input type="radio" class="form-check-input" id="radio1" name="residential_status" value="Non Resident Indian">Housewife
-                    <label class="form-check-label" for="radio1"></label>
-                </div>
-               
-                <div class="col-md-3">
-                    <input type="radio" class="form-check-input" id="radio1" name="residential_status" value="Foreign National">Student
-                    <label class="form-check-label" for="radio1"></label>
-                </div>
-                <div class="col-md-3">
-                    <input type="radio" class="form-check-input" id="radio1" name="residential_status" value="Person of Indian Origin">Business
-                    <label class="form-check-label" for="radio1"></label>
-                </div>
-                <div class="col-md-3">
-                    <input type="radio" class="form-check-input" id="radio1" name="residential_status" value="Person of Indian Origin">Not Categorized
-                    <label class="form-check-label" for="radio1"></label>
-                </div>
-            </div>
-            <div class="form-group form-check">
-                <input type="checkbox" class="form-check-input" id="residence_outside_india" name="residence_outside_india" value="something">
-      <label class="form-check-label" for="residence_outside_india">Residence for TAX purposes in Jurisdiction outside India</label>
-            </div>
-            <div class="form-group row">
-                <div class="col-md-6">
-                    <label for="first-name">ISO 3166 country Code of Jurisdiction</label>
-                    <input type="text" class="form-control" id="father-name" name="father_name1" required>
-                </div>
-                <div class="col-md-6">
-                    <label for="middle-name">TAX Identification No.</label>
-                    <input type="text" class="form-control" id="mother-name" name="mother_name1">
-                </div>
-                <div class="col-md-6">
-                    <label for="last-name">Place/City of Birth</label>
-                    <input type="date" class="form-control" id="last-name" name="dob1" required>
-                </div>
-                <div class="col-md-6">
-                    <label for="last-name">ISO 3166 Country code of Birth</label>
-                    <input type="date" class="form-control" id="last-name" name="dob1" required>
-                </div>
-            </div>
-            <div class="form-group">
-                <label for="middle-name">Proof of Identity : </label>
-            </div>
-            <div class="form-group row">
-                <div class="col-md-6 form-check">
-                    <input type="checkbox" class="form-check-input" id="residence_outside_india" name="residence_outside_india" value="something">
-                    <label class="form-check-label" for="residence_outside_india">Passport Number</label>
-                </div>
-                <div class="col-md-6">
-                    
-                    <input type="text" class="form-control" id="father-name" name="father_name1" required>
-                </div>
-                <div class="col-md-6 form-check">
-                    <input type="checkbox" class="form-check-input" id="residence_outside_india" name="residence_outside_india" value="something">
-                    <label class="form-check-label" for="residence_outside_india">Voter ID Card</label>
-                </div>
-                <div class="col-md-6">
-                    
-                    <input type="text" class="form-control" id="father-name" name="father_name1" required>
-                </div>
-                <div class="col-md-6 form-check">
-                    <input type="checkbox" class="form-check-input" id="residence_outside_india" name="residence_outside_india" value="something">
-                    <label class="form-check-label" for="residence_outside_india">PAN Card</label>
-                </div>
-                <div class="col-md-6">
-                    
-                    <input type="text" class="form-control" id="father-name" name="father_name1" required>
-                </div>
-                <div class="col-md-6 form-check">
-                    <input type="checkbox" class="form-check-input" id="residence_outside_india" name="residence_outside_india" value="something">
-                    <label class="form-check-label" for="residence_outside_india">Driving Licence</label>
-                </div>
-                <div class="col-md-6">
-                    
-                    <input type="text" class="form-control" id="father-name" name="father_name1" required>
-                </div>
-                <div class="col-md-6 form-check">
-                    <input type="checkbox" class="form-check-input" id="residence_outside_india" name="residence_outside_india" value="something">
-                    <label class="form-check-label" for="residence_outside_india">UID(Aadhaar)</label>
-                </div>
-                <div class="col-md-6">
-                    
-                    <input type="text" class="form-control" id="father-name" name="father_name1" required>
-                </div>
-                <div class="col-md-6 form-check">
-                    <input type="checkbox" class="form-check-input" id="residence_outside_india" name="residence_outside_india" value="something">
-                    <label class="form-check-label" for="residence_outside_india">NREGA Job Card</label>
-                </div>
-                <div class="col-md-6">
-                    
-                    <input type="text" class="form-control" id="father-name" name="father_name1" required>
-                </div>
-            </div>
-            
-            <!-- Submit -->
-            <div class="form-group">
-                <input type="submit" class="btn btn-success btn-block" value="Submit">
-            </div>
+                                        {{-- User Details --}}
+                                        <div class="row" style="margin-bottom: 40px !important;">
+                                            {{-- Add Title --}}
+                                            <h2 class="text-danger"><b>Central KYC Registry - First Holder</b></h2>
+                                            <div class="col-md-12" style="padding: 6px !important;">
+                                                <h3 class="text-dark text-capitalize"><b>[1.] &nbsp;&nbsp;Personal Details</b></h3>
+                                                <div class="col-md-12" style="margin-left: 20px !important; margin-bottom: 20px !important;">
+                                                    <h4 class="text-dark"><b>Name (Same as ID Proof) : <span class="text-danger">*</span></b></h2>
+                                                    <div class="row">
+                                                        <div class="col-md-3">
+                                                            <label for="prefix">Prefix : <span class="text-danger">*</span></label>
+                                                            <select class="form-control @error('prefix') is-invalid @enderror" id="prefix" name="prefix">
+                                                                <option value="" disabled selected>Select Prefix</option>
+                                                                <option value="Mr." {{ old('prefix') == 'Mr.' ? 'selected' : '' }}>Mr.</option>
+                                                                <option value="Mrs." {{ old('prefix') == 'Mrs.' ? 'selected' : '' }}>Mrs.</option>
+                                                                <option value="Shri." {{ old('prefix') == 'Shri.' ? 'selected' : '' }}>Shri.</option>
+                                                                <option value="Shrimati" {{ old('prefix') == 'Shrimati' ? 'selected' : '' }}>Shrimati</option>
+                                                            </select>
+                                                            @error('prefix')
+                                                                <span class="invalid-feedback" role="alert">
+                                                                    <strong class="text-danger">{{ $message }}</strong>
+                                                                </span>
+                                                            @enderror
+                                                        </div>
+                                                        <div class="col-md-3">
+                                                            <label for="first-name">First Name : <span class="text-danger">*</span></label>
+                                                            <input type="text" class="form-control @error('first_name') is-invalid @enderror" id="first-name" name="first_name" value="{{ old('first_name') }}">
+                                                            @error('first_name')
+                                                                <span class="invalid-feedback" role="alert">
+                                                                    <strong class="text-danger">{{ $message }}</strong>
+                                                                </span>
+                                                            @enderror
+                                                        </div>
+                                                        <div class="col-md-3">
+                                                            <label for="middle-name">Middle Name : <span class="text-danger">*</span></label>
+                                                            <input type="text" class="form-control @error('middle_name') is-invalid @enderror" id="middle-name" name="middle_name" value="{{ old('middle_name') }}">
+                                                            @error('middle_name')
+                                                                <span class="invalid-feedback" role="alert">
+                                                                    <strong class="text-danger">{{ $message }}</strong>
+                                                                </span>
+                                                            @enderror
+                                                        </div>
+                                                        <div class="col-md-3">
+                                                            <label for="last-name">Last Name : <span class="text-danger">*</span></label>
+                                                            <input type="text" class="form-control @error('last_name') is-invalid @enderror" id="last-name" name="last_name" value="{{ old('last_name') }}">
+                                                            @error('last_name')
+                                                                <span class="invalid-feedback" role="alert">
+                                                                    <strong class="text-danger">{{ $message }}</strong>
+                                                                </span>
+                                                            @enderror
+                                                        </div>
+                                                    </div>
+                                                </div>
 
-        </form>
-    </div>
+                                                <div class="col-md-12" style="margin-left: 20px !important; margin-bottom: 20px !important;">
+                                                    <h4 class="text-dark"><b>Maiden Name (if any) : <span class="text-danger">*</span></b></h2>
+                                                    <div class="row">
+                                                        <div class="col-md-3">
+                                                            <label for="prefix">Prefix : <span class="text-danger">*</span></label>
+                                                            <select class="form-control @error('maiden_prefix') is-invalid @enderror" id="maiden_prefix" name="maiden_prefix">
+                                                                <option value="" disabled selected>Select Prefix</option>
+                                                                <option value="1" {{ old('maiden_prefix') == '1' ? 'selected' : '' }}>Mr.</option>
+                                                                <option value="2" {{ old('maiden_prefix') == '2' ? 'selected' : '' }}>Miss.</option>
+                                                                <option value="3" {{ old('maiden_prefix') == '3' ? 'selected' : '' }}>Shri.</option>
+                                                                <option value="4" {{ old('maiden_prefix') == '4' ? 'selected' : '' }}>Shrimati</option>
+                                                            </select>
+                                                            @error('maiden_prefix')
+                                                                <span class="invalid-feedback" role="alert">
+                                                                    <strong class="text-danger">{{ $message }}</strong>
+                                                                </span>
+                                                            @enderror
+                                                        </div>
+    
+                                                        <div class="col-md-3">
+                                                            <label for="first-name">First Name : <span class="text-danger">*</span></label>
+                                                            <input type="text" class="form-control @error('maiden_name') is-invalid @enderror" id="first-name" name="maiden_name" value="{{ old('maiden_name') }}">
+                                                            @error('maiden_name')
+                                                                <span class="invalid-feedback" role="alert">
+                                                                    <strong class="text-danger">{{ $message }}</strong>
+                                                                </span>
+                                                            @enderror
+                                                        </div>
+                                                        <div class="col-md-3">
+                                                            <label for="middle-name">Middle Name : <span class="text-danger">*</span></label>
+                                                            <input type="text" class="form-control @error('maiden_middle_name') is-invalid @enderror" id="middle-name" name="maiden_middle_name" value="{{ old('maiden_middle_name') }}">
+                                                            @error('maiden_middle_name')
+                                                                <span class="invalid-feedback" role="alert">
+                                                                    <strong class="text-danger">{{ $message }}</strong>
+                                                                </span>
+                                                            @enderror
+                                                        </div>
+                                                        <div class="col-md-3">
+                                                            <label for="last-name">Last Name : <span class="text-danger">*</span></label>
+                                                            <input type="text" class="form-control @error('maiden_last_name') is-invalid @enderror" id="last-name" name="maiden_last_name" value="{{ old('maiden_last_name') }}">
+                                                            @error('maiden_last_name')
+                                                                <span class="invalid-feedback" role="alert">
+                                                                    <strong class="text-danger">{{ $message }}</strong>
+                                                                </span>
+                                                            @enderror
+                                                        </div>
+                                                    </div>
+                                                </div>
 
-    <!-- Bootstrap JS, Popper.js and jQuery (Optional but needed for some features like dropdowns) -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-</body>
-</html>
+                                                <div class="col-md-12" style="margin-left: 20px !important; margin-bottom: 20px !important;">
+                                                    <h4 class="text-dark"><b>Father / Spouse Name : <span class="text-danger">*</span></b></h2>
+                                                    <div class="row">
+                                                        <div class="col-md-3">
+                                                            <label for="prefix">Prefix : <span class="text-danger">*</span></label>
+                                                            <select class="form-control @error('father_prefix') is-invalid @enderror" id="father_prefix" name="father_prefix">
+                                                                <option value="" disabled selected>Select Prefix</option>
+                                                                <option value="1" {{ old('father_prefix') == '1' ? 'selected' : '' }}>Mr.</option>
+                                                                <option value="2" {{ old('father_prefix') == '2' ? 'selected' : '' }}>Miss.</option>
+                                                                <option value="3" {{ old('father_prefix') == '3' ? 'selected' : '' }}>Shri.</option>
+                                                                <option value="4" {{ old('father_prefix') == '4' ? 'selected' : '' }}>Shrimati</option>
+                                                            </select>
+                                                            @error('father_prefix')
+                                                                <span class="invalid-feedback" role="alert">
+                                                                    <strong class="text-danger">{{ $message }}</strong>
+                                                                </span>
+                                                            @enderror
+                                                        </div>
+    
+                                                        <div class="col-md-3">
+                                                            <label for="first-name">First Name : <span class="text-danger">*</span></label>
+                                                            <input type="text" class="form-control @error('father_name') is-invalid @enderror" id="first-name" name="father_name" value="{{ old('father_name') }}">
+                                                            @error('father_name')
+                                                                <span class="invalid-feedback" role="alert">
+                                                                    <strong class="text-danger">{{ $message }}</strong>
+                                                                </span>
+                                                            @enderror
+                                                        </div>
+                                                        <div class="col-md-3">
+                                                            <label for="middle-name">Middle Name : <span class="text-danger">*</span></label>
+                                                            <input type="text" class="form-control @error('father_middle_name') is-invalid @enderror" id="middle-name" name="father_middle_name" value="{{ old('father_middle_name') }}">
+                                                            @error('father_middle_name')
+                                                                <span class="invalid-feedback" role="alert">
+                                                                    <strong class="text-danger">{{ $message }}</strong>
+                                                                </span>
+                                                            @enderror
+                                                        </div>
+                                                        <div class="col-md-3">
+                                                            <label for="last-name">Last Name : <span class="text-danger">*</span></label>
+                                                            <input type="text" class="form-control @error('father_last_name') is-invalid @enderror" id="last-name" name="father_last_name" value="{{ old('father_last_name') }}">
+                                                            @error('father_last_name')
+                                                                <span class="invalid-feedback" role="alert">
+                                                                    <strong class="text-danger">{{ $message }}</strong>
+                                                                </span>
+                                                            @enderror
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-12" style="margin-left: 20px !important; margin-bottom: 20px !important;">
+                                                    <h4 class="text-dark"><b>Mother Name : <span class="text-danger">*</span></b></h2>
+                                                    <div class="row">
+                                                        <div class="col-md-3">
+                                                            <label for="prefix">Prefix : <span class="text-danger">*</span></label>
+                                                            <select class="form-control @error('mother_prefix') is-invalid @enderror" id="mother_prefix" name="mother_prefix">
+                                                                <option value="" disabled selected>Select Prefix</option>
+                                                                <option value="1" {{ old('mother_prefix') == '1' ? 'selected' : '' }}>Mr.</option>
+                                                                <option value="2" {{ old('mother_prefix') == '2' ? 'selected' : '' }}>Miss.</option>
+                                                                <option value="3" {{ old('mother_prefix') == '3' ? 'selected' : '' }}>Shri.</option>
+                                                                <option value="4" {{ old('mother_prefix') == '4' ? 'selected' : '' }}>Shrimati</option>
+                                                            </select>
+                                                            @error('mother_prefix')
+                                                                <span class="invalid-feedback" role="alert">
+                                                                    <strong class="text-danger">{{ $message }}</strong>
+                                                                </span>
+                                                            @enderror
+                                                        </div>
+    
+                                                        <div class="col-md-3">
+                                                            <label for="first-name">First Name : <span class="text-danger">*</span></label>
+                                                            <input type="text" class="form-control @error('mother_name') is-invalid @enderror" id="first-name" name="mother_name" value="{{ old('mother_name') }}">
+                                                            @error('mother_name')
+                                                                <span class="invalid-feedback" role="alert">
+                                                                    <strong class="text-danger">{{ $message }}</strong>
+                                                                </span>
+                                                            @enderror
+                                                        </div>
+                                                        <div class="col-md-3">
+                                                            <label for="middle-name">Middle Name : <span class="text-danger">*</span></label>
+                                                            <input type="text" class="form-control @error('mother_middle_name') is-invalid @enderror" id="middle-name" name="mother_middle_name" value="{{ old('mother_middle_name') }}">
+                                                            @error('mother_middle_name')
+                                                                <span class="invalid-feedback" role="alert">
+                                                                    <strong class="text-danger">{{ $message }}</strong>
+                                                                </span>
+                                                            @enderror
+                                                        </div>
+                                                        <div class="col-md-3">
+                                                            <label for="last-name">Last Name : <span class="text-danger">*</span></label>
+                                                            <input type="text" class="form-control @error('mother_last_name') is-invalid @enderror" id="last-name" name="mother_last_name" value="{{ old('mother_last_name') }}">
+                                                            @error('mother_last_name')
+                                                                <span class="invalid-feedback" role="alert">
+                                                                    <strong class="text-danger">{{ $message }}</strong>
+                                                                </span>
+                                                            @enderror
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-12" style="margin-left: 20px !important; margin-bottom: 20px !important;">
+                                                    <div class="row">    
+                                                        <div class="col-md-3">
+                                                            <label for="first-name">Date Of Birth : <span class="text-danger">*</span></label>
+                                                            <input type="date" class="form-control @error('date_of_birth') is-invalid @enderror" id="first-name" name="date_of_birth" value="{{ old('date_of_birth') }}" placeholder="Enter Date Of Birth">
+                                                            @error('date_of_birth')
+                                                                <span class="invalid-feedback" role="alert">
+                                                                    <strong class="text-danger">{{ $message }}</strong>
+                                                                </span>
+                                                            @enderror
+                                                        </div>
+
+                                                        <div class="col-md-3">
+                                                            <label for="prefix">Gender : <span class="text-danger">*</span></label>
+                                                            <select class="form-control @error('gender') is-invalid @enderror" id="gender" name="gender">
+                                                                <option value="" disabled selected>Select Gender</option>                                                           
+                                                            </select>
+                                                            @error('gender')
+                                                                <span class="invalid-feedback" role="alert">
+                                                                    <strong class="text-danger">{{ $message }}</strong>
+                                                                </span>
+                                                            @enderror
+                                                        </div>
+
+                                                        <div class="col-md-3">
+                                                            <label for="middle-name">Middle Name : <span class="text-danger">*</span></label>
+                                                            <input type="text" class="form-control @error('mother_middle_name') is-invalid @enderror" id="middle-name" name="mother_middle_name" value="{{ old('mother_middle_name') }}">
+                                                            @error('mother_middle_name')
+                                                                <span class="invalid-feedback" role="alert">
+                                                                    <strong class="text-danger">{{ $message }}</strong>
+                                                                </span>
+                                                            @enderror
+                                                        </div>
+                                                        <div class="col-md-3">
+                                                            <label for="last-name">Last Name : <span class="text-danger">*</span></label>
+                                                            <input type="text" class="form-control @error('mother_last_name') is-invalid @enderror" id="last-name" name="mother_last_name" value="{{ old('mother_last_name') }}">
+                                                            @error('mother_last_name')
+                                                                <span class="invalid-feedback" role="alert">
+                                                                    <strong class="text-danger">{{ $message }}</strong>
+                                                                </span>
+                                                            @enderror
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>                                            
+                                        </div>
+
+                                    </div>
+
+                                    <div id="button_div" class="mt-80">
+                                        <div class="row" style="display: flex; flex-wrap: wrap; align-content: space-between; justify-content: center; justify-content: center;">
+                                            <div class="col-md-4">
+                                                <div class="single-field mb-0">
+                                                    <button class="button-1" type="submit" name="submit">Submit</button>
+                                                </div>
+                                            </div>
+                                            {{-- <div class="col-md-6">
+                                                <div class="single-field mb-0">
+                                                    <a href="" class="button-1" style="padding: 12px 20px;font-size: 18px;display: inline-block;width: 100%;text-align:center;" type="submit">Cancel</a>
+                                                </div>
+                                            </div> --}}
+                                        </div>
+                                    </div>
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+@endsection

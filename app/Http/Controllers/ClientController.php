@@ -3,8 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\DB;
-use Carbon\Carbon;
 use Illuminate\Support\Facades\Auth;
 use Barryvdh\DomPDF\Facade\Pdf;
 
@@ -17,8 +17,7 @@ class ClientController extends Controller
 
     public function store(Request $request)
     {
-        // dd($request);
-
+        // Validate the form data
         $validatedData = $request->validate([
             'client_name' => 'required|string|max:255',
             'branch_name' => 'required|string|max:255',
@@ -48,7 +47,7 @@ class ClientController extends Controller
             'job_card' => 'nullable|string|max:255',
         ]);
 
-        // dd($validatedData);
+        // Insert data into the database
         DB::table('client_register_details')->insert([
             'client_name' => $validatedData['client_name'],
             'branch_name' => $validatedData['branch_name'],
@@ -76,18 +75,17 @@ class ClientController extends Controller
             'driving_licence' => $validatedData['license'],
             'aadhar_no' => $validatedData['aadhar'],
             'job_card_details' => $validatedData['job_card'],
-            'inserted_at' => now(),
+            'inserted_at' => date('Y-m-d H:i:s'),
             'inserted_by' => 1,
         ]);
 
+        // Generate and save the PDF
+        $pdf = PDF::loadView('pdf.client_details_pdf', ['data' => $validatedData]);
+        $pdfFileName = 'client_details_' . $validatedData['client_id'] . '.pdf';
+        $pdf->save(public_path('user_register/pdf' . $pdfFileName));
 
-        $pdf = Pdf::loadView('pdf.client_details_pdf', ['data' => $validatedData]);
-
-        $pdfPath = storage_path('app/public/client_details_' . $validatedData['client_id'] . '.pdf');
-        $pdf->save($pdfPath);
-
-        return $pdf->download('client_details_' . $validatedData['client_id'] . '.pdf');
-
-        return redirect()->back()->with('success', 'Client details saved successfully!');
+        // Return back with a toaster message
+        return redirect()->back()->with('success', 'Client details saved successfully! PDF has been generated and stored.');
     }
+
 }

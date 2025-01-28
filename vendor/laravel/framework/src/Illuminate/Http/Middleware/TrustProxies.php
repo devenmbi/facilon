@@ -49,7 +49,13 @@ class TrustProxies
     {
         $trustedIps = $this->proxies() ?: config('trustedproxy.proxies');
 
+<<<<<<< HEAD
         if (is_null($trustedIps) && laravel_cloud()) {
+=======
+        if (is_null($trustedIps) &&
+            (($_ENV['LARAVEL_CLOUD'] ?? false) === '1' ||
+            ($_SERVER['LARAVEL_CLOUD'] ?? false) === '1')) {
+>>>>>>> riddhi
             $trustedIps = '*';
         }
 

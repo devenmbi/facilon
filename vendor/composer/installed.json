@@ -536,6 +536,7 @@
             "install-path": "../doctrine/lexer"
         },
         {
+<<<<<<< HEAD
             "name": "dompdf/dompdf",
             "version": "v3.1.0",
             "version_normalized": "3.1.0.0",
@@ -710,6 +711,18 @@
             },
             "dist": {
                 "type": "zip",
+=======
+            "name": "dragonmantank/cron-expression",
+            "version": "v3.4.0",
+            "version_normalized": "3.4.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dragonmantank/cron-expression.git",
+                "reference": "8c784d071debd117328803d86b2097615b457500"
+            },
+            "dist": {
+                "type": "zip",
+>>>>>>> riddhi
                 "url": "https://api.github.com/repos/dragonmantank/cron-expression/zipball/8c784d071debd117328803d86b2097615b457500",
                 "reference": "8c784d071debd117328803d86b2097615b457500",
                 "shasum": ""
@@ -1595,6 +1608,7 @@
         },
         {
             "name": "laravel/framework",
+<<<<<<< HEAD
             "version": "v9.52.19",
             "version_normalized": "9.52.19.0",
             "source": {
@@ -1606,6 +1620,19 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/laravel/framework/zipball/0d244f0e7ef871b6d4efcacb396e155e6a13912c",
                 "reference": "0d244f0e7ef871b6d4efcacb396e155e6a13912c",
+=======
+            "version": "v9.52.18",
+            "version_normalized": "9.52.18.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laravel/framework.git",
+                "reference": "41c812bf83e00d0d3f4b6963b0d475b26cb6fbf7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/41c812bf83e00d0d3f4b6963b0d475b26cb6fbf7",
+                "reference": "41c812bf83e00d0d3f4b6963b0d475b26cb6fbf7",
+>>>>>>> riddhi
                 "shasum": ""
             },
             "require": {
@@ -1748,7 +1775,11 @@
                 "symfony/postmark-mailer": "Required to enable support for the Postmark mail transport (^6.0).",
                 "symfony/psr-http-message-bridge": "Required to use PSR-7 bridging features (^2.0)."
             },
+<<<<<<< HEAD
             "time": "2025-01-21T16:07:36+00:00",
+=======
+            "time": "2024-11-20T15:56:00+00:00",
+>>>>>>> riddhi
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -1796,6 +1827,7 @@
         },
         {
             "name": "laravel/pint",
+<<<<<<< HEAD
             "version": "v1.20.0",
             "version_normalized": "1.20.0.0",
             "source": {
@@ -1807,6 +1839,19 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/laravel/pint/zipball/53072e8ea22213a7ed168a8a15b96fbb8b82d44b",
                 "reference": "53072e8ea22213a7ed168a8a15b96fbb8b82d44b",
+=======
+            "version": "v1.19.0",
+            "version_normalized": "1.19.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laravel/pint.git",
+                "reference": "8169513746e1bac70c85d6ea1524d9225d4886f0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laravel/pint/zipball/8169513746e1bac70c85d6ea1524d9225d4886f0",
+                "reference": "8169513746e1bac70c85d6ea1524d9225d4886f0",
+>>>>>>> riddhi
                 "shasum": ""
             },
             "require": {
@@ -1825,7 +1870,11 @@
                 "nunomaduro/termwind": "^1.17.0",
                 "pestphp/pest": "^2.36.0"
             },
+<<<<<<< HEAD
             "time": "2025-01-14T16:20:53+00:00",
+=======
+            "time": "2024-12-30T16:20:10+00:00",
+>>>>>>> riddhi
             "bin": [
                 "builds/pint"
             ],
@@ -1865,6 +1914,7 @@
         },
         {
             "name": "laravel/sail",
+<<<<<<< HEAD
             "version": "v1.40.0",
             "version_normalized": "1.40.0.0",
             "source": {
@@ -1876,6 +1926,19 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/laravel/sail/zipball/237e70656d8eface4839de51d101284bd5d0cf71",
                 "reference": "237e70656d8eface4839de51d101284bd5d0cf71",
+=======
+            "version": "v1.39.1",
+            "version_normalized": "1.39.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laravel/sail.git",
+                "reference": "1a3c7291bc88de983b66688919a4d298d68ddec7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laravel/sail/zipball/1a3c7291bc88de983b66688919a4d298d68ddec7",
+                "reference": "1a3c7291bc88de983b66688919a4d298d68ddec7",
+>>>>>>> riddhi
                 "shasum": ""
             },
             "require": {
@@ -1890,7 +1953,11 @@
                 "orchestra/testbench": "^7.0|^8.0|^9.0",
                 "phpstan/phpstan": "^1.10"
             },
+<<<<<<< HEAD
             "time": "2025-01-13T16:57:11+00:00",
+=======
+            "time": "2024-11-27T15:42:28+00:00",
+>>>>>>> riddhi
             "bin": [
                 "bin/sail"
             ],

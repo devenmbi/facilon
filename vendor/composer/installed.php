@@ -3,7 +3,11 @@
         'name' => 'laravel/laravel',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
+<<<<<<< HEAD
         'reference' => 'd0eeb92f4d6c69cc3a5b23622c36f3742d889f3f',
+=======
+        'reference' => '09f6ffa30015bb0d19372d6c314ea016dfb92aed',
+>>>>>>> riddhi
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -214,193 +218,321 @@
         'illuminate/auth' => array(
             'dev_requirement' => false,
             'replaced' => array(
+<<<<<<< HEAD
                 0 => 'v9.52.19',
+=======
+                0 => 'v9.52.18',
+>>>>>>> riddhi
             ),
         ),
         'illuminate/broadcasting' => array(
             'dev_requirement' => false,
             'replaced' => array(
+<<<<<<< HEAD
                 0 => 'v9.52.19',
+=======
+                0 => 'v9.52.18',
+>>>>>>> riddhi
             ),
         ),
         'illuminate/bus' => array(
             'dev_requirement' => false,
             'replaced' => array(
+<<<<<<< HEAD
                 0 => 'v9.52.19',
+=======
+                0 => 'v9.52.18',
+>>>>>>> riddhi
             ),
         ),
         'illuminate/cache' => array(
             'dev_requirement' => false,
             'replaced' => array(
+<<<<<<< HEAD
                 0 => 'v9.52.19',
+=======
+                0 => 'v9.52.18',
+>>>>>>> riddhi
             ),
         ),
         'illuminate/collections' => array(
             'dev_requirement' => false,
             'replaced' => array(
+<<<<<<< HEAD
                 0 => 'v9.52.19',
+=======
+                0 => 'v9.52.18',
+>>>>>>> riddhi
             ),
         ),
         'illuminate/conditionable' => array(
             'dev_requirement' => false,
             'replaced' => array(
+<<<<<<< HEAD
                 0 => 'v9.52.19',
+=======
+                0 => 'v9.52.18',
+>>>>>>> riddhi
             ),
         ),
         'illuminate/config' => array(
             'dev_requirement' => false,
             'replaced' => array(
+<<<<<<< HEAD
                 0 => 'v9.52.19',
+=======
+                0 => 'v9.52.18',
+>>>>>>> riddhi
             ),
         ),
         'illuminate/console' => array(
             'dev_requirement' => false,
             'replaced' => array(
+<<<<<<< HEAD
                 0 => 'v9.52.19',
+=======
+                0 => 'v9.52.18',
+>>>>>>> riddhi
             ),
         ),
         'illuminate/container' => array(
             'dev_requirement' => false,
             'replaced' => array(
+<<<<<<< HEAD
                 0 => 'v9.52.19',
+=======
+                0 => 'v9.52.18',
+>>>>>>> riddhi
             ),
         ),
         'illuminate/contracts' => array(
             'dev_requirement' => false,
             'replaced' => array(
+<<<<<<< HEAD
                 0 => 'v9.52.19',
+=======
+                0 => 'v9.52.18',
+>>>>>>> riddhi
             ),
         ),
         'illuminate/cookie' => array(
             'dev_requirement' => false,
             'replaced' => array(
+<<<<<<< HEAD
                 0 => 'v9.52.19',
+=======
+                0 => 'v9.52.18',
+>>>>>>> riddhi
             ),
         ),
         'illuminate/database' => array(
             'dev_requirement' => false,
             'replaced' => array(
+<<<<<<< HEAD
                 0 => 'v9.52.19',
+=======
+                0 => 'v9.52.18',
+>>>>>>> riddhi
             ),
         ),
         'illuminate/encryption' => array(
             'dev_requirement' => false,
             'replaced' => array(
+<<<<<<< HEAD
                 0 => 'v9.52.19',
+=======
+                0 => 'v9.52.18',
+>>>>>>> riddhi
             ),
         ),
         'illuminate/events' => array(
             'dev_requirement' => false,
             'replaced' => array(
+<<<<<<< HEAD
                 0 => 'v9.52.19',
+=======
+                0 => 'v9.52.18',
+>>>>>>> riddhi
             ),
         ),
         'illuminate/filesystem' => array(
             'dev_requirement' => false,
             'replaced' => array(
+<<<<<<< HEAD
                 0 => 'v9.52.19',
+=======
+                0 => 'v9.52.18',
+>>>>>>> riddhi
             ),
         ),
         'illuminate/hashing' => array(
             'dev_requirement' => false,
             'replaced' => array(
+<<<<<<< HEAD
                 0 => 'v9.52.19',
+=======
+                0 => 'v9.52.18',
+>>>>>>> riddhi
             ),
         ),
         'illuminate/http' => array(
             'dev_requirement' => false,
             'replaced' => array(
+<<<<<<< HEAD
                 0 => 'v9.52.19',
+=======
+                0 => 'v9.52.18',
+>>>>>>> riddhi
             ),
         ),
         'illuminate/log' => array(
             'dev_requirement' => false,
             'replaced' => array(
+<<<<<<< HEAD
                 0 => 'v9.52.19',
+=======
+                0 => 'v9.52.18',
+>>>>>>> riddhi
             ),
         ),
         'illuminate/macroable' => array(
             'dev_requirement' => false,
             'replaced' => array(
+<<<<<<< HEAD
                 0 => 'v9.52.19',
+=======
+                0 => 'v9.52.18',
+>>>>>>> riddhi
             ),
         ),
         'illuminate/mail' => array(
             'dev_requirement' => false,
             'replaced' => array(
+<<<<<<< HEAD
                 0 => 'v9.52.19',
+=======
+                0 => 'v9.52.18',
+>>>>>>> riddhi
             ),
         ),
         'illuminate/notifications' => array(
             'dev_requirement' => false,
             'replaced' => array(
+<<<<<<< HEAD
                 0 => 'v9.52.19',
+=======
+                0 => 'v9.52.18',
+>>>>>>> riddhi
             ),
         ),
         'illuminate/pagination' => array(
             'dev_requirement' => false,
             'replaced' => array(
+<<<<<<< HEAD
                 0 => 'v9.52.19',
+=======
+                0 => 'v9.52.18',
+>>>>>>> riddhi
             ),
         ),
         'illuminate/pipeline' => array(
             'dev_requirement' => false,
             'replaced' => array(
+<<<<<<< HEAD
                 0 => 'v9.52.19',
+=======
+                0 => 'v9.52.18',
+>>>>>>> riddhi
             ),
         ),
         'illuminate/queue' => array(
             'dev_requirement' => false,
             'replaced' => array(
+<<<<<<< HEAD
                 0 => 'v9.52.19',
+=======
+                0 => 'v9.52.18',
+>>>>>>> riddhi
             ),
         ),
         'illuminate/redis' => array(
             'dev_requirement' => false,
             'replaced' => array(
+<<<<<<< HEAD
                 0 => 'v9.52.19',
+=======
+                0 => 'v9.52.18',
+>>>>>>> riddhi
             ),
         ),
         'illuminate/routing' => array(
             'dev_requirement' => false,
             'replaced' => array(
+<<<<<<< HEAD
                 0 => 'v9.52.19',
+=======
+                0 => 'v9.52.18',
+>>>>>>> riddhi
             ),
         ),
         'illuminate/session' => array(
             'dev_requirement' => false,
             'replaced' => array(
+<<<<<<< HEAD
                 0 => 'v9.52.19',
+=======
+                0 => 'v9.52.18',
+>>>>>>> riddhi
             ),
         ),
         'illuminate/support' => array(
             'dev_requirement' => false,
             'replaced' => array(
+<<<<<<< HEAD
                 0 => 'v9.52.19',
+=======
+                0 => 'v9.52.18',
+>>>>>>> riddhi
             ),
         ),
         'illuminate/testing' => array(
             'dev_requirement' => false,
             'replaced' => array(
+<<<<<<< HEAD
                 0 => 'v9.52.19',
+=======
+                0 => 'v9.52.18',
+>>>>>>> riddhi
             ),
         ),
         'illuminate/translation' => array(
             'dev_requirement' => false,
             'replaced' => array(
+<<<<<<< HEAD
                 0 => 'v9.52.19',
+=======
+                0 => 'v9.52.18',
+>>>>>>> riddhi
             ),
         ),
         'illuminate/validation' => array(
             'dev_requirement' => false,
             'replaced' => array(
+<<<<<<< HEAD
                 0 => 'v9.52.19',
+=======
+                0 => 'v9.52.18',
+>>>>>>> riddhi
             ),
         ),
         'illuminate/view' => array(
             'dev_requirement' => false,
             'replaced' => array(
+<<<<<<< HEAD
                 0 => 'v9.52.19',
+=======
+                0 => 'v9.52.18',
+>>>>>>> riddhi
             ),
         ),
         'kodova/hamcrest-php' => array(
@@ -410,9 +542,15 @@
             ),
         ),
         'laravel/framework' => array(
+<<<<<<< HEAD
             'pretty_version' => 'v9.52.19',
             'version' => '9.52.19.0',
             'reference' => '0d244f0e7ef871b6d4efcacb396e155e6a13912c',
+=======
+            'pretty_version' => 'v9.52.18',
+            'version' => '9.52.18.0',
+            'reference' => '41c812bf83e00d0d3f4b6963b0d475b26cb6fbf7',
+>>>>>>> riddhi
             'type' => 'library',
             'install_path' => __DIR__ . '/../laravel/framework',
             'aliases' => array(),
@@ -421,25 +559,41 @@
         'laravel/laravel' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
+<<<<<<< HEAD
             'reference' => 'd0eeb92f4d6c69cc3a5b23622c36f3742d889f3f',
+=======
+            'reference' => '09f6ffa30015bb0d19372d6c314ea016dfb92aed',
+>>>>>>> riddhi
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
             'dev_requirement' => false,
         ),
         'laravel/pint' => array(
+<<<<<<< HEAD
             'pretty_version' => 'v1.20.0',
             'version' => '1.20.0.0',
             'reference' => '53072e8ea22213a7ed168a8a15b96fbb8b82d44b',
+=======
+            'pretty_version' => 'v1.19.0',
+            'version' => '1.19.0.0',
+            'reference' => '8169513746e1bac70c85d6ea1524d9225d4886f0',
+>>>>>>> riddhi
             'type' => 'project',
             'install_path' => __DIR__ . '/../laravel/pint',
             'aliases' => array(),
             'dev_requirement' => true,
         ),
         'laravel/sail' => array(
+<<<<<<< HEAD
             'pretty_version' => 'v1.40.0',
             'version' => '1.40.0.0',
             'reference' => '237e70656d8eface4839de51d101284bd5d0cf71',
+=======
+            'pretty_version' => 'v1.39.1',
+            'version' => '1.39.1.0',
+            'reference' => '1a3c7291bc88de983b66688919a4d298d68ddec7',
+>>>>>>> riddhi
             'type' => 'library',
             'install_path' => __DIR__ . '/../laravel/sail',
             'aliases' => array(),

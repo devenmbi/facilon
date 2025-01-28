@@ -25,8 +25,20 @@ class FrontendController extends Controller
         
         return view('welcome', compact('fetch_banner_details', 'list_key_points'));
     }
-        
-        
+    
+public function coming_soon_show()
+    {
+        return view('coming-soon');
+    }    
+public function faq_show()
+{
+return view('faq');
+}
+     
+public function expression_interest_show()
+    {
+        return view('expression-of-interest');
+    }   
     //  Custody
     public function custody()
     {
@@ -114,4 +126,9 @@ class FrontendController extends Controller
         
         return view('service-providers', compact('list_service_providers'));
     }
+public function india_market_show()
+{
+return view('india-market');
+}
+
 }

@@ -44,8 +44,11 @@ Route::get('service-provider/register/thank-you',[App\Http\Controllers\BrokerCon
 
 
 //client registration
-Route::get('client/register/step1',[App\Http\Controllers\ClientController::class,'client_registration_step1_show'])->name('client_registration_step1_show');
+Route::get('client/registration',[App\Http\Controllers\ClientController::class,'client_registration_step1_show'])->name('client_registration_step1_show');
 Route::post('/submit', [App\Http\Controllers\ClientController::class, 'store'])->name('submit');
+
+// ==== Generate registration PDF ====
+Route::get('register/pdf',[App\Http\Controllers\userRegisterPDFController::class,'user_register_pdf'])->name('user_register_pdf');
 
 //Broker registration
 Route::get('broker/register/step1',[App\Http\Controllers\BrokerController::class,'broker_registration_step1_show'])->name('broker_registration_step1_show');
@@ -58,9 +61,6 @@ Route::get('broker/register/step3/{unique_code?}',[App\Http\Controllers\BrokerCo
 Route::post('broker/register/step3/{unique_code?}',[App\Http\Controllers\BrokerController::class,'broker_register_step3_submit'])->name('broker_register_step3_submit');
 
 Route::get('broker/register/thank-you',[App\Http\Controllers\BrokerController::class,'broker_register_thank_you_show'])->name('broker_register_thank_you_show');
-
-// ==== Generate registration PDF ====
-Route::get('register/pdf',[App\Http\Controllers\userRegisterPDFController::class,'user_register_pdf'])->name('user_register_pdf');
 
 //Investor Frontend Routes
 // Route::get('investor/register/step1',[App\Http\Controllers\InvestorController::class,'investor_register_step1_show'])->name('investor_register_step1_show');

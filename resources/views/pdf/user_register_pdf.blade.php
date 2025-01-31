@@ -270,10 +270,26 @@
 
         <!-- Form Section -->
         <div class="form-section">
-            <p>Name Of Client: _________________________</p>
-            <p>Client Code: ____________________ Client ID: ____________________</p>
-            <p>Branch: _________________________</p>
-        </div>
+            <p>Name Of Client : 
+                <span style="display: inline-block; width: 60%; padding-bottom: 2px; border-bottom: 1px solid #000; text-align: left;">
+                    {{ $data['client_name'] ?? '_________________________' }}
+                </span>
+            </p>
+            <p>Client Code : 
+                <span style="display: inline-block; width: 30%; padding-bottom: 2px; border-bottom: 1px solid #000; text-align: center;">
+                    {{ $data['client_code'] ?? '____________________' }}
+                </span>
+                Client ID : 
+                <span style="display: inline-block; width: 30%; padding-bottom: 2px; border-bottom: 1px solid #000; text-align: center;">
+                    {{ $data['client_id'] ?? '____________________' }}
+                </span>
+            </p>
+            <p>Branch : 
+                <span style="display: inline-block; width: 60%; padding-bottom: 2px; border-bottom: 1px solid #000; text-align: left;">
+                    {{ $data['branch_name'] ?? '_________________________' }}
+                </span>
+            </p>
+        </div>                
 
         <!-- Footer Section -->
         <div class="footer">
@@ -871,7 +887,7 @@
         <table border="1" style="border-collapse: collapse; border-color: #000000; width: 30%; float: right;">
             <tr>
                 <td style="padding: 10px; text-align: left; font-weight: bold; font-size: 20px; line-height: 20px;">
-                    FU |
+                    FU | {{ $data['client_code'] ?? '' }}
                 </td>
             </tr>
         </table>
@@ -937,14 +953,26 @@
                     </th>
                 </tr>
                 <tr>
-                    <th colspan="4" >
+                    <th colspan="4">
                         <b>Application Type <span style="color: red">*</span></b>
                     </th>
                     <th rowspan="3" class="d-flex">
-                        <div class="small-square-box">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;New</div>
+                        <div class="small-square-box">
+                            @if($data['application_type'] == 1)
+                                &#x2714;  <!-- Unicode for check mark -->
+                            @else
+                                &nbsp;
+                            @endif
+                        </div>
                     </th>
                     <th rowspan="3" class="d-flex">
-                        <div class="small-square-box">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Update</div>
+                        <div class="small-square-box">
+                            @if($data['application_type'] == 2)
+                                &#x2714;  <!-- Unicode for check mark -->
+                            @else
+                                &nbsp;
+                            @endif
+                        </div>
                     </th>
                 </tr>
                 <tr>
@@ -1241,26 +1269,16 @@
                     <td style="border: 1px solid #000;">Occupation Type <span style="color: red;">*</span></td>
                     <td style="border: 1px solid #000;">
                         <div style="display: flex; align-items: center; gap: 20px; flex-wrap: wrap;">
-                            <label><input type="checkbox" name="occupation_type" style="margin-right: 5px;">S -
-                                Service (Private Sector)</label>
-                            <label><input type="checkbox" name="occupation_type" style="margin-right: 5px;">Public
-                                Sector</label>
-                            <label><input type="checkbox" name="occupation_type"
-                                    style="margin-right: 5px;">Government Sector</label>
-                            <label><input type="checkbox" name="occupation_type" style="margin-right: 5px;">O -
-                                Others (Professional)</label>
-                            <label><input type="checkbox" name="occupation_type" style="margin-right: 5px;">Self
-                                Employed</label>
-                            <label><input type="checkbox" name="occupation_type"
-                                    style="margin-right: 5px;">Retired</label>
-                            <label><input type="checkbox" name="occupation_type" style="margin-right: 5px;">B -
-                                Business</label>
-                            <label><input type="checkbox" name="occupation_type"
-                                    style="margin-right: 5px;">Housewife</label>
-                            <label><input type="checkbox" name="occupation_type"
-                                    style="margin-right: 5px;">Student</label>
-                            <label><input type="checkbox" name="occupation_type" style="margin-right: 5px;">X - Not
-                                Categorised</label>
+                            <label><input type="checkbox" name="occupation_type" style="margin-right: 5px;">S - Service (Private Sector)</label>
+                            <label><input type="checkbox" name="occupation_type" style="margin-right: 5px;">Public Sector</label>
+                            <label><input type="checkbox" name="occupation_type" style="margin-right: 5px;">Government Sector</label>
+                            <label><input type="checkbox" name="occupation_type" style="margin-right: 5px;">O - Others (Professional)</label>
+                            <label><input type="checkbox" name="occupation_type" style="margin-right: 5px;">Self Employed</label>
+                            <label><input type="checkbox" name="occupation_type" style="margin-right: 5px;">Retired</label>
+                            <label><input type="checkbox" name="occupation_type" style="margin-right: 5px;">B - Business</label>
+                            <label><input type="checkbox" name="occupation_type" style="margin-right: 5px;">Housewife</label>
+                            <label><input type="checkbox" name="occupation_type" style="margin-right: 5px;">Student</label>
+                            <label><input type="checkbox" name="occupation_type" style="margin-right: 5px;">X - Not Categorised</label>
                         </div>
                     </td>
                 </tr>

@@ -10,7 +10,7 @@ class userRegisterPDFController extends Controller
 {
     public function user_register_pdf()
     {
-        $pdf = Pdf::loadView('pdf.user_register_pdf')
+        $pdf = Pdf::loadView('pdf.client_register_pdf')
             ->setPaper('a4', 'portrait')
             ->setWarnings(false)
             ->setOptions(['defaultFont' => 'sans-serif'])

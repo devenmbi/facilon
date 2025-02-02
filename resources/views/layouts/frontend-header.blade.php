@@ -142,6 +142,11 @@
                                 <!--</li>-->
                                 <!--<li><a href="#">Media & Events</a></li>-->
                                 <li><a href="{{ route('service_provider_registration_step1_show', ['provider_id' => 1]) }}">Service Provider Registration</a></li>
+                                <li>
+                                    <a href="{{ route('client_registration_step1_show') }}">
+                                        Client Registration
+                                    </a>
+                                </li>
                             </ul>
                         </div>
                         <button type="button" id="sidebarCollapse" class="btn btn-info sidebar-btn">

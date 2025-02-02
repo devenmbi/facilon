@@ -5,6 +5,12 @@
         border: 1px solid #3a3535 !important;
         border-radius: 5px !important;
     }
+
+    #preview-profilePic-container {
+        display: none;
+        margin-top: 10px;
+    }
+
 </style>
 @section('content')
     <section class="login-form-style4 steps4-sec section-padding align-items-center" style="background-image:url('https://anvaya.online/facilon/public/frontend/images/banner/2125.jpg');">
@@ -20,7 +26,7 @@
                     <div class="login-form-style3-main">
                         <div class="login-form-style3-main_full">
                             <div class="login-register3-form-middle">
-                                <form action="{{ route('submit') }}" data-bitwarden-watching="1" method="post">
+                                <form action="{{ route('submit') }}"  method="post" class="form-horizontal" enctype="multipart/form-data" >
                                     @csrf
 
                                     <div class="name-sec" id="section_self_div">
@@ -29,7 +35,7 @@
                                                 <label for="username">
                                                     Client Name : <span class="star-color">*</span>
                                                 </label>
-                                                <input type="text" class="form-control @error('client_name') is-invalid @enderror" id="client_name" name="client_name" value="{{ old('client_name') }}">
+                                                <input type="text" class="form-control @error('client_name') is-invalid @enderror" id="client_name" name="client_name" value="{{ old('client_name') }}" placeholder="Enter Client Name">
                                                 @error('client_name')
                                                     <span class="invalid-feedback" role="alert">
                                                         <strong class="text-danger">{{ $message }}</strong>
@@ -41,7 +47,7 @@
                                                 <label for="username">
                                                     Branch Name : <span class="star-color">*</span>
                                                 </label>
-                                                <input type="text" class="form-control @error('branch_name') is-invalid @enderror" id="branch_name" name="branch_name" value="{{ old('branch_name') }}">
+                                                <input type="text" class="form-control @error('branch_name') is-invalid @enderror" id="branch_name" name="branch_name" value="{{ old('branch_name') }}" placeholder="Enter Branch Name">
                                                 @error('branch_name')
                                                     <span class="invalid-feedback" role="alert">
                                                         <strong class="text-danger">{{ $message }}</strong>
@@ -53,7 +59,7 @@
                                                 <label for="client_code">
                                                     Client Code : <span class="star-color">*</span>
                                                 </label>
-                                                <input type="text" class="form-control @error('client_code') is-invalid @enderror" id="client_code" name="client_code" value="{{ old('client_code') }}">
+                                                <input type="text" class="form-control @error('client_code') is-invalid @enderror" id="client_code" name="client_code" value="{{ old('client_code') }}" placeholder="Enter Client Code">
                                                 @error('client_code')
                                                     <span class="invalid-feedback" role="alert">
                                                         <strong class="text-danger">{{ $message }}</strong>
@@ -65,7 +71,7 @@
                                                 <label for="client_id">
                                                     Client ID : <span class="star-color">*</span>
                                                 </label>
-                                                <input type="text" class="form-control @error('client_id') is-invalid @enderror" id="client_id" name="client_id" value="{{ old('client_id') }}">
+                                                <input type="text" class="form-control @error('client_id') is-invalid @enderror" id="client_id" name="client_id" value="{{ old('client_id') }}" placeholder="Enter Client ID">
                                                 @error('client_id')
                                                     <span class="invalid-feedback" role="alert">
                                                         <strong class="text-danger">{{ $message }}</strong>
@@ -83,8 +89,8 @@
                                                 <div class="col-md-4">
                                                     <label for="application_type">Application Type : <span class="text-danger">*</span></label>
                                                     <select class="form-control @error('application_type') is-invalid @enderror" id="application_type" name="application_type">
-                                                        <option value="" disabled selected>Select Application Type</option>
-                                                        <option value="1" {{ old('application_type') == '1' ? 'selected' : '' }} selected="selected">New</option>
+                                                        <option value="">Select Application Type</option>
+                                                        <option value="1" {{ old('application_type') == '1' ? 'selected' : '' }}>New</option>
                                                         <option value="2" {{ old('application_type') == '2' ? 'selected' : '' }}>Existing</option>
                                                     </select>
                                                     @error('application_type')
@@ -96,7 +102,7 @@
 
                                                 <div class="col-md-4">
                                                     <label for="kyc_number">KYC Number : <span class="text-danger">*</span></label>
-                                                    <input type="text" class="form-control @error('kyc_number') is-invalid @enderror" id="kyc_number" name="kyc_number" value="{{ old('kyc_number') }}">
+                                                    <input type="text" class="form-control @error('kyc_number') is-invalid @enderror" id="kyc_number" name="kyc_number" value="{{ old('kyc_number') }}" placeholder="Enter KYC Number">
                                                     @error('kyc_number')
                                                         <span class="invalid-feedback" role="alert">
                                                             <strong class="text-danger">{{ $message }}</strong>
@@ -107,7 +113,7 @@
                                                 <div class="col-md-4">
                                                     <label for="account_type">Account Type : <span class="text-danger">*</span></label>
                                                     <select class="form-control @error('account_type') is-invalid @enderror" id="account_type" name="account_type">
-                                                        <option value="" disabled selected>Select Account Type</option>
+                                                        <option value="" >Select Account Type</option>
                                                         <option value="1" {{ old('account_type') == '1' ? 'selected' : '' }}>Normal</option>
                                                         <option value="2" {{ old('account_type') == '2' ? 'selected' : '' }}>Simplified(for low risk customer)</option>
                                                         <option value="3" {{ old('account_type') == '3' ? 'selected' : '' }}>Small</option>
@@ -133,7 +139,7 @@
                                                         <div class="col-md-3">
                                                             <label for="prefix">Prefix : <span class="text-danger">*</span></label>
                                                             <select class="form-control @error('prefix') is-invalid @enderror" id="prefix" name="prefix">
-                                                                <option value="" disabled selected>Select Prefix</option>
+                                                                <option value="" >Select Prefix</option>
                                                                 <option value="1" {{ old('prefix') == '1' ? 'selected' : '' }}>Mr.</option>
                                                                 <option value="2" {{ old('prefix') == '2' ? 'selected' : '' }}>Mrs.</option>
                                                                 <option value="3" {{ old('prefix') == '3' ? 'selected' : '' }}>Shri.</option>
@@ -181,7 +187,7 @@
                                                         <div class="col-md-3">
                                                             <label for="prefix">Prefix : <span class="text-danger">*</span></label>
                                                             <select class="form-control @error('maiden_prefix') is-invalid @enderror" id="maiden_prefix" name="maiden_prefix">
-                                                                <option value="" disabled selected>Select Prefix</option>
+                                                                <option value="" >Select Prefix</option>
                                                                 <option value="1" {{ old('maiden_prefix') == '1' ? 'selected' : '' }}>Mr.</option>
                                                                 <option value="2" {{ old('maiden_prefix') == '2' ? 'selected' : '' }}>Miss.</option>
                                                                 <option value="3" {{ old('maiden_prefix') == '3' ? 'selected' : '' }}>Shri.</option>
@@ -230,7 +236,7 @@
                                                         <div class="col-md-3">
                                                             <label for="prefix">Prefix : <span class="text-danger">*</span></label>
                                                             <select class="form-control @error('father_prefix') is-invalid @enderror" id="father_prefix" name="father_prefix">
-                                                                <option value="" disabled selected>Select Prefix</option>
+                                                                <option value="" >Select Prefix</option>
                                                                 <option value="1" {{ old('father_prefix') == '1' ? 'selected' : '' }}>Mr.</option>
                                                                 <option value="2" {{ old('father_prefix') == '2' ? 'selected' : '' }}>Miss.</option>
                                                                 <option value="3" {{ old('father_prefix') == '3' ? 'selected' : '' }}>Shri.</option>
@@ -279,7 +285,7 @@
                                                         <div class="col-md-3">
                                                             <label for="prefix">Prefix : <span class="text-danger">*</span></label>
                                                             <select class="form-control @error('mother_prefix') is-invalid @enderror" id="mother_prefix" name="mother_prefix">
-                                                                <option value="" disabled selected>Select Prefix</option>
+                                                                <option value="" >Select Prefix</option>
                                                                 <option value="1" {{ old('mother_prefix') == '1' ? 'selected' : '' }}>Mr.</option>
                                                                 <option value="2" {{ old('mother_prefix') == '2' ? 'selected' : '' }}>Miss.</option>
                                                                 <option value="3" {{ old('mother_prefix') == '3' ? 'selected' : '' }}>Shri.</option>
@@ -337,7 +343,7 @@
                                                         <div class="col-md-3">
                                                             <label for="prefix">Gender : <span class="text-danger">*</span></label>
                                                             <select class="form-control @error('gender') is-invalid @enderror" id="gender" name="gender">
-                                                                <option value="" disabled selected>Select Gender</option>
+                                                                <option value="" >Select Gender</option>
                                                                 <option value="1" {{ old('gender') == '1' ? 'selected' : '' }}>M - Male</option>
                                                                 <option value="2" {{ old('gender') == '2' ? 'selected' : '' }}>F - Femail</option>
                                                                 <option value="3" {{ old('gender') == '3' ? 'selected' : '' }}>T - Transgender</option>
@@ -352,7 +358,7 @@
                                                         <div class="col-md-3">
                                                             <label for="prefix">Marital Status : <span class="text-danger">*</span></label>
                                                             <select class="form-control @error('marital_status') is-invalid @enderror" id="marital_status" name="marital_status">
-                                                                <option value="" disabled selected>Select Marital Status</option>
+                                                                <option value="" >Select Marital Status</option>
                                                                 <option value="1" {{ old('marital_status') == '1' ? 'selected' : '' }}>Married</option>
                                                                 <option value="2" {{ old('marital_status') == '2' ? 'selected' : '' }}>Unmarried</option>
                                                                 <option value="3" {{ old('marital_status') == '3' ? 'selected' : '' }}>Others</option>
@@ -367,7 +373,7 @@
                                                         <div class="col-md-3">
                                                             <label for="last-name">Citizenship : <span class="text-danger">*</span></label>
                                                             <select class="form-control @error('citizenship') is-invalid @enderror" id="citizenship" name="citizenship">
-                                                                <option value="" disabled selected>Select Citizenship</option>
+                                                                <option value="" >Select Citizenship</option>
                                                                 <option value="1" {{ old('citizenship') == '1' ? 'selected' : '' }}>IN - Indian</option>
                                                                 <option value="2" {{ old('citizenship') == '2' ? 'selected' : '' }}>Others</option>
                                                             </select>
@@ -385,7 +391,7 @@
                                                         <div class="col-md-4">
                                                             <label for="prefix">Residenital Status : <span class="text-danger">*</span></label>
                                                             <select class="form-control @error('residenital_status') is-invalid @enderror" id="residenital_status" name="residenital_status">
-                                                                <option value="" disabled selected>Select Residenital Status</option>
+                                                                <option value="" >Select Residenital Status</option>
                                                                 <option value="1" {{ old('residenital_status') == '1' ? 'selected' : '' }}>Resident Individual</option>
                                                                 <option value="2" {{ old('residenital_status') == '2' ? 'selected' : '' }}>Non-Resident Indian</option>
                                                                 <option value="3" {{ old('residenital_status') == '3' ? 'selected' : '' }}>Foreign National</option>
@@ -401,7 +407,7 @@
                                                         <div class="col-md-4">
                                                             <label for="prefix">Occupation Type : <span class="text-danger">*</span></label>
                                                             <select class="form-control @error('occupation_type') is-invalid @enderror" id="occupation_type" name="occupation_type">
-                                                                <option value="" disabled selected>Select Occupation Type</option>
+                                                                <option value="" >Select Occupation Type</option>
                                                                 <option value="1" {{ old('occupation_type') == '1' ? 'selected' : '' }}>S - Service (Private Sector)</option>
                                                                 <option value="2" {{ old('occupation_type') == '2' ? 'selected' : '' }}>Public Sector</option>
                                                                 <option value="3" {{ old('occupation_type') == '3' ? 'selected' : '' }}>Government Sector</option>
@@ -421,20 +427,20 @@
                                                         </div>
 
                                                         <div class="col-md-4">
-                                                            <label for="prefix">Upload Profile Pic : <span class="text-danger">*</label>
-                                                            <input type="file" onchange="agentPreviewFile()" accept=".png, .jpg, .jpeg, .webp" class="form-control @error('profile_pic') is-invalid @enderror" id="profile-pic" name="profile_pic" value="{{ old('profile_pic') }}">
-                                                            </span><small class="text-secondary"><b>(Files must be JPG/PNG/JPEG/WEBP, Under 2MB.)</b></small>
+                                                            <label for="profile_pic">Upload Profile Pic : <span class="text-danger">*</span></label>
+                                                            <input type="file" onchange="profilePicturePreviewFile()" accept=".png, .jpg, .jpeg, .webp" class="form-control @error('profile_pic') is-invalid @enderror" id="profile_pic" name="profile_pic" value="{{ old('profile_pic') }}">
+                                                            <small class="text-secondary">(Files must be JPG/PNG/JPEG/WEBP, Under 2MB.)</small>
                                                             <br>
                                                             @error('profile_pic')
                                                                 <span class="invalid-feedback" role="alert">
                                                                     <strong class="text-danger">{{ $message }}</strong>
                                                                 </span>
                                                             @enderror
-                                                            <br>
-                                                            <div id="preview-container">
-                                                                <div id="file-preview"></div>
+                                                            <div id="preview-profilePic-container" style="display:none;">
+                                                                <div id="file-preview-profilePic"></div>
                                                             </div>
                                                         </div>
+
                                                     </div>
                                                 </div>
                                             </div>
@@ -442,11 +448,11 @@
 
                                     </div>
 
-                                    <div id="button_div" class="mt-80">
+                                    <div id="button_div">
                                         <div class="row" style="display: flex; flex-wrap: wrap; align-content: space-between; justify-content: center; justify-content: center;">
                                             <div class="col-md-4">
                                                 <div class="single-field mb-0">
-                                                    <button class="button-1" type="submit" name="submit">Submit</button>
+                                                    <button class="button-1" type="submit">Submit</button>
                                                 </div>
                                             </div>
                                             {{-- <div class="col-md-6">
@@ -465,4 +471,41 @@
             </div>
         </div>
     </section>
+
+    {{-- Profile image/PDF preview --}}
+    <script>
+        // Existing function for Profile image/PDF preview (if needed)
+        function profilePicturePreviewFile() {
+            const fileInput = document.getElementById('profile_pic');
+            const filePreview = document.querySelector('#file-preview-profilePic');
+            const previewContainer = document.getElementById('preview-profilePic-container');
+            const file = fileInput.files[0];
+
+            if (file) {
+                console.log('File selected:', file);  // Debugging line
+                const fileType = file.type;
+                const validImageTypes = ['image/jpeg', 'image/jpg', 'image/png', 'image/webp'];
+
+                if (validImageTypes.includes(fileType)) {
+                    // Image preview
+                    const reader = new FileReader();
+                    reader.onload = function(e) {
+                        filePreview.innerHTML = `<img src="${e.target.result}" alt="Profile Preview" style="height: 150px; width: auto; border-radius: 5px;">`;
+                        console.log('Preview loaded successfully');  // Debugging line
+                    };
+                    reader.onerror = function() {
+                        console.log('Error reading file');  // Debugging line for error
+                    };
+                    reader.readAsDataURL(file);
+                } else {
+                    // Unsupported file type
+                    filePreview.innerHTML = '<p class="text-danger">Invalid file type. Please upload an image.</p>';
+                }
+
+                previewContainer.style.display = 'block';
+            } else {
+                previewContainer.style.display = 'none';
+            }
+        }
+    </script>
 @endsection

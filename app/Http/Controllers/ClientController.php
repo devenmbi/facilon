@@ -58,8 +58,8 @@ class ClientController extends Controller
             'citizenship' => 'required|string|max:255',
             'residenital_status' => 'required|string|max:255',
             'occupation_type' => 'required|string|max:255',
-            
-            // 'profile_pic' => 'required|mimes:jpeg,png,jpg,gif,webp|max:2048'
+
+            'profile_pic' => 'required|mimes:jpeg,png,jpg,gif,webp|max:2048'
         ],[
             'client_name.required' => 'The Client Name is required.',
             'client_name.string' => 'The Client Name must be a string.',
@@ -85,7 +85,7 @@ class ClientController extends Controller
             'kyc_number.required' => 'The KYC Number is required.',
             'kyc_number.string' => 'The KYC Number must be a string.',
             'kyc_number.max' => 'The KYC Number may not be greater than 255 characters.',
-            
+
             'account_type.required' => 'The Account Type is required.',
             'account_type.string' => 'The Account Type must be a string.',
             'account_type.max' => 'The Account Type may not be greater than 255 characters.',
@@ -166,8 +166,11 @@ class ClientController extends Controller
         // Save the data to the database
         $client = new ClientRegistration();
 
+        // dd($request->all());
+
         // ==== Upload Product Image
-        if ($request->hasFile('profile_pic')) {
+        if ($request->hasFile('profile_pic') && $request->file('profile_pic')->isValid()) {
+            // dd($request->file('profile_pic'));
             $image = $request->file('profile_pic');
             $extension = $image->getClientOriginalExtension();
             $new_name = time() . rand(10, 999) . '.' . $extension;
@@ -177,18 +180,18 @@ class ClientController extends Controller
             $client->profile_pic = $new_name;
         }
 
-        $client->client_name = $request->client_name;                
-        $client->branch_name = $request->branch_name;             
-        $client->client_code = $request->client_code;                 
-        $client->client_id = $request->client_id;                 
-        $client->application_type = $request->application_type;                 
-        $client->kyc_number = $request->kyc_number;                 
+        $client->client_name = $request->client_name;
+        $client->branch_name = $request->branch_name;
+        $client->client_code = $request->client_code;
+        $client->client_id = $request->client_id;
+        $client->application_type = $request->application_type;
+        $client->kyc_number = $request->kyc_number;
         $client->account_type = $request->account_type;
-        
+
         // ===== Add more fields for First Person =====
-        $client->prefix = $request->prefix;                 
-        $client->first_name = $request->first_name;                 
-        $client->middle_name = $request->middle_name;                 
+        $client->prefix = $request->prefix;
+        $client->first_name = $request->first_name;
+        $client->middle_name = $request->middle_name;
         $client->last_name = $request->last_name;
 
         // ===== Add more fields for Maiden =====
@@ -196,7 +199,7 @@ class ClientController extends Controller
         $client->maiden_first_name = $request->maiden_first_name;
         $client->maiden_middle_name = $request->maiden_middle_name;
         $client->maiden_last_name = $request->maiden_last_name;
-        
+
         // ===== Add more fields for Father/Spouse =====
         $client->father_prefix = $request->father_prefix;
         $client->father_first_name = $request->father_first_name;
@@ -210,7 +213,7 @@ class ClientController extends Controller
         $client->mother_last_name = $request->mother_last_name;
 
         $client->date_of_birth = $request->date_of_birth;
-        $client->gender = $request->gender;        
+        $client->gender = $request->gender;
         $client->marital_status = $request->marital_status;
         $client->citizenship = $request->citizenship;
         $client->residenital_status = $request->residenital_status;
@@ -227,13 +230,13 @@ class ClientController extends Controller
         // Generate and save the PDF
         $pdf = PDF::loadView('pdf.user_register_pdf', ['data' => $request->all()]);
         $pdf->setPaper('A4', 'portrait');
-        
+
         // Return the PDF and open it in the browser
         return $pdf->stream('user_registration.pdf')
-        ->header('Content-Type', 'application/pdf')
-        ->header('Content-Disposition', 'inline; filename="user_registration.pdf"')
-        ->header('Content-Transfer-Encoding', 'binary')
-        ->header('Accept-Ranges', 'bytes');
+                    ->header('Content-Type', 'application/pdf')
+                    ->header('Content-Disposition', 'inline; filename="user_registration.pdf"')
+                    ->header('Content-Transfer-Encoding', 'binary')
+                    ->header('Accept-Ranges', 'bytes');
     }
 
 }

@@ -1280,7 +1280,7 @@
         </table>
 
         {{-- Page Break --}}
-        {{-- <div class="page-break"></div> --}}
+        <div class="page-break"></div>
 
         {{-- Date of Birth Section --}}
         <table>
@@ -1334,7 +1334,7 @@
         </table>
 
         {{-- Page Break --}}
-        <div class="page-break"></div>
+        {{-- <div class="page-break"></div> --}}
 
         {{-- Gender, Marital Status, and Occupation --}}
         <table>
@@ -1652,10 +1652,12 @@
                 </tr>                
             </tbody>
         </table>
-        <br>
+        
+        {{-- Page Break --}}
+        <div class="page-break"></div>
 
         <div style="border: 1px solid #000; padding: 10px; font-family: Arial, sans-serif; width: fit-content; font-size:14px;">
-            <label style="font-weight: bold; display: block; margin-bottom: 5px; font-size: 14px; background-color: #bdb5b5;">
+            <label style="font-weight: bold; display: block; margin-bottom: 5px; font-size: 14px; background-color: #bdb5b5; padding:15px !important;">
                 <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
                 2 . TICK IF APPLICABLE RESIDENCE FOR TAX PURPOSES IN JURISDICTION(S) OUTSIDE INDIA (Please refer to instruction B at the end)
             </label>
@@ -1719,7 +1721,7 @@
         <br>
 
         <div style="border: 1px solid #000; padding: 10px; font-family: Arial, sans-serif; width: fit-content; font-size:14px;">
-            <label style="font-weight: bold; display: block; margin-bottom: 5px; font-size: 14px; background-color: #bdb5b5; padding:2px;">
+            <label style="font-weight: bold; display: block; margin-bottom: 5px; font-size: 14px; background-color: #bdb5b5; padding:2px; padding:15px !important;">
                 <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
                 3 . PROOF OF IDENTITY (POI) (please refer instruction C at the end)
             </label>
@@ -1899,6 +1901,19 @@
                     </td>
                 </tr>
             </table>
+        </div>
+
+
+        <div style="border: 1px solid #000; padding: 10px; font-family: Arial, sans-serif; width: fit-content; font-size:14px;">
+            <label style="font-weight: bold; display: block; margin-bottom: 5px; font-size: 14px; background-color: #bdb5b5; padding:15px !important;">
+                {{-- <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div> --}}
+                4 . PROOF OF ADDRESS (POA) <span class="text-danger">*</span>
+            </label>
+            <label style="font-weight: bold; display: block; margin-bottom: 5px; font-size: 14px; background-color: #b8b8b8; padding:15px !important;">
+                <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
+                4.1 CURRENT / PERMANET / OVERSEAAS ADDRESS DETAILS (Please see instruction D at the end)
+            </label>
+
         </div>
 
     </div>

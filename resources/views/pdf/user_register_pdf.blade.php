@@ -1068,37 +1068,36 @@
                     </td>
 
                     <td>
-                        <div class="square-box"></div>
-                        <div class="square-box"></div>
-                        <div class="square-box"></div>
-                    </td>
+                        @foreach(str_split($data['prefix']) as $letter)
+                            <div class="square-box" style="width: 15px; height: 15px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;">
+                                {{ $letter }}
+                            </div>
+                        @endforeach
+                    </td>                    
 
                     <td>
-                        <div class="square-box"></div>
-                        <div class="square-box"></div>
-                        <div class="square-box"></div>
-                        <div class="square-box"></div>
-                        <div class="square-box"></div>
-                        <div class="square-box"></div>
-                    </td>
+                        @foreach(str_split($data['first_name']) as $letter)
+                            <div class="square-box" style="width: 15px; height: 15px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;">
+                                {{ $letter }}
+                            </div>
+                        @endforeach
+                    </td>                    
 
                     <td>
-                        <div class="square-box"></div>
-                        <div class="square-box"></div>
-                        <div class="square-box"></div>
-                        <div class="square-box"></div>
-                        <div class="square-box"></div>
-                        <div class="square-box"></div>
-                    </td>
+                        @foreach(str_split($data['middle_name']) as $letter)
+                            <div class="square-box" style="width: 15px; height: 15px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;">
+                                {{ $letter }}
+                            </div>
+                        @endforeach
+                    </td>                    
 
                     <td>
-                        <div class="square-box"></div>
-                        <div class="square-box"></div>
-                        <div class="square-box"></div>
-                        <div class="square-box"></div>
-                        <div class="square-box"></div>
-                        <div class="square-box"></div>
-                    </td>
+                        @foreach(str_split($data['last_name']) as $letter)
+                            <div class="square-box" style="width: 15px; height: 15px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;">
+                                {{ $letter }}
+                            </div>
+                        @endforeach
+                    </td>                    
                 </tr>
 
                 <tr>
@@ -1107,36 +1106,35 @@
                     </td>
 
                     <td>
-                        <div class="square-box"></div>
-                        <div class="square-box"></div>
-                        <div class="square-box"></div>
+                        @foreach(str_split($data['maiden_prefix']) as $letter)
+                            <div class="square-box" style="width: 15px; height: 15px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;">
+                                {{ $letter }}
+                            </div>
+                        @endforeach
                     </td>
 
                     <td>
-                        <div class="square-box"></div>
-                        <div class="square-box"></div>
-                        <div class="square-box"></div>
-                        <div class="square-box"></div>
-                        <div class="square-box"></div>
-                        <div class="square-box"></div>
+                        @foreach(str_split($data['maiden_first_name']) as $letter)
+                            <div class="square-box" style="width: 15px; height: 15px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;">
+                                {{ $letter }}
+                            </div>
+                        @endforeach
                     </td>
 
                     <td>
-                        <div class="square-box"></div>
-                        <div class="square-box"></div>
-                        <div class="square-box"></div>
-                        <div class="square-box"></div>
-                        <div class="square-box"></div>
-                        <div class="square-box"></div>
+                        @foreach(str_split($data['maiden_middle_name']) as $letter)
+                            <div class="square-box" style="width: 15px; height: 15px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;">
+                                {{ $letter }}
+                            </div>
+                        @endforeach
                     </td>
 
                     <td>
-                        <div class="square-box"></div>
-                        <div class="square-box"></div>
-                        <div class="square-box"></div>
-                        <div class="square-box"></div>
-                        <div class="square-box"></div>
-                        <div class="square-box"></div>
+                        @foreach(str_split($data['maiden_last_name']) as $letter)
+                            <div class="square-box" style="width: 15px; height: 15px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;">
+                                {{ $letter }}
+                            </div>
+                        @endforeach
                     </td>
                 </tr>
 

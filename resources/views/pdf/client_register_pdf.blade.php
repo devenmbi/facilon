@@ -258,6 +258,19 @@
             page-break-after: always;
         }
     </style>
+
+<style>
+    .square-box {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        border: 1px solid black;
+        text-align: center;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin: 2px;
+    }
+</style>
 </head>
 
 <body>

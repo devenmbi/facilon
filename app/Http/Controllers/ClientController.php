@@ -220,16 +220,16 @@ class ClientController extends Controller
         $client->occupation_type = $request->occupation_type;
 
         $client->inserted_at = Carbon::now();
-        $client->save();
+        // $client->save();
 
-        $update = [
-            'inserted_by' => $client->id,
-        ];
-        ClientRegistration::where('id', $client->id)->update($update);
+        // $update = [
+        //     'inserted_by' => $client->id,
+        // ];
+        // ClientRegistration::where('id', $client->id)->update($update);
 
         // Generate and save the PDF
         $pdf = PDF::loadView('pdf.user_register_pdf', ['data' => $request->all()]);
-        $pdf->setPaper('A4', 'portrait');
+        $pdf->setPaper('A4', 'landscape');
 
         // Return the PDF and open it in the browser
         return $pdf->stream('user_registration.pdf')

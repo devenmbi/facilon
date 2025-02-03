@@ -258,19 +258,6 @@
             page-break-after: always;
         }
     </style>
-
-<style>
-    .square-box {
-        display: inline-block;
-        width: 20px;
-        height: 20px;
-        border: 1px solid black;
-        text-align: center;
-        font-weight: bold;
-        text-transform: uppercase;
-        margin: 2px;
-    }
-</style>
 </head>
 
 <body>
@@ -1406,7 +1393,6 @@
 
         {{-- Page Break --}}
         <div class="page-break"></div>
-
         <div style="border: 1px solid #000; padding: 10px; font-family: Arial, sans-serif; width: fit-content;">
             <label
                 style="font-weight: bold; display: block; margin-bottom: 5px; font-size: 14px; background-color: #bdb5b5;">
@@ -1490,6 +1476,7 @@
                 </tr>
             </table>
         </div>
+
 
     </div>
 

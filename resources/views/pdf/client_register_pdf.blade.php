@@ -1389,6 +1389,10 @@
             </table>
 
         </div>
+        <br>
+
+        {{-- Page Break --}}
+        <div class="page-break"></div>
 
         <div style="border: 1px solid #000; padding: 10px; font-family: Arial, sans-serif; width: fit-content;">
             <label
@@ -1473,7 +1477,6 @@
                 </tr>
             </table>
         </div>
-
 
     </div>
 

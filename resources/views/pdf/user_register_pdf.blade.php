@@ -253,6 +253,10 @@
             align-items: center; /* Vertically align the box and the text */
             justify-content: flex-start; /* Align everything to the left */
         }
+
+        .page-break {
+            page-break-after: always;
+        }
     </style>
 </head>
 
@@ -312,13 +316,12 @@
         </table>
         </p>
 
-        <div
-            style="text-align: center; margin-top: 1.9pt; margin-right: 0in; margin-bottom: 2.3pt; margin-left: 2.85pt;">
-            ACCOUNT<span style="letter-spacing: .5pt;"> </span>
-            OPENING<span style="letter-spacing: .5pt;"> </span>
-            KIT<span style="letter-spacing: .5pt;"> </span>
-            -<span style="letter-spacing: .5pt;"> </span>
-            INDIVIDUAL<span style="letter-spacing: .5pt;"> </span>
+        <div style="text-align: center; margin-top: 1.9pt; margin-right: 0in; margin-bottom: 2.3pt; margin-left: 2.85pt;">
+            ACCOUNT <span style="letter-spacing: .5pt;"> </span>
+            OPENING <span style="letter-spacing: .5pt;"> </span>
+            KIT <span style="letter-spacing: .5pt;"> </span>
+            - <span style="letter-spacing: .5pt;"> </span>
+            INDIVIDUAL <span style="letter-spacing: .5pt;"> </span>
             <span style="letter-spacing: -.1pt;">INDEX</span>
         </div>
         <br>
@@ -894,7 +897,7 @@
         <br><br><br>
 
         <!-- Instructions Section -->
-        <table style="width: 100%; font-size: 12px; font-weight: normal; ">
+        <table style="width: 100%; font-size: 14px; font-weight: normal; ">
             <thead>
                 <tr>
                     <th style="text-align: left;  padding-bottom: 5px;" colspan="3">
@@ -940,45 +943,48 @@
                 </tr>
             </tbody>
         </table>
+        <br>
 
 
         <table>
-            <thead>
+            <thead style="background-color: #757879 !important;">
                 <tr>
-                    <th colspan="5" class="table-header">
-                        <div class="small-square-box">
-                        </div>
+                    <th colspan="5">
+                        <div class="square-box" style="width: 15px; height: 15px; border: 1px solid #000;"></div>
                         For office use only (To be filled by financial institution)
                     </th>
                 </tr>
                 <tr>
-                    <th colspan="4">
+                    <th colspan="4" style="vertical-align: top;">
                         <b>Application Type <span style="color: red">*</span></b>
                     </th>
                     <th rowspan="3" class="d-flex">
-                        <div class="small-square-box">
+                        <div class="square-box" style="width: 15px; height: 15px; border: 1px solid #000; text-align: center;">
                             @if($data['application_type'] == 1)
                                 &#x2714;  <!-- Unicode for check mark -->
                             @else
                                 &nbsp;
                             @endif
-                        </div>
+                        </div> New
                     </th>
                     <th rowspan="3" class="d-flex">
-                        <div class="small-square-box">
+                        <div class="square-box" style="width: 15px; height: 15px; border: 1px solid #000; text-align: center;">
                             @if($data['application_type'] == 2)
                                 &#x2714;  <!-- Unicode for check mark -->
                             @else
                                 &nbsp;
                             @endif
-                        </div>
+                        </div> Update
                     </th>
                 </tr>
                 <tr>
-                    <th colspan="2">
+                    <th colspan="5">
                         <b>KYC Number <span style="color: red">*</span></b>
-                    </th>
-                    <th colspan="3">
+                        @foreach(str_split($data['kyc_number']) as $digit)
+                            <div class="square-box" style="width: 15px; height: 15px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;">
+                                {{ $digit }}
+                            </div>
+                        @endforeach
                         (Mandatory for KYC update request)
                     </th>
                 </tr>
@@ -987,8 +993,47 @@
                         1. PERSONAL DETAILS</strong> (Please refer to instruction A at the end)
                     </th>
                 </tr>
+                <tr>
+                    <th colspan="4">
+                        <b>Account Type <span style="color: red">*</span></b>
+                    </th>
+                    <th rowspan="2" class="d-flex">
+                        <div style="display: flex; align-items: center; gap: 20px; flex-wrap: nowrap;">
+                            <label style="display: flex; align-items: center; gap: 5px; white-space: nowrap;">
+                                <div class="square-box" style="width: 15px; height: 15px; border: 1px solid #000; text-align: center;">
+                                    @if($data['account_type'] == '1')
+                                        &#x2714;  <!-- Unicode for check mark -->
+                                    @endif
+                                </div> Normal
+                            </label>
+                        </div>
+                    </th>
+                    <th rowspan="2" class="d-flex">
+                        <div style="display: flex; align-items: center; gap: 20px; flex-wrap: nowrap;">
+                            <label style="display: flex; align-items: center; gap: 5px; white-space: nowrap;">
+                                <div class="square-box" style="width: 15px; height: 15px; border: 1px solid #000; text-align: center;">
+                                    @if($data['account_type'] == '2')
+                                        &#x2714;
+                                    @endif
+                                </div> Simplified (for low risk customer)
+                            </label>
+                        </div>
+                    </th>
+                    <th rowspan="2" class="d-flex">
+                        <div style="display: flex; align-items: center; gap: 20px; flex-wrap: nowrap;">
+                            <label style="display: flex; align-items: center; gap: 5px; white-space: nowrap;">
+                                <div class="square-box" style="width: 15px; height: 15px; border: 1px solid #000; text-align: center;">
+                                    @if($data['account_type'] == '3')
+                                        &#x2714;
+                                    @endif
+                                </div> Small
+                            </label>
+                        </div>
+                    </th>
+                </tr>                
             </thead>
         </table>
+        <br>
 
         {{-- First Name, Middle Name, Last Name Section --}}
         <table>
@@ -1176,41 +1221,52 @@
 
         </table>
 
+        {{-- Date of Birth Section --}}
         <table>
             <tbody>
                 <td>
                     Date of Birth <span style="color: red;">*</span>
                 </td>
                 <td>
-                    Day (DD) : -
+                    <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000;">D</div>
+                    <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000;">D</div>
                 </td>
                 <td>
-                    Month (MM) : -
+                    <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000;">M</div>
+                    <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000;">M</div>
                 </td>
                 <td>
-                    Year (YYYY) : -
+                    <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000;">Y</div>
+                    <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000;">Y</div>
+                    <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000;">Y</div>
+                    <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000;">Y</div>
                 </td>
             </tbody>
         </table>
 
+        {{-- Page Break --}}
+        <div class="page-break"></div>
+
+        {{-- Gender --}}
         <table>
             <tbody>
                 <!-- First Row -->
                 <tr>
                     <td style="width: 22%; border: 1px solid #000; ">Gender <span style="color: red;">*</span></td>
-                    <td style="width: 66%; border: 1px solid #000;">
-                        <div style="display: flex; align-items: center; gap: 20px; flex-wrap: wrap;">
-                            <label>
-                                <div class="square-box"></div>M - Male
+                    <td style="width: 66%; border: 1px solid #000; padding: 5px;">
+                        <div style="display: flex; align-items: center; gap: 20px; flex-wrap: nowrap;">
+                            <label style="display: flex; align-items: center; gap: 5px; white-space: nowrap;">
+                                <div class="square-box" style="width: 15px; height: 15px; border: 1px solid #000;"></div> M - Male
                             </label>
-                            <label>
-                                <div class="square-box"> F - Female</div>
+                            <label style="display: flex; align-items: center; gap: 5px; white-space: nowrap;">
+                                <div class="square-box" style="width: 15px; height: 15px; border: 1px solid #000;"></div> F - Female
                             </label>
-                            <label>
-                                <div class="square-box">T - Transgender</div>
+                            <label style="display: flex; align-items: center; gap: 5px; white-space: nowrap;">
+                                <div class="square-box" style="width: 15px; height: 15px; border: 1px solid #000;"></div> T - Transgender
                             </label>
                         </div>
                     </td>
+
                     <td rowspan="5" style="border: 1px solid #000; padding: 5px; width: 13%;">
                         <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/user_profile_pic.png'))) }}"
                             alt="Signature/Thumb Impression" height ="200px" width="140px"><br><br>
@@ -1222,13 +1278,16 @@
                 <tr>
                     <td style="border: 1px solid #000;">Marital Status <span style="color: red;">*</span></td>
                     <td style="border: 1px solid #000;">
-                        <div style="display: flex; align-items: center; gap: 20px; flex-wrap: wrap;">
-                            <label><input type="checkbox" name="marital_status"
-                                    style="margin-right: 5px;">Married</label>
-                            <label><input type="checkbox" name="marital_status"
-                                    style="margin-right: 5px;">Unmarried</label>
-                            <label><input type="checkbox" name="marital_status"
-                                    style="margin-right: 5px;">Others</label>
+                        <div style="display: flex; align-items: center; gap: 20px; flex-wrap: nowrap;">
+                            <label style="display: flex; align-items: center; gap: 5px; white-space: nowrap;">
+                                <div class="square-box" style="width: 15px; height: 15px; border: 1px solid #000;"></div> Married
+                            </label>
+                            <label style="display: flex; align-items: center; gap: 5px; white-space: nowrap;">
+                                <div class="square-box" style="width: 15px; height: 15px; border: 1px solid #000;"></div> Unmarried
+                            </label>
+                            <label style="display: flex; align-items: center; gap: 5px; white-space: nowrap;">
+                                <div class="square-box" style="width: 15px; height: 15px; border: 1px solid #000;"></div> Others
+                            </label>
                         </div>
                     </td>
                 </tr>
@@ -1236,13 +1295,12 @@
                 <tr>
                     <td style="border: 1px solid #000;">Citizenship <span style="color: red;">*</span></td>
                     <td style="border: 1px solid #000;">
-                        <div style="display: flex; align-items: center; gap: 20px; flex-wrap: wrap;">
-                            <label>
-                                <input type="checkbox" name="citizenship" style="margin-right: 5px;">IN - Indian
+                        <div style="display: flex; align-items: center; gap: 20px; flex-wrap: nowrap;">
+                            <label style="display: flex; align-items: center; gap: 5px; white-space: nowrap;">
+                                <div class="square-box" style="width: 15px; height: 15px; border: 1px solid #000;"></div> IN - Indian
                             </label>
-                            <label>
-                                <input type="checkbox" name="citizenship" style="margin-right: 5px;">Others
-                                (ISO 3166 Country Code <input type="text" style="width: 30px; margin-left: 5px;">)
+                            <label style="display: flex; align-items: center; gap: 5px; white-space: nowrap;">
+                                <div class="square-box" style="width: 15px; height: 15px; border: 1px solid #000;"></div> Others (ISO 3166 Country Code <div class="square-box" style="width: 15px; height: 15px; border: 1px solid #000;"></div><div class="square-box" style="width: 15px; height: 15px; border: 1px solid #000;"></div>)
                             </label>
                         </div>
                     </td>
@@ -1251,15 +1309,19 @@
                 <tr>
                     <td style="border: 1px solid #000;">Residential Status <span style="color: red;">*</span></td>
                     <td style="border: 1px solid #000;">
-                        <div style="display: flex; align-items: center; gap: 20px; flex-wrap: wrap;">
-                            <label><input type="checkbox" name="residential_status"
-                                    style="margin-right: 5px;">Resident Individual</label>
-                            <label><input type="checkbox" name="residential_status"
-                                    style="margin-right: 5px;">Foreign National</label>
-                            <label><input type="checkbox" name="residential_status"
-                                    style="margin-right: 5px;">Non-Resident Indian</label>
-                            <label><input type="checkbox" name="residential_status" style="margin-right: 5px;">Person
-                                of Indian Origin</label>
+                        <div style="display: flex; align-items: center; gap: 20px; flex-wrap: nowrap;">
+                            <label style="display: flex; align-items: center; gap: 5px; white-space: nowrap;">
+                                <div class="square-box" style="width: 15px; height: 15px; border: 1px solid #000;"></div> Resident Individual
+                            </label>
+                            <label style="display: flex; align-items: center; gap: 5px; white-space: nowrap;">
+                                <div class="square-box" style="width: 15px; height: 15px; border: 1px solid #000;"></div> Foreign National
+                            </label>
+                            <label style="display: flex; align-items: center; gap: 5px; white-space: nowrap;">
+                                <div class="square-box" style="width: 15px; height: 15px; border: 1px solid #000;"></div> Non-Resident Indian
+                            </label>
+                            <label style="display: flex; align-items: center; gap: 5px; white-space: nowrap;">
+                                <div class="square-box" style="width: 15px; height: 15px; border: 1px solid #000;"></div> Person of Indian Origin
+                            </label>
                         </div>
                     </td>
                 </tr>
@@ -1267,22 +1329,43 @@
                 <tr>
                     <td style="border: 1px solid #000;">Occupation Type <span style="color: red;">*</span></td>
                     <td style="border: 1px solid #000;">
-                        <div style="display: flex; align-items: center; gap: 20px; flex-wrap: wrap;">
-                            <label><input type="checkbox" name="occupation_type" style="margin-right: 5px;">S - Service (Private Sector)</label>
-                            <label><input type="checkbox" name="occupation_type" style="margin-right: 5px;">Public Sector</label>
-                            <label><input type="checkbox" name="occupation_type" style="margin-right: 5px;">Government Sector</label>
-                            <label><input type="checkbox" name="occupation_type" style="margin-right: 5px;">O - Others (Professional)</label>
-                            <label><input type="checkbox" name="occupation_type" style="margin-right: 5px;">Self Employed</label>
-                            <label><input type="checkbox" name="occupation_type" style="margin-right: 5px;">Retired</label>
-                            <label><input type="checkbox" name="occupation_type" style="margin-right: 5px;">B - Business</label>
-                            <label><input type="checkbox" name="occupation_type" style="margin-right: 5px;">Housewife</label>
-                            <label><input type="checkbox" name="occupation_type" style="margin-right: 5px;">Student</label>
-                            <label><input type="checkbox" name="occupation_type" style="margin-right: 5px;">X - Not Categorised</label>
+                        <div style="display: flex; align-items: center; gap: 20px; flex-wrap: nowrap;">
+                            <label style="display: flex; align-items: center; gap: 5px; white-space: nowrap;">
+                                <div class="square-box" style="width: 15px; height: 15px; border: 1px solid #000;"></div> S - Service (Private Sector)
+                            </label>
+                            <label style="display: flex; align-items: center; gap: 5px; white-space: nowrap;">
+                                <div class="square-box" style="width: 15px; height: 15px; border: 1px solid #000;"></div> Public Sector
+                            </label>
+                            <label style="display: flex; align-items: center; gap: 5px; white-space: nowrap;">
+                                <div class="square-box" style="width: 15px; height: 15px; border: 1px solid #000;"></div> Government Sector
+                            </label>
+                            <label style="display: flex; align-items: center; gap: 5px; white-space: nowrap;">
+                                <div class="square-box" style="width: 15px; height: 15px; border: 1px solid #000;"></div> Others (Professional)
+                            </label>
+                            <label style="display: flex; align-items: center; gap: 5px; white-space: nowrap;">
+                                <div class="square-box" style="width: 15px; height: 15px; border: 1px solid #000;"></div> Self Employed
+                            </label>
+                            <label style="display: flex; align-items: center; gap: 5px; white-space: nowrap;">
+                                <div class="square-box" style="width: 15px; height: 15px; border: 1px solid #000;"></div> Retired
+                            </label>
+                            <label style="display: flex; align-items: center; gap: 5px; white-space: nowrap;">
+                                <div class="square-box" style="width: 15px; height: 15px; border: 1px solid #000;"></div> B - Business
+                            </label>
+                            <label style="display: flex; align-items: center; gap: 5px; white-space: nowrap;">
+                                <div class="square-box" style="width: 15px; height: 15px; border: 1px solid #000;"></div> Housewife
+                            </label>
+                            <label style="display: flex; align-items: center; gap: 5px; white-space: nowrap;">
+                                <div class="square-box" style="width: 15px; height: 15px; border: 1px solid #000;"></div> Student
+                            </label>
+                            <label style="display: flex; align-items: center; gap: 5px; white-space: nowrap;">
+                                <div class="square-box" style="width: 15px; height: 15px; border: 1px solid #000;"></div> X - Not Categorised
+                            </label>
                         </div>
                     </td>
                 </tr>
             </tbody>
         </table>
+        <br>
 
         <div style="border: 1px solid #000; padding: 10px; font-family: Arial, sans-serif; width: fit-content;">
             <label
@@ -1328,9 +1411,12 @@
             </table>
 
         </div>
+        <br>
 
-        <div
-            style="border: 1px solid #000; padding: 10px; font-family: Arial, sans-serif; width: fit-content; margin-top: 10px;">
+        {{-- Page Break --}}
+        <div class="page-break"></div>
+
+        <div style="border: 1px solid #000; padding: 10px; font-family: Arial, sans-serif; width: fit-content;">
             <label
                 style="font-weight: bold; display: block; margin-bottom: 5px; font-size: 14px; background-color: #bdb5b5;">
                 <input type="checkbox" name="residence_tax_purpose" style="margin-right: 5px;">
@@ -1413,7 +1499,6 @@
                 </tr>
             </table>
         </div>
-
 
     </div>
 

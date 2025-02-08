@@ -898,17 +898,22 @@
 
     </div>
 
+    {{-- First Holder Form Start --}}
     <!--- Fifth Page with Content -->
     <div class="WordSection5">
-
         <table style="border-collapse: collapse; border-color: #f7efef; width: 30%; float: right;">
             <tr>
                 <td style="padding: 10px; text-align: left; font-weight: bold; font-size: 20px; line-height: 20px;">
                     FU | {{ $data['client_code'] ?? '' }}
                 </td>
             </tr>
+            <tr>
+                <td style="padding: 10px; text-align: left; font-weight: bold; font-size: 20px; line-height: 20px; text-transform: uppercase;">
+                    FIRST HOLDER
+                </td>
+            </tr>
         </table>
-        <br><br><br>
+        <br><br><br><br>
 
         <!-- Instructions Section -->
         <table style="width: 100%; font-size: 13px; font-weight: normal !important; ">
@@ -1452,8 +1457,1374 @@
             </tbody>
         </table>
 
+        <div style="border: 1px solid #000; padding: 10px; font-family: Arial, sans-serif; width: fit-content; font-size:13px;">
+            <label style="font-weight: bold; display: block; margin-bottom: 5px; font-size: 13px; background-color: #bdb5b5; padding:15px !important;">
+                <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
+                2 . TICK IF APPLICABLE RESIDENCE FOR TAX PURPOSES IN JURISDICTION(S) OUTSIDE INDIA (Please refer to instruction B at the end)
+            </label>
+
+            <div style="margin-top: 10px; font-size: 11px;">
+                <label>ADDITIONAL DETAILS REQUIRED <span style="color: red;">*</span></label>
+                <span style="font-size: 12px;">(Mandatory only if section 2 is ticked)</span>
+            </div>
+
+
+            <table style="border-collapse: collapse; margin-top: 10px; font-size: 13px; width: 100%;">
+                <tr>
+                    <td style="border: 1px solid #000; padding: 5px; width: 50%; font-size:14px;">
+                        ISO 3166 Country Code of Jurisdiction of Residence <span style="color: red;">*</span>
+                    </td>
+                    <td style="border: 1px solid #000; padding: 5px;">
+                        _________________
+                    </td>
+                </tr>
+                <tr>
+                    <td style="border: 1px solid #000; padding: 5px; width: 50%; font-size:14px;">
+                        Tax Identification Number or equivalent
+                        <span style="font-size: 12px;">(if issued by jurisdiction) <span style="color: red;">*</span></span>
+                    </td>
+                    <td style="border: 1px solid #000; padding: 5px;">
+                        _______________________________________
+                    </td>
+                </tr>
+                <tr>
+                    <td style="border: 1px solid #000; padding: 5px; width: 50%; font-size:14px;">
+                        Place / City of Birth <span style="color: red;">*</span>
+                        ___________________
+                    </td>
+                    <td style="border: 1px solid #000; padding: 5px; width: 50%; font-size:14px;">
+                        ISO 3166 Country Code of Birth <span style="color: red;">*</span>
+                        _______________
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <br>
+
+        <div style="border: 1px solid #000; padding: 10px; font-family: Arial, sans-serif; width: fit-content; font-size:13px;">
+            <label style="font-weight: bold; display: block; margin-bottom: 5px; font-size: 13px; background-color: #bdb5b5; padding:2px; padding:15px !important;">
+                <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
+                3 . PROOF OF IDENTITY (POI) (please refer instruction C at the end)
+            </label>
+
+            <div style="margin-top: 10px; font-size: 11px;">
+                <span style="font-size: 12px;">
+                    (Certified copy of any one of the following Proof of Identity[PoI] needs to be submitted) <br><br>
+                </span>
+            </div>
+
+            <table style="border-collapse: collapse; margin-top: 10px; font-size: 13px; width: 100%;">
+                <tr>
+                    <td style="border: 1px solid #000; padding: 5px; width: 50%;">
+                        <div class="square-box" class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
+                        <span style="font-size: 14px;">A. Passport Number : - </span>
+                        ____________________________
+                    </td>
+
+                    <td style="border: 1px solid #000; padding: 5px; width: 50%;">
+                        <span style="font-size: 14px;">Passport Expiry Date : -</span>
+                        ____________________________
+                    </td>
+                </tr>
+                <tr>
+                    <td style="border: 1px solid #000; padding: 5px; width: 50%;">
+                        <div class="square-box" class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
+                        <span style="font-size: 14px;">B. Voter ID Card : - </span>
+                        ____________________________
+                    </td>
+                    <td style="border: 1px solid #000; padding: 5px;">
+
+                    </td>
+                </tr>
+                <tr>
+                    <td style="border: 1px solid #000; padding: 5px; width: 50%;">
+                        <div class="square-box" class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
+                        <span style="font-size: 14px;">C. PAN Card : - </span>
+                        ____________________________
+                    </td>
+                    <td style="border: 1px solid #000; padding: 5px; width: 50%;">
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="square-box" class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
+                        <span style="font-size: 14px;">D. Driving Licence : -</span>
+                        ____________________________
+                    </td>
+                    <td style="border: 1px solid #000; padding: 5px; width: 50%;">
+                        <span style="font-size: 14px;">Driving Licence Expiry Date : -</span>
+                        ____________________________
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="square-box" class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
+                        <span style="font-size: 14px;">E. UID (Aadhaar) : - </span>
+                        ____________________________
+                    </td>
+                    <td style="border: 1px solid #000; padding: 5px; width: 50%;">
+
+                    </td>
+                </tr>
+                <tr>
+                    <td style="font-size: 14px;">
+                        <div class="square-box" class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
+                        <span>Z. Others (any document notified by the central government) : - </span>
+                        ____________________________
+                    </td>
+                    <td style="border: 1px solid #000; padding: 5px; width: 50%;">
+                        <span style="font-size: 14px;">Identification Number : - </span>
+                        ____________________________
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="square-box" class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
+                        <span style="font-size: 14px;">S. Simplified Measures Account - Document Type code : - </span>
+                        ____________________________
+                    </td>
+                    <td style="border: 1px solid #000; padding: 5px; width: 50%;">
+                        <span style="font-size: 14px;">Identification Number : - </span>
+                        ____________________________
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div style="border: 1px solid #000; padding: 10px; font-family: Arial, sans-serif; width: fit-content; font-size:12px;">
+            <label style="font-weight: bold; display: block; margin-bottom: 5px; font-size: 12px; background-color: #bdb5b5; padding:15px !important;">
+                {{-- <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div> --}}
+                4 . PROOF OF ADDRESS (POA) <span class="text-danger">*</span>
+            </label>
+            <label style="font-weight: bold; display: block; margin-bottom: 5px; font-size: 12px; background-color: #ebe1e1; padding:15px !important;">
+                <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
+                4.1 CURRENT / PERMANET / OVERSEAAS ADDRESS DETAILS (Please see instruction D at the end)
+            </label>
+
+            <div style="margin-top: 10px; margin-bottom: 10px;">
+                <small>
+                    (Certified copy of any one of the following Proof of Address[PoA] needs to be submitted)
+                </small>
+            </div>
+
+            {{-- Add a Address Type details --}}
+            <table style="font-weight: normal; margin-bottom: 10px;">
+                <tbody>
+                    <tr>
+                        <td style="width: 20%; vertical-align: middle;">
+                            <b>Address Type <span style="color: red;">*</span></b>
+                        </td>
+                        <td style="width: 80%; border: 1px solid #000; padding: 5px;">
+                            <table>
+                                <tr>
+                                    <td style="border: transparent !important; padding: 2px;">
+                                        <label style="display: flex; align-items: center; gap: 5px; white-space: nowrap;">
+                                            <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;;">
+                                                <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}"
+                                                         alt="Checkmark" style="height: 25px; width: 25px;">
+                                            </div> Residential / Business
+                                        </label>
+                                    </td>
+                                    <td style="border: transparent !important; padding: 2px;">
+                                        <label style="display: flex; align-items: center; gap: 5px; white-space: nowrap;">
+                                            <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;;">
+                                                <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}"
+                                                         alt="Checkmark" style="height: 25px; width: 25px;">
+                                            </div> Residential
+                                        </label>
+                                    </td>
+                                    <td style="border: transparent !important; padding: 2px;">
+                                        <label style="display: flex; align-items: center; gap: 5px; white-space: nowrap;">
+                                            <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;;">
+                                                <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}"
+                                                         alt="Checkmark" style="height: 25px; width: 25px;">
+                                            </div> Business
+                                        </label>
+                                    </td>
+                                    <td style="border: transparent !important; padding: 2px;">
+                                        <label style="display: flex; align-items: center; gap: 5px; white-space: nowrap;">
+                                            <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;;">
+                                                <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}"
+                                                         alt="Checkmark" style="height: 25px; width: 25px;">
+                                            </div> Registered Office
+                                        </label>
+                                    </td>
+                                    <td style="border: transparent !important; padding: 2px;">
+                                        <label style="display: flex; align-items: center; gap: 5px; white-space: nowrap;">
+                                            <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;;">
+                                                <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}"
+                                                         alt="Checkmark" style="height: 25px; width: 25px;">
+                                            </div> Unspecified
+                                        </label>
+                                    </td>
+                                </tr>
+
+                            </table>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td style="width: 10%; vertical-align: middle;">
+                            <b>Proof of Address <span style="color: red;">*</span></b>
+                        </td>
+                        <td style="width: 90%; border: 1px solid #000; padding: 5px;">
+                            <table>
+                                <tr>
+                                    <td style="border: transparent !important; padding: 2px;">
+                                        <label style="display: flex; align-items: center; gap: 5px; white-space: nowrap;">
+                                            <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;;">
+                                                <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}"
+                                                         alt="Checkmark" style="height: 25px; width: 25px;">
+                                            </div> Passport
+                                        </label>
+                                    </td>
+                                    <td style="border: transparent !important; padding: 2px;">
+                                        <label style="display: flex; align-items: center; gap: 5px; white-space: nowrap;">
+                                            <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;;">
+                                                <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}"
+                                                         alt="Checkmark" style="height: 25px; width: 25px;">
+                                            </div> Driving License
+                                        </label>
+                                    </td>
+                                    <td style="border: transparent !important; padding: 2px;">
+                                        <label style="display: flex; align-items: center; gap: 5px; white-space: nowrap;">
+                                            <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;;">
+                                                <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}"
+                                                         alt="Checkmark" style="height: 25px; width: 25px;">
+                                            </div> UID (Aadhaar)
+                                        </label>
+                                    </td>
+                                    <td style="border: transparent !important; padding: 2px;">
+                                        <label style="display: flex; align-items: center; gap: 5px; white-space: nowrap;">
+                                            <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;;">
+                                                <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}"
+                                                         alt="Checkmark" style="height: 25px; width: 25px;">
+                                            </div> Voter Identity Card
+                                        </label>
+                                    </td>
+                                    <td style="border: transparent !important; padding: 2px;">
+                                        <label style="display: flex; align-items: center; gap: 5px; white-space: nowrap;">
+                                            <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;;">
+                                                <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}"
+                                                         alt="Checkmark" style="height: 25px; width: 25px;">
+                                            </div> NREGA Job Card
+                                        </label>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td style="border: transparent !important; padding: 2px;">
+                                        <label style="display: flex; align-items: center; gap: 5px; white-space: nowrap;">
+                                            <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;;">
+                                                <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}"
+                                                         alt="Checkmark" style="height: 25px; width: 25px;">
+                                            </div> Others ______
+                                        </label>
+                                    </td>
+                                    <td style="border: transparent !important; padding: 2px;">
+                                        <label style="display: flex; align-items: center; gap: 5px; white-space: nowrap;">
+                                            <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;;">
+                                                <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}"
+                                                         alt="Checkmark" style="height: 25px; width: 25px;">
+                                            </div> Simplified Measures <br>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Account -Document<br>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            Type code : ________
+                                        </label>
+                                    </td>
+                                </tr>
+
+                            </table>
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+
+            <h2>Address</h2>
+            <div class="col-sm-12 p-2" style="font-size: 14px; height:30px;">
+                <b>Line 1 :  * </b> <span style="width: 100%;">________________________________________________________________________________________________________________</span>
+            </div>
+            <div class="col-sm-12 p-2" style="font-size: 14px; height:30px;">
+                <b>Line 2 : </b> <span style="width: 100%;">_________________________________________________________________________________________________________________</span>
+            </div>
+            <div class="row col-sm-12 p-2" style="font-size: 14px; height:30px;">
+                <b>Line 3 : </b> <span style="width: 70%;">___________________________________________________________</span>
+                <b>City / Town / Village : </b> <span style="width: 30%;">__________________________________</span>
+            </div>
+            <div class="row col-sm-12 p-2" style="font-size: 14px; height:30px;">
+                <b>District * </b> <span style="width: 30%;">________________</span>&nbsp;
+                <b>Pin / Post Code * </b> <span style="width: 20%;">_____________</span>&nbsp;
+                <b>State / U.T Code * </b> <span style="width: 20%;">_____________</span>&nbsp;
+                <b>ISO 3166 Country Code * </b> <span style="width: 30%;">_____________</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="page-break"></div>
+
+    <!--- Sixth Page with Content --->
+    <div class="container">
+        <div style="border: 1px solid #000; padding: 10px; font-family: Arial, sans-serif; width: fit-content; font-size:12px;">
+            <label style="font-weight: bold; display: block; margin-bottom: 5px; font-size: 12px; background-color: #ebe1e1; padding:15px !important;">
+                <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
+                4.2 CORRESPONDENCE / LOCAL ADDRESS DETAILS (Please see instruction E at the end)
+            </label>
+
+            <table style="border-collapse: collapse; margin-top: 10px; margin-bottom: 20px; font-size: 12px; width: 100%;">
+                <tr>
+                    <td style="border: 1px solid #000; padding: 5px; width: 50%;">
+                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
+                        <span style="font-size: 13px;">Same as Current / Permanet / Overseas Address Details (In case of multiple correspondence / local addresses please <b>fill 'Annexure A1'</b>)</span>
+                    </td>
+                </tr>
+            </table>
+
+            <div class="col-sm-12 p-2" style="font-size: 14px; height:30px;">
+                <b>Line 1 :  * </b> <span style="width: 100%;">________________________________________________________________________________________________________________</span>
+            </div>
+            <div class="col-sm-12 p-2" style="font-size: 14px; height:30px;">
+                <b>Line 2 : </b> <span style="width: 100%;">_________________________________________________________________________________________________________________</span>
+            </div>
+            <div class="row col-sm-12 p-2" style="font-size: 14px; height:30px;">
+                <b>Line 3 : </b> <span style="width: 70%;">___________________________________________________________</span>
+                <b>City / Town / Village : </b> <span style="width: 30%;">__________________________________</span>
+            </div>
+            <div class="row col-sm-12 p-2" style="font-size: 14px; height:30px;">
+                <b>District * </b> <span style="width: 30%;">________________</span>&nbsp;
+                <b>Pin / Post Code * </b> <span style="width: 20%;">_____________</span>&nbsp;
+                <b>State / U.T Code * </b> <span style="width: 20%;">_____________</span>&nbsp;
+                <b>ISO 3166 Country Code * </b> <span style="width: 30%;">_____________</span>
+            </div>
+
+        </div>
+
+        <div style="border: 1px solid #000; padding: 10px; font-family: Arial, sans-serif; width: fit-content; font-size:12px !important;">
+            <label style="font-weight: bold; display: block; margin-bottom: 5px; font-size: 12px; background-color: #ebe1e1; padding:15px !important;">
+                <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
+                4.3 ADDRESS IN THE JURISDICTION DETAILS WHERE APPLICANT IS RESIDENT OUTSIDE INDIA FOR TAX PURPOSES * (Applicable if section 2 is ticked.)
+            </label>
+
+            <table style="border-collapse: collapse; margin-top: 10px; margin-bottom: 20px; font-size: 13px; width: 100%;">
+                <tr>
+                    <td style="border: 1px solid #000; padding: 5px; width: 50%;">
+                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
+                        <span style="font-size: 14px;">Same as Current / Permanet / Overseas Address Details</span>
+                    </td>
+                    <td style="border: 1px solid #000; padding: 5px; width: 50%;">
+                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
+                        <span style="font-size: 14px;">Same as Correspondence / Local Address Details</span>
+                    </td>
+                </tr>
+            </table>
+
+            <div class="col-sm-12 p-2" style="font-size: 14px; height:30px;">
+                <b>Line 1 :  * </b> <span style="width: 100%;">________________________________________________________________________________________________________________</span>
+            </div>
+            <div class="col-sm-12 p-2" style="font-size: 14px; height:30px;">
+                <b>Line 2 : </b> <span style="width: 100%;">_________________________________________________________________________________________________________________</span>
+            </div>
+            <div class="row col-sm-12 p-2" style="font-size: 14px; height:30px;">
+                <b>Line 3 : </b> <span style="width: 70%;">___________________________________________________________</span>
+                <b>City / Town / Village : </b> <span style="width: 30%;">__________________________________</span>
+            </div>
+            <div class="row col-sm-12 p-2" style="font-size: 14px; height:30px;">
+                <b>State * </b> <span style="width: 30%;">____________________________</span>&nbsp;
+                <b>Zip / Post Code * </b> <span style="width: 30%;">_______________________</span>&nbsp;
+                <b>ISO 3166 Country Code * </b> <span style="width: 30%;">_______________________</span>
+            </div>
+
+        </div>
+
+        <div style="border: 1px solid #000; padding: 10px; font-family: Arial, sans-serif; width: fit-content; font-size:12px !important;">
+            <label style="font-weight: bold; display: block; margin-bottom: 5px; font-size: 14px; background-color: #ebe1e1; padding:15px !important;">
+                <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
+                5 . CONTACT DETAILS (All Communications will be sent on provided Mobile No. / Email - Id)(please refer instructions G at the end)
+            </label>
+
+            <table style="border-collapse: collapse; margin-top: 10px; font-size: 13px; width: 100%;">
+                <tr>
+                    <td style="border: 1px solid #000; padding: 5px; width: 40%;">
+                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
+                        <span style="font-size: 14px;">Tel. (Off)</span>&nbsp;&nbsp;&nbsp;
+                        ___________________________
+                    </td>
+                    <td style="border: 1px solid #000; padding: 5px; width: 40%;">
+                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
+                        <span style="font-size: 14px;">Tel. (Res)</span>&nbsp;&nbsp;&nbsp;
+                       ___________________________
+                    </td>
+                    <td style="border: 1px solid #000; padding: 5px; width: 40%;">
+                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
+                        <span style="font-size: 14px;">FAX</span>&nbsp;&nbsp;&nbsp;
+                       ________________________________
+                    </td>
+                </tr>
+            </table>
+            <table style="border-collapse: collapse; font-size: 13px; width: 100%;">
+                <tr>
+                    <td style="width: 22%; border: 1px solid #000; vertical-align: middle;">
+                        Mobile <span style="color: Red;">*</span>
+                        ______________________
+                    </td>
+                    <td style="width: 66%; border: 1px solid #000; padding: 5px;">
+                        <table>
+                            <tr>
+                                <td style="border: transparent !important; padding: 2px;">
+                                    <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;;">
+                                        <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}" alt="Checkmark" style="height: 25px; width: 25px;">
+                                    </div> Self
+                                </td>
+                                <td style="border: transparent !important; padding: 2px;">
+                                    <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;;">
+                                        <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}" alt="Checkmark" style="height: 25px; width: 25px;">
+                                    </div> Spouse
+                                </td>
+                                <td style="border: transparent !important; padding: 2px;">
+                                    <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;;">
+                                        <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}" alt="Checkmark" style="height: 25px; width: 25px;">
+                                    </div> Dependent Parent
+                                </td>
+                                <td style="border: transparent !important; padding: 2px;">
+                                    <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;;">
+                                        <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}" alt="Checkmark" style="height: 25px; width: 25px;">
+                                    </div> Dependent Children
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+            <table style="border-collapse: collapse; font-size: 13px; width: 100%;">
+                <tr>
+                    <td style="width: 22%; border: 1px solid #000; vertical-align: middle;">
+                        Email Id <span style="color: Red;">*</span>
+                        ______________________
+                    </td>
+                    <td style="width: 66%; border: 1px solid #000; padding: 5px;">
+                        <table>
+                            <tr>
+                                <td style="border: transparent !important; padding: 2px;">
+                                    <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;;">
+                                        <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}" alt="Checkmark" style="height: 25px; width: 25px;">
+                                    </div> Self
+                                </td>
+                                <td style="border: transparent !important; padding: 2px;">
+                                    <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;;">
+                                        <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}" alt="Checkmark" style="height: 25px; width: 25px;">
+                                    </div> Spouse
+                                </td>
+                                <td style="border: transparent !important; padding: 2px;">
+                                    <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;;">
+                                        <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}" alt="Checkmark" style="height: 25px; width: 25px;">
+                                    </div> Dependent Parent
+                                </td>
+                                <td style="border: transparent !important; padding: 2px;">
+                                    <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;;">
+                                        <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}" alt="Checkmark" style="height: 25px; width: 25px;">
+                                    </div> Dependent Children
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div style="border: 1px solid #000; padding: 10px; font-family: Arial, sans-serif; width: fit-content; font-size:14px;">
+            <label style="font-weight: bold; display: block; margin-bottom: 5px; font-size: 14px; background-color: #ebe1e1; padding:15px !important;">
+                <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
+                6 . DETAILS OF RELATED PERSON ((In case of additional related persons, please <b>fill 'Annexure A1'</b>))(please refer instructions G at the end)
+            </label>
+
+            <table style="border-collapse: collapse; margin-top: 3px;  background-color: #eeeeee; font-size: 13px; width: 100%;">
+                <tr>
+                    <td style="border: 1px solid #000; padding: 5px; width: 25%;">
+                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
+                        <span style="font-size: 14px;">Addition of Related Person</span>
+                    </td>
+                    <td style="border: 1px solid #000; padding: 5px; width: 75%;">
+                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
+                        <span style="font-size: 14px;">Deletion of Related Person</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <span style="font-size: 14px;">KYC Number of Related Person (if available *)</span>&nbsp;&nbsp;_______________________
+                    </td>
+                </tr>
+            </table>
+
+            <table style="border-collapse: collapse; font-size: 13px; width: 100%;">
+                <tr>
+                    <td style="width: 22%; border: 1px solid #000; vertical-align: middle;">
+                        Related Person Type <span style="color: Red;">*</span>
+                    </td>
+                    <td style="width: 66%; border: 1px solid #000; padding: 5px;">
+                        <table>
+                            <tr>
+                                <td style="border: transparent !important; padding: 2px;">
+                                    <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;;">
+                                        <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}" alt="Checkmark" style="height: 25px; width: 25px;">
+                                    </div> Guardian of Minor
+                                </td>
+                                <td style="border: transparent !important; padding: 2px;">
+                                    <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;;">
+                                        <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}" alt="Checkmark" style="height: 25px; width: 25px;">
+                                    </div> Assignee
+                                </td>
+                                <td style="border: transparent !important; padding: 2px;">
+                                    <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;;">
+                                        <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}" alt="Checkmark" style="height: 25px; width: 25px;">
+                                    </div> Authorised Representative
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+
+            <table style="font-weight: normal;">
+                <thead>
+                    <tr>
+                        <td></td>
+                        <td><span class="label text-muted">Prefix</span></td>
+                        <td><span class="label text-muted">First Name</span></td>
+                        <td><span class="label text-muted">Middle Name</span></td>
+                        <td><span class="label text-muted">Last Name</span></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Name *</td>
+                        <td><div class="underline">______________</div></td>
+                        <td><div class="underline">______________</div></td>
+                        <td><div class="underline">______________</div></td>
+                        <td><div class="underline">______________</div></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <label style="font-weight: bold; display: block; margin-top: 5px; margin-bottom: 5px; font-size: 14px; background-color: #eeeeee; padding:15px !important;">
+                PROOF OF IDENTITY [POI] OF RELATED PERSON * (please refer instructions (H) at the end)
+            </label>
+
+            <table style="border-collapse: collapse; margin-top: 5px; font-size: 13px; width: 100%;">
+                <tr>
+                    <td style="border: 1px solid #000; padding: 5px; width: 50%;">
+                        <div class="square-box" class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
+                        <span style="font-size: 14px;">A. Passport Number : - </span>
+                        ____________________________
+                    </td>
+
+                    <td style="border: 1px solid #000; padding: 5px; width: 50%;">
+                        <span style="font-size: 14px;">Passport Expiry Date : -</span>
+                        ____________________________
+                    </td>
+                </tr>
+                <tr>
+                    <td style="border: 1px solid #000; padding: 5px; width: 50%;">
+                        <div class="square-box" class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
+                        <span style="font-size: 14px;">B. Voter ID Card : - </span>
+                        ____________________________
+                    </td>
+                    <td style="border: 1px solid #000; padding: 5px;">
+
+                    </td>
+                </tr>
+                <tr>
+                    <td style="border: 1px solid #000; padding: 5px; width: 50%;">
+                        <div class="square-box" class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
+                        <span style="font-size: 14px;">C. PAN Card : - </span>
+                        ____________________________
+                    </td>
+                    <td style="border: 1px solid #000; padding: 5px; width: 50%;">
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="square-box" class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
+                        <span style="font-size: 14px;">D. Driving Licence : -</span>
+                        ____________________________
+                    </td>
+                    <td style="border: 1px solid #000; padding: 5px; width: 50%;">
+                        <span style="font-size: 14px;">Driving Licence Expiry Date : -</span>
+                        ____________________________
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="square-box" class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
+                        <span style="font-size: 14px;">E. UID (Aadhaar) : - </span>
+                        ____________________________
+                    </td>
+                    <td style="border: 1px solid #000; padding: 5px; width: 50%;">
+
+                    </td>
+                </tr>
+                <tr>
+                    <td style="font-size: 14px;">
+                        <div class="square-box" class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
+                        <span>Z. Others (any document notified by the central government) : - </span>
+                        ____________________________
+                    </td>
+                    <td style="border: 1px solid #000; padding: 5px; width: 50%;">
+                        <span style="font-size: 14px;">Identification Number : - </span>
+                        ____________________________
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="square-box" class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
+                        <span style="font-size: 14px;">S. Simplified Measures Account - Document Type code : - </span>
+                        ____________________________
+                    </td>
+                    <td style="border: 1px solid #000; padding: 5px; width: 50%;">
+                        <span style="font-size: 14px;">Identification Number : - </span>
+                        ____________________________
+                    </td>
+                </tr>
+            </table>
+
+        </div>
+    </div>
+
+    {{-- Page Break --}}
+    <div class="page-break"></div>
+
+    <!--- Seventh Page with Content --->
+    <div class="container" style="border: 1px solid #000; margin-top: 20px; padding: 10px;">
+        <div style="font-family: Arial, sans-serif; width: fit-content; font-size:12px !important;">
+            <label style="font-weight: bold; display: block; margin-bottom: 5px; font-size: 14px; background-color: #ebe1e1; padding:15px !important;">
+                <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
+                7 . REMARKS (if any)
+            </label>
+        </div>
+
+        <div class="col-sm-12 p-2" style="font-size: 14px; height:30px;">
+            <span style="width: 100%;">________________________________________________________________________________________________________________________</span>
+        </div>
+        <div class="col-sm-12 p-2" style="font-size: 14px; height:30px;">
+            <span style="width: 100%;">________________________________________________________________________________________________________________________</span>
+        </div>
+        <div class="col-sm-12 p-2" style="font-size: 14px; height:30px;">
+            <span style="width: 100%;">________________________________________________________________________________________________________________________</span>
+        </div>
+    </div>
+
+    <!--- Eight Page with Content --->
+    <div class="container" style="border: 1px solid #000; margin-top: 20px; padding: 10px;">
+        <div style="font-family: Arial, sans-serif; width: fit-content; font-size:12px !important;">
+            <label style="font-weight: bold; display: block; margin-bottom: 5px; font-size: 14px; background-color: #ebe1e1; padding:15px !important;">
+                <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
+                8 . APPLICATION DECLARATION
+            </label>
+        </div>
+
+        <table style="border-collapse: collapse; margin-top: 10px; font-size: 12px; width: 100%;">
+            <tr>
+                <td style="width: 60%;">
+                    {{-- Order list --}}
+                    <ul style="font-size: 14px; text-align: justify;">
+                        <li style="margin-bottom: 10px;">
+                            I hereby declare that the details furnished above are true and correct to the best of my knowledge
+                            and belief and I undertake to inform you of any changes therein, immediately. In case any of the
+                            above information is found to be false or untrue or misleading or misrepresenting, I am aware
+                            that I may be held liable for it.
+                        </li>
+                        <li>
+                            I hereby consent to receiving information from Central KYC Registry through SMS/Email on the
+                            above registered number/email address.
+                        </li>
+                    </ul>
+
+                    <span style="font-size: 14px;">
+                        <strong>Date :</strong>
+                        ____________________________
+                    </span>
+
+                    <span style="font-size: 14px;">
+                        <strong>Place :</strong>
+                        _________________________
+                    </span>
+                </td>
+                <th style="width: 40%;">
+                    <span style="font-size: 14px;">
+                        Signature / Thumb Impression of Applicant
+                    </span>
+                </th>
+            </tr>
+        </table>
+    </div>
+
+    <div class="page-break"></div>
+
+    <!--- Ninth Page with Content --->
+    <div class="container" style="border: 1px solid #000; margin-top: 20px; padding: 10px;">
+        <div style="font-family: Arial, sans-serif; width: fit-content; font-size:12px !important;">
+            <label style="font-weight: bold; display: block; margin-bottom: 5px; font-size: 14px; background-color: #ebe1e1; padding:15px !important;">
+                <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
+                9 . ATTESTATION / FOR OFFICE USE ONLY
+            </label>
+        </div>
+
+        <table style="font-weight: normal; margin-bottom: 10px;">
+            <tbody>
+                <tr>
+                    <td style="width: 20%; vertical-align: middle;">
+                        <b>Documents Received </b>
+                    </td>
+                    <td style="width: 80%; border: 1px solid #000; padding: 5px;">
+                        <table>
+                            <tr>
+                                <td style="border: transparent !important; padding: 2px;">
+                                    <label style="display: flex; align-items: center; gap: 5px; white-space: nowrap;">
+                                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;;">
+                                            <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}"
+                                                     alt="Checkmark" style="height: 25px; width: 25px;">
+                                        </div> Certified Copies
+                                    </label>
+                                </td>
+                                <td style="border: transparent !important; padding: 2px;">
+                                    <label style="display: flex; align-items: center; gap: 5px; white-space: nowrap;">
+                                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;;">
+                                            <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}"
+                                                     alt="Checkmark" style="height: 25px; width: 25px;">
+                                        </div> Client Interviewed by
+                                    </label>
+                                </td>
+                                <td style="border: transparent !important; padding: 2px;">
+                                    <label style="display: flex; align-items: center; gap: 5px; white-space: nowrap;">
+                                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;;">
+                                            <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}"
+                                                     alt="Checkmark" style="height: 25px; width: 25px;">
+                                        </div> In - Person verification done by
+                                    </label>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+
+        <table style="border-collapse: collapse; margin-top: 10px; font-size: 12px; width: 100%;">
+            <tr>
+                <td style="width: 50%;">
+                    <label style="font-weight: bold; display: block; margin-bottom: 5px; font-size: 14px; background-color: #e6e3e3; padding:15px !important;">
+                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
+                        KYC VERIFICATION CARRIED OUT BY
+                    </label><br>
+
+                    <span style="font-size: 14px; font-weight: bold; padding: 5px;;">
+                        Date : ____________________________
+                    </span><br><br>
+                    <span style="font-size: 14px; font-weight: bold; padding: 5px;;">
+                        Emp. Name : ____________________________
+                    </span><br><br>
+                    <span style="font-size: 14px; font-weight: bold; padding: 5px;;">
+                        Emp. Code : ____________________________
+                    </span><br><br>
+                    <span style="font-size: 14px; font-weight: bold; padding: 5px;;">
+                        Emp. Designation : ____________________________
+                    </span><br><br>
+                    <span style="font-size: 14px; font-weight: bold; padding: 5px;;">
+                        Emp. Branch : ____________________________
+                    </span><br><br>
+                    <div class="square-box" style="width: 100%; height: 30%; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px;">
+                        {{-- Employee Signature --}}
+                        {{-- <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/signature.png'))) }}" alt="Signature" style="height: 50px; width: 140px;"> --}}
+                        <small class="text-muted">
+                            [Employee Signature]
+                        </small>
+                    </div>
+                </td>
+
+                <td style="width: 50%;">
+                    <label style="font-weight: bold; display: block; margin-bottom: 5px; font-size: 14px; background-color: #e6e3e3; padding:15px !important;">
+                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
+                        INSTITUTION DETAILS
+                    </label><br><br><br>
+
+                    <span style="font-size: 14px; font-weight: bold; padding: 5px;;">
+                        Name : ____________________________
+                    </span><br><br>
+
+                    <span style="font-size: 14px; font-weight: bold; padding: 5px;;">
+                        Code : ____________________________
+                    </span><br><br><br><br>
+
+                    <div class="square-box" style="width: 100%; height: 35%; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px;">
+                        {{-- Employee Signature --}}
+                        {{-- <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/signature.png'))) }}" alt="Signature" style="height: 50px; width: 140px;"> --}}
+                        <small class="text-muted" >[Institution Stamp]</small>
+                    </div>
+                </td>
+            </td>
+        </table>
+    </div>
+    {{-- First Holder Form End --}}
+
+    <div class="page-break"></div>
+
+    {{-- Second Holder Form Start --}}
+    <!--- Fifth Page with Content -->
+    <div class="WordSection5">
+
+        <table style="border-collapse: collapse; border-color: #f7efef; width: 30%; float: right;">
+            <tr>
+                <td style="padding: 10px; text-align: left; font-weight: bold; font-size: 20px; line-height: 20px;">
+                    FU | {{ $data['client_code'] ?? '' }}
+                </td>
+            </tr>
+            <tr>
+                <td style="padding: 10px; text-align: left; font-weight: bold; font-size: 20px; line-height: 20px; text-transform: uppercase;">
+                    SECOND HOLDER
+                </td>
+            </tr>
+        </table>
+        <br><br><br><br>
+
+        <!-- Instructions Section -->
+        <table style="width: 100%; font-size: 13px; font-weight: normal !important; ">
+            <thead>
+                <tr>
+                    <th style="text-align: left;  padding-bottom: 5px;" colspan="3">
+                        CENTRAL KYC REGISTRY | Know Your Cusstomer (KYC) Application Form | Individual
+                    </th>
+                </tr>
+                <tr>
+                    <th style="text-align: left;  padding-bottom: 5px;" colspan="3">
+                        <h4>Important Instructions:</h4>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <!-- Section 1 -->
+                    <td style="vertical-align: top; width: 40% !important; text-align: justify;">
+                        <ul style="list-style-type: none; padding-left: 0;">
+                            <p>(A) Fields marked with “*” are mandatory fields.</p>
+                            <p>(B) Please fill the form in English and in BLOCK letters.</p>
+                            <p>(C) Please fill the date in DD-MM-YYYY format.</p>
+                            <p>(D) Please read section-wise detailed guidelines/instructions at the end.</p>
+                        </ul>
+                    </td>
+                    <!-- Section 2 -->
+                    <td style="vertical-align: top; width: 50%; text-align: justify;">
+                        <ul style="list-style-type: none; padding-left: 0; font-style: normal;">
+                            <p>(E) List of State/U.T codes as per Indian Motor Vehicle Act, 1988 is available at the
+                                end.</p>
+                            <p>(F) List of two-character ISO 3166 country codes is available at the end.</p>
+                            <p>(G) KYC number of applicant is mandatory for update application.</p>
+                            <p>(H) For particular section update, please tick (✓) in the box available before the
+                                section
+                                number and strike off the sections not required to be updated.
+                            </p>
+                        </ul>
+                    </td>
+                    <!-- Section 3 -->
+                    <td style="vertical-align: top; padding: 10px; width: 10%;">
+                        <ul style="list-style-type: none; padding-left: 0;">
+                            <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/central_KYC_logo.png'))) }}" alt="Ventura Logo">
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <table style="width: 100%; font-weight: normal !important;">
+            <thead style="background-color: #757879 !important;">
+                <tr>
+                    <th colspan="5">
+                        <div class="square-box" style="width: 15px; height: 15px; border: 1px solid #000;"></div>
+                        For office use only (To be filled by financial institution)
+                    </th>
+                </tr>
+                <tr>
+                    <th colspan="4" style="vertical-align: top; ">
+                        <span style="font-size: 14px;">Application Type <span style="color: red">*</span></span>
+                    </th>
+                    <th rowspan="3" class="d-flex" style="font-size: 14px;">
+                        <div class="square-box" style="width: 15px; height: 15px; border: 1px solid #000; text-align: center;">
+                            @if($data['application_type'] == 1)
+                            <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}"
+                                alt="Ventura Logo" style="height: 20px; width: 20px;">
+                            @else
+                                &nbsp;
+                            @endif
+                        </div> New
+                    </th>
+                    <th rowspan="3" class="d-flex" style="font-size: 14px;">
+                        <div class="square-box" style="width: 15px; height: 15px; border: 1px solid #000; text-align: center;">
+                            @if($data['application_type'] == 2)
+                            <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}"
+                                alt="Ventura Logo" style="height: 20px; width: 20px;">
+                            @else
+                                &nbsp;
+                            @endif
+                        </div> Update
+                    </th>
+                </tr>
+                <tr>
+                    <th colspan="5">
+                        <span style="font-size: 14px;"> KYC Number <span style="color: red">*</span>
+                        @foreach(str_split($data['kyc_number']) as $digit)
+                            <div class="square-box" style="width: 15px; height: 15px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;">
+                                {{ $digit }}
+                            </div>
+                        @endforeach
+                        <span style="font-size: 14px;">(Mandatory for KYC update request)</span>
+                    </th>
+                </tr>
+                <tr>
+                    <th colspan="4">
+                        <span style="font-size: 14px;">Account Type <span style="color: red">*</span></span>
+                    </th>
+                    <th rowspan="2" class="d-flex">
+                        <div style="display: flex; align-items: center; gap: 20px; flex-wrap: nowrap;">
+                            <label style="display: flex; align-items: center; gap: 5px; white-space: nowrap;" style="font-size: 14px;">
+                                <div class="square-box" style="width: 15px; height: 15px; border: 1px solid #000; text-align: center;">
+                                    @if($data['account_type'] == '1')
+                                    <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}"
+                                    alt="Ventura Logo" style="height: 20px; width: 20px;">
+                                    @endif
+                                </div> Normal
+                            </label>
+                        </div>
+                    </th>
+                    <th rowspan="2" class="d-flex">
+                        <div style="display: flex; align-items: center; gap: 20px; flex-wrap: nowrap;">
+                            <label style="display: flex; align-items: center; gap: 5px; white-space: nowrap;" style="font-size: 14px;">
+                                <div class="square-box" style="width: 15px; height: 15px; border: 1px solid #000; text-align: center;">
+                                    @if($data['account_type'] == '2')
+                                    <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}"
+                                    alt="Ventura Logo" style="height: 20px; width: 20px;">
+                                    @endif
+                                </div> Simplified (for low risk customer)
+                            </label>
+                        </div>
+                    </th>
+                    <th rowspan="2" class="d-flex">
+                        <div style="display: flex; align-items: center; gap: 20px; flex-wrap: nowrap;">
+                            <label style="display: flex; align-items: center; gap: 5px; white-space: nowrap;" style="font-size: 14px;">
+                                <div class="square-box" style="width: 15px; height: 15px; border: 1px solid #000; text-align: center;">
+                                    @if($data['account_type'] == '3')
+                                    <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}"
+                                    alt="Ventura Logo" style="height: 20px; width: 20px;">
+                                    @endif
+                                </div> Small
+                            </label>
+                        </div>
+                    </th>
+                </tr>
+
+            </thead>
+        </table>
+
         {{-- Page Break --}}
         <div class="page-break"></div>
+
+        {{-- First Name, Middle Name, Last Name Section --}}
+        <table style="font-weight: normal;">
+            <thead>
+                <tr>
+                    <th colspan="5">
+                        1. PERSONAL DETAILS</strong> (Please refer to instruction A at the end)
+                    </th>
+                </tr>
+                <tr>
+                    <th></th>
+                    <th><span class="label text-center">Prefix</span></th>
+                    <th><span class="label text-center">First Name</span></th>
+                    <th><span class="label text-center">Middle Name</span></th>
+                    <th><span class="label text-center">Last Name</span></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Name (Same as ID proof)</td>
+                    @php
+                        $prefixes = [1 => 'Mr.', 2 => 'Mrs.', 3 => 'Shri.', 4 => 'Shrimati'];
+                        $prefix = $prefixes[$data['prefix']] ?? '';
+                    @endphp
+                    <td><div class="underline">{{ $prefix }}</div></td>
+                    <td><div class="underline">{{ $data['first_name'] ?? '' }}</div></td>
+                    <td><div class="underline">{{ $data['middle_name'] ?? '' }}</div></td>
+                    <td><div class="underline">{{ $data['last_name'] ?? '' }}</div></td>
+                </tr>
+
+                <tr>
+                    <td>Maiden Name (if any <span style="color: red;">*</span>)</td>
+                    @php
+                        $maiden_prefix = $prefixes[$data['maiden_prefix']] ?? '';
+                    @endphp
+                    <td><div class="underline">{{ $maiden_prefix }}</div></td>
+                    <td><div class="underline">{{ $data['maiden_first_name'] ?? '' }}</div></td>
+                    <td><div class="underline">{{ $data['maiden_middle_name'] ?? '' }}</div></td>
+                    <td><div class="underline">{{ $data['maiden_last_name'] ?? '' }}</div></td>
+                </tr>
+
+                <tr>
+                    <td>Father / Spouse Name <span style="color: red;">*</span></td>
+                    @php
+                        $father_prefix = $prefixes[$data['father_prefix']] ?? '';
+                    @endphp
+                    <td><div class="underline">{{ $father_prefix }}</div></td>
+                    <td><div class="underline">{{ $data['father_first_name'] ?? '' }}</div></td>
+                    <td><div class="underline">{{ $data['father_middle_name'] ?? '' }}</div></td>
+                    <td><div class="underline">{{ $data['father_last_name'] ?? '' }}</div></td>
+                </tr>
+
+                <tr>
+                    <td>Mother Name <span style="color: red;">*</span></td>
+                    @php
+                        $mother_prefix = $prefixes[$data['mother_prefix']] ?? '';
+                    @endphp
+                    <td><div class="underline">{{ $mother_prefix }}</div></td>
+                    <td><div class="underline">{{ $data['mother_first_name'] ?? '' }}</div></td>
+                    <td><div class="underline">{{ $data['mother_middle_name'] ?? '' }}</div></td>
+                    <td><div class="underline">{{ $data['mother_last_name'] ?? '' }}</div></td>
+                </tr>
+            </tbody>
+        </table>
+
+        {{-- Date of Birth Section --}}
+        <table style="font-weight: normal;">
+            <tbody>
+                <tr>
+                    <td>Date of Birth <span style="color: red;">*</span></td>
+
+                    @php
+                        $dob = \Carbon\Carbon::parse($data['date_of_birth'])->format('d-m-Y');
+                    @endphp
+
+                    <td>
+                        @foreach(str_split($dob) as $char)
+                            <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;">
+                                {{ $char }}
+                            </div>
+                        @endforeach
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        {{-- Gender, Marital Status, and Occupation --}}
+        <table style="font-weight: normal;">
+            <tbody>
+                <!-- First Row -->
+                <tr>
+                    <td style="width: 22%; border: 1px solid #000; vertical-align: middle;">Gender <span style="color: red;">*</span></td>
+                    <td style="width: 66%; border: 1px solid #000; padding: 5px;">
+                        <table>
+                            <tr>
+                                <td style="border: transparent !important; padding: 2px;">
+                                    <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;;">
+                                        @if($data['gender'] == '1')
+                                            <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}" alt="Checkmark" style="height: 25px; width: 25px;">
+                                        @endif
+                                    </div> M - Male
+                                </td>
+                                <td style="border: transparent !important; padding: 2px;">
+                                    <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;;">
+                                        @if($data['gender'] == '2')
+                                            <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}"
+                                                 alt="Checkmark" style="height: 25px; width: 25px;">
+                                        @endif
+                                    </div> F - Female
+                                </td>
+                                <td style="border: transparent !important; padding: 2px;">
+                                    <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;;">
+                                        @if($data['gender'] == '3')
+                                            <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}"
+                                                 alt="Checkmark" style="height: 25px; width: 25px;">
+                                        @endif
+                                    </div> T - Transgender
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td rowspan="5" style="border: 1px solid #000; padding: 5px; width: 13%; text-align: center;">
+                        <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/user_profile_pic.png'))) }}"
+                            alt="User Profile" height="200px" width="140px"><br><br>
+                        <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/signature_user_pic.png'))) }}"
+                            alt="Signature" height="50px" width="140px">
+                    </td>
+                </tr>
+
+                <!-- Second Row -->
+                <tr>
+                    <td style="width: 22%; border: 1px solid #000; vertical-align: middle;">
+                        Marital Status <span style="color: Red;">*</span>
+                    </td>
+                    <td style="width: 66%; border: 1px solid #000; padding: 5px;">
+                        <table>
+                            <tr>
+                                <td style="border: transparent !important; padding: 2px;">
+                                    <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;;">
+                                        @if($data['marital_status'] == '1')
+                                            <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}"
+                                                 alt="Checkmark" style="height: 25px; width: 25px;">
+                                        @endif
+                                    </div> Married
+                                </td>
+                                <td style="border: transparent !important; padding: 2px;">
+                                    <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;;">
+                                        @if($data['marital_status'] == '2')
+                                            <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}"
+                                                 alt="Checkmark" style="height: 25px; width: 25px;">
+                                        @endif
+                                    </div> Unmarried
+                                </td>
+                                <td style="border: transparent !important; padding: 2px;">
+                                    <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;;">
+                                        @if($data['marital_status'] == '3')
+                                            <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}"
+                                                 alt="Checkmark" style="height: 25px; width: 25px;">
+                                        @endif
+                                    </div> Others
+                                </td>
+                            </tr>
+
+
+                        </table>
+                    </td>
+                </tr>
+
+                <!-- Third Row -->
+                <tr>
+                    <td style="width: 22%; border: 1px solid #000; vertical-align: middle;">
+                        Citizenship <span style="color: red;">*</span>
+                    </td>
+                    <td style="width: 66%; border: 1px solid #000; padding: 5px;">
+                        <table>
+                            <tr>
+                                <td style="border: transparent !important; padding: 2px;">
+                                    <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;;">
+                                        @if($data['citizenship'] == 'IN')
+                                            <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}"
+                                                 alt="Checkmark" style="height: 25px; width: 25px;">
+                                        @endif
+                                    </div> IN - Indian
+                                </td>
+                                <td style="border: transparent !important; padding: 2px;">
+                                    <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;;">
+                                        @if($data['citizenship'] == 'others')
+                                            <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}"
+                                                 alt="Checkmark" style="height: 25px; width: 25px;">
+                                        @endif
+                                    </div> Others (ISO 3166 Country Code)
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+
+                <!-- Fourth Row -->
+                <tr>
+                    <td style="width: 22%; vertical-align: middle;">
+                        Residential Status <span style="color: red;">*</span>
+                    </td>
+                    <td style="width: 66%; border: 1px solid #000; padding: 5px;">
+                        <table>
+                            <tr>
+                                <td style="border: transparent !important; padding: 2px;">
+                                    <label style="display: flex; align-items: center; gap: 5px; white-space: nowrap;">
+                                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;;">
+                                            @if($data['residenital_status'] == '1')
+                                                <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}"
+                                                     alt="Checkmark" style="height: 25px; width: 25px;">
+                                            @else
+                                                &nbsp;
+                                            @endif
+                                        </div> Resident Individual
+                                    </label>
+                                </td>
+                                <td style="border: transparent !important; padding: 2px;">
+                                    <label style="display: flex; align-items: center; gap: 5px; white-space: nowrap;">
+                                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;;">
+                                            @if($data['residenital_status'] == '2')
+                                                <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}"
+                                                     alt="Checkmark" style="height: 25px; width: 25px;">
+                                            @else
+                                                &nbsp;
+                                            @endif
+                                        </div> Foreign National
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="border: transparent !important; padding: 2px;">
+                                    <label style="display: flex; align-items: center; gap: 5px; white-space: nowrap;">
+                                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;;">
+                                            @if($data['residenital_status'] == '3')
+                                                <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}"
+                                                     alt="Checkmark" style="height: 25px; width: 25px;">
+                                            @else
+                                                &nbsp;
+                                            @endif
+                                        </div> Non-Resident Indian
+                                    </label>
+                                </td>
+                                <td style="border: transparent !important; padding: 2px;">
+                                    <label style="display: flex; align-items: center; gap: 5px; white-space: nowrap;">
+                                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;;">
+                                            @if($data['residenital_status'] == '4')
+                                                <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}"
+                                                     alt="Checkmark" style="height: 25px; width: 25px;">
+                                            @else
+                                                &nbsp;
+                                            @endif
+                                        </div> Person of Indian Origin
+                                    </label>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+
+                <!-- Fifth Row -->
+                <tr>
+                    <td style="width: 22%; vertical-align: middle;">
+                        Occupation Type <span style="color: red;">*</span>
+                    </td>
+                    <td style="width: 66%; border: 1px solid #000; padding: 5px;">
+                        <table>
+                            <tr>
+                                <td style="border: transparent !important; padding: 2px;">
+                                    <label style="display: flex; align-items: center; gap: 5px; white-space: nowrap;">
+                                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;;">
+                                            @if($data['occupation_type'] == '1')
+                                                <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}"
+                                                     alt="Checkmark" style="height: 25px; width: 25px;">
+                                            @else
+                                                &nbsp;
+                                            @endif
+                                        </div> S - Service (Private Sector)
+                                    </label>
+                                </td>
+                                <td style="border: transparent !important; padding: 2px;">
+                                    <label style="display: flex; align-items: center; gap: 5px; white-space: nowrap;">
+                                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;;">
+                                            @if($data['occupation_type'] == '2')
+                                                <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}"
+                                                     alt="Checkmark" style="height: 25px; width: 25px;">
+                                            @else
+                                                &nbsp;
+                                            @endif
+                                        </div> Public Sector
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="border: transparent !important; padding: 2px;">
+                                    <label style="display: flex; align-items: center; gap: 5px; white-space: nowrap;">
+                                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;;">
+                                            @if($data['occupation_type'] == '3')
+                                                <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}"
+                                                     alt="Checkmark" style="height: 25px; width: 25px;">
+                                            @else
+                                                &nbsp;
+                                            @endif
+                                        </div> Government Sector
+                                    </label>
+                                </td>
+                                <td style="border: transparent !important; padding: 2px;">
+                                    <label style="display: flex; align-items: center; gap: 5px; white-space: nowrap;">
+                                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;;">
+                                            @if($data['occupation_type'] == '4')
+                                                <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}"
+                                                     alt="Checkmark" style="height: 25px; width: 25px;">
+                                            @else
+                                                &nbsp;
+                                            @endif
+                                        </div> Others (Professional)
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="border: transparent !important; padding: 2px;">
+                                    <label style="display: flex; align-items: center; gap: 5px; white-space: nowrap;">
+                                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;;">
+                                            @if($data['occupation_type'] == '5')
+                                                <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}"
+                                                     alt="Checkmark" style="height: 25px; width: 25px;">
+                                            @else
+                                                &nbsp;
+                                            @endif
+                                        </div> Self Employed
+                                    </label>
+                                </td>
+                                <td style="border: transparent !important; padding: 2px;">
+                                    <label style="display: flex; align-items: center; gap: 5px; white-space: nowrap;">
+                                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;;">
+                                            @if($data['occupation_type'] == '6')
+                                                <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}"
+                                                     alt="Checkmark" style="height: 25px; width: 25px;">
+                                            @else
+                                                &nbsp;
+                                            @endif
+                                        </div> Retired
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="border: transparent !important; padding: 2px;">
+                                    <label style="display: flex; align-items: center; gap: 5px; white-space: nowrap;">
+                                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;;">
+                                            @if($data['occupation_type'] == '7')
+                                                <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}"
+                                                     alt="Checkmark" style="height: 25px; width: 25px;">
+                                            @else
+                                                &nbsp;
+                                            @endif
+                                        </div> B - Business
+                                    </label>
+                                </td>
+                                <td style="border: transparent !important; padding: 2px;">
+                                    <label style="display: flex; align-items: center; gap: 5px; white-space: nowrap;">
+                                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;;">
+                                            @if($data['occupation_type'] == '8')
+                                                <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}"
+                                                     alt="Checkmark" style="height: 25px; width: 25px;">
+                                            @else
+                                                &nbsp;
+                                            @endif
+                                        </div> Housewife
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="border: transparent !important; padding: 2px;">
+                                    <label style="display: flex; align-items: center; gap: 5px; white-space: nowrap;">
+                                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;;">
+                                            @if($data['occupation_type'] == '9')
+                                                <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}"
+                                                     alt="Checkmark" style="height: 25px; width: 25px;">
+                                            @else
+                                                &nbsp;
+                                            @endif
+                                        </div> Student
+                                    </label>
+                                </td>
+                                <td style="border: transparent !important; padding: 2px;">
+                                    <label style="display: flex; align-items: center; gap: 5px; white-space: nowrap;">
+                                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;;">
+                                            @if($data['occupation_type'] == '10')
+                                                <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}"
+                                                     alt="Checkmark" style="height: 25px; width: 25px;">
+                                            @else
+                                                &nbsp;
+                                            @endif
+                                        </div> X - Not Categorised
+                                    </label>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
 
         <div style="border: 1px solid #000; padding: 10px; font-family: Arial, sans-serif; width: fit-content; font-size:13px;">
             <label style="font-weight: bold; display: block; margin-bottom: 5px; font-size: 13px; background-color: #bdb5b5; padding:15px !important;">
@@ -1590,25 +2961,30 @@
             </table>
         </div>
 
-
-        <div style="border: 1px solid #000; padding: 10px; font-family: Arial, sans-serif; width: fit-content; font-size:14px;">
-            <label style="font-weight: bold; display: block; margin-bottom: 5px; font-size: 14px; background-color: #bdb5b5; padding:15px !important;">
+        <div style="border: 1px solid #000; padding: 10px; font-family: Arial, sans-serif; width: fit-content; font-size:12px;">
+            <label style="font-weight: bold; display: block; margin-bottom: 5px; font-size: 12px; background-color: #bdb5b5; padding:15px !important;">
                 {{-- <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div> --}}
                 4 . PROOF OF ADDRESS (POA) <span class="text-danger">*</span>
             </label>
-            <label style="font-weight: bold; display: block; margin-bottom: 5px; font-size: 14px; background-color: #ebe1e1; padding:15px !important;">
+            <label style="font-weight: bold; display: block; margin-bottom: 5px; font-size: 12px; background-color: #ebe1e1; padding:15px !important;">
                 <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
                 4.1 CURRENT / PERMANET / OVERSEAAS ADDRESS DETAILS (Please see instruction D at the end)
             </label>
 
+            <div style="margin-top: 10px; margin-bottom: 10px;">
+                <small>
+                    (Certified copy of any one of the following Proof of Address[PoA] needs to be submitted)
+                </small>
+            </div>
+
             {{-- Add a Address Type details --}}
-            <table style="font-weight: normal;">
+            <table style="font-weight: normal; margin-bottom: 10px;">
                 <tbody>
                     <tr>
-                        <td style="width: 22%; vertical-align: middle;">
+                        <td style="width: 20%; vertical-align: middle;">
                             <b>Address Type <span style="color: red;">*</span></b>
                         </td>
-                        <td style="width: 66%; border: 1px solid #000; padding: 5px;">
+                        <td style="width: 80%; border: 1px solid #000; padding: 5px;">
                             <table>
                                 <tr>
                                     <td style="border: transparent !important; padding: 2px;">
@@ -1658,10 +3034,10 @@
                     </tr>
 
                     <tr>
-                        <td style="width: 22%; vertical-align: middle;">
+                        <td style="width: 10%; vertical-align: middle;">
                             <b>Proof of Address <span style="color: red;">*</span></b>
                         </td>
-                        <td style="width: 66%; border: 1px solid #000; padding: 5px;">
+                        <td style="width: 90%; border: 1px solid #000; padding: 5px;">
                             <table>
                                 <tr>
                                     <td style="border: transparent !important; padding: 2px;">
@@ -1688,9 +3064,6 @@
                                             </div> UID (Aadhaar)
                                         </label>
                                     </td>
-                                </tr>
-
-                                <tr>
                                     <td style="border: transparent !important; padding: 2px;">
                                         <label style="display: flex; align-items: center; gap: 5px; white-space: nowrap;">
                                             <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;;">
@@ -1707,14 +3080,6 @@
                                             </div> NREGA Job Card
                                         </label>
                                     </td>
-                                    <td style="border: transparent !important; padding: 2px;">
-                                        <label style="display: flex; align-items: center; gap: 5px; white-space: nowrap;">
-                                            <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;;">
-                                                <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}"
-                                                         alt="Checkmark" style="height: 25px; width: 25px;">
-                                            </div> Others ___________________
-                                        </label>
-                                    </td>
                                 </tr>
 
                                 <tr>
@@ -1723,7 +3088,18 @@
                                             <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;;">
                                                 <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}"
                                                          alt="Checkmark" style="height: 25px; width: 25px;">
-                                            </div> Simplified Measures  Account - <br>Document Type code : ________
+                                            </div> Others ______
+                                        </label>
+                                    </td>
+                                    <td style="border: transparent !important; padding: 2px;">
+                                        <label style="display: flex; align-items: center; gap: 5px; white-space: nowrap;">
+                                            <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;;">
+                                                <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}"
+                                                         alt="Checkmark" style="height: 25px; width: 25px;">
+                                            </div> Simplified Measures <br>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Account -Document<br>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            Type code : ________
                                         </label>
                                     </td>
                                 </tr>
@@ -1744,18 +3120,1886 @@
             </div>
             <div class="row col-sm-12 p-2" style="font-size: 14px; height:30px;">
                 <b>Line 3 : </b> <span style="width: 70%;">___________________________________________________________</span>
-                <b>City / Town / Village : </b> <span style="width: 30%;">___________________________________</span>
+                <b>City / Town / Village : </b> <span style="width: 30%;">__________________________________</span>
             </div>
             <div class="row col-sm-12 p-2" style="font-size: 14px; height:30px;">
                 <b>District * </b> <span style="width: 30%;">________________</span>&nbsp;
                 <b>Pin / Post Code * </b> <span style="width: 20%;">_____________</span>&nbsp;
                 <b>State / U.T Code * </b> <span style="width: 20%;">_____________</span>&nbsp;
-                <b>ISO 3166 Country Code * </b> <span style="width: 30%;">_______________</span>
+                <b>ISO 3166 Country Code * </b> <span style="width: 30%;">_____________</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="page-break"></div>
+
+    <!--- Sixth Page with Content --->
+    <div class="container">
+        <div style="border: 1px solid #000; padding: 10px; font-family: Arial, sans-serif; width: fit-content; font-size:12px;">
+            <label style="font-weight: bold; display: block; margin-bottom: 5px; font-size: 12px; background-color: #ebe1e1; padding:15px !important;">
+                <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
+                4.2 CORRESPONDENCE / LOCAL ADDRESS DETAILS (Please see instruction E at the end)
+            </label>
+
+            <table style="border-collapse: collapse; margin-top: 10px; margin-bottom: 20px; font-size: 12px; width: 100%;">
+                <tr>
+                    <td style="border: 1px solid #000; padding: 5px; width: 50%;">
+                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
+                        <span style="font-size: 13px;">Same as Current / Permanet / Overseas Address Details (In case of multiple correspondence / local addresses please <b>fill 'Annexure A1'</b>)</span>
+                    </td>
+                </tr>
+            </table>
+
+            <div class="col-sm-12 p-2" style="font-size: 14px; height:30px;">
+                <b>Line 1 :  * </b> <span style="width: 100%;">________________________________________________________________________________________________________________</span>
+            </div>
+            <div class="col-sm-12 p-2" style="font-size: 14px; height:30px;">
+                <b>Line 2 : </b> <span style="width: 100%;">_________________________________________________________________________________________________________________</span>
+            </div>
+            <div class="row col-sm-12 p-2" style="font-size: 14px; height:30px;">
+                <b>Line 3 : </b> <span style="width: 70%;">___________________________________________________________</span>
+                <b>City / Town / Village : </b> <span style="width: 30%;">__________________________________</span>
+            </div>
+            <div class="row col-sm-12 p-2" style="font-size: 14px; height:30px;">
+                <b>District * </b> <span style="width: 30%;">________________</span>&nbsp;
+                <b>Pin / Post Code * </b> <span style="width: 20%;">_____________</span>&nbsp;
+                <b>State / U.T Code * </b> <span style="width: 20%;">_____________</span>&nbsp;
+                <b>ISO 3166 Country Code * </b> <span style="width: 30%;">_____________</span>
             </div>
 
         </div>
 
+        <div style="border: 1px solid #000; padding: 10px; font-family: Arial, sans-serif; width: fit-content; font-size:12px !important;">
+            <label style="font-weight: bold; display: block; margin-bottom: 5px; font-size: 12px; background-color: #ebe1e1; padding:15px !important;">
+                <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
+                4.3 ADDRESS IN THE JURISDICTION DETAILS WHERE APPLICANT IS RESIDENT OUTSIDE INDIA FOR TAX PURPOSES * (Applicable if section 2 is ticked.)
+            </label>
+
+            <table style="border-collapse: collapse; margin-top: 10px; margin-bottom: 20px; font-size: 13px; width: 100%;">
+                <tr>
+                    <td style="border: 1px solid #000; padding: 5px; width: 50%;">
+                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
+                        <span style="font-size: 14px;">Same as Current / Permanet / Overseas Address Details</span>
+                    </td>
+                    <td style="border: 1px solid #000; padding: 5px; width: 50%;">
+                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
+                        <span style="font-size: 14px;">Same as Correspondence / Local Address Details</span>
+                    </td>
+                </tr>
+            </table>
+
+            <div class="col-sm-12 p-2" style="font-size: 14px; height:30px;">
+                <b>Line 1 :  * </b> <span style="width: 100%;">________________________________________________________________________________________________________________</span>
+            </div>
+            <div class="col-sm-12 p-2" style="font-size: 14px; height:30px;">
+                <b>Line 2 : </b> <span style="width: 100%;">_________________________________________________________________________________________________________________</span>
+            </div>
+            <div class="row col-sm-12 p-2" style="font-size: 14px; height:30px;">
+                <b>Line 3 : </b> <span style="width: 70%;">___________________________________________________________</span>
+                <b>City / Town / Village : </b> <span style="width: 30%;">__________________________________</span>
+            </div>
+            <div class="row col-sm-12 p-2" style="font-size: 14px; height:30px;">
+                <b>State * </b> <span style="width: 30%;">____________________________</span>&nbsp;
+                <b>Zip / Post Code * </b> <span style="width: 30%;">_______________________</span>&nbsp;
+                <b>ISO 3166 Country Code * </b> <span style="width: 30%;">_______________________</span>
+            </div>
+
+        </div>
+
+        <div style="border: 1px solid #000; padding: 10px; font-family: Arial, sans-serif; width: fit-content; font-size:12px !important;">
+            <label style="font-weight: bold; display: block; margin-bottom: 5px; font-size: 14px; background-color: #ebe1e1; padding:15px !important;">
+                <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
+                5 . CONTACT DETAILS (All Communications will be sent on provided Mobile No. / Email - Id)(please refer instructions G at the end)
+            </label>
+
+            <table style="border-collapse: collapse; margin-top: 10px; font-size: 13px; width: 100%;">
+                <tr>
+                    <td style="border: 1px solid #000; padding: 5px; width: 40%;">
+                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
+                        <span style="font-size: 14px;">Tel. (Off)</span>&nbsp;&nbsp;&nbsp;
+                        ___________________________
+                    </td>
+                    <td style="border: 1px solid #000; padding: 5px; width: 40%;">
+                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
+                        <span style="font-size: 14px;">Tel. (Res)</span>&nbsp;&nbsp;&nbsp;
+                       ___________________________
+                    </td>
+                    <td style="border: 1px solid #000; padding: 5px; width: 40%;">
+                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
+                        <span style="font-size: 14px;">FAX</span>&nbsp;&nbsp;&nbsp;
+                       ________________________________
+                    </td>
+                </tr>
+            </table>
+            <table style="border-collapse: collapse; font-size: 13px; width: 100%;">
+                <tr>
+                    <td style="width: 22%; border: 1px solid #000; vertical-align: middle;">
+                        Mobile <span style="color: Red;">*</span>
+                        ______________________
+                    </td>
+                    <td style="width: 66%; border: 1px solid #000; padding: 5px;">
+                        <table>
+                            <tr>
+                                <td style="border: transparent !important; padding: 2px;">
+                                    <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;;">
+                                        <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}" alt="Checkmark" style="height: 25px; width: 25px;">
+                                    </div> Self
+                                </td>
+                                <td style="border: transparent !important; padding: 2px;">
+                                    <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;;">
+                                        <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}" alt="Checkmark" style="height: 25px; width: 25px;">
+                                    </div> Spouse
+                                </td>
+                                <td style="border: transparent !important; padding: 2px;">
+                                    <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;;">
+                                        <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}" alt="Checkmark" style="height: 25px; width: 25px;">
+                                    </div> Dependent Parent
+                                </td>
+                                <td style="border: transparent !important; padding: 2px;">
+                                    <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;;">
+                                        <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}" alt="Checkmark" style="height: 25px; width: 25px;">
+                                    </div> Dependent Children
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+            <table style="border-collapse: collapse; font-size: 13px; width: 100%;">
+                <tr>
+                    <td style="width: 22%; border: 1px solid #000; vertical-align: middle;">
+                        Email Id <span style="color: Red;">*</span>
+                        ______________________
+                    </td>
+                    <td style="width: 66%; border: 1px solid #000; padding: 5px;">
+                        <table>
+                            <tr>
+                                <td style="border: transparent !important; padding: 2px;">
+                                    <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;;">
+                                        <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}" alt="Checkmark" style="height: 25px; width: 25px;">
+                                    </div> Self
+                                </td>
+                                <td style="border: transparent !important; padding: 2px;">
+                                    <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;;">
+                                        <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}" alt="Checkmark" style="height: 25px; width: 25px;">
+                                    </div> Spouse
+                                </td>
+                                <td style="border: transparent !important; padding: 2px;">
+                                    <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;;">
+                                        <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}" alt="Checkmark" style="height: 25px; width: 25px;">
+                                    </div> Dependent Parent
+                                </td>
+                                <td style="border: transparent !important; padding: 2px;">
+                                    <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;;">
+                                        <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}" alt="Checkmark" style="height: 25px; width: 25px;">
+                                    </div> Dependent Children
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div style="border: 1px solid #000; padding: 10px; font-family: Arial, sans-serif; width: fit-content; font-size:14px;">
+            <label style="font-weight: bold; display: block; margin-bottom: 5px; font-size: 14px; background-color: #ebe1e1; padding:15px !important;">
+                <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
+                6 . DETAILS OF RELATED PERSON ((In case of additional related persons, please <b>fill 'Annexure A1'</b>))(please refer instructions G at the end)
+            </label>
+
+            <table style="border-collapse: collapse; margin-top: 3px;  background-color: #eeeeee; font-size: 13px; width: 100%;">
+                <tr>
+                    <td style="border: 1px solid #000; padding: 5px; width: 25%;">
+                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
+                        <span style="font-size: 14px;">Addition of Related Person</span>
+                    </td>
+                    <td style="border: 1px solid #000; padding: 5px; width: 75%;">
+                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
+                        <span style="font-size: 14px;">Deletion of Related Person</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <span style="font-size: 14px;">KYC Number of Related Person (if available *)</span>&nbsp;&nbsp;_______________________
+                    </td>
+                </tr>
+            </table>
+
+            <table style="border-collapse: collapse; font-size: 13px; width: 100%;">
+                <tr>
+                    <td style="width: 22%; border: 1px solid #000; vertical-align: middle;">
+                        Related Person Type <span style="color: Red;">*</span>
+                    </td>
+                    <td style="width: 66%; border: 1px solid #000; padding: 5px;">
+                        <table>
+                            <tr>
+                                <td style="border: transparent !important; padding: 2px;">
+                                    <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;;">
+                                        <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}" alt="Checkmark" style="height: 25px; width: 25px;">
+                                    </div> Guardian of Minor
+                                </td>
+                                <td style="border: transparent !important; padding: 2px;">
+                                    <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;;">
+                                        <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}" alt="Checkmark" style="height: 25px; width: 25px;">
+                                    </div> Assignee
+                                </td>
+                                <td style="border: transparent !important; padding: 2px;">
+                                    <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;;">
+                                        <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}" alt="Checkmark" style="height: 25px; width: 25px;">
+                                    </div> Authorised Representative
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+
+            <table style="font-weight: normal;">
+                <thead>
+                    <tr>
+                        <td></td>
+                        <td><span class="label text-muted">Prefix</span></td>
+                        <td><span class="label text-muted">First Name</span></td>
+                        <td><span class="label text-muted">Middle Name</span></td>
+                        <td><span class="label text-muted">Last Name</span></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Name *</td>
+                        <td><div class="underline">______________</div></td>
+                        <td><div class="underline">______________</div></td>
+                        <td><div class="underline">______________</div></td>
+                        <td><div class="underline">______________</div></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <label style="font-weight: bold; display: block; margin-top: 5px; margin-bottom: 5px; font-size: 14px; background-color: #eeeeee; padding:15px !important;">
+                PROOF OF IDENTITY [POI] OF RELATED PERSON * (please refer instructions (H) at the end)
+            </label>
+
+            <table style="border-collapse: collapse; margin-top: 5px; font-size: 13px; width: 100%;">
+                <tr>
+                    <td style="border: 1px solid #000; padding: 5px; width: 50%;">
+                        <div class="square-box" class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
+                        <span style="font-size: 14px;">A. Passport Number : - </span>
+                        ____________________________
+                    </td>
+
+                    <td style="border: 1px solid #000; padding: 5px; width: 50%;">
+                        <span style="font-size: 14px;">Passport Expiry Date : -</span>
+                        ____________________________
+                    </td>
+                </tr>
+                <tr>
+                    <td style="border: 1px solid #000; padding: 5px; width: 50%;">
+                        <div class="square-box" class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
+                        <span style="font-size: 14px;">B. Voter ID Card : - </span>
+                        ____________________________
+                    </td>
+                    <td style="border: 1px solid #000; padding: 5px;">
+
+                    </td>
+                </tr>
+                <tr>
+                    <td style="border: 1px solid #000; padding: 5px; width: 50%;">
+                        <div class="square-box" class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
+                        <span style="font-size: 14px;">C. PAN Card : - </span>
+                        ____________________________
+                    </td>
+                    <td style="border: 1px solid #000; padding: 5px; width: 50%;">
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="square-box" class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
+                        <span style="font-size: 14px;">D. Driving Licence : -</span>
+                        ____________________________
+                    </td>
+                    <td style="border: 1px solid #000; padding: 5px; width: 50%;">
+                        <span style="font-size: 14px;">Driving Licence Expiry Date : -</span>
+                        ____________________________
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="square-box" class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
+                        <span style="font-size: 14px;">E. UID (Aadhaar) : - </span>
+                        ____________________________
+                    </td>
+                    <td style="border: 1px solid #000; padding: 5px; width: 50%;">
+
+                    </td>
+                </tr>
+                <tr>
+                    <td style="font-size: 14px;">
+                        <div class="square-box" class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
+                        <span>Z. Others (any document notified by the central government) : - </span>
+                        ____________________________
+                    </td>
+                    <td style="border: 1px solid #000; padding: 5px; width: 50%;">
+                        <span style="font-size: 14px;">Identification Number : - </span>
+                        ____________________________
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="square-box" class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
+                        <span style="font-size: 14px;">S. Simplified Measures Account - Document Type code : - </span>
+                        ____________________________
+                    </td>
+                    <td style="border: 1px solid #000; padding: 5px; width: 50%;">
+                        <span style="font-size: 14px;">Identification Number : - </span>
+                        ____________________________
+                    </td>
+                </tr>
+            </table>
+
+        </div>
     </div>
+
+    {{-- Page Break --}}
+    <div class="page-break"></div>
+
+    <!--- Seventh Page with Content --->
+    <div class="container" style="border: 1px solid #000; margin-top: 20px; padding: 10px;">
+        <div style="font-family: Arial, sans-serif; width: fit-content; font-size:12px !important;">
+            <label style="font-weight: bold; display: block; margin-bottom: 5px; font-size: 14px; background-color: #ebe1e1; padding:15px !important;">
+                <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
+                7 . REMARKS (if any)
+            </label>
+        </div>
+
+        <div class="col-sm-12 p-2" style="font-size: 14px; height:30px;">
+            <span style="width: 100%;">________________________________________________________________________________________________________________________</span>
+        </div>
+        <div class="col-sm-12 p-2" style="font-size: 14px; height:30px;">
+            <span style="width: 100%;">________________________________________________________________________________________________________________________</span>
+        </div>
+        <div class="col-sm-12 p-2" style="font-size: 14px; height:30px;">
+            <span style="width: 100%;">________________________________________________________________________________________________________________________</span>
+        </div>
+    </div>
+
+    <!--- Eight Page with Content --->
+    <div class="container" style="border: 1px solid #000; margin-top: 20px; padding: 10px;">
+        <div style="font-family: Arial, sans-serif; width: fit-content; font-size:12px !important;">
+            <label style="font-weight: bold; display: block; margin-bottom: 5px; font-size: 14px; background-color: #ebe1e1; padding:15px !important;">
+                <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
+                8 . APPLICATION DECLARATION
+            </label>
+        </div>
+
+        <table style="border-collapse: collapse; margin-top: 10px; font-size: 12px; width: 100%;">
+            <tr>
+                <td style="width: 60%;">
+                    {{-- Order list --}}
+                    <ul style="font-size: 14px; text-align: justify;">
+                        <li style="margin-bottom: 10px;">
+                            I hereby declare that the details furnished above are true and correct to the best of my knowledge
+                            and belief and I undertake to inform you of any changes therein, immediately. In case any of the
+                            above information is found to be false or untrue or misleading or misrepresenting, I am aware
+                            that I may be held liable for it.
+                        </li>
+                        <li>
+                            I hereby consent to receiving information from Central KYC Registry through SMS/Email on the
+                            above registered number/email address.
+                        </li>
+                    </ul>
+
+                    <span style="font-size: 14px;">
+                        <strong>Date :</strong>
+                        ____________________________
+                    </span>
+
+                    <span style="font-size: 14px;">
+                        <strong>Place :</strong>
+                        _________________________
+                    </span>
+                </td>
+                <th style="width: 40%;">
+                    <span style="font-size: 14px;">
+                        Signature / Thumb Impression of Applicant
+                    </span>
+                </th>
+            </tr>
+        </table>
+    </div>
+
+    <div class="page-break"></div>
+
+    <!--- Ninth Page with Content --->
+    <div class="container" style="border: 1px solid #000; margin-top: 20px; padding: 10px;">
+        <div style="font-family: Arial, sans-serif; width: fit-content; font-size:12px !important;">
+            <label style="font-weight: bold; display: block; margin-bottom: 5px; font-size: 14px; background-color: #ebe1e1; padding:15px !important;">
+                <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
+                9 . ATTESTATION / FOR OFFICE USE ONLY
+            </label>
+        </div>
+
+        <table style="font-weight: normal; margin-bottom: 10px;">
+            <tbody>
+                <tr>
+                    <td style="width: 20%; vertical-align: middle;">
+                        <b>Documents Received </b>
+                    </td>
+                    <td style="width: 80%; border: 1px solid #000; padding: 5px;">
+                        <table>
+                            <tr>
+                                <td style="border: transparent !important; padding: 2px;">
+                                    <label style="display: flex; align-items: center; gap: 5px; white-space: nowrap;">
+                                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;;">
+                                            <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}"
+                                                     alt="Checkmark" style="height: 25px; width: 25px;">
+                                        </div> Certified Copies
+                                    </label>
+                                </td>
+                                <td style="border: transparent !important; padding: 2px;">
+                                    <label style="display: flex; align-items: center; gap: 5px; white-space: nowrap;">
+                                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;;">
+                                            <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}"
+                                                     alt="Checkmark" style="height: 25px; width: 25px;">
+                                        </div> Client Interviewed by
+                                    </label>
+                                </td>
+                                <td style="border: transparent !important; padding: 2px;">
+                                    <label style="display: flex; align-items: center; gap: 5px; white-space: nowrap;">
+                                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;;">
+                                            <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}"
+                                                     alt="Checkmark" style="height: 25px; width: 25px;">
+                                        </div> In - Person verification done by
+                                    </label>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+
+        <table style="border-collapse: collapse; margin-top: 10px; font-size: 12px; width: 100%;">
+            <tr>
+                <td style="width: 50%;">
+                    <label style="font-weight: bold; display: block; margin-bottom: 5px; font-size: 14px; background-color: #e6e3e3; padding:15px !important;">
+                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
+                        KYC VERIFICATION CARRIED OUT BY
+                    </label><br>
+
+                    <span style="font-size: 14px; font-weight: bold; padding: 5px;;">
+                        Date : ____________________________
+                    </span><br><br>
+                    <span style="font-size: 14px; font-weight: bold; padding: 5px;;">
+                        Emp. Name : ____________________________
+                    </span><br><br>
+                    <span style="font-size: 14px; font-weight: bold; padding: 5px;;">
+                        Emp. Code : ____________________________
+                    </span><br><br>
+                    <span style="font-size: 14px; font-weight: bold; padding: 5px;;">
+                        Emp. Designation : ____________________________
+                    </span><br><br>
+                    <span style="font-size: 14px; font-weight: bold; padding: 5px;;">
+                        Emp. Branch : ____________________________
+                    </span><br><br>
+                    <div class="square-box" style="width: 100%; height: 30%; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px;">
+                        {{-- Employee Signature --}}
+                        {{-- <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/signature.png'))) }}" alt="Signature" style="height: 50px; width: 140px;"> --}}
+                        <small class="text-muted">
+                            [Employee Signature]
+                        </small>
+                    </div>
+                </td>
+
+                <td style="width: 50%;">
+                    <label style="font-weight: bold; display: block; margin-bottom: 5px; font-size: 14px; background-color: #e6e3e3; padding:15px !important;">
+                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
+                        INSTITUTION DETAILS
+                    </label><br><br><br>
+
+                    <span style="font-size: 14px; font-weight: bold; padding: 5px;;">
+                        Name : ____________________________
+                    </span><br><br>
+
+                    <span style="font-size: 14px; font-weight: bold; padding: 5px;;">
+                        Code : ____________________________
+                    </span><br><br><br><br>
+
+                    <div class="square-box" style="width: 100%; height: 35%; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px;">
+                        {{-- Employee Signature --}}
+                        {{-- <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/signature.png'))) }}" alt="Signature" style="height: 50px; width: 140px;"> --}}
+                        <small class="text-muted" >[Institution Stamp]</small>
+                    </div>
+                </td>
+            </td>
+        </table>
+    </div>
+    {{-- Second Holder Form End --}}
+
+    <div class="page-break"></div>
+
+    {{-- THIRD Holder Form Start --}}
+    <!--- Fifth Page with Content -->
+    <div class="WordSection5">
+
+        <table style="border-collapse: collapse; border-color: #f7efef; width: 30%; float: right;">
+            <tr>
+                <td style="padding: 10px; text-align: left; font-weight: bold; font-size: 20px; line-height: 20px;">
+                    FU | {{ $data['client_code'] ?? '' }}
+                </td>
+            </tr>
+            <tr>
+                <td style="padding: 10px; text-align: left; font-weight: bold; font-size: 20px; line-height: 20px; text-transform: uppercase;">
+                    THIRD HOLDER
+                </td>
+            </tr>
+        </table><br><br><br><br>
+
+        <!-- Instructions Section -->
+        <table style="width: 100%; font-size: 13px; font-weight: normal !important; ">
+            <thead>
+                <tr>
+                    <th style="text-align: left;  padding-bottom: 5px;" colspan="3">
+                        CENTRAL KYC REGISTRY | Know Your Cusstomer (KYC) Application Form | Individual
+                    </th>
+                </tr>
+                <tr>
+                    <th style="text-align: left;  padding-bottom: 5px;" colspan="3">
+                        <h4>Important Instructions:</h4>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <!-- Section 1 -->
+                    <td style="vertical-align: top; width: 40% !important; text-align: justify;">
+                        <ul style="list-style-type: none; padding-left: 0;">
+                            <p>(A) Fields marked with “*” are mandatory fields.</p>
+                            <p>(B) Please fill the form in English and in BLOCK letters.</p>
+                            <p>(C) Please fill the date in DD-MM-YYYY format.</p>
+                            <p>(D) Please read section-wise detailed guidelines/instructions at the end.</p>
+                        </ul>
+                    </td>
+                    <!-- Section 2 -->
+                    <td style="vertical-align: top; width: 50%; text-align: justify;">
+                        <ul style="list-style-type: none; padding-left: 0; font-style: normal;">
+                            <p>(E) List of State/U.T codes as per Indian Motor Vehicle Act, 1988 is available at the
+                                end.</p>
+                            <p>(F) List of two-character ISO 3166 country codes is available at the end.</p>
+                            <p>(G) KYC number of applicant is mandatory for update application.</p>
+                            <p>(H) For particular section update, please tick (✓) in the box available before the
+                                section
+                                number and strike off the sections not required to be updated.
+                            </p>
+                        </ul>
+                    </td>
+                    <!-- Section 3 -->
+                    <td style="vertical-align: top; padding: 10px; width: 10%;">
+                        <ul style="list-style-type: none; padding-left: 0;">
+                            <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/central_KYC_logo.png'))) }}" alt="Ventura Logo">
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <table style="width: 100%; font-weight: normal !important;">
+            <thead style="background-color: #757879 !important;">
+                <tr>
+                    <th colspan="5">
+                        <div class="square-box" style="width: 15px; height: 15px; border: 1px solid #000;"></div>
+                        For office use only (To be filled by financial institution)
+                    </th>
+                </tr>
+                <tr>
+                    <th colspan="4" style="vertical-align: top; ">
+                        <span style="font-size: 14px;">Application Type <span style="color: red">*</span></span>
+                    </th>
+                    <th rowspan="3" class="d-flex" style="font-size: 14px;">
+                        <div class="square-box" style="width: 15px; height: 15px; border: 1px solid #000; text-align: center;">
+                            @if($data['application_type'] == 1)
+                            <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}"
+                                alt="Ventura Logo" style="height: 20px; width: 20px;">
+                            @else
+                                &nbsp;
+                            @endif
+                        </div> New
+                    </th>
+                    <th rowspan="3" class="d-flex" style="font-size: 14px;">
+                        <div class="square-box" style="width: 15px; height: 15px; border: 1px solid #000; text-align: center;">
+                            @if($data['application_type'] == 2)
+                            <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}"
+                                alt="Ventura Logo" style="height: 20px; width: 20px;">
+                            @else
+                                &nbsp;
+                            @endif
+                        </div> Update
+                    </th>
+                </tr>
+                <tr>
+                    <th colspan="5">
+                        <span style="font-size: 14px;"> KYC Number <span style="color: red">*</span>
+                        @foreach(str_split($data['kyc_number']) as $digit)
+                            <div class="square-box" style="width: 15px; height: 15px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;">
+                                {{ $digit }}
+                            </div>
+                        @endforeach
+                        <span style="font-size: 14px;">(Mandatory for KYC update request)</span>
+                    </th>
+                </tr>
+                <tr>
+                    <th colspan="4">
+                        <span style="font-size: 14px;">Account Type <span style="color: red">*</span></span>
+                    </th>
+                    <th rowspan="2" class="d-flex">
+                        <div style="display: flex; align-items: center; gap: 20px; flex-wrap: nowrap;">
+                            <label style="display: flex; align-items: center; gap: 5px; white-space: nowrap;" style="font-size: 14px;">
+                                <div class="square-box" style="width: 15px; height: 15px; border: 1px solid #000; text-align: center;">
+                                    @if($data['account_type'] == '1')
+                                    <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}"
+                                    alt="Ventura Logo" style="height: 20px; width: 20px;">
+                                    @endif
+                                </div> Normal
+                            </label>
+                        </div>
+                    </th>
+                    <th rowspan="2" class="d-flex">
+                        <div style="display: flex; align-items: center; gap: 20px; flex-wrap: nowrap;">
+                            <label style="display: flex; align-items: center; gap: 5px; white-space: nowrap;" style="font-size: 14px;">
+                                <div class="square-box" style="width: 15px; height: 15px; border: 1px solid #000; text-align: center;">
+                                    @if($data['account_type'] == '2')
+                                    <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}"
+                                    alt="Ventura Logo" style="height: 20px; width: 20px;">
+                                    @endif
+                                </div> Simplified (for low risk customer)
+                            </label>
+                        </div>
+                    </th>
+                    <th rowspan="2" class="d-flex">
+                        <div style="display: flex; align-items: center; gap: 20px; flex-wrap: nowrap;">
+                            <label style="display: flex; align-items: center; gap: 5px; white-space: nowrap;" style="font-size: 14px;">
+                                <div class="square-box" style="width: 15px; height: 15px; border: 1px solid #000; text-align: center;">
+                                    @if($data['account_type'] == '3')
+                                    <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}"
+                                    alt="Ventura Logo" style="height: 20px; width: 20px;">
+                                    @endif
+                                </div> Small
+                            </label>
+                        </div>
+                    </th>
+                </tr>
+
+            </thead>
+        </table>
+
+        {{-- Page Break --}}
+        <div class="page-break"></div>
+
+        {{-- First Name, Middle Name, Last Name Section --}}
+        <table style="font-weight: normal;">
+            <thead>
+                <tr>
+                    <th colspan="5">
+                        1. PERSONAL DETAILS</strong> (Please refer to instruction A at the end)
+                    </th>
+                </tr>
+                <tr>
+                    <th></th>
+                    <th><span class="label text-center">Prefix</span></th>
+                    <th><span class="label text-center">First Name</span></th>
+                    <th><span class="label text-center">Middle Name</span></th>
+                    <th><span class="label text-center">Last Name</span></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Name (Same as ID proof)</td>
+                    @php
+                        $prefixes = [1 => 'Mr.', 2 => 'Mrs.', 3 => 'Shri.', 4 => 'Shrimati'];
+                        $prefix = $prefixes[$data['prefix']] ?? '';
+                    @endphp
+                    <td><div class="underline">{{ $prefix }}</div></td>
+                    <td><div class="underline">{{ $data['first_name'] ?? '' }}</div></td>
+                    <td><div class="underline">{{ $data['middle_name'] ?? '' }}</div></td>
+                    <td><div class="underline">{{ $data['last_name'] ?? '' }}</div></td>
+                </tr>
+
+                <tr>
+                    <td>Maiden Name (if any <span style="color: red;">*</span>)</td>
+                    @php
+                        $maiden_prefix = $prefixes[$data['maiden_prefix']] ?? '';
+                    @endphp
+                    <td><div class="underline">{{ $maiden_prefix }}</div></td>
+                    <td><div class="underline">{{ $data['maiden_first_name'] ?? '' }}</div></td>
+                    <td><div class="underline">{{ $data['maiden_middle_name'] ?? '' }}</div></td>
+                    <td><div class="underline">{{ $data['maiden_last_name'] ?? '' }}</div></td>
+                </tr>
+
+                <tr>
+                    <td>Father / Spouse Name <span style="color: red;">*</span></td>
+                    @php
+                        $father_prefix = $prefixes[$data['father_prefix']] ?? '';
+                    @endphp
+                    <td><div class="underline">{{ $father_prefix }}</div></td>
+                    <td><div class="underline">{{ $data['father_first_name'] ?? '' }}</div></td>
+                    <td><div class="underline">{{ $data['father_middle_name'] ?? '' }}</div></td>
+                    <td><div class="underline">{{ $data['father_last_name'] ?? '' }}</div></td>
+                </tr>
+
+                <tr>
+                    <td>Mother Name <span style="color: red;">*</span></td>
+                    @php
+                        $mother_prefix = $prefixes[$data['mother_prefix']] ?? '';
+                    @endphp
+                    <td><div class="underline">{{ $mother_prefix }}</div></td>
+                    <td><div class="underline">{{ $data['mother_first_name'] ?? '' }}</div></td>
+                    <td><div class="underline">{{ $data['mother_middle_name'] ?? '' }}</div></td>
+                    <td><div class="underline">{{ $data['mother_last_name'] ?? '' }}</div></td>
+                </tr>
+            </tbody>
+        </table>
+
+        {{-- Date of Birth Section --}}
+        <table style="font-weight: normal;">
+            <tbody>
+                <tr>
+                    <td>Date of Birth <span style="color: red;">*</span></td>
+
+                    @php
+                        $dob = \Carbon\Carbon::parse($data['date_of_birth'])->format('d-m-Y');
+                    @endphp
+
+                    <td>
+                        @foreach(str_split($dob) as $char)
+                            <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;">
+                                {{ $char }}
+                            </div>
+                        @endforeach
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        {{-- Gender, Marital Status, and Occupation --}}
+        <table style="font-weight: normal;">
+            <tbody>
+                <!-- First Row -->
+                <tr>
+                    <td style="width: 22%; border: 1px solid #000; vertical-align: middle;">Gender <span style="color: red;">*</span></td>
+                    <td style="width: 66%; border: 1px solid #000; padding: 5px;">
+                        <table>
+                            <tr>
+                                <td style="border: transparent !important; padding: 2px;">
+                                    <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;;">
+                                        @if($data['gender'] == '1')
+                                            <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}" alt="Checkmark" style="height: 25px; width: 25px;">
+                                        @endif
+                                    </div> M - Male
+                                </td>
+                                <td style="border: transparent !important; padding: 2px;">
+                                    <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;;">
+                                        @if($data['gender'] == '2')
+                                            <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}"
+                                                 alt="Checkmark" style="height: 25px; width: 25px;">
+                                        @endif
+                                    </div> F - Female
+                                </td>
+                                <td style="border: transparent !important; padding: 2px;">
+                                    <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;;">
+                                        @if($data['gender'] == '3')
+                                            <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}"
+                                                 alt="Checkmark" style="height: 25px; width: 25px;">
+                                        @endif
+                                    </div> T - Transgender
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td rowspan="5" style="border: 1px solid #000; padding: 5px; width: 13%; text-align: center;">
+                        <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/user_profile_pic.png'))) }}"
+                            alt="User Profile" height="200px" width="140px"><br><br>
+                        <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/signature_user_pic.png'))) }}"
+                            alt="Signature" height="50px" width="140px">
+                    </td>
+                </tr>
+
+                <!-- Second Row -->
+                <tr>
+                    <td style="width: 22%; border: 1px solid #000; vertical-align: middle;">
+                        Marital Status <span style="color: Red;">*</span>
+                    </td>
+                    <td style="width: 66%; border: 1px solid #000; padding: 5px;">
+                        <table>
+                            <tr>
+                                <td style="border: transparent !important; padding: 2px;">
+                                    <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;;">
+                                        @if($data['marital_status'] == '1')
+                                            <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}"
+                                                 alt="Checkmark" style="height: 25px; width: 25px;">
+                                        @endif
+                                    </div> Married
+                                </td>
+                                <td style="border: transparent !important; padding: 2px;">
+                                    <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;;">
+                                        @if($data['marital_status'] == '2')
+                                            <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}"
+                                                 alt="Checkmark" style="height: 25px; width: 25px;">
+                                        @endif
+                                    </div> Unmarried
+                                </td>
+                                <td style="border: transparent !important; padding: 2px;">
+                                    <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;;">
+                                        @if($data['marital_status'] == '3')
+                                            <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}"
+                                                 alt="Checkmark" style="height: 25px; width: 25px;">
+                                        @endif
+                                    </div> Others
+                                </td>
+                            </tr>
+
+
+                        </table>
+                    </td>
+                </tr>
+
+                <!-- Third Row -->
+                <tr>
+                    <td style="width: 22%; border: 1px solid #000; vertical-align: middle;">
+                        Citizenship <span style="color: red;">*</span>
+                    </td>
+                    <td style="width: 66%; border: 1px solid #000; padding: 5px;">
+                        <table>
+                            <tr>
+                                <td style="border: transparent !important; padding: 2px;">
+                                    <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;;">
+                                        @if($data['citizenship'] == 'IN')
+                                            <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}"
+                                                 alt="Checkmark" style="height: 25px; width: 25px;">
+                                        @endif
+                                    </div> IN - Indian
+                                </td>
+                                <td style="border: transparent !important; padding: 2px;">
+                                    <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;;">
+                                        @if($data['citizenship'] == 'others')
+                                            <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}"
+                                                 alt="Checkmark" style="height: 25px; width: 25px;">
+                                        @endif
+                                    </div> Others (ISO 3166 Country Code)
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+
+                <!-- Fourth Row -->
+                <tr>
+                    <td style="width: 22%; vertical-align: middle;">
+                        Residential Status <span style="color: red;">*</span>
+                    </td>
+                    <td style="width: 66%; border: 1px solid #000; padding: 5px;">
+                        <table>
+                            <tr>
+                                <td style="border: transparent !important; padding: 2px;">
+                                    <label style="display: flex; align-items: center; gap: 5px; white-space: nowrap;">
+                                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;;">
+                                            @if($data['residenital_status'] == '1')
+                                                <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}"
+                                                     alt="Checkmark" style="height: 25px; width: 25px;">
+                                            @else
+                                                &nbsp;
+                                            @endif
+                                        </div> Resident Individual
+                                    </label>
+                                </td>
+                                <td style="border: transparent !important; padding: 2px;">
+                                    <label style="display: flex; align-items: center; gap: 5px; white-space: nowrap;">
+                                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;;">
+                                            @if($data['residenital_status'] == '2')
+                                                <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}"
+                                                     alt="Checkmark" style="height: 25px; width: 25px;">
+                                            @else
+                                                &nbsp;
+                                            @endif
+                                        </div> Foreign National
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="border: transparent !important; padding: 2px;">
+                                    <label style="display: flex; align-items: center; gap: 5px; white-space: nowrap;">
+                                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;;">
+                                            @if($data['residenital_status'] == '3')
+                                                <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}"
+                                                     alt="Checkmark" style="height: 25px; width: 25px;">
+                                            @else
+                                                &nbsp;
+                                            @endif
+                                        </div> Non-Resident Indian
+                                    </label>
+                                </td>
+                                <td style="border: transparent !important; padding: 2px;">
+                                    <label style="display: flex; align-items: center; gap: 5px; white-space: nowrap;">
+                                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;;">
+                                            @if($data['residenital_status'] == '4')
+                                                <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}"
+                                                     alt="Checkmark" style="height: 25px; width: 25px;">
+                                            @else
+                                                &nbsp;
+                                            @endif
+                                        </div> Person of Indian Origin
+                                    </label>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+
+                <!-- Fifth Row -->
+                <tr>
+                    <td style="width: 22%; vertical-align: middle;">
+                        Occupation Type <span style="color: red;">*</span>
+                    </td>
+                    <td style="width: 66%; border: 1px solid #000; padding: 5px;">
+                        <table>
+                            <tr>
+                                <td style="border: transparent !important; padding: 2px;">
+                                    <label style="display: flex; align-items: center; gap: 5px; white-space: nowrap;">
+                                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;;">
+                                            @if($data['occupation_type'] == '1')
+                                                <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}"
+                                                     alt="Checkmark" style="height: 25px; width: 25px;">
+                                            @else
+                                                &nbsp;
+                                            @endif
+                                        </div> S - Service (Private Sector)
+                                    </label>
+                                </td>
+                                <td style="border: transparent !important; padding: 2px;">
+                                    <label style="display: flex; align-items: center; gap: 5px; white-space: nowrap;">
+                                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;;">
+                                            @if($data['occupation_type'] == '2')
+                                                <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}"
+                                                     alt="Checkmark" style="height: 25px; width: 25px;">
+                                            @else
+                                                &nbsp;
+                                            @endif
+                                        </div> Public Sector
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="border: transparent !important; padding: 2px;">
+                                    <label style="display: flex; align-items: center; gap: 5px; white-space: nowrap;">
+                                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;;">
+                                            @if($data['occupation_type'] == '3')
+                                                <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}"
+                                                     alt="Checkmark" style="height: 25px; width: 25px;">
+                                            @else
+                                                &nbsp;
+                                            @endif
+                                        </div> Government Sector
+                                    </label>
+                                </td>
+                                <td style="border: transparent !important; padding: 2px;">
+                                    <label style="display: flex; align-items: center; gap: 5px; white-space: nowrap;">
+                                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;;">
+                                            @if($data['occupation_type'] == '4')
+                                                <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}"
+                                                     alt="Checkmark" style="height: 25px; width: 25px;">
+                                            @else
+                                                &nbsp;
+                                            @endif
+                                        </div> Others (Professional)
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="border: transparent !important; padding: 2px;">
+                                    <label style="display: flex; align-items: center; gap: 5px; white-space: nowrap;">
+                                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;;">
+                                            @if($data['occupation_type'] == '5')
+                                                <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}"
+                                                     alt="Checkmark" style="height: 25px; width: 25px;">
+                                            @else
+                                                &nbsp;
+                                            @endif
+                                        </div> Self Employed
+                                    </label>
+                                </td>
+                                <td style="border: transparent !important; padding: 2px;">
+                                    <label style="display: flex; align-items: center; gap: 5px; white-space: nowrap;">
+                                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;;">
+                                            @if($data['occupation_type'] == '6')
+                                                <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}"
+                                                     alt="Checkmark" style="height: 25px; width: 25px;">
+                                            @else
+                                                &nbsp;
+                                            @endif
+                                        </div> Retired
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="border: transparent !important; padding: 2px;">
+                                    <label style="display: flex; align-items: center; gap: 5px; white-space: nowrap;">
+                                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;;">
+                                            @if($data['occupation_type'] == '7')
+                                                <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}"
+                                                     alt="Checkmark" style="height: 25px; width: 25px;">
+                                            @else
+                                                &nbsp;
+                                            @endif
+                                        </div> B - Business
+                                    </label>
+                                </td>
+                                <td style="border: transparent !important; padding: 2px;">
+                                    <label style="display: flex; align-items: center; gap: 5px; white-space: nowrap;">
+                                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;;">
+                                            @if($data['occupation_type'] == '8')
+                                                <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}"
+                                                     alt="Checkmark" style="height: 25px; width: 25px;">
+                                            @else
+                                                &nbsp;
+                                            @endif
+                                        </div> Housewife
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="border: transparent !important; padding: 2px;">
+                                    <label style="display: flex; align-items: center; gap: 5px; white-space: nowrap;">
+                                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;;">
+                                            @if($data['occupation_type'] == '9')
+                                                <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}"
+                                                     alt="Checkmark" style="height: 25px; width: 25px;">
+                                            @else
+                                                &nbsp;
+                                            @endif
+                                        </div> Student
+                                    </label>
+                                </td>
+                                <td style="border: transparent !important; padding: 2px;">
+                                    <label style="display: flex; align-items: center; gap: 5px; white-space: nowrap;">
+                                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;;">
+                                            @if($data['occupation_type'] == '10')
+                                                <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}"
+                                                     alt="Checkmark" style="height: 25px; width: 25px;">
+                                            @else
+                                                &nbsp;
+                                            @endif
+                                        </div> X - Not Categorised
+                                    </label>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div style="border: 1px solid #000; padding: 10px; font-family: Arial, sans-serif; width: fit-content; font-size:13px;">
+            <label style="font-weight: bold; display: block; margin-bottom: 5px; font-size: 13px; background-color: #bdb5b5; padding:15px !important;">
+                <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
+                2 . TICK IF APPLICABLE RESIDENCE FOR TAX PURPOSES IN JURISDICTION(S) OUTSIDE INDIA (Please refer to instruction B at the end)
+            </label>
+
+            <div style="margin-top: 10px; font-size: 11px;">
+                <label>ADDITIONAL DETAILS REQUIRED <span style="color: red;">*</span></label>
+                <span style="font-size: 12px;">(Mandatory only if section 2 is ticked)</span>
+            </div>
+
+
+            <table style="border-collapse: collapse; margin-top: 10px; font-size: 13px; width: 100%;">
+                <tr>
+                    <td style="border: 1px solid #000; padding: 5px; width: 50%; font-size:14px;">
+                        ISO 3166 Country Code of Jurisdiction of Residence <span style="color: red;">*</span>
+                    </td>
+                    <td style="border: 1px solid #000; padding: 5px;">
+                        _________________
+                    </td>
+                </tr>
+                <tr>
+                    <td style="border: 1px solid #000; padding: 5px; width: 50%; font-size:14px;">
+                        Tax Identification Number or equivalent
+                        <span style="font-size: 12px;">(if issued by jurisdiction) <span style="color: red;">*</span></span>
+                    </td>
+                    <td style="border: 1px solid #000; padding: 5px;">
+                        _______________________________________
+                    </td>
+                </tr>
+                <tr>
+                    <td style="border: 1px solid #000; padding: 5px; width: 50%; font-size:14px;">
+                        Place / City of Birth <span style="color: red;">*</span>
+                        ___________________
+                    </td>
+                    <td style="border: 1px solid #000; padding: 5px; width: 50%; font-size:14px;">
+                        ISO 3166 Country Code of Birth <span style="color: red;">*</span>
+                        _______________
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <br>
+
+        <div style="border: 1px solid #000; padding: 10px; font-family: Arial, sans-serif; width: fit-content; font-size:13px;">
+            <label style="font-weight: bold; display: block; margin-bottom: 5px; font-size: 13px; background-color: #bdb5b5; padding:2px; padding:15px !important;">
+                <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
+                3 . PROOF OF IDENTITY (POI) (please refer instruction C at the end)
+            </label>
+
+            <div style="margin-top: 10px; font-size: 11px;">
+                <span style="font-size: 12px;">
+                    (Certified copy of any one of the following Proof of Identity[PoI] needs to be submitted) <br><br>
+                </span>
+            </div>
+
+            <table style="border-collapse: collapse; margin-top: 10px; font-size: 13px; width: 100%;">
+                <tr>
+                    <td style="border: 1px solid #000; padding: 5px; width: 50%;">
+                        <div class="square-box" class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
+                        <span style="font-size: 14px;">A. Passport Number : - </span>
+                        ____________________________
+                    </td>
+
+                    <td style="border: 1px solid #000; padding: 5px; width: 50%;">
+                        <span style="font-size: 14px;">Passport Expiry Date : -</span>
+                        ____________________________
+                    </td>
+                </tr>
+                <tr>
+                    <td style="border: 1px solid #000; padding: 5px; width: 50%;">
+                        <div class="square-box" class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
+                        <span style="font-size: 14px;">B. Voter ID Card : - </span>
+                        ____________________________
+                    </td>
+                    <td style="border: 1px solid #000; padding: 5px;">
+
+                    </td>
+                </tr>
+                <tr>
+                    <td style="border: 1px solid #000; padding: 5px; width: 50%;">
+                        <div class="square-box" class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
+                        <span style="font-size: 14px;">C. PAN Card : - </span>
+                        ____________________________
+                    </td>
+                    <td style="border: 1px solid #000; padding: 5px; width: 50%;">
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="square-box" class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
+                        <span style="font-size: 14px;">D. Driving Licence : -</span>
+                        ____________________________
+                    </td>
+                    <td style="border: 1px solid #000; padding: 5px; width: 50%;">
+                        <span style="font-size: 14px;">Driving Licence Expiry Date : -</span>
+                        ____________________________
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="square-box" class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
+                        <span style="font-size: 14px;">E. UID (Aadhaar) : - </span>
+                        ____________________________
+                    </td>
+                    <td style="border: 1px solid #000; padding: 5px; width: 50%;">
+
+                    </td>
+                </tr>
+                <tr>
+                    <td style="font-size: 14px;">
+                        <div class="square-box" class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
+                        <span>Z. Others (any document notified by the central government) : - </span>
+                        ____________________________
+                    </td>
+                    <td style="border: 1px solid #000; padding: 5px; width: 50%;">
+                        <span style="font-size: 14px;">Identification Number : - </span>
+                        ____________________________
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="square-box" class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
+                        <span style="font-size: 14px;">S. Simplified Measures Account - Document Type code : - </span>
+                        ____________________________
+                    </td>
+                    <td style="border: 1px solid #000; padding: 5px; width: 50%;">
+                        <span style="font-size: 14px;">Identification Number : - </span>
+                        ____________________________
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div style="border: 1px solid #000; padding: 10px; font-family: Arial, sans-serif; width: fit-content; font-size:12px;">
+            <label style="font-weight: bold; display: block; margin-bottom: 5px; font-size: 12px; background-color: #bdb5b5; padding:15px !important;">
+                {{-- <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div> --}}
+                4 . PROOF OF ADDRESS (POA) <span class="text-danger">*</span>
+            </label>
+            <label style="font-weight: bold; display: block; margin-bottom: 5px; font-size: 12px; background-color: #ebe1e1; padding:15px !important;">
+                <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
+                4.1 CURRENT / PERMANET / OVERSEAAS ADDRESS DETAILS (Please see instruction D at the end)
+            </label>
+
+            <div style="margin-top: 10px; margin-bottom: 10px;">
+                <small>
+                    (Certified copy of any one of the following Proof of Address[PoA] needs to be submitted)
+                </small>
+            </div>
+
+            {{-- Add a Address Type details --}}
+            <table style="font-weight: normal; margin-bottom: 10px;">
+                <tbody>
+                    <tr>
+                        <td style="width: 20%; vertical-align: middle;">
+                            <b>Address Type <span style="color: red;">*</span></b>
+                        </td>
+                        <td style="width: 80%; border: 1px solid #000; padding: 5px;">
+                            <table>
+                                <tr>
+                                    <td style="border: transparent !important; padding: 2px;">
+                                        <label style="display: flex; align-items: center; gap: 5px; white-space: nowrap;">
+                                            <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;;">
+                                                <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}"
+                                                         alt="Checkmark" style="height: 25px; width: 25px;">
+                                            </div> Residential / Business
+                                        </label>
+                                    </td>
+                                    <td style="border: transparent !important; padding: 2px;">
+                                        <label style="display: flex; align-items: center; gap: 5px; white-space: nowrap;">
+                                            <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;;">
+                                                <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}"
+                                                         alt="Checkmark" style="height: 25px; width: 25px;">
+                                            </div> Residential
+                                        </label>
+                                    </td>
+                                    <td style="border: transparent !important; padding: 2px;">
+                                        <label style="display: flex; align-items: center; gap: 5px; white-space: nowrap;">
+                                            <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;;">
+                                                <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}"
+                                                         alt="Checkmark" style="height: 25px; width: 25px;">
+                                            </div> Business
+                                        </label>
+                                    </td>
+                                    <td style="border: transparent !important; padding: 2px;">
+                                        <label style="display: flex; align-items: center; gap: 5px; white-space: nowrap;">
+                                            <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;;">
+                                                <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}"
+                                                         alt="Checkmark" style="height: 25px; width: 25px;">
+                                            </div> Registered Office
+                                        </label>
+                                    </td>
+                                    <td style="border: transparent !important; padding: 2px;">
+                                        <label style="display: flex; align-items: center; gap: 5px; white-space: nowrap;">
+                                            <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;;">
+                                                <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}"
+                                                         alt="Checkmark" style="height: 25px; width: 25px;">
+                                            </div> Unspecified
+                                        </label>
+                                    </td>
+                                </tr>
+
+                            </table>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td style="width: 10%; vertical-align: middle;">
+                            <b>Proof of Address <span style="color: red;">*</span></b>
+                        </td>
+                        <td style="width: 90%; border: 1px solid #000; padding: 5px;">
+                            <table>
+                                <tr>
+                                    <td style="border: transparent !important; padding: 2px;">
+                                        <label style="display: flex; align-items: center; gap: 5px; white-space: nowrap;">
+                                            <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;;">
+                                                <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}"
+                                                         alt="Checkmark" style="height: 25px; width: 25px;">
+                                            </div> Passport
+                                        </label>
+                                    </td>
+                                    <td style="border: transparent !important; padding: 2px;">
+                                        <label style="display: flex; align-items: center; gap: 5px; white-space: nowrap;">
+                                            <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;;">
+                                                <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}"
+                                                         alt="Checkmark" style="height: 25px; width: 25px;">
+                                            </div> Driving License
+                                        </label>
+                                    </td>
+                                    <td style="border: transparent !important; padding: 2px;">
+                                        <label style="display: flex; align-items: center; gap: 5px; white-space: nowrap;">
+                                            <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;;">
+                                                <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}"
+                                                         alt="Checkmark" style="height: 25px; width: 25px;">
+                                            </div> UID (Aadhaar)
+                                        </label>
+                                    </td>
+                                    <td style="border: transparent !important; padding: 2px;">
+                                        <label style="display: flex; align-items: center; gap: 5px; white-space: nowrap;">
+                                            <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;;">
+                                                <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}"
+                                                         alt="Checkmark" style="height: 25px; width: 25px;">
+                                            </div> Voter Identity Card
+                                        </label>
+                                    </td>
+                                    <td style="border: transparent !important; padding: 2px;">
+                                        <label style="display: flex; align-items: center; gap: 5px; white-space: nowrap;">
+                                            <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;;">
+                                                <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}"
+                                                         alt="Checkmark" style="height: 25px; width: 25px;">
+                                            </div> NREGA Job Card
+                                        </label>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td style="border: transparent !important; padding: 2px;">
+                                        <label style="display: flex; align-items: center; gap: 5px; white-space: nowrap;">
+                                            <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;;">
+                                                <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}"
+                                                         alt="Checkmark" style="height: 25px; width: 25px;">
+                                            </div> Others ______
+                                        </label>
+                                    </td>
+                                    <td style="border: transparent !important; padding: 2px;">
+                                        <label style="display: flex; align-items: center; gap: 5px; white-space: nowrap;">
+                                            <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;;">
+                                                <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}"
+                                                         alt="Checkmark" style="height: 25px; width: 25px;">
+                                            </div> Simplified Measures <br>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Account -Document<br>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            Type code : ________
+                                        </label>
+                                    </td>
+                                </tr>
+
+                            </table>
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+
+            <h2>Address</h2>
+            <div class="col-sm-12 p-2" style="font-size: 14px; height:30px;">
+                <b>Line 1 :  * </b> <span style="width: 100%;">________________________________________________________________________________________________________________</span>
+            </div>
+            <div class="col-sm-12 p-2" style="font-size: 14px; height:30px;">
+                <b>Line 2 : </b> <span style="width: 100%;">_________________________________________________________________________________________________________________</span>
+            </div>
+            <div class="row col-sm-12 p-2" style="font-size: 14px; height:30px;">
+                <b>Line 3 : </b> <span style="width: 70%;">___________________________________________________________</span>
+                <b>City / Town / Village : </b> <span style="width: 30%;">__________________________________</span>
+            </div>
+            <div class="row col-sm-12 p-2" style="font-size: 14px; height:30px;">
+                <b>District * </b> <span style="width: 30%;">________________</span>&nbsp;
+                <b>Pin / Post Code * </b> <span style="width: 20%;">_____________</span>&nbsp;
+                <b>State / U.T Code * </b> <span style="width: 20%;">_____________</span>&nbsp;
+                <b>ISO 3166 Country Code * </b> <span style="width: 30%;">_____________</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="page-break"></div>
+
+    <!--- Sixth Page with Content --->
+    <div class="container">
+        <div style="border: 1px solid #000; padding: 10px; font-family: Arial, sans-serif; width: fit-content; font-size:12px;">
+            <label style="font-weight: bold; display: block; margin-bottom: 5px; font-size: 12px; background-color: #ebe1e1; padding:15px !important;">
+                <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
+                4.2 CORRESPONDENCE / LOCAL ADDRESS DETAILS (Please see instruction E at the end)
+            </label>
+
+            <table style="border-collapse: collapse; margin-top: 10px; margin-bottom: 20px; font-size: 12px; width: 100%;">
+                <tr>
+                    <td style="border: 1px solid #000; padding: 5px; width: 50%;">
+                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
+                        <span style="font-size: 13px;">Same as Current / Permanet / Overseas Address Details (In case of multiple correspondence / local addresses please <b>fill 'Annexure A1'</b>)</span>
+                    </td>
+                </tr>
+            </table>
+
+            <div class="col-sm-12 p-2" style="font-size: 14px; height:30px;">
+                <b>Line 1 :  * </b> <span style="width: 100%;">________________________________________________________________________________________________________________</span>
+            </div>
+            <div class="col-sm-12 p-2" style="font-size: 14px; height:30px;">
+                <b>Line 2 : </b> <span style="width: 100%;">_________________________________________________________________________________________________________________</span>
+            </div>
+            <div class="row col-sm-12 p-2" style="font-size: 14px; height:30px;">
+                <b>Line 3 : </b> <span style="width: 70%;">___________________________________________________________</span>
+                <b>City / Town / Village : </b> <span style="width: 30%;">__________________________________</span>
+            </div>
+            <div class="row col-sm-12 p-2" style="font-size: 14px; height:30px;">
+                <b>District * </b> <span style="width: 30%;">________________</span>&nbsp;
+                <b>Pin / Post Code * </b> <span style="width: 20%;">_____________</span>&nbsp;
+                <b>State / U.T Code * </b> <span style="width: 20%;">_____________</span>&nbsp;
+                <b>ISO 3166 Country Code * </b> <span style="width: 30%;">_____________</span>
+            </div>
+
+        </div>
+
+        <div style="border: 1px solid #000; padding: 10px; font-family: Arial, sans-serif; width: fit-content; font-size:12px !important;">
+            <label style="font-weight: bold; display: block; margin-bottom: 5px; font-size: 12px; background-color: #ebe1e1; padding:15px !important;">
+                <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
+                4.3 ADDRESS IN THE JURISDICTION DETAILS WHERE APPLICANT IS RESIDENT OUTSIDE INDIA FOR TAX PURPOSES * (Applicable if section 2 is ticked.)
+            </label>
+
+            <table style="border-collapse: collapse; margin-top: 10px; margin-bottom: 20px; font-size: 13px; width: 100%;">
+                <tr>
+                    <td style="border: 1px solid #000; padding: 5px; width: 50%;">
+                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
+                        <span style="font-size: 14px;">Same as Current / Permanet / Overseas Address Details</span>
+                    </td>
+                    <td style="border: 1px solid #000; padding: 5px; width: 50%;">
+                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
+                        <span style="font-size: 14px;">Same as Correspondence / Local Address Details</span>
+                    </td>
+                </tr>
+            </table>
+
+            <div class="col-sm-12 p-2" style="font-size: 14px; height:30px;">
+                <b>Line 1 :  * </b> <span style="width: 100%;">________________________________________________________________________________________________________________</span>
+            </div>
+            <div class="col-sm-12 p-2" style="font-size: 14px; height:30px;">
+                <b>Line 2 : </b> <span style="width: 100%;">_________________________________________________________________________________________________________________</span>
+            </div>
+            <div class="row col-sm-12 p-2" style="font-size: 14px; height:30px;">
+                <b>Line 3 : </b> <span style="width: 70%;">___________________________________________________________</span>
+                <b>City / Town / Village : </b> <span style="width: 30%;">__________________________________</span>
+            </div>
+            <div class="row col-sm-12 p-2" style="font-size: 14px; height:30px;">
+                <b>State * </b> <span style="width: 30%;">____________________________</span>&nbsp;
+                <b>Zip / Post Code * </b> <span style="width: 30%;">_______________________</span>&nbsp;
+                <b>ISO 3166 Country Code * </b> <span style="width: 30%;">_______________________</span>
+            </div>
+
+        </div>
+
+        <div style="border: 1px solid #000; padding: 10px; font-family: Arial, sans-serif; width: fit-content; font-size:12px !important;">
+            <label style="font-weight: bold; display: block; margin-bottom: 5px; font-size: 14px; background-color: #ebe1e1; padding:15px !important;">
+                <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
+                5 . CONTACT DETAILS (All Communications will be sent on provided Mobile No. / Email - Id)(please refer instructions G at the end)
+            </label>
+
+            <table style="border-collapse: collapse; margin-top: 10px; font-size: 13px; width: 100%;">
+                <tr>
+                    <td style="border: 1px solid #000; padding: 5px; width: 40%;">
+                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
+                        <span style="font-size: 14px;">Tel. (Off)</span>&nbsp;&nbsp;&nbsp;
+                        ___________________________
+                    </td>
+                    <td style="border: 1px solid #000; padding: 5px; width: 40%;">
+                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
+                        <span style="font-size: 14px;">Tel. (Res)</span>&nbsp;&nbsp;&nbsp;
+                       ___________________________
+                    </td>
+                    <td style="border: 1px solid #000; padding: 5px; width: 40%;">
+                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
+                        <span style="font-size: 14px;">FAX</span>&nbsp;&nbsp;&nbsp;
+                       ________________________________
+                    </td>
+                </tr>
+            </table>
+            <table style="border-collapse: collapse; font-size: 13px; width: 100%;">
+                <tr>
+                    <td style="width: 22%; border: 1px solid #000; vertical-align: middle;">
+                        Mobile <span style="color: Red;">*</span>
+                        ______________________
+                    </td>
+                    <td style="width: 66%; border: 1px solid #000; padding: 5px;">
+                        <table>
+                            <tr>
+                                <td style="border: transparent !important; padding: 2px;">
+                                    <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;;">
+                                        <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}" alt="Checkmark" style="height: 25px; width: 25px;">
+                                    </div> Self
+                                </td>
+                                <td style="border: transparent !important; padding: 2px;">
+                                    <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;;">
+                                        <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}" alt="Checkmark" style="height: 25px; width: 25px;">
+                                    </div> Spouse
+                                </td>
+                                <td style="border: transparent !important; padding: 2px;">
+                                    <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;;">
+                                        <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}" alt="Checkmark" style="height: 25px; width: 25px;">
+                                    </div> Dependent Parent
+                                </td>
+                                <td style="border: transparent !important; padding: 2px;">
+                                    <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;;">
+                                        <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}" alt="Checkmark" style="height: 25px; width: 25px;">
+                                    </div> Dependent Children
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+            <table style="border-collapse: collapse; font-size: 13px; width: 100%;">
+                <tr>
+                    <td style="width: 22%; border: 1px solid #000; vertical-align: middle;">
+                        Email Id <span style="color: Red;">*</span>
+                        ______________________
+                    </td>
+                    <td style="width: 66%; border: 1px solid #000; padding: 5px;">
+                        <table>
+                            <tr>
+                                <td style="border: transparent !important; padding: 2px;">
+                                    <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;;">
+                                        <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}" alt="Checkmark" style="height: 25px; width: 25px;">
+                                    </div> Self
+                                </td>
+                                <td style="border: transparent !important; padding: 2px;">
+                                    <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;;">
+                                        <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}" alt="Checkmark" style="height: 25px; width: 25px;">
+                                    </div> Spouse
+                                </td>
+                                <td style="border: transparent !important; padding: 2px;">
+                                    <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;;">
+                                        <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}" alt="Checkmark" style="height: 25px; width: 25px;">
+                                    </div> Dependent Parent
+                                </td>
+                                <td style="border: transparent !important; padding: 2px;">
+                                    <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;;">
+                                        <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}" alt="Checkmark" style="height: 25px; width: 25px;">
+                                    </div> Dependent Children
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div style="border: 1px solid #000; padding: 10px; font-family: Arial, sans-serif; width: fit-content; font-size:14px;">
+            <label style="font-weight: bold; display: block; margin-bottom: 5px; font-size: 14px; background-color: #ebe1e1; padding:15px !important;">
+                <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
+                6 . DETAILS OF RELATED PERSON ((In case of additional related persons, please <b>fill 'Annexure A1'</b>))(please refer instructions G at the end)
+            </label>
+
+            <table style="border-collapse: collapse; margin-top: 3px;  background-color: #eeeeee; font-size: 13px; width: 100%;">
+                <tr>
+                    <td style="border: 1px solid #000; padding: 5px; width: 25%;">
+                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
+                        <span style="font-size: 14px;">Addition of Related Person</span>
+                    </td>
+                    <td style="border: 1px solid #000; padding: 5px; width: 75%;">
+                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
+                        <span style="font-size: 14px;">Deletion of Related Person</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <span style="font-size: 14px;">KYC Number of Related Person (if available *)</span>&nbsp;&nbsp;_______________________
+                    </td>
+                </tr>
+            </table>
+
+            <table style="border-collapse: collapse; font-size: 13px; width: 100%;">
+                <tr>
+                    <td style="width: 22%; border: 1px solid #000; vertical-align: middle;">
+                        Related Person Type <span style="color: Red;">*</span>
+                    </td>
+                    <td style="width: 66%; border: 1px solid #000; padding: 5px;">
+                        <table>
+                            <tr>
+                                <td style="border: transparent !important; padding: 2px;">
+                                    <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;;">
+                                        <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}" alt="Checkmark" style="height: 25px; width: 25px;">
+                                    </div> Guardian of Minor
+                                </td>
+                                <td style="border: transparent !important; padding: 2px;">
+                                    <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;;">
+                                        <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}" alt="Checkmark" style="height: 25px; width: 25px;">
+                                    </div> Assignee
+                                </td>
+                                <td style="border: transparent !important; padding: 2px;">
+                                    <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;;">
+                                        <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}" alt="Checkmark" style="height: 25px; width: 25px;">
+                                    </div> Authorised Representative
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+
+            <table style="font-weight: normal;">
+                <thead>
+                    <tr>
+                        <td></td>
+                        <td><span class="label text-muted">Prefix</span></td>
+                        <td><span class="label text-muted">First Name</span></td>
+                        <td><span class="label text-muted">Middle Name</span></td>
+                        <td><span class="label text-muted">Last Name</span></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Name *</td>
+                        <td><div class="underline">______________</div></td>
+                        <td><div class="underline">______________</div></td>
+                        <td><div class="underline">______________</div></td>
+                        <td><div class="underline">______________</div></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <label style="font-weight: bold; display: block; margin-top: 5px; margin-bottom: 5px; font-size: 14px; background-color: #eeeeee; padding:15px !important;">
+                PROOF OF IDENTITY [POI] OF RELATED PERSON * (please refer instructions (H) at the end)
+            </label>
+
+            <table style="border-collapse: collapse; margin-top: 5px; font-size: 13px; width: 100%;">
+                <tr>
+                    <td style="border: 1px solid #000; padding: 5px; width: 50%;">
+                        <div class="square-box" class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
+                        <span style="font-size: 14px;">A. Passport Number : - </span>
+                        ____________________________
+                    </td>
+
+                    <td style="border: 1px solid #000; padding: 5px; width: 50%;">
+                        <span style="font-size: 14px;">Passport Expiry Date : -</span>
+                        ____________________________
+                    </td>
+                </tr>
+                <tr>
+                    <td style="border: 1px solid #000; padding: 5px; width: 50%;">
+                        <div class="square-box" class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
+                        <span style="font-size: 14px;">B. Voter ID Card : - </span>
+                        ____________________________
+                    </td>
+                    <td style="border: 1px solid #000; padding: 5px;">
+
+                    </td>
+                </tr>
+                <tr>
+                    <td style="border: 1px solid #000; padding: 5px; width: 50%;">
+                        <div class="square-box" class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
+                        <span style="font-size: 14px;">C. PAN Card : - </span>
+                        ____________________________
+                    </td>
+                    <td style="border: 1px solid #000; padding: 5px; width: 50%;">
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="square-box" class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
+                        <span style="font-size: 14px;">D. Driving Licence : -</span>
+                        ____________________________
+                    </td>
+                    <td style="border: 1px solid #000; padding: 5px; width: 50%;">
+                        <span style="font-size: 14px;">Driving Licence Expiry Date : -</span>
+                        ____________________________
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="square-box" class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
+                        <span style="font-size: 14px;">E. UID (Aadhaar) : - </span>
+                        ____________________________
+                    </td>
+                    <td style="border: 1px solid #000; padding: 5px; width: 50%;">
+
+                    </td>
+                </tr>
+                <tr>
+                    <td style="font-size: 14px;">
+                        <div class="square-box" class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
+                        <span>Z. Others (any document notified by the central government) : - </span>
+                        ____________________________
+                    </td>
+                    <td style="border: 1px solid #000; padding: 5px; width: 50%;">
+                        <span style="font-size: 14px;">Identification Number : - </span>
+                        ____________________________
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="square-box" class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
+                        <span style="font-size: 14px;">S. Simplified Measures Account - Document Type code : - </span>
+                        ____________________________
+                    </td>
+                    <td style="border: 1px solid #000; padding: 5px; width: 50%;">
+                        <span style="font-size: 14px;">Identification Number : - </span>
+                        ____________________________
+                    </td>
+                </tr>
+            </table>
+
+        </div>
+    </div>
+
+    {{-- Page Break --}}
+    <div class="page-break"></div>
+
+    <!--- Seventh Page with Content --->
+    <div class="container" style="border: 1px solid #000; margin-top: 20px; padding: 10px;">
+        <div style="font-family: Arial, sans-serif; width: fit-content; font-size:12px !important;">
+            <label style="font-weight: bold; display: block; margin-bottom: 5px; font-size: 14px; background-color: #ebe1e1; padding:15px !important;">
+                <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
+                7 . REMARKS (if any)
+            </label>
+        </div>
+
+        <div class="col-sm-12 p-2" style="font-size: 14px; height:30px;">
+            <span style="width: 100%;">________________________________________________________________________________________________________________________</span>
+        </div>
+        <div class="col-sm-12 p-2" style="font-size: 14px; height:30px;">
+            <span style="width: 100%;">________________________________________________________________________________________________________________________</span>
+        </div>
+        <div class="col-sm-12 p-2" style="font-size: 14px; height:30px;">
+            <span style="width: 100%;">________________________________________________________________________________________________________________________</span>
+        </div>
+    </div>
+
+    <!--- Eight Page with Content --->
+    <div class="container" style="border: 1px solid #000; margin-top: 20px; padding: 10px;">
+        <div style="font-family: Arial, sans-serif; width: fit-content; font-size:12px !important;">
+            <label style="font-weight: bold; display: block; margin-bottom: 5px; font-size: 14px; background-color: #ebe1e1; padding:15px !important;">
+                <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
+                8 . APPLICATION DECLARATION
+            </label>
+        </div>
+
+        <table style="border-collapse: collapse; margin-top: 10px; font-size: 12px; width: 100%;">
+            <tr>
+                <td style="width: 60%;">
+                    {{-- Order list --}}
+                    <ul style="font-size: 14px; text-align: justify;">
+                        <li style="margin-bottom: 10px;">
+                            I hereby declare that the details furnished above are true and correct to the best of my knowledge
+                            and belief and I undertake to inform you of any changes therein, immediately. In case any of the
+                            above information is found to be false or untrue or misleading or misrepresenting, I am aware
+                            that I may be held liable for it.
+                        </li>
+                        <li>
+                            I hereby consent to receiving information from Central KYC Registry through SMS/Email on the
+                            above registered number/email address.
+                        </li>
+                    </ul>
+
+                    <span style="font-size: 14px;">
+                        <strong>Date :</strong>
+                        ____________________________
+                    </span>
+
+                    <span style="font-size: 14px;">
+                        <strong>Place :</strong>
+                        _________________________
+                    </span>
+                </td>
+                <th style="width: 40%;">
+                    <span style="font-size: 14px;">
+                        Signature / Thumb Impression of Applicant
+                    </span>
+                </th>
+            </tr>
+        </table>
+    </div>
+
+    <div class="page-break"></div>
+
+    <!--- Ninth Page with Content --->
+    <div class="container" style="border: 1px solid #000; margin-top: 20px; padding: 10px;">
+        <div style="font-family: Arial, sans-serif; width: fit-content; font-size:12px !important;">
+            <label style="font-weight: bold; display: block; margin-bottom: 5px; font-size: 14px; background-color: #ebe1e1; padding:15px !important;">
+                <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
+                9 . ATTESTATION / FOR OFFICE USE ONLY
+            </label>
+        </div>
+
+        <table style="font-weight: normal; margin-bottom: 10px;">
+            <tbody>
+                <tr>
+                    <td style="width: 20%; vertical-align: middle;">
+                        <b>Documents Received </b>
+                    </td>
+                    <td style="width: 80%; border: 1px solid #000; padding: 5px;">
+                        <table>
+                            <tr>
+                                <td style="border: transparent !important; padding: 2px;">
+                                    <label style="display: flex; align-items: center; gap: 5px; white-space: nowrap;">
+                                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;;">
+                                            <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}"
+                                                     alt="Checkmark" style="height: 25px; width: 25px;">
+                                        </div> Certified Copies
+                                    </label>
+                                </td>
+                                <td style="border: transparent !important; padding: 2px;">
+                                    <label style="display: flex; align-items: center; gap: 5px; white-space: nowrap;">
+                                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;;">
+                                            <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}"
+                                                     alt="Checkmark" style="height: 25px; width: 25px;">
+                                        </div> Client Interviewed by
+                                    </label>
+                                </td>
+                                <td style="border: transparent !important; padding: 2px;">
+                                    <label style="display: flex; align-items: center; gap: 5px; white-space: nowrap;">
+                                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;;">
+                                            <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}"
+                                                     alt="Checkmark" style="height: 25px; width: 25px;">
+                                        </div> In - Person verification done by
+                                    </label>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+
+        <table style="border-collapse: collapse; margin-top: 10px; font-size: 12px; width: 100%;">
+            <tr>
+                <td style="width: 50%;">
+                    <label style="font-weight: bold; display: block; margin-bottom: 5px; font-size: 14px; background-color: #e6e3e3; padding:15px !important;">
+                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
+                        KYC VERIFICATION CARRIED OUT BY
+                    </label><br>
+
+                    <span style="font-size: 14px; font-weight: bold; padding: 5px;;">
+                        Date : ____________________________
+                    </span><br><br>
+                    <span style="font-size: 14px; font-weight: bold; padding: 5px;;">
+                        Emp. Name : ____________________________
+                    </span><br><br>
+                    <span style="font-size: 14px; font-weight: bold; padding: 5px;;">
+                        Emp. Code : ____________________________
+                    </span><br><br>
+                    <span style="font-size: 14px; font-weight: bold; padding: 5px;;">
+                        Emp. Designation : ____________________________
+                    </span><br><br>
+                    <span style="font-size: 14px; font-weight: bold; padding: 5px;;">
+                        Emp. Branch : ____________________________
+                    </span><br><br>
+                    <div class="square-box" style="width: 100%; height: 30%; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px;">
+                        {{-- Employee Signature --}}
+                        {{-- <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/signature.png'))) }}" alt="Signature" style="height: 50px; width: 140px;"> --}}
+                        <small class="text-muted">
+                            [Employee Signature]
+                        </small>
+                    </div>
+                </td>
+
+                <td style="width: 50%;">
+                    <label style="font-weight: bold; display: block; margin-bottom: 5px; font-size: 14px; background-color: #e6e3e3; padding:15px !important;">
+                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
+                        INSTITUTION DETAILS
+                    </label><br><br><br>
+
+                    <span style="font-size: 14px; font-weight: bold; padding: 5px;;">
+                        Name : ____________________________
+                    </span><br><br>
+
+                    <span style="font-size: 14px; font-weight: bold; padding: 5px;;">
+                        Code : ____________________________
+                    </span><br><br><br><br>
+
+                    <div class="square-box" style="width: 100%; height: 35%; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px;">
+                        {{-- Employee Signature --}}
+                        {{-- <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/signature.png'))) }}" alt="Signature" style="height: 50px; width: 140px;"> --}}
+                        <small class="text-muted" >[Institution Stamp]</small>
+                    </div>
+                </td>
+            </td>
+        </table>
+    </div>
+    {{-- THIRD Holder Form End --}}
 
 </body>
 

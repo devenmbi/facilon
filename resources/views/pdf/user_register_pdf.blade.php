@@ -124,15 +124,27 @@
         }
 
         table {
+            border: 1px solid #f2f2f2;
             border-collapse: collapse;
             width: 100%;
         }
-
-        th,
-        td {
-            border: 1px solid black;
+        th, td {
+            border: 1px solid #000000;
             padding: 8px;
             text-align: left;
+        }
+        .underline {
+            /* border-bottom: 1px solid #000; */
+            text-decoration: underline;
+            display: inline-block;
+            text-align: left;
+            line-height: 20px;
+            text-transform: Capitalize;
+            width: 100%;
+        }
+        .label {
+            color: rgb(145, 145, 145);
+            font-size: 13px;
         }
 
         th {
@@ -889,7 +901,7 @@
     <!--- Fifth Page with Content -->
     <div class="WordSection5">
 
-        <table style="border-collapse: collapse; border-color: #000000; width: 30%; float: right;">
+        <table style="border-collapse: collapse; border-color: #f7efef; width: 30%; float: right;">
             <tr>
                 <td style="padding: 10px; text-align: left; font-weight: bold; font-size: 20px; line-height: 20px;">
                     FU | {{ $data['client_code'] ?? '' }}
@@ -899,7 +911,7 @@
         <br><br><br>
 
         <!-- Instructions Section -->
-        <table style="width: 100%; font-size: 14px; font-weight: normal; ">
+        <table style="width: 100%; font-size: 13px; font-weight: normal !important; ">
             <thead>
                 <tr>
                     <th style="text-align: left;  padding-bottom: 5px;" colspan="3">
@@ -945,10 +957,8 @@
                 </tr>
             </tbody>
         </table>
-        <br>
 
-
-        <table>
+        <table style="width: 100%; font-weight: normal !important;">
             <thead style="background-color: #757879 !important;">
                 <tr>
                     <th colspan="5">
@@ -957,10 +967,10 @@
                     </th>
                 </tr>
                 <tr>
-                    <th colspan="4" style="vertical-align: top;">
-                        <b>Application Type <span style="color: red">*</span></b>
+                    <th colspan="4" style="vertical-align: top; ">
+                        <span style="font-size: 14px;">Application Type <span style="color: red">*</span></span>
                     </th>
-                    <th rowspan="3" class="d-flex">
+                    <th rowspan="3" class="d-flex" style="font-size: 14px;">
                         <div class="square-box" style="width: 15px; height: 15px; border: 1px solid #000; text-align: center;">
                             @if($data['application_type'] == 1)
                             <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}"
@@ -970,7 +980,7 @@
                             @endif
                         </div> New
                     </th>
-                    <th rowspan="3" class="d-flex">
+                    <th rowspan="3" class="d-flex" style="font-size: 14px;">
                         <div class="square-box" style="width: 15px; height: 15px; border: 1px solid #000; text-align: center;">
                             @if($data['application_type'] == 2)
                             <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}"
@@ -983,27 +993,22 @@
                 </tr>
                 <tr>
                     <th colspan="5">
-                        <b>KYC Number <span style="color: red">*</span></b>
+                        <span style="font-size: 14px;"> KYC Number <span style="color: red">*</span>
                         @foreach(str_split($data['kyc_number']) as $digit)
                             <div class="square-box" style="width: 15px; height: 15px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;">
                                 {{ $digit }}
                             </div>
                         @endforeach
-                        (Mandatory for KYC update request)
-                    </th>
-                </tr>
-                <tr>
-                    <th colspan="5">
-                        1. PERSONAL DETAILS</strong> (Please refer to instruction A at the end)
+                        <span style="font-size: 14px;">(Mandatory for KYC update request)</span>
                     </th>
                 </tr>
                 <tr>
                     <th colspan="4">
-                        <b>Account Type <span style="color: red">*</span></b>
+                        <span style="font-size: 14px;">Account Type <span style="color: red">*</span></span>
                     </th>
                     <th rowspan="2" class="d-flex">
                         <div style="display: flex; align-items: center; gap: 20px; flex-wrap: nowrap;">
-                            <label style="display: flex; align-items: center; gap: 5px; white-space: nowrap;">
+                            <label style="display: flex; align-items: center; gap: 5px; white-space: nowrap;" style="font-size: 14px;">
                                 <div class="square-box" style="width: 15px; height: 15px; border: 1px solid #000; text-align: center;">
                                     @if($data['account_type'] == '1')
                                     <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}"
@@ -1015,7 +1020,7 @@
                     </th>
                     <th rowspan="2" class="d-flex">
                         <div style="display: flex; align-items: center; gap: 20px; flex-wrap: nowrap;">
-                            <label style="display: flex; align-items: center; gap: 5px; white-space: nowrap;">
+                            <label style="display: flex; align-items: center; gap: 5px; white-space: nowrap;" style="font-size: 14px;">
                                 <div class="square-box" style="width: 15px; height: 15px; border: 1px solid #000; text-align: center;">
                                     @if($data['account_type'] == '2')
                                     <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}"
@@ -1027,7 +1032,7 @@
                     </th>
                     <th rowspan="2" class="d-flex">
                         <div style="display: flex; align-items: center; gap: 20px; flex-wrap: nowrap;">
-                            <label style="display: flex; align-items: center; gap: 5px; white-space: nowrap;">
+                            <label style="display: flex; align-items: center; gap: 5px; white-space: nowrap;" style="font-size: 14px;">
                                 <div class="square-box" style="width: 15px; height: 15px; border: 1px solid #000; text-align: center;">
                                     @if($data['account_type'] == '3')
                                     <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}"
@@ -1038,306 +1043,100 @@
                         </div>
                     </th>
                 </tr>
-            </thead>
-        </table>
-        <br>
-
-        {{-- First Name, Middle Name, Last Name Section --}}
-        <table>
-            <thead>
-                <tr>
-                    <td>
-                    </td>
-
-                    <td>
-                        Prefix
-                    </td>
-
-                    <td>
-                        First Name
-                    </td>
-
-                    <td>
-                        Middle Name
-                    </td>
-
-                    <td>
-                        Last Name
-                    </td>
-                </tr>
 
             </thead>
-
-            <tbody>
-                <tr>
-                    <td>
-                        Name (Same as ID proof)
-                    </td>
-
-                    @php
-                        $prefix = '';
-
-                        if ($data['prefix'] == 1){
-                            $prefix = 'Mr.';
-                        } elseif ($data['prefix'] == 2){
-                            $prefix = 'Mrs.';
-                        } elseif ($data['prefix'] == 3){
-                            $prefix = 'Shri.';
-                        } elseif ($data['prefix'] == 4){
-                            $prefix = 'Shrimati';
-                        }
-                    @endphp
-                    <td>
-                        @foreach(str_split($prefix) as $letter)
-                            <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;">
-                                {{ $letter }}
-                            </div>
-                        @endforeach
-                    </td>
-
-                    <td>
-                        @foreach(str_split($data['first_name']) as $letter)
-                            <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;">
-                                {{ $letter }}
-                            </div>
-                        @endforeach
-                    </td>
-
-                    <td>
-                        @foreach(str_split($data['middle_name']) as $letter)
-                            <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;">
-                                {{ $letter }}
-                            </div>
-                        @endforeach
-                    </td>
-
-                    <td>
-                        @foreach(str_split($data['last_name']) as $letter)
-                            <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;">
-                                {{ $letter }}
-                            </div>
-                        @endforeach
-                    </td>
-                </tr>
-
-                <tr>
-                    <td>
-                        Maiden Name (if any <span style="color: red;">*</span>)
-                    </td>
-
-                    @php
-                        $maiden_prefix = '';
-
-                        if ($data['maiden_prefix'] == 1){
-                            $maiden_prefix = 'Mr.';
-                        } elseif ($data['maiden_prefix'] == 2){
-                            $maiden_prefix = 'Mrs.';
-                        } elseif ($data['maiden_prefix'] == 3){
-                            $maiden_prefix = 'Shri.';
-                        } elseif ($data['maiden_prefix'] == 4){
-                            $maiden_prefix = 'Shrimati';
-                        }
-                    @endphp
-
-                    <td>
-                        @foreach(str_split($maiden_prefix) as $letter)
-                            <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;">
-                                {{ $letter }}
-                            </div>
-                        @endforeach
-                    </td>
-
-                    <td>
-                        @foreach(str_split($data['maiden_first_name']) as $letter)
-                            <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;">
-                                {{ $letter }}
-                            </div>
-                        @endforeach
-                    </td>
-
-                    <td>
-                        @foreach(str_split($data['maiden_middle_name']) as $letter)
-                            <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;">
-                                {{ $letter }}
-                            </div>
-                        @endforeach
-                    </td>
-
-                    <td>
-                        @foreach(str_split($data['maiden_last_name']) as $letter)
-                            <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;">
-                                {{ $letter }}
-                            </div>
-                        @endforeach
-                    </td>
-                </tr>
-
-                <tr>
-                    <td>
-                        Father / Spouse Name <span style="color: red;">*</span>
-                    </td>
-
-                    @php
-                        $father_prefix = '';
-
-                        if ($data['father_prefix'] == 1){
-                            $father_prefix = 'Mr.';
-                        } elseif ($data['father_prefix'] == 2){
-                            $father_prefix = 'Mrs.';
-                        } elseif ($data['father_prefix'] == 3){
-                            $father_prefix = 'Shri.';
-                        } elseif ($data['father_prefix'] == 4){
-                            $father_prefix = 'Shrimati';
-                        }
-                    @endphp
-
-                    <td>
-                        @foreach(str_split($father_prefix) as $letter)
-                            <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;">
-                                {{ $letter }}
-                            </div>
-                        @endforeach
-                    </td>
-
-                    <td>
-                        @foreach(str_split($data['father_first_name']) as $letter)
-                            <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;">
-                                {{ $letter }}
-                            </div>
-                        @endforeach
-                    </td>
-
-                    <td>
-                        @foreach(str_split($data['father_middle_name']) as $letter)
-                            <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;">
-                                {{ $letter }}
-                            </div>
-                        @endforeach
-                    </td>
-
-                    <td>
-                        @foreach(str_split($data['father_last_name']) as $letter)
-                            <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;">
-                                {{ $letter }}
-                            </div>
-                        @endforeach
-                    </td>
-                </tr>
-
-                <tr>
-                    <td>
-                        Mother Name <span style="color: red;">*</span>
-                    </td>
-
-                    @php
-                        $mother_prefix = '';
-
-                        if ($data['mother_prefix'] == 1){
-                            $mother_prefix = 'Mr.';
-                        } elseif ($data['mother_prefix'] == 2){
-                            $mother_prefix = 'Mrs.';
-                        } elseif ($data['mother_prefix'] == 3){
-                            $mother_prefix = 'Shri.';
-                        } elseif ($data['mother_prefix'] == 4){
-                            $mother_prefix = 'Shrimati';
-                        }
-                    @endphp
-
-                    <td>
-                        @foreach(str_split($mother_prefix) as $letter)
-                            <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;">
-                                {{ $letter }}
-                            </div>
-                        @endforeach
-                    </td>
-
-                    <td>
-                        @foreach(str_split($data['mother_first_name']) as $letter)
-                            <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;">
-                                {{ $letter }}
-                            </div>
-                        @endforeach
-                    </td>
-
-                    <td>
-                        @foreach(str_split($data['mother_middle_name']) as $letter)
-                            <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;">
-                                {{ $letter }}
-                            </div>
-                        @endforeach
-                    </td>
-
-                    <td>
-                        @foreach(str_split($data['mother_last_name']) as $letter)
-                            <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;">
-                                {{ $letter }}
-                            </div>
-                        @endforeach
-                    </td>
-                </tr>
-            </tbody>
-
         </table>
 
         {{-- Page Break --}}
         <div class="page-break"></div>
 
-        {{-- Date of Birth Section --}}
-        <table>
+        {{-- First Name, Middle Name, Last Name Section --}}
+        <table style="font-weight: normal;">
+            <thead>
+                <tr>
+                    <th colspan="5">
+                        1. PERSONAL DETAILS</strong> (Please refer to instruction A at the end)
+                    </th>
+                </tr>
+                <tr>
+                    <th></th>
+                    <th><span class="label text-center">Prefix</span></th>
+                    <th><span class="label text-center">First Name</span></th>
+                    <th><span class="label text-center">Middle Name</span></th>
+                    <th><span class="label text-center">Last Name</span></th>
+                </tr>
+            </thead>
             <tbody>
-                <td>
-                    Date of Birth <span style="color: red;">*</span>
-                </td>
+                <tr>
+                    <td>Name (Same as ID proof)</td>
+                    @php
+                        $prefixes = [1 => 'Mr.', 2 => 'Mrs.', 3 => 'Shri.', 4 => 'Shrimati'];
+                        $prefix = $prefixes[$data['prefix']] ?? '';
+                    @endphp
+                    <td><div class="underline">{{ $prefix }}</div></td>
+                    <td><div class="underline">{{ $data['first_name'] ?? '' }}</div></td>
+                    <td><div class="underline">{{ $data['middle_name'] ?? '' }}</div></td>
+                    <td><div class="underline">{{ $data['last_name'] ?? '' }}</div></td>
+                </tr>
 
-                @php
-                    // Date of Birth
-                    $dob = \Carbon\Carbon::parse($data['date_of_birth']);
-                    $year = $dob->year;
-                    $month = $dob->month;
-                    $day = $dob->day;
-                @endphp
+                <tr>
+                    <td>Maiden Name (if any <span style="color: red;">*</span>)</td>
+                    @php
+                        $maiden_prefix = $prefixes[$data['maiden_prefix']] ?? '';
+                    @endphp
+                    <td><div class="underline">{{ $maiden_prefix }}</div></td>
+                    <td><div class="underline">{{ $data['maiden_first_name'] ?? '' }}</div></td>
+                    <td><div class="underline">{{ $data['maiden_middle_name'] ?? '' }}</div></td>
+                    <td><div class="underline">{{ $data['maiden_last_name'] ?? '' }}</div></td>
+                </tr>
 
-                <td>
-                    <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block;">
-                        {{ substr($day, 0, 1) }}
-                    </div>
-                    <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block;">
-                        {{ substr($day, 1, 1) }}
-                    </div>
-                </td>
+                <tr>
+                    <td>Father / Spouse Name <span style="color: red;">*</span></td>
+                    @php
+                        $father_prefix = $prefixes[$data['father_prefix']] ?? '';
+                    @endphp
+                    <td><div class="underline">{{ $father_prefix }}</div></td>
+                    <td><div class="underline">{{ $data['father_first_name'] ?? '' }}</div></td>
+                    <td><div class="underline">{{ $data['father_middle_name'] ?? '' }}</div></td>
+                    <td><div class="underline">{{ $data['father_last_name'] ?? '' }}</div></td>
+                </tr>
 
-                <td>
-                    <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block;">
-                        {{ substr($month, 0, 1) }}
-                    </div>
-                    <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block;">
-                        {{ substr($month, 1, 1) }}
-                    </div>
-                </td>
-
-                <td>
-                    <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block;">
-                        {{ substr($year, 0, 1) }}
-                    </div>
-                    <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block;">
-                        {{ substr($year, 1, 1) }}
-                    </div>
-                    <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block;">
-                        {{ substr($year, 2, 1) }}
-                    </div>
-                    <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block;">
-                        {{ substr($year, 3, 1) }}
-                    </div>
-                </td>
-
+                <tr>
+                    <td>Mother Name <span style="color: red;">*</span></td>
+                    @php
+                        $mother_prefix = $prefixes[$data['mother_prefix']] ?? '';
+                    @endphp
+                    <td><div class="underline">{{ $mother_prefix }}</div></td>
+                    <td><div class="underline">{{ $data['mother_first_name'] ?? '' }}</div></td>
+                    <td><div class="underline">{{ $data['mother_middle_name'] ?? '' }}</div></td>
+                    <td><div class="underline">{{ $data['mother_last_name'] ?? '' }}</div></td>
+                </tr>
             </tbody>
         </table>
 
-        {{-- Page Break --}}
-        {{-- <div class="page-break"></div> --}}
+        {{-- Date of Birth Section --}}
+        <table style="font-weight: normal;">
+            <tbody>
+                <tr>
+                    <td>Date of Birth <span style="color: red;">*</span></td>
+
+                    @php
+                        $dob = \Carbon\Carbon::parse($data['date_of_birth'])->format('d-m-Y');
+                    @endphp
+
+                    <td>
+                        @foreach(str_split($dob) as $char)
+                            <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;">
+                                {{ $char }}
+                            </div>
+                        @endforeach
+                    </td>
+                </tr>
+            </tbody>
+        </table>
 
         {{-- Gender, Marital Status, and Occupation --}}
-        <table>
+        <table style="font-weight: normal;">
             <tbody>
                 <!-- First Row -->
                 <tr>
@@ -1345,23 +1144,23 @@
                     <td style="width: 66%; border: 1px solid #000; padding: 5px;">
                         <table>
                             <tr>
-                                <td style="border: none; padding: 5px;">
-                                    <div style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block;">
+                                <td style="border: transparent !important; padding: 2px;">
+                                    <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;;">
                                         @if($data['gender'] == '1')
                                             <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}" alt="Checkmark" style="height: 25px; width: 25px;">
                                         @endif
                                     </div> M - Male
                                 </td>
-                                <td style="border: none; padding: 5px;">
-                                    <div style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block;">
+                                <td style="border: transparent !important; padding: 2px;">
+                                    <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;;">
                                         @if($data['gender'] == '2')
                                             <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}"
                                                  alt="Checkmark" style="height: 25px; width: 25px;">
                                         @endif
                                     </div> F - Female
                                 </td>
-                                <td style="border: none; padding: 5px;">
-                                    <div style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block;">
+                                <td style="border: transparent !important; padding: 2px;">
+                                    <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;;">
                                         @if($data['gender'] == '3')
                                             <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}"
                                                  alt="Checkmark" style="height: 25px; width: 25px;">
@@ -1387,24 +1186,24 @@
                     <td style="width: 66%; border: 1px solid #000; padding: 5px;">
                         <table>
                             <tr>
-                                <td style="border: none; padding: 5px;">
-                                    <div style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block;">
+                                <td style="border: transparent !important; padding: 2px;">
+                                    <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;;">
                                         @if($data['marital_status'] == '1')
                                             <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}"
                                                  alt="Checkmark" style="height: 25px; width: 25px;">
                                         @endif
                                     </div> Married
                                 </td>
-                                <td style="border: none; padding: 5px;">
-                                    <div style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block;">
+                                <td style="border: transparent !important; padding: 2px;">
+                                    <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;;">
                                         @if($data['marital_status'] == '2')
                                             <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}"
                                                  alt="Checkmark" style="height: 25px; width: 25px;">
                                         @endif
                                     </div> Unmarried
                                 </td>
-                                <td style="border: none; padding: 5px;">
-                                    <div style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block;">
+                                <td style="border: transparent !important; padding: 2px;">
+                                    <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;;">
                                         @if($data['marital_status'] == '3')
                                             <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}"
                                                  alt="Checkmark" style="height: 25px; width: 25px;">
@@ -1426,16 +1225,16 @@
                     <td style="width: 66%; border: 1px solid #000; padding: 5px;">
                         <table>
                             <tr>
-                                <td style="border: none; padding: 5px;">
-                                    <div style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block;">
+                                <td style="border: transparent !important; padding: 2px;">
+                                    <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;;">
                                         @if($data['citizenship'] == 'IN')
                                             <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}"
                                                  alt="Checkmark" style="height: 25px; width: 25px;">
                                         @endif
                                     </div> IN - Indian
                                 </td>
-                                <td style="border: none; padding: 5px;">
-                                    <div style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block;">
+                                <td style="border: transparent !important; padding: 2px;">
+                                    <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;;">
                                         @if($data['citizenship'] == 'others')
                                             <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}"
                                                  alt="Checkmark" style="height: 25px; width: 25px;">
@@ -1446,7 +1245,7 @@
                         </table>
                     </td>
                 </tr>
-                
+
                 <!-- Fourth Row -->
                 <tr>
                     <td style="width: 22%; vertical-align: middle;">
@@ -1455,9 +1254,9 @@
                     <td style="width: 66%; border: 1px solid #000; padding: 5px;">
                         <table>
                             <tr>
-                                <td style="border: none; padding: 5px;">
+                                <td style="border: transparent !important; padding: 2px;">
                                     <label style="display: flex; align-items: center; gap: 5px; white-space: nowrap;">
-                                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000;">
+                                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;;">
                                             @if($data['residenital_status'] == '1')
                                                 <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}"
                                                      alt="Checkmark" style="height: 25px; width: 25px;">
@@ -1467,9 +1266,9 @@
                                         </div> Resident Individual
                                     </label>
                                 </td>
-                                <td style="border: none; padding: 5px;">
+                                <td style="border: transparent !important; padding: 2px;">
                                     <label style="display: flex; align-items: center; gap: 5px; white-space: nowrap;">
-                                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000;">
+                                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;;">
                                             @if($data['residenital_status'] == '2')
                                                 <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}"
                                                      alt="Checkmark" style="height: 25px; width: 25px;">
@@ -1481,9 +1280,9 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td style="border: none; padding: 5px;">
+                                <td style="border: transparent !important; padding: 2px;">
                                     <label style="display: flex; align-items: center; gap: 5px; white-space: nowrap;">
-                                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000;">
+                                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;;">
                                             @if($data['residenital_status'] == '3')
                                                 <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}"
                                                      alt="Checkmark" style="height: 25px; width: 25px;">
@@ -1493,9 +1292,9 @@
                                         </div> Non-Resident Indian
                                     </label>
                                 </td>
-                                <td style="border: none; padding: 5px;">
+                                <td style="border: transparent !important; padding: 2px;">
                                     <label style="display: flex; align-items: center; gap: 5px; white-space: nowrap;">
-                                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000;">
+                                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;;">
                                             @if($data['residenital_status'] == '4')
                                                 <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}"
                                                      alt="Checkmark" style="height: 25px; width: 25px;">
@@ -1508,8 +1307,8 @@
                             </tr>
                         </table>
                     </td>
-                </tr>                                
-                
+                </tr>
+
                 <!-- Fifth Row -->
                 <tr>
                     <td style="width: 22%; vertical-align: middle;">
@@ -1518,9 +1317,9 @@
                     <td style="width: 66%; border: 1px solid #000; padding: 5px;">
                         <table>
                             <tr>
-                                <td style="border: none; padding: 5px;">
+                                <td style="border: transparent !important; padding: 2px;">
                                     <label style="display: flex; align-items: center; gap: 5px; white-space: nowrap;">
-                                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000;">
+                                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;;">
                                             @if($data['occupation_type'] == '1')
                                                 <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}"
                                                      alt="Checkmark" style="height: 25px; width: 25px;">
@@ -1530,9 +1329,9 @@
                                         </div> S - Service (Private Sector)
                                     </label>
                                 </td>
-                                <td style="border: none; padding: 5px;">
+                                <td style="border: transparent !important; padding: 2px;">
                                     <label style="display: flex; align-items: center; gap: 5px; white-space: nowrap;">
-                                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000;">
+                                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;;">
                                             @if($data['occupation_type'] == '2')
                                                 <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}"
                                                      alt="Checkmark" style="height: 25px; width: 25px;">
@@ -1544,9 +1343,9 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td style="border: none; padding: 5px;">
+                                <td style="border: transparent !important; padding: 2px;">
                                     <label style="display: flex; align-items: center; gap: 5px; white-space: nowrap;">
-                                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000;">
+                                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;;">
                                             @if($data['occupation_type'] == '3')
                                                 <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}"
                                                      alt="Checkmark" style="height: 25px; width: 25px;">
@@ -1556,9 +1355,9 @@
                                         </div> Government Sector
                                     </label>
                                 </td>
-                                <td style="border: none; padding: 5px;">
+                                <td style="border: transparent !important; padding: 2px;">
                                     <label style="display: flex; align-items: center; gap: 5px; white-space: nowrap;">
-                                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000;">
+                                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;;">
                                             @if($data['occupation_type'] == '4')
                                                 <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}"
                                                      alt="Checkmark" style="height: 25px; width: 25px;">
@@ -1570,9 +1369,9 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td style="border: none; padding: 5px;">
+                                <td style="border: transparent !important; padding: 2px;">
                                     <label style="display: flex; align-items: center; gap: 5px; white-space: nowrap;">
-                                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000;">
+                                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;;">
                                             @if($data['occupation_type'] == '5')
                                                 <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}"
                                                      alt="Checkmark" style="height: 25px; width: 25px;">
@@ -1582,9 +1381,9 @@
                                         </div> Self Employed
                                     </label>
                                 </td>
-                                <td style="border: none; padding: 5px;">
+                                <td style="border: transparent !important; padding: 2px;">
                                     <label style="display: flex; align-items: center; gap: 5px; white-space: nowrap;">
-                                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000;">
+                                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;;">
                                             @if($data['occupation_type'] == '6')
                                                 <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}"
                                                      alt="Checkmark" style="height: 25px; width: 25px;">
@@ -1596,9 +1395,9 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td style="border: none; padding: 5px;">
+                                <td style="border: transparent !important; padding: 2px;">
                                     <label style="display: flex; align-items: center; gap: 5px; white-space: nowrap;">
-                                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000;">
+                                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;;">
                                             @if($data['occupation_type'] == '7')
                                                 <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}"
                                                      alt="Checkmark" style="height: 25px; width: 25px;">
@@ -1608,9 +1407,9 @@
                                         </div> B - Business
                                     </label>
                                 </td>
-                                <td style="border: none; padding: 5px;">
+                                <td style="border: transparent !important; padding: 2px;">
                                     <label style="display: flex; align-items: center; gap: 5px; white-space: nowrap;">
-                                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000;">
+                                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;;">
                                             @if($data['occupation_type'] == '8')
                                                 <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}"
                                                      alt="Checkmark" style="height: 25px; width: 25px;">
@@ -1622,9 +1421,9 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td style="border: none; padding: 5px;">
+                                <td style="border: transparent !important; padding: 2px;">
                                     <label style="display: flex; align-items: center; gap: 5px; white-space: nowrap;">
-                                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000;">
+                                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;;">
                                             @if($data['occupation_type'] == '9')
                                                 <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}"
                                                      alt="Checkmark" style="height: 25px; width: 25px;">
@@ -1634,9 +1433,9 @@
                                         </div> Student
                                     </label>
                                 </td>
-                                <td style="border: none; padding: 5px;">
+                                <td style="border: transparent !important; padding: 2px;">
                                     <label style="display: flex; align-items: center; gap: 5px; white-space: nowrap;">
-                                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000;">
+                                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;;">
                                             @if($data['occupation_type'] == '10')
                                                 <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}"
                                                      alt="Checkmark" style="height: 25px; width: 25px;">
@@ -1649,15 +1448,15 @@
                             </tr>
                         </table>
                     </td>
-                </tr>                
+                </tr>
             </tbody>
         </table>
-        
+
         {{-- Page Break --}}
         <div class="page-break"></div>
 
-        <div style="border: 1px solid #000; padding: 10px; font-family: Arial, sans-serif; width: fit-content; font-size:14px;">
-            <label style="font-weight: bold; display: block; margin-bottom: 5px; font-size: 14px; background-color: #bdb5b5; padding:15px !important;">
+        <div style="border: 1px solid #000; padding: 10px; font-family: Arial, sans-serif; width: fit-content; font-size:13px;">
+            <label style="font-weight: bold; display: block; margin-bottom: 5px; font-size: 13px; background-color: #bdb5b5; padding:15px !important;">
                 <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
                 2 . TICK IF APPLICABLE RESIDENCE FOR TAX PURPOSES IN JURISDICTION(S) OUTSIDE INDIA (Please refer to instruction B at the end)
             </label>
@@ -1668,60 +1467,40 @@
             </div>
 
 
-            <table style="border-collapse: collapse; margin-top: 10px; font-size: 14px; width: 100%;">
+            <table style="border-collapse: collapse; margin-top: 10px; font-size: 13px; width: 100%;">
                 <tr>
-                    <td style="border: 1px solid #000; padding: 5px; width: 50%;">
+                    <td style="border: 1px solid #000; padding: 5px; width: 50%; font-size:14px;">
                         ISO 3166 Country Code of Jurisdiction of Residence <span style="color: red;">*</span>
                     </td>
                     <td style="border: 1px solid #000; padding: 5px;">
-                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
-                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
+                        _________________
                     </td>
                 </tr>
                 <tr>
-                    <td style="border: 1px solid #000; padding: 5px; width: 50%;">
+                    <td style="border: 1px solid #000; padding: 5px; width: 50%; font-size:14px;">
                         Tax Identification Number or equivalent
                         <span style="font-size: 12px;">(if issued by jurisdiction) <span style="color: red;">*</span></span>
                     </td>
                     <td style="border: 1px solid #000; padding: 5px;">
-                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
-                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
-                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
-                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
-                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
-                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
-                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
-                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
-                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
-                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
-                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
-                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
+                        _______________________________________
                     </td>
                 </tr>
                 <tr>
-                    <td style="border: 1px solid #000; padding: 5px; width: 50%;">
+                    <td style="border: 1px solid #000; padding: 5px; width: 50%; font-size:14px;">
                         Place / City of Birth <span style="color: red;">*</span>
-                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
-                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
-                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
-                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
-                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
-                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
-                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
-                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
+                        ___________________
                     </td>
-                    <td style="border: 1px solid #000; padding: 5px; width: 50%;">
+                    <td style="border: 1px solid #000; padding: 5px; width: 50%; font-size:14px;">
                         ISO 3166 Country Code of Birth <span style="color: red;">*</span>
-                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
-                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
+                        _______________
                     </td>
                 </tr>
             </table>
         </div>
         <br>
 
-        <div style="border: 1px solid #000; padding: 10px; font-family: Arial, sans-serif; width: fit-content; font-size:14px;">
-            <label style="font-weight: bold; display: block; margin-bottom: 5px; font-size: 14px; background-color: #bdb5b5; padding:2px; padding:15px !important;">
+        <div style="border: 1px solid #000; padding: 10px; font-family: Arial, sans-serif; width: fit-content; font-size:13px;">
+            <label style="font-weight: bold; display: block; margin-bottom: 5px; font-size: 13px; background-color: #bdb5b5; padding:2px; padding:15px !important;">
                 <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
                 3 . PROOF OF IDENTITY (POI) (please refer instruction C at the end)
             </label>
@@ -1732,172 +1511,80 @@
                 </span>
             </div>
 
-            <table style="border-collapse: collapse; margin-top: 10px; font-size: 14px; width: 100%;">
+            <table style="border-collapse: collapse; margin-top: 10px; font-size: 13px; width: 100%;">
                 <tr>
                     <td style="border: 1px solid #000; padding: 5px; width: 50%;">
-                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block;"></div>
-                        <span>A. Passport Number : - </span>
-                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
-                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
-                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
-                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
-                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
-                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
-                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
+                        <div class="square-box" class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
+                        <span style="font-size: 14px;">A. Passport Number : - </span>
+                        ____________________________
                     </td>
 
                     <td style="border: 1px solid #000; padding: 5px; width: 50%;">
-                        <span>Passport Expiry Date : -</span>
-
-                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;">d</div>
-                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;">d</div>
-
-                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;">-</div>
-
-                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;">m</div>
-                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;">m</div>
-
-                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;">-</div>
-
-                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;">y</div>
-                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;">y</div>
-                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;">y</div>
-                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;">y</div>
+                        <span style="font-size: 14px;">Passport Expiry Date : -</span>
+                        ____________________________
                     </td>
                 </tr>
                 <tr>
                     <td style="border: 1px solid #000; padding: 5px; width: 50%;">
-                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block;"></div>
-                        <span>B. Voter ID Card : - </span>
-                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
-                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
-                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
-                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
-                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
-                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
-                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
-                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
-                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
-                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
+                        <div class="square-box" class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
+                        <span style="font-size: 14px;">B. Voter ID Card : - </span>
+                        ____________________________
                     </td>
                     <td style="border: 1px solid #000; padding: 5px;">
-                        
+
                     </td>
                 </tr>
                 <tr>
                     <td style="border: 1px solid #000; padding: 5px; width: 50%;">
-                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block;"></div>
-                        <span>C. PAN Card : - </span>
-                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
-                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
-                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
-                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
-                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
-                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
-                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
-                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
-                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
-                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
+                        <div class="square-box" class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
+                        <span style="font-size: 14px;">C. PAN Card : - </span>
+                        ____________________________
                     </td>
                     <td style="border: 1px solid #000; padding: 5px; width: 50%;">
-                        
+
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block;"></div>
-                        <span>D. Driving Licence : -</span>
-                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
-                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
-                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
-                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
-                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
-                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
-                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
-                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
-                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
-                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
+                        <div class="square-box" class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
+                        <span style="font-size: 14px;">D. Driving Licence : -</span>
+                        ____________________________
                     </td>
                     <td style="border: 1px solid #000; padding: 5px; width: 50%;">
-                        <span>Driving Licence Expiry Date : -</span>
-                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;">d</div>
-                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;">d</div>
-
-                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;">-</div>
-
-                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;">m</div>
-                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;">m</div>
-
-                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;">-</div>
-
-                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;">y</div>
-                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;">y</div>
-                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;">y</div>
-                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;">y</div>
+                        <span style="font-size: 14px;">Driving Licence Expiry Date : -</span>
+                        ____________________________
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block;"></div>
-                        <span>E. UID (Aadhaar) : - </span>
-                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
-                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
-                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
-                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
-                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
-                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
-                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
-                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
-                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
-                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
+                        <div class="square-box" class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
+                        <span style="font-size: 14px;">E. UID (Aadhaar) : - </span>
+                        ____________________________
                     </td>
                     <td style="border: 1px solid #000; padding: 5px; width: 50%;">
-                        
+
                     </td>
                 </tr>
                 <tr>
-                    <td>
-                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block;"></div>
+                    <td style="font-size: 14px;">
+                        <div class="square-box" class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
                         <span>Z. Others (any document notified by the central government) : - </span>
-                        <br>
-                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
-                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
-                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
-                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
-                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
-                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
-                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
-                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
-                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
-                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
+                        ____________________________
                     </td>
                     <td style="border: 1px solid #000; padding: 5px; width: 50%;">
-                        <span>Identification Number : - </span>
-                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
-                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
-                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
-                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
-                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
-                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
-                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
-                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
-                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
-                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
+                        <span style="font-size: 14px;">Identification Number : - </span>
+                        ____________________________
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block;"></div>
-                        <span>S. Simplified Measures Account - Document Type code : - </span>
-                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
-                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
+                        <div class="square-box" class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
+                        <span style="font-size: 14px;">S. Simplified Measures Account - Document Type code : - </span>
+                        ____________________________
                     </td>
                     <td style="border: 1px solid #000; padding: 5px; width: 50%;">
-                        <span>Identification Number : - </span>
-                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
-                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
-                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
-                        <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
+                        <span style="font-size: 14px;">Identification Number : - </span>
+                        ____________________________
                     </td>
                 </tr>
             </table>
@@ -1909,10 +1596,162 @@
                 {{-- <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div> --}}
                 4 . PROOF OF ADDRESS (POA) <span class="text-danger">*</span>
             </label>
-            <label style="font-weight: bold; display: block; margin-bottom: 5px; font-size: 14px; background-color: #b8b8b8; padding:15px !important;">
+            <label style="font-weight: bold; display: block; margin-bottom: 5px; font-size: 14px; background-color: #ebe1e1; padding:15px !important;">
                 <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 20px; text-transform: uppercase;"></div>
                 4.1 CURRENT / PERMANET / OVERSEAAS ADDRESS DETAILS (Please see instruction D at the end)
             </label>
+
+            {{-- Add a Address Type details --}}
+            <table style="font-weight: normal;">
+                <tbody>
+                    <tr>
+                        <td style="width: 22%; vertical-align: middle;">
+                            <b>Address Type <span style="color: red;">*</span></b>
+                        </td>
+                        <td style="width: 66%; border: 1px solid #000; padding: 5px;">
+                            <table>
+                                <tr>
+                                    <td style="border: transparent !important; padding: 2px;">
+                                        <label style="display: flex; align-items: center; gap: 5px; white-space: nowrap;">
+                                            <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;;">
+                                                <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}"
+                                                         alt="Checkmark" style="height: 25px; width: 25px;">
+                                            </div> Residential / Business
+                                        </label>
+                                    </td>
+                                    <td style="border: transparent !important; padding: 2px;">
+                                        <label style="display: flex; align-items: center; gap: 5px; white-space: nowrap;">
+                                            <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;;">
+                                                <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}"
+                                                         alt="Checkmark" style="height: 25px; width: 25px;">
+                                            </div> Residential
+                                        </label>
+                                    </td>
+                                    <td style="border: transparent !important; padding: 2px;">
+                                        <label style="display: flex; align-items: center; gap: 5px; white-space: nowrap;">
+                                            <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;;">
+                                                <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}"
+                                                         alt="Checkmark" style="height: 25px; width: 25px;">
+                                            </div> Business
+                                        </label>
+                                    </td>
+                                    <td style="border: transparent !important; padding: 2px;">
+                                        <label style="display: flex; align-items: center; gap: 5px; white-space: nowrap;">
+                                            <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;;">
+                                                <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}"
+                                                         alt="Checkmark" style="height: 25px; width: 25px;">
+                                            </div> Registered Office
+                                        </label>
+                                    </td>
+                                    <td style="border: transparent !important; padding: 2px;">
+                                        <label style="display: flex; align-items: center; gap: 5px; white-space: nowrap;">
+                                            <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;;">
+                                                <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}"
+                                                         alt="Checkmark" style="height: 25px; width: 25px;">
+                                            </div> Unspecified
+                                        </label>
+                                    </td>
+                                </tr>
+
+                            </table>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td style="width: 22%; vertical-align: middle;">
+                            <b>Proof of Address <span style="color: red;">*</span></b>
+                        </td>
+                        <td style="width: 66%; border: 1px solid #000; padding: 5px;">
+                            <table>
+                                <tr>
+                                    <td style="border: transparent !important; padding: 2px;">
+                                        <label style="display: flex; align-items: center; gap: 5px; white-space: nowrap;">
+                                            <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;;">
+                                                <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}"
+                                                         alt="Checkmark" style="height: 25px; width: 25px;">
+                                            </div> Passport
+                                        </label>
+                                    </td>
+                                    <td style="border: transparent !important; padding: 2px;">
+                                        <label style="display: flex; align-items: center; gap: 5px; white-space: nowrap;">
+                                            <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;;">
+                                                <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}"
+                                                         alt="Checkmark" style="height: 25px; width: 25px;">
+                                            </div> Driving License
+                                        </label>
+                                    </td>
+                                    <td style="border: transparent !important; padding: 2px;">
+                                        <label style="display: flex; align-items: center; gap: 5px; white-space: nowrap;">
+                                            <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;;">
+                                                <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}"
+                                                         alt="Checkmark" style="height: 25px; width: 25px;">
+                                            </div> UID (Aadhaar)
+                                        </label>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td style="border: transparent !important; padding: 2px;">
+                                        <label style="display: flex; align-items: center; gap: 5px; white-space: nowrap;">
+                                            <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;;">
+                                                <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}"
+                                                         alt="Checkmark" style="height: 25px; width: 25px;">
+                                            </div> Voter Identity Card
+                                        </label>
+                                    </td>
+                                    <td style="border: transparent !important; padding: 2px;">
+                                        <label style="display: flex; align-items: center; gap: 5px; white-space: nowrap;">
+                                            <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;;">
+                                                <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}"
+                                                         alt="Checkmark" style="height: 25px; width: 25px;">
+                                            </div> NREGA Job Card
+                                        </label>
+                                    </td>
+                                    <td style="border: transparent !important; padding: 2px;">
+                                        <label style="display: flex; align-items: center; gap: 5px; white-space: nowrap;">
+                                            <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;;">
+                                                <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}"
+                                                         alt="Checkmark" style="height: 25px; width: 25px;">
+                                            </div> Others ___________________
+                                        </label>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td style="border: transparent !important; padding: 2px;">
+                                        <label style="display: flex; align-items: center; gap: 5px; white-space: nowrap;">
+                                            <div class="square-box" style="width: 20px; height: 20px; border: 1px solid #000; display: inline-block; text-align: center; line-height: 15px;;">
+                                                <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}"
+                                                         alt="Checkmark" style="height: 25px; width: 25px;">
+                                            </div> Simplified Measures  Account - <br>Document Type code : ________
+                                        </label>
+                                    </td>
+                                </tr>
+
+                            </table>
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+
+            <h2>Address</h2>
+            <div class="col-sm-12 p-2" style="font-size: 14px; height:30px;">
+                <b>Line 1 :  * </b> <span style="width: 100%;">________________________________________________________________________________________________________________</span>
+            </div>
+            <div class="col-sm-12 p-2" style="font-size: 14px; height:30px;">
+                <b>Line 2 : </b> <span style="width: 100%;">_________________________________________________________________________________________________________________</span>
+            </div>
+            <div class="row col-sm-12 p-2" style="font-size: 14px; height:30px;">
+                <b>Line 3 : </b> <span style="width: 70%;">___________________________________________________________</span>
+                <b>City / Town / Village : </b> <span style="width: 30%;">___________________________________</span>
+            </div>
+            <div class="row col-sm-12 p-2" style="font-size: 14px; height:30px;">
+                <b>District * </b> <span style="width: 30%;">________________</span>&nbsp;
+                <b>Pin / Post Code * </b> <span style="width: 20%;">_____________</span>&nbsp;
+                <b>State / U.T Code * </b> <span style="width: 20%;">_____________</span>&nbsp;
+                <b>ISO 3166 Country Code * </b> <span style="width: 30%;">_______________</span>
+            </div>
 
         </div>
 

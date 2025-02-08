@@ -229,7 +229,7 @@ class ClientController extends Controller
 
         // Generate and save the PDF
         $pdf = PDF::loadView('pdf.user_register_pdf', ['data' => $request->all()]);
-        $pdf->setPaper('A4', 'landscape');
+        $pdf->setPaper('letter', 'landscape');
 
         // Return the PDF and open it in the browser
         return $pdf->stream('user_registration.pdf')

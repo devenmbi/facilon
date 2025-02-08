@@ -5001,6 +5001,57 @@
     </div>
     {{-- THIRD Holder Form End --}}
 
+    <div class="page-break"></div>
+
+    <div class="WordSection3">
+        <div class="row">
+            <p class="instructions-header">
+                CENTRAL KYC REGISTRY | Instructions / Check list / Guidelines for filling Individual KYC Application Form
+            </p>
+
+            <p class="list-paragraph">General Instructions:</p>
+            <p style="margin-left: 40px; text-align: justify; font-weight: normal; font-size:16px;">
+                1. Fields marked with ‘*’ are mandatory fields.
+            </p>
+            <p style="margin-left: 40px; text-align: justify; font-weight: normal; font-size:16px;">
+                2. Tick ‘<img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}"
+                alt="Checkmark" style="height: 25px; width: 25px;">’ wherever applicable.
+            </p>
+            <p style="margin-left: 40px; text-align: justify; font-weight: normal; font-size:16px;">
+                3. Self-Certification of documents is mandatory.
+            </p>
+            <p style="margin-left: 40px; text-align: justify; font-weight: normal; font-size:16px;">
+                4. Please fill the form in English and in BLOCK Letters.
+            </p>
+            <p style="margin-left: 40px; text-align: justify; font-weight: normal; font-size:16px;">
+                5. Please fill all dates in DD-MM-YYYY format.
+            </p>
+            <p style="margin-left: 40px; text-align: justify; font-weight: normal; font-size:16px;">
+                6. Wherever state code and country code is to be furnished, the same should be the two-digit code as per Indian Motor Vehicle, 1988 and ISO 3166 country code
+                   respectively list of which is available at the end.
+            </p>
+            <p style="margin-left: 40px; text-align: justify; font-weight: normal; font-size:16px;">
+                7. KYC number of applicant is mandatory for updation of KYC details.
+            </p>
+            <p style="margin-left: 40px; text-align: justify; font-weight: normal; font-size:16px;">
+                8. For particular section update, please tick (<img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('frontend/images/pdf/checkmark-small.webp'))) }}"
+                alt="Checkmark" style="height: 25px; width: 25px;">] in the box available before the section number and strike off the sections not required to be updated.
+            </p>
+            <p style="margin-left: 40px; text-align: justify; font-weight: normal; font-size:16px;">
+                9. In case of ‘Small Account type’ only personal details at section number 1 and 2, photograph, signature and self-certification required.
+            </p>
+
+            <p class="list-paragraph">A Clarification / Guidelines on filling ‘Personal Details’ section</p>
+            <p class="list-paragraph">B Clarification / Guidelines on filling details if applicant residence for tax purposes in jurisdiction(s) outside India</p>
+            <p class="list-paragraph">C Clarification / Guidelines on filling ‘Proof of Identity [Pol]’ section</p>
+            <p class="list-paragraph">D Clarification / Guidelines on filling ‘Proof of Address [PoA] - Current / Permanent / Overseas Address details’ section</p>
+            <p class="list-paragraph">E Clarification / Guidelines on filling ‘Proof of Address [PoA] - Correspondence / Local Address details’ section</p>
+            <p class="list-paragraph">F Clarification / Guidelines on filling ‘Contact details’ section</p>
+            <p class="list-paragraph">G Clarification / Guidelines on filling ‘Related Person details’ section</p>
+            <p class="list-paragraph">H Clarification / Guidelines on filling ‘Related Person details - Proof of Identity [Pol] of Related Person’ section</p>
+        </div>
+    </div>
+
 </body>
 
 </html>

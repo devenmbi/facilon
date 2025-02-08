@@ -6,26 +6,49 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!--favicon-->
-	<link rel="icon" href="{{asset('public/admin/assets/images/favicon-32x32.png')}}" type="image/png"/>
+<<<<<<< HEAD
+	<link rel="icon" href="{{asset('admin/assets/images/favicon-32x32.png')}}" type="image/png"/>
 	<!--plugins-->
-	<link href="{{asset('public/admin/assets/plugins/vectormap/jquery-jvectormap-2.0.2.css')}}" rel="stylesheet"/>
-	<link href="{{asset('public/admin/assets/plugins/simplebar/css/simplebar.css')}}" rel="stylesheet" />
-	<link href="{{asset('public/admin/assets/plugins/perfect-scrollbar/css/perfect-scrollbar.css')}}" rel="stylesheet" />
-	<link href="{{asset('public/admin/assets/plugins/metismenu/css/metisMenu.min.css')}}" rel="stylesheet"/>
-	<link href="{{asset('public/admin/assets/plugins/datatable/css/dataTables.bootstrap5.min.css')}}" rel="stylesheet" />
+	<link href="{{asset('admin/assets/plugins/vectormap/jquery-jvectormap-2.0.2.css')}}" rel="stylesheet"/>
+	<link href="{{asset('admin/assets/plugins/simplebar/css/simplebar.css')}}" rel="stylesheet" />
+	<link href="{{asset('admin/assets/plugins/perfect-scrollbar/css/perfect-scrollbar.css')}}" rel="stylesheet" />
+	<link href="{{asset('admin/assets/plugins/metismenu/css/metisMenu.min.css')}}" rel="stylesheet"/>
+	<link href="{{asset('admin/assets/plugins/datatable/css/dataTables.bootstrap5.min.css')}}" rel="stylesheet" />
 	<!-- loader-->
-	<link href="{{asset('public/admin/assets/css/pace.min.css')}}" rel="stylesheet"/>
-	<script src="{{asset('public/admin/assets/js/pace.min.js')}}"></script>
+	<link href="{{asset('admin/assets/css/pace.min.css')}}" rel="stylesheet"/>
+	<script src="{{asset('admin/assets/js/pace.min.js')}}"></script>
 	<!-- Bootstrap CSS -->
-	<link href="{{asset('public/admin/assets/css/bootstrap.min.css')}}" rel="stylesheet">
-	<link href="{{asset('public/admin/assets/css/bootstrap-extended.css')}}" rel="stylesheet">
+	<link href="{{asset('admin/assets/css/bootstrap.min.css')}}" rel="stylesheet">
+	<link href="{{asset('admin/assets/css/bootstrap-extended.css')}}" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-	<link href="{{asset('public/admin/assets/css/app.css')}}" rel="stylesheet">
-	<link href="{{asset('public/admin/assets/css/icons.css')}}" rel="stylesheet">
+	<link href="{{asset('admin/assets/css/app.css')}}" rel="stylesheet">
+	<link href="{{asset('admin/assets/css/icons.css')}}" rel="stylesheet">
 	<!-- Theme Style CSS -->
-	<link rel="stylesheet" href="{{asset('public/admin/assets/css/dark-theme.css')}}"/>
-	<link rel="stylesheet" href="{{asset('public/admin/assets/css/semi-dark.css')}}"/>
-	<link rel="stylesheet" href="{{asset('public/admin/assets/css/header-colors.css')}}"/>
+	<link rel="stylesheet" href="{{asset('admin/assets/css/dark-theme.css')}}"/>
+	<link rel="stylesheet" href="{{asset('admin/assets/css/semi-dark.css')}}"/>
+	<link rel="stylesheet" href="{{asset('admin/assets/css/header-colors.css')}}"/>
+=======
+	<link rel="icon" href="{{asset('/admin/assets/images/favicon-32x32.png')}}" type="image/png"/>
+	<!--plugins-->
+	<link href="{{asset('/admin/assets/plugins/vectormap/jquery-jvectormap-2.0.2.css')}}" rel="stylesheet"/>
+	<link href="{{asset('/admin/assets/plugins/simplebar/css/simplebar.css')}}" rel="stylesheet" />
+	<link href="{{asset('/admin/assets/plugins/perfect-scrollbar/css/perfect-scrollbar.css')}}" rel="stylesheet" />
+	<link href="{{asset('/admin/assets/plugins/metismenu/css/metisMenu.min.css')}}" rel="stylesheet"/>
+	<link href="{{asset('/admin/assets/plugins/datatable/css/dataTables.bootstrap5.min.css')}}" rel="stylesheet" />
+	<!-- loader-->
+	<link href="{{asset('/admin/assets/css/pace.min.css')}}" rel="stylesheet"/>
+	<script src="{{asset('/admin/assets/js/pace.min.js')}}"></script>
+	<!-- Bootstrap CSS -->
+	<link href="{{asset('/admin/assets/css/bootstrap.min.css')}}" rel="stylesheet">
+	<link href="{{asset('/admin/assets/css/bootstrap-extended.css')}}" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+	<link href="{{asset('/admin/assets/css/app.css')}}" rel="stylesheet">
+	<link href="{{asset('/admin/assets/css/icons.css')}}" rel="stylesheet">
+	<!-- Theme Style CSS -->
+	<link rel="stylesheet" href="{{asset('/admin/assets/css/dark-theme.css')}}"/>
+	<link rel="stylesheet" href="{{asset('/admin/assets/css/semi-dark.css')}}"/>
+	<link rel="stylesheet" href="{{asset('/admin/assets/css/header-colors.css')}}"/>
+>>>>>>> riddhi
 	<title>Facilon | Admin</title>
 </head>
 
@@ -36,7 +59,11 @@
 		<div class="sidebar-wrapper" data-simplebar="true">
 			<div class="sidebar-header">
 				<div>
-					<img src="{{asset('public/frontend/images/logo.png')}}" class="logo-icon" alt="logo icon">
+<<<<<<< HEAD
+					<img src="{{asset('frontend/images/logo.png')}}" class="logo-icon" alt="logo icon">
+=======
+					<img src="{{asset('/frontend/images/logo.png')}}" class="logo-icon" alt="logo icon">
+>>>>>>> riddhi
 				</div>
 				<div>
 					<h4 class="logo-text">Facilon</h4>
@@ -52,7 +79,7 @@
 						</div>
 						<div class="menu-title">Dashboard</div>
 					</a>
-					
+
 				</li>
 				<li>
 					<a href="javascript:;" class="has-arrow">
@@ -152,11 +179,11 @@
 						<li><a href="{{route('admin.list_trading_listed_securities_services')}}"><i class='bx bx-radio-circle'></i>List Services</a></li>
 					</ul>
 				</li>
-				
-				
-				
-				
-				
+
+
+
+
+
 			</ul>
 			<!--end navigation-->
 		</div>
@@ -178,8 +205,8 @@
 								<a class="nav-link" href="avascript:;"><i class='bx bx-search'></i>
 								</a>
 							</li>
-							
-							
+
+
 
 							<li class="nav-item dropdown dropdown-app">
 								<a class="nav-link dropdown-toggle dropdown-toggle-nocaret" data-bs-toggle="dropdown" href="javascript:;"><i class='bx bx-grid-alt'></i></a>
@@ -190,7 +217,7 @@
 										  <a href="javascript:;">
 											<div class="app-box text-center">
 											  <div class="app-icon">
-												  <img src="{{asset('public/admin/assets/images/app/slack.png')}}" width="30" alt="">
+												  <img src="{{asset('admin/assets/images/app/slack.png')}}" width="30" alt="">
 											  </div>
 											  <div class="app-name">
 												  <p class="mb-0 mt-1">Slack</p>
@@ -198,10 +225,10 @@
 											  </div>
 											</a>
 										 </div>
-										 
-				
+
+
 									  </div><!--end row-->
-				
+
 									</div>
 								</div>
 							</li>
@@ -221,7 +248,7 @@
 										<a class="dropdown-item" href="javascript:;">
 											<div class="d-flex align-items-center">
 												<div class="user-online">
-													<img src="{{asset('public/admin/assets/images/avatars/avatar-1.png')}}" class="msg-avatar" alt="user avatar">
+													<img src="{{asset('admin/assets/images/avatars/avatar-1.png')}}" class="msg-avatar" alt="user avatar">
 												</div>
 												<div class="flex-grow-1">
 													<h6 class="msg-name">Deven Punse<span class="msg-time float-end"></span></h6>
@@ -229,10 +256,10 @@
 												</div>
 											</div>
 										</a>
-										
+
 									</div>
 									<a href="javascript:;">
-										
+
 									</a>
 								</div>
 							</li>
@@ -252,7 +279,7 @@
 											<div class="d-flex align-items-center gap-3">
 												<div class="position-relative">
 													<div class="cart-product rounded-circle bg-light">
-														<img src="{{asset('public/admin/assets/images/products/11.png')}}" class="" alt="product image">
+														<img src="{{asset('admin/assets/images/products/11.png')}}" class="" alt="product image">
 													</div>
 												</div>
 												<div class="flex-grow-1">
@@ -270,7 +297,7 @@
 											<div class="d-flex align-items-center gap-3">
 												<div class="position-relative">
 													<div class="cart-product rounded-circle bg-light">
-														<img src="{{asset('public/admin/assets/images/products/02.png')}}" class="" alt="product image">
+														<img src="{{asset('admin/assets/images/products/02.png')}}" class="" alt="product image">
 													</div>
 												</div>
 												<div class="flex-grow-1">
@@ -288,7 +315,7 @@
 											<div class="d-flex align-items-center gap-3">
 												<div class="position-relative">
 													<div class="cart-product rounded-circle bg-light">
-														<img src="{{asset('public/admin/assets/images/products/03.png')}}" class="" alt="product image">
+														<img src="{{asset('admin/assets/images/products/03.png')}}" class="" alt="product image">
 													</div>
 												</div>
 												<div class="flex-grow-1">
@@ -306,7 +333,7 @@
 											<div class="d-flex align-items-center gap-3">
 												<div class="position-relative">
 													<div class="cart-product rounded-circle bg-light">
-														<img src="{{asset('public/admin/assets/images/products/04.png')}}" class="" alt="product image">
+														<img src="{{asset('admin/assets/images/products/04.png')}}" class="" alt="product image">
 													</div>
 												</div>
 												<div class="flex-grow-1">
@@ -324,7 +351,7 @@
 											<div class="d-flex align-items-center gap-3">
 												<div class="position-relative">
 													<div class="cart-product rounded-circle bg-light">
-														<img src="{{asset('public/admin/assets/images/products/05.png')}}" class="" alt="product image">
+														<img src="{{asset('admin/assets/images/products/05.png')}}" class="" alt="product image">
 													</div>
 												</div>
 												<div class="flex-grow-1">
@@ -342,7 +369,7 @@
 											<div class="d-flex align-items-center gap-3">
 												<div class="position-relative">
 													<div class="cart-product rounded-circle bg-light">
-														<img src="{{asset('public/admin/assets/images/products/06.png')}}" class="" alt="product image">
+														<img src="{{asset('admin/assets/images/products/06.png')}}" class="" alt="product image">
 													</div>
 												</div>
 												<div class="flex-grow-1">
@@ -360,7 +387,7 @@
 											<div class="d-flex align-items-center gap-3">
 												<div class="position-relative">
 													<div class="cart-product rounded-circle bg-light">
-														<img src="{{asset('public/admin/assets/images/products/07.png')}}" class="" alt="product image">
+														<img src="{{asset('admin/assets/images/products/07.png')}}" class="" alt="product image">
 													</div>
 												</div>
 												<div class="flex-grow-1">
@@ -378,7 +405,7 @@
 											<div class="d-flex align-items-center gap-3">
 												<div class="position-relative">
 													<div class="cart-product rounded-circle bg-light">
-														<img src="{{asset('public/admin/assets/images/products/08.png')}}" class="" alt="product image">
+														<img src="{{asset('admin/assets/images/products/08.png')}}" class="" alt="product image">
 													</div>
 												</div>
 												<div class="flex-grow-1">
@@ -396,7 +423,7 @@
 											<div class="d-flex align-items-center gap-3">
 												<div class="position-relative">
 													<div class="cart-product rounded-circle bg-light">
-														<img src="{{asset('public/admin/assets/images/products/09.png')}}" class="" alt="product image">
+														<img src="{{asset('admin/assets/images/products/09.png')}}" class="" alt="product image">
 													</div>
 												</div>
 												<div class="flex-grow-1">
@@ -426,7 +453,7 @@
 					</div>
 					<div class="user-box dropdown px-3">
 						<a class="d-flex align-items-center nav-link dropdown-toggle gap-3 dropdown-toggle-nocaret" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-							<img src="{{asset('public/admin/assets/images/avatars/avatar-2.png')}}" class="user-img" alt="user avatar">
+							<img src="{{asset('admin/assets/images/avatars/avatar-2.png')}}" class="user-img" alt="user avatar">
 							<div class="user-info">
 								<p class="user-name mb-0">Pauline Seitz</p>
 								<p class="designattion mb-0">Web Designer</p>
@@ -615,19 +642,19 @@
 	</div>
 	<!--end switcher-->
 	<!-- Bootstrap JS -->
-	<script src="{{asset('public/admin/assets/js/bootstrap.bundle.min.js')}}"></script>
+	<script src="{{asset('admin/assets/js/bootstrap.bundle.min.js')}}"></script>
 	<!--plugins-->
-	<script src="{{asset('public/admin/assets/js/jquery.min.js')}}"></script>
-	<script src="{{asset('public/admin/assets/plugins/simplebar/js/simplebar.min.js')}}"></script>
-	<script src="{{asset('public/admin/assets/plugins/metismenu/js/metisMenu.min.js')}}"></script>
-	<script src="{{asset('public/admin/assets/plugins/perfect-scrollbar/js/perfect-scrollbar.js')}}"></script>
-	<script src="{{asset('public/admin/assets/plugins/apexcharts-bundle/js/apexcharts.min.js')}}"></script>
-	<script src="{{asset('public/admin/assets/plugins/datatable/js/jquery.dataTables.min.js')}}"></script>
-	<script src="{{asset('public/admin/assets/plugins/datatable/js/dataTables.bootstrap5.min.js')}}"></script>
-	
-	<script src="{{asset('public/admin/assets/js/index.js')}}"></script>
+	<script src="{{asset('admin/assets/js/jquery.min.js')}}"></script>
+	<script src="{{asset('admin/assets/plugins/simplebar/js/simplebar.min.js')}}"></script>
+	<script src="{{asset('admin/assets/plugins/metismenu/js/metisMenu.min.js')}}"></script>
+	<script src="{{asset('admin/assets/plugins/perfect-scrollbar/js/perfect-scrollbar.js')}}"></script>
+	<script src="{{asset('admin/assets/plugins/apexcharts-bundle/js/apexcharts.min.js')}}"></script>
+	<script src="{{asset('admin/assets/plugins/datatable/js/jquery.dataTables.min.js')}}"></script>
+	<script src="{{asset('admin/assets/plugins/datatable/js/dataTables.bootstrap5.min.js')}}"></script>
+
+	<script src="{{asset('admin/assets/js/index.js')}}"></script>
 	<!--app JS-->
-	<script src="{{asset('public/admin/assets/js/app.js')}}"></script>
+	<script src="{{asset('admin/assets/js/app.js')}}"></script>
 </body>
 
 </html>

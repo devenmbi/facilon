@@ -49,7 +49,7 @@
                                         <div class="col-md-4">
                                             <div class="form-group row mt-3">
                                                 <div class="col-md-12">
-                                                    <label>Background Image <span class="text-danger"> *</span></label> <a href="{{asset('public/admin/assets/images/portfolio-investment-scheme/'.$fetch_portfolio_investment_scheme_basic_details->bg_img_src)}}" class="btn btn-sm btn-primary mb-2" target="_blank">View Image</a>
+                                                    <label>Background Image <span class="text-danger"> *</span></label> <a href="{{asset('admin/assets/images/portfolio-investment-scheme/'.$fetch_portfolio_investment_scheme_basic_details->bg_img_src)}}" class="btn btn-sm btn-primary mb-2" target="_blank">View Image</a>
 
                                                     <input type="file" class="form-control" name="bg_img_src" accept="image/*">
                                                     <input type="hidden" name="old_bg_img_src" value="{{ $fetch_portfolio_investment_scheme_basic_details->bg_img_src }}">
@@ -77,5 +77,5 @@
                 </div>
             </div>
         </div>
-    </div>	
+    </div>
 @endsection

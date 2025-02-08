@@ -26,10 +26,10 @@
               <ul>
                 @foreach ($list_custody_services as $list_custody_services_ind)
                   <li>
-                    <span><img src="{{asset('public/admin/assets/images/custody/services/'.$list_custody_services_ind->img_src)}}"></span> 
-                    
+                    <span><img src="{{asset('admin/assets/images/custody/services/'.$list_custody_services_ind->img_src)}}"></span>
+
                     <b>{{ $list_custody_services_ind->title }}</b>
-                    
+
                     {{ $list_custody_services_ind->description }}
                   </li>
                 @endforeach

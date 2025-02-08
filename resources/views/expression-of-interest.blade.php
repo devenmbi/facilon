@@ -15,14 +15,14 @@
               <div class="derivatives-content">
             <div class="derivatives-box ">
               <ul>
-                <li><span><img src="{{asset('public/frontend/images/icon/portfolio-investment-scheme/checklist.svg')}}"></span> <b>
+                <li><span><img src="{{asset('/frontend/images/icon/portfolio-investment-scheme/checklist.svg')}}"></span> <b>
                     Investment Advisors</b>
                   Facilon Manage addresses the challenges faced by Investment managers and streamlines the process of service provider appointment, client KYC, and account opening documentation, transactions, and instruction management.
 
 
 
                 </li>
-                <li><span><img src="{{asset('public/frontend/images/icon/portfolio-investment-scheme/money.svg')}}"></span> <b>Service Providers like Brokers, Custodians, Banks etc.
+                <li><span><img src="{{asset('/frontend/images/icon/portfolio-investment-scheme/money.svg')}}"></span> <b>Service Providers like Brokers, Custodians, Banks etc.
 
                   </b>
                   Platform to showcase their service offerings and extend their marketing & client acquisition. Seamlessly integrate with Facilon through Facilon Onboard, ensuring efficient operations and client engagement at the time of onboarding and account opening. 
@@ -74,7 +74,7 @@
     </div>
   </div> -->
   <section class="login-form-style4 steps4-sec serv-c section-padding align-items-center"
-      style="background-image:url('./public/frontend/images/expand__28590.png');">
+      style="background-image:url('.//frontend/images/expand__28590.png');">
       <div class="container ">
         <div class="row align-items-center">
           <div class="col-lg-5 col-md-12 col-sm-12">

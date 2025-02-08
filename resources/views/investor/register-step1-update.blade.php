@@ -6,10 +6,10 @@
             <div class="col-lg-7 col-md-7 col-sm-12">
               <div class="lgf4_Left_content">
                 <h3>Welcome to <span>Facilon Services</span> (‘Facilon’) Registration Process
-  
+
                 </h3>
                 <p>Before we start the registration process we would like to verify your email address & mobile number
-  
+
                 </p>
               </div>
             </div>
@@ -36,7 +36,7 @@
                         <label for="username">Please enter your Email: <span class="star-color">*</span><a href="#"
                             data-toggle="popover" data-trigger="hover" title="Enter Email"
                             data-content="You'll need to have access to the email to be able to receive the OTP."><img
-                              src="{{asset('public/frontend/images/information-button.png')}}" /></a>
+                              src="{{asset('frontend/images/information-button.png')}}" /></a>
                         </label>
                         <input type="text" name="email" value="{{$fetch_user_details->email}}">
                       </div>
@@ -44,7 +44,7 @@
                         <label for="username">Please enter your Mobile No: <span class="star-color">*</span><a href="#"
                             data-toggle="popover" data-trigger="hover" title="Enter Mobile No."
                             data-content="You'll need to have access to the mobile no. to be able to receive the OTP."><img
-                              src="{{asset('public/frontend/images/information-button.png')}}" /></a>
+                              src="{{asset('frontend/images/information-button.png')}}" /></a>
                         </label>
                         <select name="country_code">
                             @php
@@ -55,9 +55,9 @@
                             @foreach($fetch_country_code as $country_code)
                                 <option value="{{$country_code->id}}">+{{$country_code->code_value}} ({{$country_code->country_name}})</option>
                             @endforeach
-                            
+
                         </select>
-                        <input type="text" id="" name="mobile_number" value="{{$fetch_user_details->mobile_no}}">                      
+                        <input type="text" id="" name="mobile_number" value="{{$fetch_user_details->mobile_no}}">
                       </div>
                       <div class="single-field">
                         <div class="checkbox-wrapper-33">
